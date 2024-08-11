@@ -5,6 +5,10 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6kkp7"]
 albedo_texture = ExtResource("2_pmx10")
+emission_enabled = true
+emission_energy_multiplier = 2.0
+backlight_enabled = true
+backlight_texture = ExtResource("2_pmx10")
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_8dgna"]
 material = SubResource("StandardMaterial3D_6kkp7")
