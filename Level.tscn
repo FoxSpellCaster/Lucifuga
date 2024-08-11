@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://dbsaykgj4kmxl"]
+[gd_scene load_steps=17 format=3 uid="uid://dbsaykgj4kmxl"]
 
 [ext_resource type="PackedScene" uid="uid://i8uq2ym555l8" path="res://player.tscn" id="1_apcu6"]
 [ext_resource type="Texture2D" uid="uid://b5y422nll8m8j" path="res://Textures/Project DarkWorld_Floor.png" id="1_n87lm"]
 [ext_resource type="Texture2D" uid="uid://61ngmeo1eg8c" path="res://Textures/Project DarkWorld_Grass.png" id="3_ghepx"]
+[ext_resource type="Texture2D" uid="uid://4ddk14owdlc7" path="res://Textures/Project DarkWorld_Player.png" id="4_qrjo2"]
 
 [sub_resource type="Environment" id="Environment_p7er5"]
 
@@ -27,6 +28,17 @@ uv1_world_triplanar = true
 material = SubResource("StandardMaterial3D_yt8rx")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bppyv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0jhye"]
+albedo_texture = ExtResource("4_qrjo2")
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_g7ocw"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_r1pf0"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_nbo1x"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_s0tof"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -58,3 +70,22 @@ skeleton = NodePath("../MeshInstance3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D"]
 shape = SubResource("BoxShape3D_bppyv")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+
+[node name="BodyMesh" type="MeshInstance3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.27716, 0)
+material_override = SubResource("StandardMaterial3D_0jhye")
+mesh = SubResource("CapsuleMesh_g7ocw")
+
+[node name="Eye Left" type="MeshInstance3D" parent="CharacterBody3D/BodyMesh"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.141765, 0.526248, -0.441865)
+mesh = SubResource("SphereMesh_r1pf0")
+
+[node name="Eye Right" type="MeshInstance3D" parent="CharacterBody3D/BodyMesh"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.163496, 0.506698, -0.442661)
+mesh = SubResource("SphereMesh_nbo1x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_s0tof")
