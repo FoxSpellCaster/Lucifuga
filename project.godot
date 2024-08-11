@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Project DarkWorld"
+config/description="Created by FoxSpellCaster"
+config/version="v0.0.1-alpha"
 run/main_scene="res://Level.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/show_image=false
+boot_splash/fullsize=false
+boot_splash/use_filter=false
 
 [display]
 

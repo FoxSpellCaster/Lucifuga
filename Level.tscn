@@ -1,9 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://dbsaykgj4kmxl"]
+[gd_scene load_steps=16 format=3 uid="uid://dbsaykgj4kmxl"]
 
-[ext_resource type="PackedScene" uid="uid://i8uq2ym555l8" path="res://player.tscn" id="1_apcu6"]
 [ext_resource type="Texture2D" uid="uid://b5y422nll8m8j" path="res://Textures/Project DarkWorld_Floor.png" id="1_n87lm"]
 [ext_resource type="Texture2D" uid="uid://61ngmeo1eg8c" path="res://Textures/Project DarkWorld_Grass.png" id="3_ghepx"]
-[ext_resource type="Texture2D" uid="uid://4ddk14owdlc7" path="res://Textures/Project DarkWorld_Player.png" id="4_qrjo2"]
+[ext_resource type="PackedScene" uid="uid://cof0fnwcu7ks2" path="res://playernew.tscn" id="3_pxox5"]
+[ext_resource type="Material" uid="uid://bvfn86yr3ml6n" path="res://Floor.tres" id="4_xd6jn"]
+[ext_resource type="Texture2D" uid="uid://cli8auuh76afs" path="res://Textures/Project DarkWorld_Spawn.png" id="5_gqpd8"]
+[ext_resource type="Texture2D" uid="uid://d1ahu8qdkwvr8" path="res://Textures/Project DarkWorld_Wall.png" id="6_53afy"]
 
 [sub_resource type="Environment" id="Environment_p7er5"]
 
@@ -29,16 +31,15 @@ material = SubResource("StandardMaterial3D_yt8rx")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bppyv"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0jhye"]
-albedo_texture = ExtResource("4_qrjo2")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0qkvh"]
+albedo_texture = ExtResource("5_gqpd8")
+uv1_triplanar = true
+uv1_world_triplanar = true
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_g7ocw"]
-
-[sub_resource type="SphereMesh" id="SphereMesh_r1pf0"]
-
-[sub_resource type="SphereMesh" id="SphereMesh_nbo1x"]
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_s0tof"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o20xe"]
+albedo_texture = ExtResource("6_53afy")
+uv1_triplanar = true
+uv1_world_triplanar = true
 
 [node name="Node3D" type="Node3D"]
 
@@ -50,6 +51,7 @@ transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75
 shadow_enabled = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
 mesh = SubResource("PlaneMesh_lt268")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
@@ -57,12 +59,9 @@ mesh = SubResource("PlaneMesh_lt268")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_q44mx")
 
-[node name="Player" parent="." instance=ExtResource("1_apcu6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -2)
-linear_damp = 3.0
-
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.902, 0.5, -2.71)
+visible = false
 mesh = SubResource("BoxMesh_5cwk7")
 skeleton = NodePath("../MeshInstance3D")
 
@@ -71,21 +70,27 @@ skeleton = NodePath("../MeshInstance3D")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D"]
 shape = SubResource("BoxShape3D_bppyv")
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+[node name="Player" parent="." instance=ExtResource("3_pxox5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.509876, 0, 0.515173)
 
-[node name="BodyMesh" type="MeshInstance3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.27716, 0)
-material_override = SubResource("StandardMaterial3D_0jhye")
-mesh = SubResource("CapsuleMesh_g7ocw")
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
 
-[node name="Eye Left" type="MeshInstance3D" parent="CharacterBody3D/BodyMesh"]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.141765, 0.526248, -0.441865)
-mesh = SubResource("SphereMesh_r1pf0")
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.35439, -0.5, 0.380922)
+size = Vector3(15.1923, 1, 16.0156)
+material = ExtResource("4_xd6jn")
 
-[node name="Eye Right" type="MeshInstance3D" parent="CharacterBody3D/BodyMesh"]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.163496, 0.506698, -0.442661)
-mesh = SubResource("SphereMesh_nbo1x")
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2225, -1.48391, -3.95698)
+size = Vector3(27.8727, 1, 24.6914)
+material = ExtResource("4_xd6jn")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
-transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)
-shape = SubResource("CapsuleShape3D_s0tof")
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.499492, 0.0300398, 0.496646)
+size = Vector3(0.976013, 0.0969238, 0.978455)
+material = SubResource("StandardMaterial3D_0qkvh")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6932, 1.7583, 8.89822)
+size = Vector3(25.1178, 6.7627, 1)
+material = SubResource("StandardMaterial3D_o20xe")

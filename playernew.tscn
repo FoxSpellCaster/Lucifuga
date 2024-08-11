@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://cof0fnwcu7ks2"]
+
+[ext_resource type="Texture2D" uid="uid://4ddk14owdlc7" path="res://Textures/Project DarkWorld_Player.png" id="1_ks48b"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oxkog"]
+albedo_texture = ExtResource("1_ks48b")
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_hrcv3"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_nl4hh"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_xexsd"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4j1kh"]
+
+[node name="Player" type="CharacterBody3D"]
+
+[node name="BodyMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.27716, 0)
+material_override = SubResource("StandardMaterial3D_oxkog")
+mesh = SubResource("CapsuleMesh_hrcv3")
+skeleton = NodePath("")
+
+[node name="Eye Left" type="MeshInstance3D" parent="BodyMesh"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.141765, 0.526248, -0.441865)
+mesh = SubResource("SphereMesh_nl4hh")
+
+[node name="Eye Right" type="MeshInstance3D" parent="BodyMesh"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.163496, 0.506698, -0.442661)
+mesh = SubResource("SphereMesh_xexsd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_4j1kh")
