@@ -1,46 +1,49 @@
-[gd_scene load_steps=7 format=3 uid="uid://cdcnpm8utss6e"]
+[gd_scene load_steps=6 format=3 uid="uid://cdcnpm8utss6e"]
 
-[ext_resource type="Material" uid="uid://cw14kv0bgoxue" path="res://textures/materials/floor_standard_material_3d.tres" id="1_vn3mg"]
-[ext_resource type="Texture2D" uid="uid://cli8auuh76afs" path="res://textures/grid/Project DarkWorld_Spawn.png" id="2_opdtm"]
-[ext_resource type="Material" uid="uid://y4w2brf27ta6" path="res://textures/materials/stairs_standard_material_3d.tres" id="3_eoov5"]
+[ext_resource type="Texture2D" uid="uid://bmrv60c4adkfh" path="res://textures/grid/Floor_1m x 1m.png" id="1_iruuu"]
+[ext_resource type="Texture2D" uid="uid://4fvdpdspuuvq" path="res://textures/grid/Spawn_1m x 1m.png" id="2_yn05q"]
 [ext_resource type="PackedScene" uid="uid://i8uq2ym555l8" path="res://scenes/player.tscn" id="3_l5v8t"]
 
-[sub_resource type="Environment" id="Environment_53h1e"]
-sdfgi_enabled = true
-volumetric_fog_enabled = true
-volumetric_fog_emission = Color(0.424762, 0.606788, 1, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nllu0"]
+albedo_texture = ExtResource("1_iruuu")
+uv1_offset = Vector3(0, 0.05, 0)
+uv1_triplanar = true
+uv1_world_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_85fw8"]
-albedo_texture = ExtResource("2_opdtm")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_su8w3"]
+albedo_texture = ExtResource("2_yn05q")
 uv1_triplanar = true
 uv1_world_triplanar = true
 
 [node name="World_Lobby" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 29.7746, -14.8424)
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+light_energy = 0.7
 shadow_enabled = true
+directional_shadow_max_distance = 50.0
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_53h1e")
-
-[node name="CSGCombiner3D" type="CSGCombiner3D" parent="WorldEnvironment"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0321525, 3.45354, 0)
-snap = 0.01
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
 use_collision = true
 
-[node name="Floor" type="CSGBox3D" parent="WorldEnvironment/CSGCombiner3D"]
+[node name="Floor1" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.95, 0)
 size = Vector3(5, 2, 4)
-material = ExtResource("1_vn3mg")
+material = SubResource("StandardMaterial3D_nllu0")
 
-[node name="Spawn Platform" type="CSGBox3D" parent="WorldEnvironment/CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
+[node name="Floor2" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, -0.55, -2)
+size = Vector3(10, 1, 8)
+material = SubResource("StandardMaterial3D_nllu0")
+
+[node name="SpawnPlatorm1" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2, 0.5)
 size = Vector3(1, 0.1, 1)
-material = SubResource("StandardMaterial3D_85fw8")
+material = SubResource("StandardMaterial3D_su8w3")
 
-[node name="Stairs" type="CSGBox3D" parent="WorldEnvironment/CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
-material = ExtResource("3_eoov5")
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.45, -2.5)
 
 [node name="Player" parent="." instance=ExtResource("3_l5v8t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.95354, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 3.47311, 0.6)
+sens = 0.5

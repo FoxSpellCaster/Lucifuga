@@ -1,12 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://i8uq2ym555l8"]
+[gd_scene load_steps=7 format=3 uid="uid://i8uq2ym555l8"]
 
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_pwwmi"]
-[ext_resource type="Texture2D" uid="uid://4ddk14owdlc7" path="res://textures/grid/Project DarkWorld_Player.png" id="2_pmx10"]
+[ext_resource type="Script" path="res://scripts/player_3rd_person.gd" id="1_3rmo1"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oxkog"]
-albedo_texture = ExtResource("2_pmx10")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cerfv"]
+albedo_color = Color(0.737953, 0.396042, 9.62615e-07, 1)
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_hrcv3"]
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_7osqy"]
+material = SubResource("StandardMaterial3D_cerfv")
 
 [sub_resource type="SphereMesh" id="SphereMesh_nl4hh"]
 
@@ -16,15 +16,13 @@ albedo_texture = ExtResource("2_pmx10")
 
 [node name="Player" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.22689, 0)
-script = ExtResource("1_pwwmi")
+script = ExtResource("1_3rmo1")
 
 [node name="BodyMesh" type="MeshInstance3D" parent="."]
-material_override = SubResource("StandardMaterial3D_oxkog")
-mesh = SubResource("CapsuleMesh_hrcv3")
-skeleton = NodePath("")
+mesh = SubResource("CapsuleMesh_7osqy")
 
 [node name="Eye Left" type="MeshInstance3D" parent="BodyMesh"]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.141765, 0.526248, -0.441865)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.141765, 0.502216, -0.441865)
 mesh = SubResource("SphereMesh_nl4hh")
 
 [node name="Eye Right" type="MeshInstance3D" parent="BodyMesh"]
