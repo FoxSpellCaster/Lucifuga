@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://ocegv3wa7chp"]
+
+[node name="mesh_library" type="Node3D"]

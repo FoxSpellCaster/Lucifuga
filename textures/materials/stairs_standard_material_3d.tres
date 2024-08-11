@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://y4w2brf27ta6"]
+
+[ext_resource type="Texture2D" uid="uid://bo6fhoh0d0jpw" path="res://textures/grid/Project DarkWorld_Stairs.png" id="1_vb3f7"]
+
+[resource]
+albedo_texture = ExtResource("1_vb3f7")
+uv1_triplanar = true
+uv1_world_triplanar = true

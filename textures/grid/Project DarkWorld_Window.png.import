@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chy3relwlrba1"
-path="res://.godot/imported/Project DarkWorld_Door.png-ec275b569d9e13a2631c64d7aac28b94.ctex"
+uid="uid://bscgiro2p04gs"
+path="res://.godot/imported/Project DarkWorld_Window.png-41d814822fc06910cf02bf7a8e12bc93.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/Project DarkWorld_Door.png"
-dest_files=["res://.godot/imported/Project DarkWorld_Door.png-ec275b569d9e13a2631c64d7aac28b94.ctex"]
+source_file="res://textures/grid/Project DarkWorld_Window.png"
+dest_files=["res://.godot/imported/Project DarkWorld_Window.png-41d814822fc06910cf02bf7a8e12bc93.ctex"]
 
 [params]
 

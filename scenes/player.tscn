@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://i8uq2ym555l8"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_pwwmi"]
-[ext_resource type="Texture2D" uid="uid://4ddk14owdlc7" path="res://textures/Project DarkWorld_Player.png" id="2_pmx10"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_pwwmi"]
+[ext_resource type="Texture2D" uid="uid://4ddk14owdlc7" path="res://textures/grid/Project DarkWorld_Player.png" id="2_pmx10"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oxkog"]
 albedo_texture = ExtResource("2_pmx10")
