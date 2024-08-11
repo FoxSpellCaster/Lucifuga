@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cli8auuh76afs"
-path.s3tc="res://.godot/imported/Project DarkWorld_Spawn.png-85fde4f3468ec0faf5332adf17c104c2.s3tc.ctex"
+path.s3tc="res://.godot/imported/Project DarkWorld_Spawn.png-114b00e4342bfe1c285bd951329486d6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/Project DarkWorld_Spawn.png"
-dest_files=["res://.godot/imported/Project DarkWorld_Spawn.png-85fde4f3468ec0faf5332adf17c104c2.s3tc.ctex"]
+source_file="res://textures/Project DarkWorld_Spawn.png"
+dest_files=["res://.godot/imported/Project DarkWorld_Spawn.png-114b00e4342bfe1c285bd951329486d6.s3tc.ctex"]
 
 [params]
 

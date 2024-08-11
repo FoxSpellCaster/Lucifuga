@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cl3b8al082nm4"
-path="res://.godot/imported/Project DarkWorld_Cape.png-aa68643adb744a5a40f860a77fa7f000.ctex"
+path="res://.godot/imported/Project DarkWorld_Cape.png-b9c77409e27abd12f185878432cc5c8e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Project DarkWorld_Cape.png"
-dest_files=["res://.godot/imported/Project DarkWorld_Cape.png-aa68643adb744a5a40f860a77fa7f000.ctex"]
+source_file="res://textures/Project DarkWorld_Cape.png"
+dest_files=["res://.godot/imported/Project DarkWorld_Cape.png-b9c77409e27abd12f185878432cc5c8e.ctex"]
 
 [params]
 

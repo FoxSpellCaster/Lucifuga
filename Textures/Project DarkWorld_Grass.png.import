@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://61ngmeo1eg8c"
-path.s3tc="res://.godot/imported/Project DarkWorld_Grass.png-7f2db19253b508e14fa468e5ed7e145f.s3tc.ctex"
+path.s3tc="res://.godot/imported/Project DarkWorld_Grass.png-1ec1dc7441c59a4feea2f720f5a9f39c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/Project DarkWorld_Grass.png"
-dest_files=["res://.godot/imported/Project DarkWorld_Grass.png-7f2db19253b508e14fa468e5ed7e145f.s3tc.ctex"]
+source_file="res://textures/Project DarkWorld_Grass.png"
+dest_files=["res://.godot/imported/Project DarkWorld_Grass.png-1ec1dc7441c59a4feea2f720f5a9f39c.s3tc.ctex"]
 
 [params]
 

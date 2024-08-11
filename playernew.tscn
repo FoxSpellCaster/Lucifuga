@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cof0fnwcu7ks2"]
 
-[ext_resource type="Texture2D" uid="uid://4ddk14owdlc7" path="res://Textures/Project DarkWorld_Player.png" id="1_ks48b"]
+[ext_resource type="Texture2D" uid="uid://4ddk14owdlc7" path="res://textures/Project DarkWorld_Player.png" id="1_ks48b"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oxkog"]
 albedo_texture = ExtResource("1_ks48b")
@@ -30,5 +30,5 @@ transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.163496, 0.506698, 
 mesh = SubResource("SphereMesh_xexsd")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 1.24356, 0)
 shape = SubResource("CapsuleShape3D_4j1kh")

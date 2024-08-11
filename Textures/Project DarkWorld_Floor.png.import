@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5y422nll8m8j"
-path.s3tc="res://.godot/imported/Project DarkWorld_Floor.png-7ffa8096e45c213567d6c629684d691f.s3tc.ctex"
+path.s3tc="res://.godot/imported/Project DarkWorld_Floor.png-058227b1dfd34fae8c2f884e466c271c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/Project DarkWorld_Floor.png"
-dest_files=["res://.godot/imported/Project DarkWorld_Floor.png-7ffa8096e45c213567d6c629684d691f.s3tc.ctex"]
+source_file="res://textures/Project DarkWorld_Floor.png"
+dest_files=["res://.godot/imported/Project DarkWorld_Floor.png-058227b1dfd34fae8c2f884e466c271c.s3tc.ctex"]
 
 [params]
 

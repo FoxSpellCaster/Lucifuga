@@ -1,11 +1,11 @@
 [gd_scene load_steps=16 format=3 uid="uid://dbsaykgj4kmxl"]
 
-[ext_resource type="Texture2D" uid="uid://b5y422nll8m8j" path="res://Textures/Project DarkWorld_Floor.png" id="1_n87lm"]
-[ext_resource type="Texture2D" uid="uid://61ngmeo1eg8c" path="res://Textures/Project DarkWorld_Grass.png" id="3_ghepx"]
+[ext_resource type="Texture2D" uid="uid://b5y422nll8m8j" path="res://textures/Project DarkWorld_Floor.png" id="1_n87lm"]
+[ext_resource type="Texture2D" uid="uid://61ngmeo1eg8c" path="res://textures/Project DarkWorld_Grass.png" id="3_ghepx"]
 [ext_resource type="PackedScene" uid="uid://cof0fnwcu7ks2" path="res://playernew.tscn" id="3_pxox5"]
 [ext_resource type="Material" uid="uid://bvfn86yr3ml6n" path="res://Floor.tres" id="4_xd6jn"]
-[ext_resource type="Texture2D" uid="uid://cli8auuh76afs" path="res://Textures/Project DarkWorld_Spawn.png" id="5_gqpd8"]
-[ext_resource type="Texture2D" uid="uid://d1ahu8qdkwvr8" path="res://Textures/Project DarkWorld_Wall.png" id="6_53afy"]
+[ext_resource type="Texture2D" uid="uid://cli8auuh76afs" path="res://textures/Project DarkWorld_Spawn.png" id="5_gqpd8"]
+[ext_resource type="Texture2D" uid="uid://d1ahu8qdkwvr8" path="res://textures/Project DarkWorld_Wall.png" id="6_53afy"]
 
 [sub_resource type="Environment" id="Environment_p7er5"]
 
