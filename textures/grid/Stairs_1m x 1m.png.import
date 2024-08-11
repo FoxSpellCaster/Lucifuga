@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://61ngmeo1eg8c"
-path.s3tc="res://.godot/imported/Project DarkWorld_Grass.png-4beeeb3515319cd1181c3d8cc0ecb44f.s3tc.ctex"
+uid="uid://cfm0g78bv1uwx"
+path.s3tc="res://.godot/imported/Stairs_1m x 1m.png-37bcee497bc07265d7d2714f0a772c8f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/grid/Project DarkWorld_Grass.png"
-dest_files=["res://.godot/imported/Project DarkWorld_Grass.png-4beeeb3515319cd1181c3d8cc0ecb44f.s3tc.ctex"]
+source_file="res://textures/grid/Stairs_1m x 1m.png"
+dest_files=["res://.godot/imported/Stairs_1m x 1m.png-37bcee497bc07265d7d2714f0a772c8f.s3tc.ctex"]
 
 [params]
 
