@@ -1,37 +1,45 @@
-extends RigidBody3D
+extends CharacterBody3D
 
-var mouse_sensitivity := 0.001
-var twist_input := 0.0
-var pitch_input := 0.0
 
-@onready var twist_pivot := $TwistPivot
-@onready var pitch_pivot := $TwistPivot/PitchPivot
+const SPEED = 5.0
+const JUMP_VELOCITY = 4.5
 
-func _ready() -> void:
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	var input := Vector3.ZERO
-	input.x = Input.get_axis("move_left", "move_right")
-	input.z = Input.get_axis("move_forward", "move_back")
-	
-	apply_central_force(twist_pivot.basis * input * 1200.0 * delta)
-	
-	if Input.is_action_just_pressed("ui_cancel"):
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	
-	twist_pivot.rotate_y(twist_input)
-	pitch_pivot.rotate_x(pitch_input)
-	pitch_pivot.rotation.x = clamp(pitch_pivot.rotation.x,
-	deg_to_rad(-30),
-	deg_to_rad(30)
-	)
-	twist_input = 0.0
-	pitch_input = 0.0
+@onready var pivot = $CamOrgin
+@export var sens = 0.5
 
-func _unhandled_input(event: InputEvent) -> void:
+# Get the gravity from the project settings to be synced with RigidBody nodes.
+var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+
+func _read() :
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+
+func _input(event):
 	if event is InputEventMouseMotion:
-		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-			twist_input = - event.relative.x * mouse_sensitivity
-			pitch_input = - event.relative.y * mouse_sensitivity
+		rotate_y(deg_to_rad(-event.relative.x * sens))
+		pivot.rotate_x(deg_to_rad(-event.relative.y * sens))
+		pivot.rotation.x = clamp(pivot.rotation.x, deg_to_rad(-90), deg_to_rad(45))
+
+func _physics_process(delta):
+	# Add the gravity.
+	if not is_on_floor():
+		velocity.y -= gravity * delta
+
+	# Handle jump.
+	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+
+	if Input.is_action_just_pressed("quit"):
+		get_tree().quit()
+
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var input_dir = Input.get_vector("left", "right", "up", "down")
+	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	if direction:
+		velocity.x = direction.x * SPEED
+		velocity.z = direction.z * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.z = move_toward(velocity.z, 0, SPEED)
+
+	move_and_slide()

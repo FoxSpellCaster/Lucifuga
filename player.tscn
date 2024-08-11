@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://i8uq2ym555l8"]
+[gd_scene load_steps=8 format=3 uid="uid://i8uq2ym555l8"]
 
+[ext_resource type="Script" path="res://player.gd" id="1_pwwmi"]
 [ext_resource type="Texture2D" uid="uid://4ddk14owdlc7" path="res://textures/Project DarkWorld_Player.png" id="2_pmx10"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oxkog"]
@@ -15,6 +16,7 @@ albedo_texture = ExtResource("2_pmx10")
 
 [node name="Player" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.22689, 0)
+script = ExtResource("1_pwwmi")
 
 [node name="BodyMesh" type="MeshInstance3D" parent="."]
 material_override = SubResource("StandardMaterial3D_oxkog")
@@ -29,6 +31,16 @@ mesh = SubResource("SphereMesh_nl4hh")
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.163496, 0.506698, -0.442661)
 mesh = SubResource("SphereMesh_xexsd")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="BodyCol" type="CollisionShape3D" parent="."]
 transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_4j1kh")
+
+[node name="CamOrgin" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.545309, 0)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CamOrgin"]
+spring_length = 2.0
+margin = 0.5
+
+[node name="Camera3D" type="Camera3D" parent="CamOrgin/SpringArm3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.78669)
