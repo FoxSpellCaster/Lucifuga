@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdcnpm8utss6e"]
+
+[sub_resource type="Environment" id="Environment_53h1e"]
+sdfgi_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_emission = Color(0.424762, 0.606788, 1, 1)
+
+[node name="World_Lobby" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_53h1e")
