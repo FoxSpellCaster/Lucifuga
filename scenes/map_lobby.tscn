@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://cdcnpm8utss6e"]
+
+[ext_resource type="PackedScene" uid="uid://i8uq2ym555l8" path="res://scenes/player.tscn" id="1_2bfbk"]
+[ext_resource type="Texture2D" uid="uid://bo7y365malnio" path="res://textures/floor.webp" id="2_rjpw0"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rp602"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jcky0"]
+albedo_texture = ExtResource("2_rjpw0")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ahytv"]
+material = SubResource("StandardMaterial3D_jcky0")
+size = Vector2(3, 3)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_xvq51"]
+
+[node name="World_Lobby" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_2bfbk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.6, 3.55, -19)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58, 5.6, -17.9)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.2, 1.7, -16.9)
+physics_material_override = SubResource("PhysicsMaterial_rp602")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("PlaneMesh_ahytv")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -1.19209e-07, -3)
+mesh = SubResource("PlaneMesh_ahytv")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8147e-06, -1.19209e-07, -3)
+mesh = SubResource("PlaneMesh_ahytv")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -1.19209e-07, 3.8147e-06)
+mesh = SubResource("PlaneMesh_ahytv")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_xvq51")
