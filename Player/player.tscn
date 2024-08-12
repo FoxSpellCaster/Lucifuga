@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3scbwirb2vnm"]
+
+[ext_resource type="Script" path="res://Player/camera_controller.gd" id="1_puyn7"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_isnft"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_1tou8"]
+
+[node name="Player" type="CharacterBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_isnft")
+
+[node name="MeshRoot (future model)" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshRoot (future model)"]
+mesh = SubResource("CapsuleMesh_1tou8")
+
+[node name="CamRoot" type="Node3D" parent="."]
+script = ExtResource("1_puyn7")
+
+[node name="CamYaw" type="Node3D" parent="CamRoot"]
+
+[node name="CamPitch" type="Node3D" parent="CamRoot/CamYaw"]
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CamRoot/CamYaw/CamPitch"]
+spring_length = 3.0
+
+[node name="Camera3D" type="Camera3D" parent="CamRoot/CamYaw/CamPitch/SpringArm3D"]

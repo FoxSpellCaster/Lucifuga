@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3nu84gkuwwhp"
-path="res://.godot/imported/darkworld.webp-5a8c3b4c62bc731791ea3dbf8e583a57.ctex"
+uid="uid://r8tw5ar5ktvx"
+path="res://.godot/imported/april_capsule.png-0b5221342ab9f6e80d0a9558360f5531.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://darkworld.webp"
-dest_files=["res://.godot/imported/darkworld.webp-5a8c3b4c62bc731791ea3dbf8e583a57.ctex"]
+source_file="res://Textures/april_capsule.png"
+dest_files=["res://.godot/imported/april_capsule.png-0b5221342ab9f6e80d0a9558360f5531.ctex"]
 
 [params]
 

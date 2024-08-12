@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bp6085stwehs7"
-path.s3tc="res://.godot/imported/foxfur.webp-3e5907bb04f9ee4f53b78d6b27f0b27d.s3tc.ctex"
+path.s3tc="res://.godot/imported/foxfur.webp-38c6a63955fab7ef711a747a504159cd.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/foxfur.webp"
-dest_files=["res://.godot/imported/foxfur.webp-3e5907bb04f9ee4f53b78d6b27f0b27d.s3tc.ctex"]
+source_file="res://Textures/foxfur.webp"
+dest_files=["res://.godot/imported/foxfur.webp-38c6a63955fab7ef711a747a504159cd.s3tc.ctex"]
 
 [params]
 

@@ -13,7 +13,7 @@ config_version=5
 config/name="Project DarkWorld"
 config/description="Created by FoxSpellCaster"
 config/tags=PackedStringArray("alpha")
-run/main_scene="res://scenes/map_lobby.tscn"
+run/main_scene="res://Environment/map_lobby.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/show_image=false
 boot_splash/fullsize=false
@@ -24,10 +24,6 @@ boot_splash/use_filter=false
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=2
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/ridiculous_coding/plugin.cfg", "res://addons/sprite_mesh/plugin.cfg")
 
 [input]
 
