@@ -1,6 +1,5 @@
-[gd_scene load_steps=4 format=3 uid="uid://cdcnpm8utss6e"]
+[gd_scene load_steps=3 format=3 uid="uid://cdcnpm8utss6e"]
 
-[ext_resource type="PackedScene" uid="uid://i8uq2ym555l8" path="res://scenes/player.tscn" id="1_2bfbk"]
 [ext_resource type="Texture2D" uid="uid://bi1k6nyo4ofsj" path="res://textures/tileset/floor.png" id="2_ihoct"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vhth7"]
@@ -11,9 +10,6 @@ uv1_triplanar = true
 uv1_world_triplanar = true
 
 [node name="World_Lobby" type="Node3D"]
-
-[node name="Player" parent="." instance=ExtResource("1_2bfbk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.200001, 1.65, -4.1)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3, 2.2, -3)

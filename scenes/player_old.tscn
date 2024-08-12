@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://i8uq2ym555l8"]
 
-[ext_resource type="Script" path="res://scripts/player_3rd_person.gd" id="1_3rmo1"]
+[ext_resource type="Script" path="res://scripts/player_3rd_person_old.gd" id="1_3rmo1"]
 [ext_resource type="Texture2D" uid="uid://bp6085stwehs7" path="res://textures/foxfur.webp" id="2_wtayd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cerfv"]
