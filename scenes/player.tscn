@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://i8uq2ym555l8"]
+[gd_scene load_steps=8 format=3 uid="uid://i8uq2ym555l8"]
 
 [ext_resource type="Script" path="res://scripts/player_3rd_person.gd" id="1_3rmo1"]
+[ext_resource type="Texture2D" uid="uid://bp6085stwehs7" path="res://textures/foxfur.webp" id="2_wtayd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cerfv"]
-albedo_color = Color(0.737953, 0.396042, 9.62615e-07, 1)
+albedo_texture = ExtResource("2_wtayd")
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_7osqy"]
 material = SubResource("StandardMaterial3D_cerfv")
@@ -41,4 +42,4 @@ spring_length = 2.0
 margin = 0.5
 
 [node name="Camera3D" type="Camera3D" parent="CamOrgin/SpringArm3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.78669)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.77715, 2.99742)

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bs8ctsgctpfx3"
-path.s3tc="res://.godot/imported/Wall_1m x 1m.png-608341fcaa0cc8501ae48b8398f4bfc0.s3tc.ctex"
+uid="uid://bp6085stwehs7"
+path.s3tc="res://.godot/imported/foxfur.webp-3e5907bb04f9ee4f53b78d6b27f0b27d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/grid/Wall_1m x 1m.png"
-dest_files=["res://.godot/imported/Wall_1m x 1m.png-608341fcaa0cc8501ae48b8398f4bfc0.s3tc.ctex"]
+source_file="res://textures/foxfur.webp"
+dest_files=["res://.godot/imported/foxfur.webp-3e5907bb04f9ee4f53b78d6b27f0b27d.s3tc.ctex"]
 
 [params]
 

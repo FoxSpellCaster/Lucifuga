@@ -10,3 +10,4 @@ albedo_texture = ExtResource("1_17vop")
 albedo_texture_force_srgb = true
 emission_texture = SubResource("CompressedTexture2D_ehpgo")
 uv1_triplanar = true
+uv1_world_triplanar = true

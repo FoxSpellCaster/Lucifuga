@@ -1,24 +1,27 @@
-[gd_scene load_steps=6 format=3 uid="uid://cdcnpm8utss6e"]
+[gd_scene load_steps=8 format=3 uid="uid://cdcnpm8utss6e"]
 
 [ext_resource type="Texture2D" uid="uid://bmrv60c4adkfh" path="res://textures/grid/Floor_1m x 1m.png" id="1_iruuu"]
+[ext_resource type="Texture2D" uid="uid://c26hwpi531bel" path="res://textures/Windfall_Island_overview.png" id="1_ow5u1"]
 [ext_resource type="Texture2D" uid="uid://4fvdpdspuuvq" path="res://textures/grid/Spawn_1m x 1m.png" id="2_yn05q"]
 [ext_resource type="PackedScene" uid="uid://i8uq2ym555l8" path="res://scenes/player.tscn" id="3_l5v8t"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nllu0"]
-albedo_texture = ExtResource("1_iruuu")
-uv1_offset = Vector3(0, 0.05, 0)
-uv1_triplanar = true
-uv1_world_triplanar = true
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3xo2c"]
+albedo_texture = ExtResource("1_ow5u1")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_su8w3"]
 albedo_texture = ExtResource("2_yn05q")
 uv1_triplanar = true
 uv1_world_triplanar = true
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1454y"]
+albedo_texture = ExtResource("1_iruuu")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
 [node name="World_Lobby" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0, 58.7, 0)
 light_energy = 0.7
 shadow_enabled = true
 directional_shadow_max_distance = 50.0
@@ -26,24 +29,21 @@ directional_shadow_max_distance = 50.0
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
 use_collision = true
 
-[node name="Floor1" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.95, 0)
-size = Vector3(5, 2, 4)
-material = SubResource("StandardMaterial3D_nllu0")
-
-[node name="Floor2" type="CSGBox3D" parent="CSGCombiner3D"]
+[node name="Default Floor" type="CSGBox3D" parent="CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, -0.55, -2)
-size = Vector3(10, 1, 8)
-material = SubResource("StandardMaterial3D_nllu0")
+size = Vector3(200, 1, 200)
+material = SubResource("StandardMaterial3D_3xo2c")
+metadata/_edit_lock_ = true
 
 [node name="SpawnPlatorm1" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2, 0.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.4, 1, -22.8)
 size = Vector3(1, 0.1, 1)
 material = SubResource("StandardMaterial3D_su8w3")
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.45, -2.5)
+[node name="Player" parent="CSGCombiner3D" instance=ExtResource("3_l5v8t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.4, 2.05, -22.7)
 
-[node name="Player" parent="." instance=ExtResource("3_l5v8t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 3.47311, 0.6)
-sens = 0.5
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -55.3, 0.45, -23.2)
+size = Vector3(40, 1, 10)
+material = SubResource("StandardMaterial3D_1454y")
