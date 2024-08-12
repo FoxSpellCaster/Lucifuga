@@ -2,12 +2,9 @@ Trello Development Board
 
 https://trello.com/b/jLLGFHRW/project-darkworld
 
+
 Plugins
 
-
-https://github.com/QodotPlugin/Qodot
-
-ID Software Style Map Design
 
 https://github.com/Cuppixx/RidiculousCodingCuppixxVersion
 
