@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://cdcnpm8utss6e"]
+[gd_scene load_steps=6 format=3 uid="uid://cdcnpm8utss6e"]
 
-[ext_resource type="Texture2D" uid="uid://bi1k6nyo4ofsj" path="res://Textures/Tileset/floor.png" id="1_0h8uc"]
-[ext_resource type="PackedScene" uid="uid://c3scbwirb2vnm" path="res://Player/player.tscn" id="2_usbmg"]
+[ext_resource type="Texture2D" uid="uid://bq8bqxo154q7q" path="res://Textures/Tileset/floor_tile.png" id="1_lm1my"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pkb2q"]
 sky_horizon_color = Color(0.59625, 0.6135, 0.6375, 1)
@@ -21,7 +20,7 @@ sdfgi_enabled = true
 glow_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vhth7"]
-albedo_texture = ExtResource("1_0h8uc")
+albedo_texture = ExtResource("1_lm1my")
 normal_enabled = true
 uv1_scale = Vector3(0.5, 0.5, 0.5)
 uv1_triplanar = true
@@ -47,6 +46,3 @@ use_collision = true
 [node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
 size = Vector3(30, 1, 30)
 material = SubResource("StandardMaterial3D_vhth7")
-
-[node name="Player" parent="." instance=ExtResource("2_usbmg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
