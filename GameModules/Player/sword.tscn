@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhn6espa32eot"]
+
+[ext_resource type="PackedScene" uid="uid://cj6c5pwbhyile" path="res://GameModules/Player/sword.glb" id="1_wx0de"]
+
+[node name="sword" instance=ExtResource("1_wx0de")]

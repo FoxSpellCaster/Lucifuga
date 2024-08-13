@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MovementState" load_steps=2 format=3 uid="uid://bst4ytials11d"]
+
+[ext_resource type="Script" path="res://GameModules/Player/movement_state.gd" id="1_aqmb7"]
+
+[resource]
+script = ExtResource("1_aqmb7")
+state_name = "run"
+movement_speed = 8.0
+acceleration = 5.0
+camera_fov = 75.0
+id = 2

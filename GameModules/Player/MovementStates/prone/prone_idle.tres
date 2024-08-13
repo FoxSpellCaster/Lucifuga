@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="MovementState" load_steps=2 format=3 uid="uid://ciavsiq3ylqo"]
+
+[ext_resource type="Script" path="res://GameModules/Player/movement_state.gd" id="1_50dns"]
+
+[resource]
+script = ExtResource("1_50dns")
+state_name = "stand"
+id = 0
+movement_speed = 0.0
+acceleration = 6.0
+camera_fov = 70.0
+animation_speed = 1.0

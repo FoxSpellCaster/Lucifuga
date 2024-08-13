@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dg1qvasd07hvc"]
+
+[ext_resource type="PackedScene" uid="uid://bu3rrx5dxtgpx" path="res://GameModules/Player/godot_chan_4.glb" id="1_xxe8b"]
+
+[node name="godot_chan_4" instance=ExtResource("1_xxe8b")]
