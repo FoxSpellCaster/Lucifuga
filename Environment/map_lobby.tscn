@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://cdcnpm8utss6e"]
+[gd_scene load_steps=10 format=3 uid="uid://cdcnpm8utss6e"]
 
+[ext_resource type="PackedScene" path="res://Player/PlayerPrefab.tscn" id="2_tb2ff"]
 [ext_resource type="Texture2D" uid="uid://b0ixwhd7h4ion" path="res://Textures/Project DarkWorld_1m x 1m.png" id="3_a1j5g"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uegr6"]
@@ -88,3 +89,6 @@ created by FoxSpellCaster
 
 Enjoy Your Stay"
 autowrap_mode = 3
+
+[node name="PlayerBody" parent="." instance=ExtResource("2_tb2ff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1, 2.05705, -0.4)
