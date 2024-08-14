@@ -2,8 +2,6 @@ MIT License
 
 Copyright (c) 2024 DarkWorld Godot, and DarkWorld Godot contributors.
 
-All code Copyright (c) 2018-2021 Juan Linietsky, Godot Engine contributors.
-
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
 "Software"), to deal in the Software without restriction, including

@@ -92,3 +92,18 @@ autowrap_mode = 3
 
 [node name="PlayerBody" parent="." instance=ExtResource("2_tb2ff")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1, 2.05705, -0.4)
+
+[node name="Lifestone" type="CSGCombiner3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, -11)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Lifestone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0, 1)
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Lifestone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 0, -1.3)
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="Lifestone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3, 0, 0)
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Lifestone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)
