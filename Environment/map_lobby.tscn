@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://cdcnpm8utss6e"]
 
-[ext_resource type="PackedScene" path="res://Player/PlayerPrefab.tscn" id="2_tb2ff"]
+[ext_resource type="PackedScene" uid="uid://cr16qvxkng034" path="res://Player/PlayerPrefab.tscn" id="2_tb2ff"]
 [ext_resource type="Texture2D" uid="uid://b0ixwhd7h4ion" path="res://Textures/Project DarkWorld_1m x 1m.png" id="3_a1j5g"]
 [ext_resource type="PackedScene" uid="uid://0ap4lnoay4y7" path="res://Blockbench/stoneblock.gltf" id="4_y4027"]
 [ext_resource type="PackedScene" uid="uid://cn77qb3jpmkjv" path="res://Blockbench/cobblestone.gltf" id="5_f2flf"]
