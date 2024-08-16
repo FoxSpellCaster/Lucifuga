@@ -57,6 +57,12 @@ Interact={
 ]
 }
 
+[physics]
+
+3d/run_on_separate_thread=true
+3d/physics_engine="GodotPhysics3D"
+common/physics_interpolation=true
+
 [rendering]
 
 lights_and_shadows/directional_shadow/soft_shadow_filter_quality=3

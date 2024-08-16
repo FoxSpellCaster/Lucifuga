@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://0sy67svnxlvr"]
+
+[ext_resource type="PackedScene" uid="uid://cnxgj55st4ra0" path="res://Blockbench/animal_fox.gltf" id="1_w4pjj"]
+
+[node name="animal_fox" instance=ExtResource("1_w4pjj")]

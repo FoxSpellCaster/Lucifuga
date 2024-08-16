@@ -1,10 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://cdcnpm8utss6e"]
+[gd_scene load_steps=8 format=3 uid="uid://cdcnpm8utss6e"]
 
-[ext_resource type="PackedScene" uid="uid://cr16qvxkng034" path="res://Player/PlayerPrefab.tscn" id="2_tb2ff"]
+[ext_resource type="PackedScene" path="res://Player/PlayerPrefab.tscn" id="2_tb2ff"]
 [ext_resource type="Texture2D" uid="uid://b0ixwhd7h4ion" path="res://Textures/Project DarkWorld_1m x 1m.png" id="3_a1j5g"]
-[ext_resource type="PackedScene" uid="uid://0ap4lnoay4y7" path="res://Blockbench/stoneblock.gltf" id="4_y4027"]
-[ext_resource type="PackedScene" uid="uid://cn77qb3jpmkjv" path="res://Blockbench/cobblestone.gltf" id="5_f2flf"]
-[ext_resource type="PackedScene" uid="uid://bmd2f75jx7ww4" path="res://Blockbench/lifestone.gltf" id="5_jn6t3"]
+[ext_resource type="PackedScene" uid="uid://cnxgj55st4ra0" path="res://Blockbench/animal_fox.gltf" id="3_seut6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pr11m"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -32,26 +30,6 @@ albedo_texture = ExtResource("3_a1j5g")
 uv1_triplanar = true
 uv1_world_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6r3kx"]
-albedo_color = Color(0.392102, 0.582538, 1, 1)
-albedo_texture = ExtResource("3_a1j5g")
-uv1_triplanar = true
-uv1_world_triplanar = true
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_812gg"]
-albedo_color = Color(1, 0.501961, 0, 1)
-albedo_texture = ExtResource("3_a1j5g")
-emission = Color(1, 1, 1, 1)
-emission_energy_multiplier = 4.28
-backlight = Color(1, 1, 1, 1)
-uv1_triplanar = true
-uv1_world_triplanar = true
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j5muw"]
-albedo_texture = ExtResource("3_a1j5g")
-uv1_triplanar = true
-uv1_world_triplanar = true
-
 [node name="World_Lobby" type="Node3D"]
 editor_description = "Default Sandbox Lobby Prototype"
 
@@ -75,20 +53,6 @@ use_collision = true
 size = Vector3(30, 1, 30)
 material = SubResource("StandardMaterial3D_6o8ew")
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1, 3, 0)
-size = Vector3(5, 5, 1)
-material = SubResource("StandardMaterial3D_6r3kx")
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8, 1, -5.8)
-size = Vector3(3, 1, 1)
-material = SubResource("StandardMaterial3D_812gg")
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, -3.2)
-material = SubResource("StandardMaterial3D_j5muw")
-
 [node name="Label3D" type="Label3D" parent="."]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 1.9, 2, -0.6)
 text = "DarkWorld Godot
@@ -100,26 +64,5 @@ autowrap_mode = 3
 [node name="PlayerBody" parent="." instance=ExtResource("2_tb2ff")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1, 2.05705, -0.4)
 
-[node name="Lifestone" type="CSGCombiner3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, -11)
-
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Lifestone"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0, 1)
-
-[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Lifestone"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 0, -1.3)
-
-[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="Lifestone"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3, 0, 0)
-
-[node name="CSGSphere3D" type="CSGSphere3D" parent="Lifestone"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)
-
-[node name="blockbench_export" parent="." instance=ExtResource("4_y4027")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8, 0.5, 1.9)
-
-[node name="blockbench_export2" parent="." instance=ExtResource("5_f2flf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.3, 0.5, -2.1)
-
-[node name="blockbench_export3" parent="." instance=ExtResource("5_jn6t3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5312, 0.5, -8.71306)
+[node name="blockbench_export" parent="." instance=ExtResource("3_seut6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 0.5, -5.9)
