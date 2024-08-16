@@ -65,4 +65,6 @@ autowrap_mode = 3
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1, 2.05705, -0.4)
 
 [node name="blockbench_export" parent="." instance=ExtResource("3_seut6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 0.5, -5.9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 0.8, 0)
+
+[editable path="blockbench_export"]
