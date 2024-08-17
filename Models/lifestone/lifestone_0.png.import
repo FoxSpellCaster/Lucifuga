@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://devnxk4htfadv"
-path.s3tc="res://.godot/imported/cobblestone_0.png-ee39ee6d512bd1f9324f2ea6ffc662d8.s3tc.ctex"
+uid="uid://q77djr67r3vh"
+path.s3tc="res://.godot/imported/lifestone_0.png-5801180d4442dd5359ed98f3689ffb52.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "8e3264cbc93324d4d2bf443755eb067e"
+"md5": "ae046a0107a5123007213cc6c1620d5c"
 }
 
 [deps]
 
-source_file="res://Blockbench/cobblestone_0.png"
-dest_files=["res://.godot/imported/cobblestone_0.png-ee39ee6d512bd1f9324f2ea6ffc662d8.s3tc.ctex"]
+source_file="res://Models/lifestone/lifestone_0.png"
+dest_files=["res://.godot/imported/lifestone_0.png-5801180d4442dd5359ed98f3689ffb52.s3tc.ctex"]
 
 [params]
 

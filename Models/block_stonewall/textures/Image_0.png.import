@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7ngbgh5hrdky"
-path="res://.godot/imported/texture.png-094e90b9634a34c556c88f79516b9fd5.ctex"
+uid="uid://cxcpw3nsoq5n4"
+path="res://.godot/imported/Image_0.png-0b576112df6bb3e07f611d2d51c53617.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Blockbench/texture.png"
-dest_files=["res://.godot/imported/texture.png-094e90b9634a34c556c88f79516b9fd5.ctex"]
+source_file="res://Models/block_stonewall/textures/Image_0.png"
+dest_files=["res://.godot/imported/Image_0.png-0b576112df6bb3e07f611d2d51c53617.ctex"]
 
 [params]
 

@@ -1,8 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://cdcnpm8utss6e"]
+[gd_scene load_steps=6 format=3 uid="uid://cdcnpm8utss6e"]
 
-[ext_resource type="PackedScene" uid="uid://cr16qvxkng034" path="res://Player/PlayerPrefab.tscn" id="2_tb2ff"]
-[ext_resource type="Texture2D" uid="uid://b0ixwhd7h4ion" path="res://Textures/Project DarkWorld_1m x 1m.png" id="3_a1j5g"]
-[ext_resource type="PackedScene" uid="uid://cnxgj55st4ra0" path="res://Blockbench/animal_fox.gltf" id="3_seut6"]
+[ext_resource type="PackedScene" uid="uid://bghytkm6bx56p" path="res://Player/PlayerPrefab.tscn" id="2_tb2ff"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pr11m"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -24,11 +22,8 @@ glow_enabled = true
 volumetric_fog_enabled = true
 volumetric_fog_albedo = Color(0.223103, 0.223103, 0.223103, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6o8ew"]
-albedo_color = Color(0.476967, 0.679359, 0.904131, 1)
-albedo_texture = ExtResource("3_a1j5g")
-uv1_triplanar = true
-uv1_world_triplanar = true
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h7482"]
+albedo_color = Color(0.259, 0.74, 0.339167, 1)
 
 [node name="World_Lobby" type="Node3D"]
 editor_description = "Default Sandbox Lobby Prototype"
@@ -52,7 +47,7 @@ use_collision = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
 size = Vector3(30, 1, 30)
-material = SubResource("StandardMaterial3D_6o8ew")
+material = SubResource("StandardMaterial3D_h7482")
 
 [node name="Label3D" type="Label3D" parent="."]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 1.9, 2, -0.6)
@@ -65,8 +60,3 @@ autowrap_mode = 3
 
 [node name="PlayerBody" parent="." instance=ExtResource("2_tb2ff")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1, 2.05705, -0.4)
-
-[node name="blockbench_export" parent="." instance=ExtResource("3_seut6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 0.8, 0)
-
-[editable path="blockbench_export"]

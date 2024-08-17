@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cr16qvxkng034"]
+[gd_scene load_steps=16 format=3 uid="uid://bghytkm6bx56p"]
 
 [ext_resource type="Script" path="res://Player/PlayerController.gd" id="1_lqs8g"]
 [ext_resource type="Script" path="res://Player/Interaction/PlayerInteractionHandler.gd" id="2_kykvu"]

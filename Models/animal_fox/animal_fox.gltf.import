@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bmd2f75jx7ww4"
-path="res://.godot/imported/lifestone.gltf-1ec8ba3dc20e9dfb1cfdb0164be75ba8.scn"
+uid="uid://cnxgj55st4ra0"
+path="res://.godot/imported/animal_fox.gltf-d395e35687a65de9c0a4f71cbc4eb0fc.scn"
 
 [deps]
 
-source_file="res://Blockbench/lifestone.gltf"
-dest_files=["res://.godot/imported/lifestone.gltf-1ec8ba3dc20e9dfb1cfdb0164be75ba8.scn"]
+source_file="res://Models/animal_fox/animal_fox.gltf"
+dest_files=["res://.godot/imported/animal_fox.gltf-d395e35687a65de9c0a4f71cbc4eb0fc.scn"]
 
 [params]
 

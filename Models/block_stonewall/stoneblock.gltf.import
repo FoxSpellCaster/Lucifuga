@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cnxgj55st4ra0"
-path="res://.godot/imported/animal_fox.gltf-2ae8c4ea8db81b66bff44d5185892106.scn"
+uid="uid://0ap4lnoay4y7"
+path="res://.godot/imported/stoneblock.gltf-dc1e3f4f51e3a642f6ca7b436b8a3273.scn"
 
 [deps]
 
-source_file="res://Blockbench/animal_fox.gltf"
-dest_files=["res://.godot/imported/animal_fox.gltf-2ae8c4ea8db81b66bff44d5185892106.scn"]
+source_file="res://Models/block_stonewall/stoneblock.gltf"
+dest_files=["res://.godot/imported/stoneblock.gltf-dc1e3f4f51e3a642f6ca7b436b8a3273.scn"]
 
 [params]
 

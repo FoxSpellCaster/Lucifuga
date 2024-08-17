@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s2fjo2xewov2"
-path.s3tc="res://.godot/imported/lifestone_1.png-677640aa49c6c9b6700ee609fc289f92.s3tc.ctex"
+uid="uid://cy2ix7fl5ci3c"
+path.s3tc="res://.godot/imported/lifestone_1.png-252f9f9a548603e4cf333f107f6d741d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Blockbench/lifestone_1.png"
-dest_files=["res://.godot/imported/lifestone_1.png-677640aa49c6c9b6700ee609fc289f92.s3tc.ctex"]
+source_file="res://Models/lifestone/lifestone_1.png"
+dest_files=["res://.godot/imported/lifestone_1.png-252f9f9a548603e4cf333f107f6d741d.s3tc.ctex"]
 
 [params]
 

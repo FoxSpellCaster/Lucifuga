@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://knkdl8g18kph"
-path.s3tc="res://.godot/imported/stoneblock_0.png-bb7ca7142d6a7ca43e469d0fbcb21ab4.s3tc.ctex"
+uid="uid://devnxk4htfadv"
+path.s3tc="res://.godot/imported/cobblestone_0.png-f5820c9c460958922979ae9fb8ba8dbb.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "8bff30f5ce9ba294bfe7c90f02d19a9a"
+"md5": "8e3264cbc93324d4d2bf443755eb067e"
 }
 
 [deps]
 
-source_file="res://Blockbench/stoneblock_0.png"
-dest_files=["res://.godot/imported/stoneblock_0.png-bb7ca7142d6a7ca43e469d0fbcb21ab4.s3tc.ctex"]
+source_file="res://Models/block_cobblestone/cobblestone_0.png"
+dest_files=["res://.godot/imported/cobblestone_0.png-f5820c9c460958922979ae9fb8ba8dbb.s3tc.ctex"]
 
 [params]
 

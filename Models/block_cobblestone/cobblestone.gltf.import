@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://0ap4lnoay4y7"
-path="res://.godot/imported/stoneblock.gltf-6d7be80a9f80c630c3b63160a56bf61e.scn"
+uid="uid://cn77qb3jpmkjv"
+path="res://.godot/imported/cobblestone.gltf-c19df01620dc6947962640ccc19b9083.scn"
 
 [deps]
 
-source_file="res://Blockbench/stoneblock.gltf"
-dest_files=["res://.godot/imported/stoneblock.gltf-6d7be80a9f80c630c3b63160a56bf61e.scn"]
+source_file="res://Models/block_cobblestone/cobblestone.gltf"
+dest_files=["res://.godot/imported/cobblestone.gltf-c19df01620dc6947962640ccc19b9083.scn"]
 
 [params]
 
