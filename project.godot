@@ -15,9 +15,12 @@ config/description="Created by FoxSpellCaster"
 config/tags=PackedStringArray("alpha", "v4.3.stable.mono.official")
 run/main_scene="res://Maps/map_lobby.tscn"
 config/features=PackedStringArray("4.3", "C#", "Forward Plus")
+run/max_fps=60
 boot_splash/show_image=false
+boot_splash/image="res://splash_darkworld.png"
 boot_splash/fullsize=false
 boot_splash/use_filter=false
+config/icon="res://icon_darkworld.png"
 
 [debug]
 

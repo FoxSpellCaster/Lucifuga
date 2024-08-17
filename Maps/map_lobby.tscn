@@ -1,9 +1,9 @@
 [gd_scene load_steps=11 format=3 uid="uid://cdcnpm8utss6e"]
 
-[ext_resource type="Texture2D" uid="uid://3ae0qyvqouhs" path="res://Textures/sign.png" id="1_3xw62"]
-[ext_resource type="PackedScene" uid="uid://bghytkm6bx56p" path="res://Player/PlayerPrefab.tscn" id="2_tb2ff"]
-[ext_resource type="PackedScene" uid="uid://cuiklvlmyu8n6" path="res://Inventory/TestCube.tscn" id="3_epnum"]
-[ext_resource type="PackedScene" uid="uid://dcig5eot87p8w" path="res://Inventory/TestSphere.tscn" id="4_6fgrr"]
+[ext_resource type="Texture2D" uid="uid://o4ye8m7nmuqh" path="res://Misc/sign.png" id="1_3xw62"]
+[ext_resource type="PackedScene" path="res://Player/PlayerPrefab.tscn" id="2_tb2ff"]
+[ext_resource type="PackedScene" path="res://Inventory/TestCube.tscn" id="3_epnum"]
+[ext_resource type="PackedScene" path="res://Inventory/TestSphere.tscn" id="4_6fgrr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pr11m"]
 sky_top_color = Color(0, 0, 0, 1)
