@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://q8r4ga5bkxrl"]
 
-[ext_resource type="PackedScene" path="res://Player/PlayerPrefab.tscn" id="1_yqaf2"]
+[ext_resource type="PackedScene" uid="uid://bghytkm6bx56p" path="res://Player/PlayerPrefab.tscn" id="1_yqaf2"]
 [ext_resource type="PackedScene" uid="uid://cuiklvlmyu8n6" path="res://Inventory/TestCube.tscn" id="2_6xe7p"]
 [ext_resource type="PackedScene" uid="uid://dcig5eot87p8w" path="res://Inventory/TestSphere.tscn" id="3_uojng"]
 
