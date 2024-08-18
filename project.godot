@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Project DarkWorld"
+config/name="DarkWorld Godot"
 config/description="Created by FoxSpellCaster"
 config/tags=PackedStringArray("alpha", "v4.3.stable.mono.official")
-run/main_scene="res://Maps/map_lobby.tscn"
+config/quit_on_go_back=false
 config/features=PackedStringArray("4.3", "Forward Plus")
 run/max_fps=60
 boot_splash/image="res://splash_darkworld.png"
@@ -31,15 +31,21 @@ gdscript/warnings/unsafe_call_argument=1
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
-window/size/mode=2
+window/size/viewport_width=1600
+window/size/viewport_height=900
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
 [dotnet]
 
 project/assembly_name="Project DarkWorld"
+
+[file_customization]
+
+folder_colors={
+"res://scenes/": "blue",
+"res://scripts/": "pink"
+}
 
 [input]
 

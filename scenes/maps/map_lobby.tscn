@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://cdcnpm8utss6e"]
 
-[ext_resource type="Texture2D" uid="uid://o4ye8m7nmuqh" path="res://Misc/sign.png" id="1_3xw62"]
+[ext_resource type="Texture2D" uid="uid://o4ye8m7nmuqh" path="res://misc/sign.png" id="1_3xw62"]
 [ext_resource type="PackedScene" path="res://Player/PlayerPrefab.tscn" id="2_tb2ff"]
 [ext_resource type="PackedScene" path="res://Inventory/TestCube.tscn" id="3_epnum"]
 [ext_resource type="PackedScene" path="res://Inventory/TestSphere.tscn" id="4_6fgrr"]
