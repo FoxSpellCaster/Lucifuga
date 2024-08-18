@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://brd0x6tqygi01"]
+
+[ext_resource type="Script" path="res://singletons/manger_silver/manager_silver.gd" id="1_jfikf"]
+
+[node name="ManagerSilver" type="Node"]
+script = ExtResource("1_jfikf")
