@@ -44,8 +44,7 @@ project/assembly_name="Project DarkWorld"
 
 folder_colors={
 "res://addons/": "gray",
-"res://models/": "green",
-"res://scripts/": "pink"
+"res://models/": "green"
 }
 
 [input]
