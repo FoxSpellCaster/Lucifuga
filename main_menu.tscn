@@ -105,6 +105,14 @@ theme_override_font_sizes/font_size = 60
 text = "Godot"
 vertical_alignment = 1
 
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 330.0
+offset_top = 54.0
+offset_right = 624.0
+offset_bottom = 77.0
+text = "Alpha Testing"
+
 [node name="Menu" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8

@@ -17,6 +17,7 @@ run/main_scene="res://main_menu.tscn"
 config/quit_on_go_back=false
 config/features=PackedStringArray("4.3", "Forward Plus")
 run/max_fps=60
+boot_splash/image="res://godot_assets/Screen/Original logo/splatter_orange.png"
 config/icon="res://icon_darkworld.png"
 boot_splash/minimum_display_time=60
 

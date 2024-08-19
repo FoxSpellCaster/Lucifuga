@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ivvpsi314b34" path="res://textures/grid.jpg" id="1_57ppx"]
 
-[sub_resource type="Shader" id="Shader_cwof1"]
+[sub_resource type="Shader" id="Shader_btlia"]
 code = "// NOTE: Shader automatically converted from Godot Engine 4.1.dev4's StandardMaterial3D.
 
 shader_type spatial;
@@ -62,7 +62,7 @@ void fragment() {
 
 [resource]
 render_priority = 0
-shader = SubResource("Shader_cwof1")
+shader = SubResource("Shader_btlia")
 shader_parameter/albedo = Color(0, 0, 0, 1)
 shader_parameter/point_size = 1.0
 shader_parameter/roughness = 0.5
