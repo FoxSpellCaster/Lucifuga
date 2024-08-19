@@ -17,7 +17,6 @@ run/main_scene="res://main_menu.tscn"
 config/quit_on_go_back=false
 config/features=PackedStringArray("4.3", "Forward Plus")
 run/max_fps=60
-boot_splash/image="res://splash_darkworld.png"
 config/icon="res://icon_darkworld.png"
 boot_splash/minimum_display_time=60
 
@@ -46,7 +45,6 @@ project/assembly_name="Project DarkWorld"
 folder_colors={
 "res://addons/": "gray",
 "res://models/": "green",
-"res://scenes/": "blue",
 "res://scripts/": "pink"
 }
 

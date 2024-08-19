@@ -142,7 +142,7 @@ mesh = SubResource("BoxMesh_xc4gq")
 shape = SubResource("ConcavePolygonShape3D_vp4dy")
 
 [node name="Ramp" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 0, 0)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 1, 0)
 mesh = SubResource("PrismMesh_rutao")
 skeleton = NodePath("../Box")
 
@@ -152,3 +152,5 @@ skeleton = NodePath("../Box")
 shape = SubResource("ConcavePolygonShape3D_j6kcl")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("4_liofc")]
+SPEED = 6.0
+JUMP_VELOCITY = 5.0
