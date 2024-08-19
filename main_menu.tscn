@@ -1,0 +1,173 @@
+[gd_scene load_steps=10 format=3 uid="uid://7rqlqp3ebic5"]
+
+[ext_resource type="Texture2D" uid="uid://br1m6c4cgaq8v" path="res://background_mainmenu.png" id="1_l16lj"]
+[ext_resource type="Script" path="res://main_menu.gd" id="1_vtf5e"]
+[ext_resource type="FontFile" uid="uid://0gd8yfhbv0pr" path="res://fonts/quadratum-unum-font/QuadratumUnum-LW0Z.ttf" id="2_pf3ee"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8x3uj"]
+texture = ExtResource("1_l16lj")
+modulate_color = Color(0.396889, 0.396889, 0.396889, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ou8kl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3e1pd"]
+bg_color = Color(0.82606, 0.82606, 0.82606, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_drepp"]
+bg_color = Color(0.641934, 0.641934, 0.641934, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2hxqd"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="Environment" id="Environment_tyjjm"]
+background_mode = 3
+glow_enabled = true
+glow_bloom = 0.06
+glow_blend_mode = 1
+adjustment_enabled = true
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vtf5e")
+metadata/_edit_lock_ = true
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_8x3uj")
+metadata/_edit_lock_ = true
+
+[node name="label_darkworld" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -694.0
+offset_top = -366.0
+offset_right = 6.0
+offset_bottom = -260.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_fonts/font = ExtResource("2_pf3ee")
+theme_override_font_sizes/font_size = 90
+text = "DarkWorld"
+vertical_alignment = 1
+
+[node name="label_godot" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -435.0
+offset_top = -302.0
+offset_right = -263.0
+offset_bottom = -231.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.442821, 0.703524, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_fonts/font = ExtResource("2_pf3ee")
+theme_override_font_sizes/font_size = 60
+text = "Godot"
+vertical_alignment = 1
+
+[node name="Menu" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -680.0
+offset_top = -97.0
+offset_right = -372.0
+offset_bottom = 151.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="Start Game" type="Button" parent="Menu"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ou8kl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3e1pd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_drepp")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2hxqd")
+text = "Start Game"
+
+[node name="Options" type="Button" parent="Menu"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ou8kl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3e1pd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_drepp")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2hxqd")
+text = "Options"
+
+[node name="Exit" type="Button" parent="Menu"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ou8kl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3e1pd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_drepp")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2hxqd")
+text = "Exit"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_tyjjm")
+
+[connection signal="pressed" from="Menu/Start Game" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Menu/Options" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Menu/Exit" to="." method="_on_exit_pressed"]

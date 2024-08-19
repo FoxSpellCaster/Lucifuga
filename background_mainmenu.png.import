@@ -2,27 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://o4ye8m7nmuqh"
-path.s3tc="res://.godot/imported/sign.png-0aab3a74365f03802a52c3f36df59ac8.s3tc.ctex"
+uid="uid://br1m6c4cgaq8v"
+path="res://.godot/imported/background_mainmenu.png-4b6707ddf8ac1b79da95a6c848552ff7.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://misc/sign.png"
-dest_files=["res://.godot/imported/sign.png-0aab3a74365f03802a52c3f36df59ac8.s3tc.ctex"]
+source_file="res://background_mainmenu.png"
+dest_files=["res://.godot/imported/background_mainmenu.png-4b6707ddf8ac1b79da95a6c848552ff7.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -32,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdcnpm8utss6e"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_6nt3v"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yyq4a"]
+size = Vector3(80, 1, 80)
+
+[node name="World_Lobby" type="Node3D"]
+editor_description = "Default Sandbox Lobby Prototype"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_6nt3v")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_yyq4a")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D"]
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D3/StaticBody3D"]
