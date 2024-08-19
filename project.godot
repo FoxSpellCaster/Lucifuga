@@ -40,6 +40,10 @@ window/stretch/aspect="expand"
 
 project/assembly_name="Project DarkWorld"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_sfxr/plugin.cfg", "res://addons/project-time-tracker/plugin.cfg")
+
 [file_customization]
 
 folder_colors={
