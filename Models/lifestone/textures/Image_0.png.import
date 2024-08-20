@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cteiipr5xndrk"
-path.s3tc="res://.godot/imported/Image_0.png-e617d0011621f46348144fce0a32c1bf.s3tc.ctex"
+path.s3tc="res://.godot/imported/Image_0.png-41a0a8bd2befa54fc67f46096e912072.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://models/lifestone/textures/Image_0.png"
-dest_files=["res://.godot/imported/Image_0.png-e617d0011621f46348144fce0a32c1bf.s3tc.ctex"]
+source_file="res://Models/lifestone/textures/Image_0.png"
+dest_files=["res://.godot/imported/Image_0.png-41a0a8bd2befa54fc67f46096e912072.s3tc.ctex"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://oe2wtuii8uov"
-path="res://.godot/imported/animal_fox.blend-58c34927e85ff78a547f1211e910516b.scn"
+path="res://.godot/imported/animal_fox.blend-82256ca9dfbce48d72d2b85b17a0ec54.scn"
 
 [deps]
 
-source_file="res://models/animal_fox/animal_fox.blend"
-dest_files=["res://.godot/imported/animal_fox.blend-58c34927e85ff78a547f1211e910516b.scn"]
+source_file="res://Models/animal_fox/animal_fox.blend"
+dest_files=["res://.godot/imported/animal_fox.blend-82256ca9dfbce48d72d2b85b17a0ec54.scn"]
 
 [params]
 

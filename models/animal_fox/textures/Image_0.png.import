@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cpu3v1lhg6nyx"
-path.s3tc="res://.godot/imported/Image_0.png-6a07ef4491b9d2103179b4d1a3d9c1cd.s3tc.ctex"
+path.s3tc="res://.godot/imported/Image_0.png-8fab47cef07d335fb3f9c830f7ffd95a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://models/animal_fox/textures/Image_0.png"
-dest_files=["res://.godot/imported/Image_0.png-6a07ef4491b9d2103179b4d1a3d9c1cd.s3tc.ctex"]
+source_file="res://Models/animal_fox/textures/Image_0.png"
+dest_files=["res://.godot/imported/Image_0.png-8fab47cef07d335fb3f9c830f7ffd95a.s3tc.ctex"]
 
 [params]
 
