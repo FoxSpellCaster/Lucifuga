@@ -43,7 +43,7 @@ project/assembly_name="Project DarkWorld"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot_sfxr/plugin.cfg", "res://addons/project-time-tracker/plugin.cfg")
+enabled=PackedStringArray("res://addons/godot-voice-generator/plugin.cfg", "res://addons/godot_sfxr/plugin.cfg")
 
 [file_customization]
 
