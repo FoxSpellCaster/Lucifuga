@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://yh5r24og412n"
+path="res://.godot/imported/Ant Party (Black).fnt-5d77bb627adc2a525bc683bce3bc4def.fontdata"
+
+[deps]
+
+source_file="res://fonts/Slime's Pixel Font Pack! v1.2/Angel Code Format (v1.2)/Ant Party (Black)/Ant Party (Black).fnt"
+dest_files=["res://.godot/imported/Ant Party (Black).fnt-5d77bb627adc2a525bc683bce3bc4def.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2

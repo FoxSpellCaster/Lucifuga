@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://bjvx20ng5m0ve"
+path="res://.godot/imported/Corvid Conspirator (Black).fnt-c19fd178a060a64579b8d6b27ea9f4f2.fontdata"
+
+[deps]
+
+source_file="res://fonts/Slime's Pixel Font Pack! v1.2/Angel Code Format (v1.2)/Corvid Conspirator (Black)/Corvid Conspirator (Black).fnt"
+dest_files=["res://.godot/imported/Corvid Conspirator (Black).fnt-c19fd178a060a64579b8d6b27ea9f4f2.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2

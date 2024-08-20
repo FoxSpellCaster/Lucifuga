@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://bd1o7gsb47niu"
+path="res://.godot/imported/Sol Schori Thin(Black).fnt-35efeaecd3f7a8fca72b2bc2a0676adf.fontdata"
+
+[deps]
+
+source_file="res://fonts/Slime's Pixel Font Pack! v1.2/Angel Code Format (v1.2)/Sol Schori Thin (Black)/Sol Schori Thin(Black).fnt"
+dest_files=["res://.godot/imported/Sol Schori Thin(Black).fnt-35efeaecd3f7a8fca72b2bc2a0676adf.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2

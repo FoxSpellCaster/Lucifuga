@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://c764k8mo3epby"
+path="res://.godot/imported/Varnished (Black).fnt-fc41f095ce63425f28581aed9ab8c845.fontdata"
+
+[deps]
+
+source_file="res://fonts/Slime's Pixel Font Pack! v1.2/Angel Code Format (v1.2)/Varnished (Black)/Varnished (Black).fnt"
+dest_files=["res://.godot/imported/Varnished (Black).fnt-fc41f095ce63425f28581aed9ab8c845.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2
