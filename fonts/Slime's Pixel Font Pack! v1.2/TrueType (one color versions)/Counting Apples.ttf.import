@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://q6hd1ki7xcar"
-path="res://.godot/imported/Counting Apples.ttf-8c6b05b4ff27deec17ece0086158a660.fontdata"
+path="res://.godot/imported/Counting Apples.ttf-77902e2773d70db4a9f34bd655e684c2.fontdata"
 
 [deps]
 
-source_file="res://fonts/Slime's Pixel Font Pack! v1.2/TrueType (one color versions)/Counting Apples.ttf"
-dest_files=["res://.godot/imported/Counting Apples.ttf-8c6b05b4ff27deec17ece0086158a660.fontdata"]
+source_file="res://Fonts/Slime's Pixel Font Pack! v1.2/TrueType (one color versions)/Counting Apples.ttf"
+dest_files=["res://.godot/imported/Counting Apples.ttf-77902e2773d70db4a9f34bd655e684c2.fontdata"]
 
 [params]
 

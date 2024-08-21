@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://oa6wcbur3oq6"
-path="res://.godot/imported/PixeloidMono.otf-ba6e7436d313c970975f6d5c7b2b0585.fontdata"
+path="res://.godot/imported/PixeloidMono.otf-518647ee7889ec889e45be2bbc1f2ab2.fontdata"
 
 [deps]
 
-source_file="res://fonts/Pixeloid_Font_0_5/OpenType (.otf)/PixeloidMono.otf"
-dest_files=["res://.godot/imported/PixeloidMono.otf-ba6e7436d313c970975f6d5c7b2b0585.fontdata"]
+source_file="res://Fonts/Pixeloid_Font_0_5/OpenType (.otf)/PixeloidMono.otf"
+dest_files=["res://.godot/imported/PixeloidMono.otf-518647ee7889ec889e45be2bbc1f2ab2.fontdata"]
 
 [params]
 

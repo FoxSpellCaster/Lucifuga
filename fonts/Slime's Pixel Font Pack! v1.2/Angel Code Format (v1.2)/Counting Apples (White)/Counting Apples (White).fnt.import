@@ -3,12 +3,12 @@
 importer="font_data_bmfont"
 type="FontFile"
 uid="uid://balnrb440o7m1"
-path="res://.godot/imported/Counting Apples (White).fnt-d7f6de43c301b6b62f74dda12ca70559.fontdata"
+path="res://.godot/imported/Counting Apples (White).fnt-5864aa71f8510dae533532754b995a3d.fontdata"
 
 [deps]
 
-source_file="res://fonts/Slime's Pixel Font Pack! v1.2/Angel Code Format (v1.2)/Counting Apples (White)/Counting Apples (White).fnt"
-dest_files=["res://.godot/imported/Counting Apples (White).fnt-d7f6de43c301b6b62f74dda12ca70559.fontdata"]
+source_file="res://Fonts/Slime's Pixel Font Pack! v1.2/Angel Code Format (v1.2)/Counting Apples (White)/Counting Apples (White).fnt"
+dest_files=["res://.godot/imported/Counting Apples (White).fnt-5864aa71f8510dae533532754b995a3d.fontdata"]
 
 [params]
 

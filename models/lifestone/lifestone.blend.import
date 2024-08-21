@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://5jdbxexxkphy"
-path="res://.godot/imported/lifestone.blend-c80564ff8b19d8563af201a3aa229454.scn"
+path="res://.godot/imported/lifestone.blend-f58c978452fb9b5c85ac4c511894eeae.scn"
 
 [deps]
 
-source_file="res://Models/lifestone/lifestone.blend"
-dest_files=["res://.godot/imported/lifestone.blend-c80564ff8b19d8563af201a3aa229454.scn"]
+source_file="res://models/lifestone/lifestone.blend"
+dest_files=["res://.godot/imported/lifestone.blend-f58c978452fb9b5c85ac4c511894eeae.scn"]
 
 [params]
 

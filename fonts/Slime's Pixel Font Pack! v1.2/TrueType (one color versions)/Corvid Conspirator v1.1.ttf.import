@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://cofnorekdeyfq"
-path="res://.godot/imported/Corvid Conspirator v1.1.ttf-bf7559e77efe38b71aa2de05fd4c6c66.fontdata"
+path="res://.godot/imported/Corvid Conspirator v1.1.ttf-7384822ee5699d6d06b6bfaa94976645.fontdata"
 
 [deps]
 
-source_file="res://fonts/Slime's Pixel Font Pack! v1.2/TrueType (one color versions)/Corvid Conspirator v1.1.ttf"
-dest_files=["res://.godot/imported/Corvid Conspirator v1.1.ttf-bf7559e77efe38b71aa2de05fd4c6c66.fontdata"]
+source_file="res://Fonts/Slime's Pixel Font Pack! v1.2/TrueType (one color versions)/Corvid Conspirator v1.1.ttf"
+dest_files=["res://.godot/imported/Corvid Conspirator v1.1.ttf-7384822ee5699d6d06b6bfaa94976645.fontdata"]
 
 [params]
 

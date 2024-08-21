@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://p00jfd4lelg5"
-path="res://.godot/imported/Ant Party.ttf-a7ba03ef3385db957bf85900ca87a270.fontdata"
+path="res://.godot/imported/Ant Party.ttf-d352ae2c434b8505d8b3fd4dd817aad8.fontdata"
 
 [deps]
 
-source_file="res://fonts/Slime's Pixel Font Pack! v1.2/TrueType (one color versions)/Ant Party.ttf"
-dest_files=["res://.godot/imported/Ant Party.ttf-a7ba03ef3385db957bf85900ca87a270.fontdata"]
+source_file="res://Fonts/Slime's Pixel Font Pack! v1.2/TrueType (one color versions)/Ant Party.ttf"
+dest_files=["res://.godot/imported/Ant Party.ttf-d352ae2c434b8505d8b3fd4dd817aad8.fontdata"]
 
 [params]
 

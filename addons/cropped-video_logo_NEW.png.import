@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvm803uk6rdp3"
-path="res://.godot/imported/cropped-video_logo_NEW.png-00222288955ba9fc4913c5b36cbb251f.ctex"
+path="res://.godot/imported/cropped-video_logo_NEW.png-267ae9a7773b56cd98c7e3c8643a2256.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/cropped-video_logo_NEW.png"
-dest_files=["res://.godot/imported/cropped-video_logo_NEW.png-00222288955ba9fc4913c5b36cbb251f.ctex"]
+source_file="res://Addons/cropped-video_logo_NEW.png"
+dest_files=["res://.godot/imported/cropped-video_logo_NEW.png-267ae9a7773b56cd98c7e3c8643a2256.ctex"]
 
 [params]
 

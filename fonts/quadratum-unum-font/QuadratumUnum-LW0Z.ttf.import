@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://0gd8yfhbv0pr"
-path="res://.godot/imported/QuadratumUnum-LW0Z.ttf-5c6ff25a763646a03434576b8f993565.fontdata"
+path="res://.godot/imported/QuadratumUnum-LW0Z.ttf-2d73bade2f360e599f52647b8dc0adde.fontdata"
 
 [deps]
 
-source_file="res://fonts/quadratum-unum-font/QuadratumUnum-LW0Z.ttf"
-dest_files=["res://.godot/imported/QuadratumUnum-LW0Z.ttf-5c6ff25a763646a03434576b8f993565.fontdata"]
+source_file="res://Fonts/quadratum-unum-font/QuadratumUnum-LW0Z.ttf"
+dest_files=["res://.godot/imported/QuadratumUnum-LW0Z.ttf-2d73bade2f360e599f52647b8dc0adde.fontdata"]
 
 [params]
 

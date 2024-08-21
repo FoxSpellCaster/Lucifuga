@@ -1,3 +1,5 @@
 # Godot 4+ specific ignores
 .godot/
-DarkWorld Godot.exe
+DarkWorld.exe
+*.import
+*.*.import

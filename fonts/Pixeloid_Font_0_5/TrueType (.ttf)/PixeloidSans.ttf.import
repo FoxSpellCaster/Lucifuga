@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://c2t1kklrrme5p"
-path="res://.godot/imported/PixeloidSans.ttf-c1d4dc414cf1b909c31744f057cb8c61.fontdata"
+path="res://.godot/imported/PixeloidSans.ttf-db53a224005c3941d3a8f77896382efe.fontdata"
 
 [deps]
 
-source_file="res://fonts/Pixeloid_Font_0_5/TrueType (.ttf)/PixeloidSans.ttf"
-dest_files=["res://.godot/imported/PixeloidSans.ttf-c1d4dc414cf1b909c31744f057cb8c61.fontdata"]
+source_file="res://Fonts/Pixeloid_Font_0_5/TrueType (.ttf)/PixeloidSans.ttf"
+dest_files=["res://.godot/imported/PixeloidSans.ttf-db53a224005c3941d3a8f77896382efe.fontdata"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgb5lgmnajmow"
-path="res://.godot/imported/Breadcrumbs & Flakery (White)-export.png-0c88f3d884b3088c5de3899a69bdba66.ctex"
+path="res://.godot/imported/Breadcrumbs & Flakery (White)-export.png-058fa1061513915a2ca42dd3db6eb9cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fonts/Slime's Pixel Font Pack! v1.2/Angel Code Format (v1.2)/Breadcrumbs & Flakery (White)/Breadcrumbs & Flakery (White)-export.png"
-dest_files=["res://.godot/imported/Breadcrumbs & Flakery (White)-export.png-0c88f3d884b3088c5de3899a69bdba66.ctex"]
+source_file="res://Fonts/Slime's Pixel Font Pack! v1.2/Angel Code Format (v1.2)/Breadcrumbs & Flakery (White)/Breadcrumbs & Flakery (White)-export.png"
+dest_files=["res://.godot/imported/Breadcrumbs & Flakery (White)-export.png-058fa1061513915a2ca42dd3db6eb9cd.ctex"]
 
 [params]
 

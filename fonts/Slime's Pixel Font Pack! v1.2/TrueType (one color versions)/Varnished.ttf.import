@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://buv7u3t1np7ca"
-path="res://.godot/imported/Varnished.ttf-2c41b41672de67fc8b12f6845620f836.fontdata"
+path="res://.godot/imported/Varnished.ttf-54e57bbaadf0150a314b537f5d877c6a.fontdata"
 
 [deps]
 
-source_file="res://fonts/Slime's Pixel Font Pack! v1.2/TrueType (one color versions)/Varnished.ttf"
-dest_files=["res://.godot/imported/Varnished.ttf-2c41b41672de67fc8b12f6845620f836.fontdata"]
+source_file="res://Fonts/Slime's Pixel Font Pack! v1.2/TrueType (one color versions)/Varnished.ttf"
+dest_files=["res://.godot/imported/Varnished.ttf-54e57bbaadf0150a314b537f5d877c6a.fontdata"]
 
 [params]
 

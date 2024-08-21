@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://df4n38mmwmhc7"
-path="res://.godot/imported/ThaleahFat.ttf-f453bf2c300221fa54f71506031c4dbf.fontdata"
+path="res://.godot/imported/ThaleahFat.ttf-8aa4520edd6caa07664aa24aeb3217d6.fontdata"
 
 [deps]
 
-source_file="res://fonts/ThaleahFat/ThaleahFat.ttf"
-dest_files=["res://.godot/imported/ThaleahFat.ttf-f453bf2c300221fa54f71506031c4dbf.fontdata"]
+source_file="res://Fonts/ThaleahFat/ThaleahFat.ttf"
+dest_files=["res://.godot/imported/ThaleahFat.ttf-8aa4520edd6caa07664aa24aeb3217d6.fontdata"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://b1micobe175lm"
-path="res://.godot/imported/Breadcrumbs & Flakery.ttf-0914447e9e5e77e1ecec327d88a89f28.fontdata"
+path="res://.godot/imported/Breadcrumbs & Flakery.ttf-672bd5e0f2be06551dc0d648d2993ccb.fontdata"
 
 [deps]
 
-source_file="res://fonts/Slime's Pixel Font Pack! v1.2/TrueType (one color versions)/Breadcrumbs & Flakery.ttf"
-dest_files=["res://.godot/imported/Breadcrumbs & Flakery.ttf-0914447e9e5e77e1ecec327d88a89f28.fontdata"]
+source_file="res://Fonts/Slime's Pixel Font Pack! v1.2/TrueType (one color versions)/Breadcrumbs & Flakery.ttf"
+dest_files=["res://.godot/imported/Breadcrumbs & Flakery.ttf-672bd5e0f2be06551dc0d648d2993ccb.fontdata"]
 
 [params]
 

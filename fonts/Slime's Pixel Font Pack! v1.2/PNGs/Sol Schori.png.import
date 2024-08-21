@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://665jkwsljlu"
-path="res://.godot/imported/Sol Schori.png-b0f9eb936c17a4fd667ddd03d8114034.ctex"
+path="res://.godot/imported/Sol Schori.png-8f7ab24fa993093ebe1b175001d112ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fonts/Slime's Pixel Font Pack! v1.2/PNGs/Sol Schori.png"
-dest_files=["res://.godot/imported/Sol Schori.png-b0f9eb936c17a4fd667ddd03d8114034.ctex"]
+source_file="res://Fonts/Slime's Pixel Font Pack! v1.2/PNGs/Sol Schori.png"
+dest_files=["res://.godot/imported/Sol Schori.png-8f7ab24fa993093ebe1b175001d112ed.ctex"]
 
 [params]
 

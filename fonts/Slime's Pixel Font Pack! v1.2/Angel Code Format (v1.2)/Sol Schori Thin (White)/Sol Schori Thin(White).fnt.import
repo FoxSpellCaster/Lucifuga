@@ -3,12 +3,12 @@
 importer="font_data_bmfont"
 type="FontFile"
 uid="uid://bqtbbq26f2mfv"
-path="res://.godot/imported/Sol Schori Thin(White).fnt-e8abb458574153df2966ecbba92f79dd.fontdata"
+path="res://.godot/imported/Sol Schori Thin(White).fnt-125e1d3932e4cda8acc94dd22069ba66.fontdata"
 
 [deps]
 
-source_file="res://fonts/Slime's Pixel Font Pack! v1.2/Angel Code Format (v1.2)/Sol Schori Thin (White)/Sol Schori Thin(White).fnt"
-dest_files=["res://.godot/imported/Sol Schori Thin(White).fnt-e8abb458574153df2966ecbba92f79dd.fontdata"]
+source_file="res://Fonts/Slime's Pixel Font Pack! v1.2/Angel Code Format (v1.2)/Sol Schori Thin (White)/Sol Schori Thin(White).fnt"
+dest_files=["res://.godot/imported/Sol Schori Thin(White).fnt-125e1d3932e4cda8acc94dd22069ba66.fontdata"]
 
 [params]
 

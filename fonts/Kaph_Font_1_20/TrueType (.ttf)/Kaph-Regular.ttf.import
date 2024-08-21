@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://drcpm2f5uwhuo"
-path="res://.godot/imported/Kaph-Regular.ttf-bc0220fe06bead985b3f2985a4de9137.fontdata"
+path="res://.godot/imported/Kaph-Regular.ttf-28403c5461f16cc8d9279c0f60d91a0d.fontdata"
 
 [deps]
 
-source_file="res://fonts/Kaph_Font_1_20/TrueType (.ttf)/Kaph-Regular.ttf"
-dest_files=["res://.godot/imported/Kaph-Regular.ttf-bc0220fe06bead985b3f2985a4de9137.fontdata"]
+source_file="res://Fonts/Kaph_Font_1_20/TrueType (.ttf)/Kaph-Regular.ttf"
+dest_files=["res://.godot/imported/Kaph-Regular.ttf-28403c5461f16cc8d9279c0f60d91a0d.fontdata"]
 
 [params]
 

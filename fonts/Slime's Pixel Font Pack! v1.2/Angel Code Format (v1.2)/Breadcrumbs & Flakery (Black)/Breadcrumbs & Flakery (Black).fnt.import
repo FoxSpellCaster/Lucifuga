@@ -3,12 +3,12 @@
 importer="font_data_bmfont"
 type="FontFile"
 uid="uid://btvam8s1idert"
-path="res://.godot/imported/Breadcrumbs & Flakery (Black).fnt-986ff8a6c29a006b042b47a9e789a39b.fontdata"
+path="res://.godot/imported/Breadcrumbs & Flakery (Black).fnt-953aa382206b6427096b9d258806fa83.fontdata"
 
 [deps]
 
-source_file="res://fonts/Slime's Pixel Font Pack! v1.2/Angel Code Format (v1.2)/Breadcrumbs & Flakery (Black)/Breadcrumbs & Flakery (Black).fnt"
-dest_files=["res://.godot/imported/Breadcrumbs & Flakery (Black).fnt-986ff8a6c29a006b042b47a9e789a39b.fontdata"]
+source_file="res://Fonts/Slime's Pixel Font Pack! v1.2/Angel Code Format (v1.2)/Breadcrumbs & Flakery (Black)/Breadcrumbs & Flakery (Black).fnt"
+dest_files=["res://.godot/imported/Breadcrumbs & Flakery (Black).fnt-953aa382206b6427096b9d258806fa83.fontdata"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="font_data_bmfont"
 type="FontFile"
 uid="uid://cvg51ouwh5pyp"
-path="res://.godot/imported/Ant Party (White).fnt-69aa7bdbc91132950064e5f53009dbb9.fontdata"
+path="res://.godot/imported/Ant Party (White).fnt-cb49bf911d9a0f39264cb6d946303ff8.fontdata"
 
 [deps]
 
-source_file="res://fonts/Slime's Pixel Font Pack! v1.2/Angel Code Format (v1.2)/Ant Party (White)/Ant Party (White).fnt"
-dest_files=["res://.godot/imported/Ant Party (White).fnt-69aa7bdbc91132950064e5f53009dbb9.fontdata"]
+source_file="res://Fonts/Slime's Pixel Font Pack! v1.2/Angel Code Format (v1.2)/Ant Party (White)/Ant Party (White).fnt"
+dest_files=["res://.godot/imported/Ant Party (White).fnt-cb49bf911d9a0f39264cb6d946303ff8.fontdata"]
 
 [params]
 

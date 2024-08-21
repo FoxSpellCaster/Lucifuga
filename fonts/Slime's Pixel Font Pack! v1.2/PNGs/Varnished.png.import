@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c8lm81wgm42x6"
-path="res://.godot/imported/Varnished.png-faddd28aff1a238fa402ca81f3b6556f.ctex"
+path="res://.godot/imported/Varnished.png-f18ec37d5654c36650d94cad06bfe5a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fonts/Slime's Pixel Font Pack! v1.2/PNGs/Varnished.png"
-dest_files=["res://.godot/imported/Varnished.png-faddd28aff1a238fa402ca81f3b6556f.ctex"]
+source_file="res://Fonts/Slime's Pixel Font Pack! v1.2/PNGs/Varnished.png"
+dest_files=["res://.godot/imported/Varnished.png-f18ec37d5654c36650d94cad06bfe5a3.ctex"]
 
 [params]
 

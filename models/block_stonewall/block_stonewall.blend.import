@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cnx5nx8txv1fr"
-path="res://.godot/imported/block_stonewall.blend-e7e2fc8a8c5231f1835b578e7cad4f54.scn"
+path="res://.godot/imported/block_stonewall.blend-e269119f4fec5a63a511afaf734edba7.scn"
 
 [deps]
 
-source_file="res://Models/block_stonewall/block_stonewall.blend"
-dest_files=["res://.godot/imported/block_stonewall.blend-e7e2fc8a8c5231f1835b578e7cad4f54.scn"]
+source_file="res://models/block_stonewall/block_stonewall.blend"
+dest_files=["res://.godot/imported/block_stonewall.blend-e269119f4fec5a63a511afaf734edba7.scn"]
 
 [params]
 

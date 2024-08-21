@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cjw4vq50etgd7"
-path="res://.godot/imported/Corvid Conspirator.png-fc3b8179d2ea2c4ab30d1bea8cf6964c.ctex"
+path="res://.godot/imported/Corvid Conspirator.png-5bbc3d0ecb5021240fb23c6d069c9367.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fonts/Slime's Pixel Font Pack! v1.2/PNGs/Corvid Conspirator.png"
-dest_files=["res://.godot/imported/Corvid Conspirator.png-fc3b8179d2ea2c4ab30d1bea8cf6964c.ctex"]
+source_file="res://Fonts/Slime's Pixel Font Pack! v1.2/PNGs/Corvid Conspirator.png"
+dest_files=["res://.godot/imported/Corvid Conspirator.png-5bbc3d0ecb5021240fb23c6d069c9367.ctex"]
 
 [params]
 

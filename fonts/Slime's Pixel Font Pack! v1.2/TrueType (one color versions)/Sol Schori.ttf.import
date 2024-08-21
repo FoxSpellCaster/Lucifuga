@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bdpe4yaticrid"
-path="res://.godot/imported/Sol Schori.ttf-3926eb5b69c74c3d730602e9f28f2de4.fontdata"
+path="res://.godot/imported/Sol Schori.ttf-fa03ffe61f745d4b8f21f0fb23b98b62.fontdata"
 
 [deps]
 
-source_file="res://fonts/Slime's Pixel Font Pack! v1.2/TrueType (one color versions)/Sol Schori.ttf"
-dest_files=["res://.godot/imported/Sol Schori.ttf-3926eb5b69c74c3d730602e9f28f2de4.fontdata"]
+source_file="res://Fonts/Slime's Pixel Font Pack! v1.2/TrueType (one color versions)/Sol Schori.ttf"
+dest_files=["res://.godot/imported/Sol Schori.ttf-fa03ffe61f745d4b8f21f0fb23b98b62.fontdata"]
 
 [params]
 

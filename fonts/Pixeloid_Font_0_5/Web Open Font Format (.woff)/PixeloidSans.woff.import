@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://jwraircyven2"
-path="res://.godot/imported/PixeloidSans.woff-e5987ffaaf81def2c982e71c1c3e361d.fontdata"
+path="res://.godot/imported/PixeloidSans.woff-0b83f572fe242e9eb5bbb1072ca9948a.fontdata"
 
 [deps]
 
-source_file="res://fonts/Pixeloid_Font_0_5/Web Open Font Format (.woff)/PixeloidSans.woff"
-dest_files=["res://.godot/imported/PixeloidSans.woff-e5987ffaaf81def2c982e71c1c3e361d.fontdata"]
+source_file="res://Fonts/Pixeloid_Font_0_5/Web Open Font Format (.woff)/PixeloidSans.woff"
+dest_files=["res://.godot/imported/PixeloidSans.woff-0b83f572fe242e9eb5bbb1072ca9948a.fontdata"]
 
 [params]
 
