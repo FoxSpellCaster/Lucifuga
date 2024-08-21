@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://br1m6c4cgaq8v" path="res://background_mainmenu.png" id="1_l16lj"]
 [ext_resource type="Script" path="res://main_menu.gd" id="1_vtf5e"]
-[ext_resource type="FontFile" uid="uid://edublug23skr" path="res://fonts/Kaph_Font_1_20/OpenType (.otf)/Kaph-Regular.otf" id="3_ljyk6"]
-[ext_resource type="FontFile" uid="uid://df4n38mmwmhc7" path="res://fonts/ThaleahFat/ThaleahFat.ttf" id="5_j6r08"]
+[ext_resource type="FontFile" uid="uid://edublug23skr" path="res://Fonts/Kaph_Font_1_20/OpenType (.otf)/Kaph-Regular.otf" id="3_ljyk6"]
+[ext_resource type="FontFile" uid="uid://df4n38mmwmhc7" path="res://Fonts/ThaleahFat/ThaleahFat.ttf" id="5_j6r08"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8x3uj"]
 texture = ExtResource("1_l16lj")

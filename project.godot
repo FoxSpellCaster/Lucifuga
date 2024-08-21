@@ -17,8 +17,8 @@ run/main_scene="res://main_menu.tscn"
 config/quit_on_go_back=false
 config/features=PackedStringArray("4.3", "Forward Plus")
 run/max_fps=60
-boot_splash/image="res://godot_assets/Screen/Original logo/splatter_orange.png"
-config/icon="res://icon_darkworld.png"
+boot_splash/image="res://splash_darkworld2.png"
+config/icon="res://icon_darkworld2.png"
 boot_splash/minimum_display_time=60
 
 [debug]
@@ -43,7 +43,7 @@ project/assembly_name="Project DarkWorld"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot-voice-generator/plugin.cfg", "res://addons/godot_sfxr/plugin.cfg")
+enabled=PackedStringArray("res://addons/gdfxr/plugin.cfg", "res://addons/godot-voice-generator/plugin.cfg", "res://addons/godot_sfxr/plugin.cfg")
 
 [file_customization]
 
