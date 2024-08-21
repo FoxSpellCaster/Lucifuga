@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://ldd1eoatl3ms"
+path="res://.godot/imported/Counting Apples (White).fnt-5864aa71f8510dae533532754b995a3d.fontdata"
+
+[deps]
+
+source_file="res://Fonts/Slime's Pixel Font Pack! v1.2/Angel Code Format (v1.2)/Counting Apples (White)/Counting Apples (White).fnt"
+dest_files=["res://.godot/imported/Counting Apples (White).fnt-5864aa71f8510dae533532754b995a3d.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2

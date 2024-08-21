@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://cnjqu51fh3hpd"
+path="res://.godot/imported/Varnished (White).fnt-89215e6106b97c226747c88a1b11abbc.fontdata"
+
+[deps]
+
+source_file="res://Fonts/Slime's Pixel Font Pack! v1.2/Angel Code Format (v1.2)/Varnished (White)/Varnished (White).fnt"
+dest_files=["res://.godot/imported/Varnished (White).fnt-89215e6106b97c226747c88a1b11abbc.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2
