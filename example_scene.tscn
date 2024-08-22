@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://cm2irk4twhtud"]
 
-[ext_resource type="Texture2D" uid="uid://dlce4y86ybsyt" path="res://icon.svg" id="1_gj4nv"]
+[ext_resource type="Texture2D" uid="uid://bmoah54m4x8mo" path="res://icon.svg" id="1_gj4nv"]
 [ext_resource type="Script" path="res://example_scene.gd" id="1_tlwp7"]
-[ext_resource type="AudioStream" uid="uid://bywmglflhrtpq" path="res://addons/godot-voice-generator/sound/v1.ogg" id="2_0edca"]
+[ext_resource type="AudioStream" uid="uid://dve4wou64qvil" path="res://addons/godot-voice-generator/sound/v1.ogg" id="2_0edca"]
 [ext_resource type="Script" path="res://addons/godot-voice-generator/voice_audio_stream_player.gd" id="3_qrlrr"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_gwxjp"]

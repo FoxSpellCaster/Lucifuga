@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b7fj5y7nrjqxr"
-path="res://.godot/imported/a.wav-db33cb0e245ebb17ec5d406d8504ddcc.sample"
+path="res://.godot/imported/a.wav-806934642ad5fb41936d4be875897790.sample"
 
 [deps]
 
-source_file="res://Addons/godot-voice-generator/sound/alphabet/lowest/a.wav"
-dest_files=["res://.godot/imported/a.wav-db33cb0e245ebb17ec5d406d8504ddcc.sample"]
+source_file="res://addons/godot-voice-generator/sound/alphabet/lowest/a.wav"
+dest_files=["res://.godot/imported/a.wav-806934642ad5fb41936d4be875897790.sample"]
 
 [params]
 

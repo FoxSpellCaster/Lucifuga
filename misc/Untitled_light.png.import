@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hrhsyq6gbftg"
-path="res://.godot/imported/cropped-video_logo_NEW.png-00222288955ba9fc4913c5b36cbb251f.ctex"
+uid="uid://kioj1srs8tw8"
+path="res://.godot/imported/Untitled_light.png-bee01d96532810e23d4003781bd00019.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/cropped-video_logo_NEW.png"
-dest_files=["res://.godot/imported/cropped-video_logo_NEW.png-00222288955ba9fc4913c5b36cbb251f.ctex"]
+source_file="res://misc/Untitled_light.png"
+dest_files=["res://.godot/imported/Untitled_light.png-bee01d96532810e23d4003781bd00019.ctex"]
 
 [params]
 

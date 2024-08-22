@@ -41,10 +41,6 @@ window/stretch/aspect="expand"
 
 project/assembly_name="Project DarkWorld"
 
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/gdfxr/plugin.cfg", "res://addons/godot-voice-generator/plugin.cfg", "res://addons/godot_sfxr/plugin.cfg")
-
 [file_customization]
 
 folder_colors={

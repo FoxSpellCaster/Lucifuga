@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2xtm7pfif6oi"]
+
+[ext_resource type="PackedScene" uid="uid://d3cbciu2q3ale" path="res://levels/level.blend" id="1_51l0u"]
+[ext_resource type="PackedScene" uid="uid://c3ffql15mo0aj" path="res://Controllers/fps_controller.tscn" id="2_kghyv"]
+
+[node name="LevelBlender" type="Node3D"]
+
+[node name="level" parent="." instance=ExtResource("1_51l0u")]
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("2_kghyv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.73127, 2.98606)
+
+[node name="GridMap" type="GridMap" parent="."]
+visible = false
+cell_size = Vector3(10, 10, 10)
+metadata/_edit_lock_ = true
+
+[editable path="level"]
