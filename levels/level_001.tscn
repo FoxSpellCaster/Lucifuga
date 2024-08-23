@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://b1yleqbb8tc7x"]
+[gd_scene load_steps=13 format=3 uid="uid://b1yleqbb8tc7x"]
 
 [ext_resource type="PackedScene" uid="uid://btv0a42cgxt8g" path="res://levels/WE_test.tscn" id="1_db21n"]
 [ext_resource type="Material" uid="uid://cn1gsy15bkaff" path="res://materials/grid.tres" id="2_x5xie"]
 [ext_resource type="Texture2D" uid="uid://d3dhdflviv7pq" path="res://textures/grid.jpg" id="3_yfwkt"]
 [ext_resource type="PackedScene" uid="uid://c3ffql15mo0aj" path="res://Controllers/fps_controller.tscn" id="4_liofc"]
 [ext_resource type="PackedScene" uid="uid://y4334hxs1mst" path="res://models/animal_fox/animal_fox.blend" id="5_mjoam"]
+[ext_resource type="PackedScene" uid="uid://lpa77scoum5g" path="res://models/player_Atype/playerA.blend" id="6_u06fj"]
 
 [sub_resource type="Shader" id="Shader_btlia"]
 code = "// NOTE: Shader automatically converted from Godot Engine 4.1.dev4's StandardMaterial3D.
@@ -184,5 +185,8 @@ metadata/_edit_lock_ = true
 
 [node name="animal_fox" parent="." instance=ExtResource("5_mjoam")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.57018, 0.521993, 1.20302)
+
+[node name="playerA" parent="." instance=ExtResource("6_u06fj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.8843, 1.14476, -1.43414)
 
 [editable path="animal_fox"]
