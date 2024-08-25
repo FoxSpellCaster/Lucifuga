@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://cl82vs2l2wx2t"
+path="res://.godot/imported/Corvid Conspirator (White).fnt-cc1422e648d70ac4912b027d9335f09f.fontdata"
+
+[deps]
+
+source_file="res://assets/fonts/Slime's Pixel Font Pack! v1.2/Angel Code Format (v1.2)/Corvid Conspirator (White)/Corvid Conspirator (White).fnt"
+dest_files=["res://.godot/imported/Corvid Conspirator (White).fnt-cc1422e648d70ac4912b027d9335f09f.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2

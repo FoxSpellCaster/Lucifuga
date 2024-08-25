@@ -10,15 +10,13 @@ config_version=5
 
 [application]
 
-config/name="DarkWorld Godot"
+config/name="Lucifuga"
 config/description="Created by FoxSpellCaster"
 config/tags=PackedStringArray("alpha", "v4.3.stable.mono.official")
-run/main_scene="res://main_menu.tscn"
+run/main_scene="res://csg_fox/start.tscn"
 config/quit_on_go_back=false
 config/features=PackedStringArray("4.3", "Forward Plus")
 run/max_fps=60
-boot_splash/image="res://splash_darkworld2.png"
-config/icon="res://icon_darkworld2.png"
 boot_splash/minimum_display_time=60
 
 [debug]
@@ -39,12 +37,15 @@ window/stretch/aspect="expand"
 
 [dotnet]
 
-project/assembly_name="Project DarkWorld"
+project/assembly_name="Lucifuga"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/ridiculous_coding/plugin.cfg")
 
 [file_customization]
 
 folder_colors={
-"res://addons/": "gray",
 "res://models/": "green"
 }
 
@@ -88,11 +89,11 @@ crouch={
 
 [physics]
 
-3d/run_on_separate_thread=true
-3d/physics_engine="GodotPhysics3D"
 common/physics_interpolation=true
 
 [rendering]
 
 lights_and_shadows/directional_shadow/soft_shadow_filter_quality=3
-anti_aliasing/quality/msaa_3d=1
+scaling_3d/mode=2
+anti_aliasing/quality/msaa_3d=2
+occlusion_culling/use_occlusion_culling=true

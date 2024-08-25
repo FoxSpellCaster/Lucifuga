@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://dku2o6ftexv4w"
+path="res://.godot/imported/Sol Schori (White).fnt-0d45d1ef8b352fe13a7ce740db7631d0.fontdata"
+
+[deps]
+
+source_file="res://assets/fonts/Slime's Pixel Font Pack! v1.2/Angel Code Format (v1.2)/Sol Schori (White/Sol Schori (White).fnt"
+dest_files=["res://.godot/imported/Sol Schori (White).fnt-0d45d1ef8b352fe13a7ce740db7631d0.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2

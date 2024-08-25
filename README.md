@@ -1,2 +1,2 @@
-# DarkWorld-Godot
-A Simple Game, to create with and share with people
+# godotHypercasualShader
+A shader meant for adding gradients to unlit 3D meshes. Contains examples, and documented code. 

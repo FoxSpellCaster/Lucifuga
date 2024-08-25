@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://kmle1cotmc1j"]
+
+[ext_resource type="Material" uid="uid://b3yii3cq2t0gw" path="res://csg_fox/floor.tres" id="1_18j68"]
+[ext_resource type="Material" uid="uid://dwnx5semtqidx" path="res://csg_fox/orange.tres" id="2_lffxc"]
+[ext_resource type="Environment" uid="uid://7iwta2i74mx6" path="res://csg_fox/env.tres" id="3_ymns8"]
+[ext_resource type="CameraAttributesPractical" uid="uid://d0k15olbb4fp3" path="res://csg_fox/start_camera.tres" id="4_3qa20"]
+[ext_resource type="PackedScene" uid="uid://c3ffql15mo0aj" path="res://controllers/fps_controller.tscn" id="4_nu6br"]
+
+[node name="start" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.680721, -0.379477, 0.626591, 0, 0.855364, 0.518027, -0.732543, -0.352632, 0.582264, 0, 0, 0)
+shadow_enabled = true
+directional_shadow_max_distance = 500.0
+
+[node name="Floor2" type="CSGCombiner3D" parent="."]
+use_collision = true
+
+[node name="Floor" type="CSGBox3D" parent="Floor2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+size = Vector3(1000, 1, 1000)
+material = ExtResource("1_18j68")
+metadata/_edit_lock_ = true
+
+[node name="arch" type="CSGCombiner3D" parent="."]
+material_override = ExtResource("2_lffxc")
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="arch"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+size = Vector3(4, 4, 4)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="arch"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+operation = 2
+size = Vector3(2, 2, 4)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="arch"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 2, 0)
+operation = 2
+radius = 1.0
+height = 4.0
+sides = 32
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("3_ymns8")
+camera_attributes = ExtResource("4_3qa20")
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("4_nu6br")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.819371, 11.4186)
+
+[editable path="CharacterBody3D"]
