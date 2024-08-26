@@ -11,8 +11,8 @@ fu - Pronounced like "foo."
 ga - Pronounced like "gah."
 The emphasis is on the "FOO" syllable, giving it a strong and slightly mysterious sound.
 
-### Latin
-Etymology
+## Latin
+###Etymology
 From lūx, lūcis (“light”) +‎ -i- +‎ fugere (“to shun”).
 
 ### Adjective
