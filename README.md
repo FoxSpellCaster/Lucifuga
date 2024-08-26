@@ -12,7 +12,7 @@ ga - Pronounced like "gah."
 The emphasis is on the "FOO" syllable, giving it a strong and slightly mysterious sound.
 
 ## Latin
-###Etymology
+### Etymology
 From lūx, lūcis (“light”) +‎ -i- +‎ fugere (“to shun”).
 
 ### Adjective
