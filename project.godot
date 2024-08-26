@@ -12,11 +12,11 @@ config_version=5
 
 config/name="Lucifuga"
 config/description="Created by FoxSpellCaster"
-config/tags=PackedStringArray("alpha", "v4.3.stable.mono.official")
 run/main_scene="res://csg_fox/start.tscn"
 config/quit_on_go_back=false
 config/features=PackedStringArray("4.3", "Forward Plus")
 run/max_fps=60
+config/icon="res://lucifuga.png"
 boot_splash/minimum_display_time=60
 
 [debug]
@@ -89,6 +89,8 @@ crouch={
 
 [physics]
 
+3d/run_on_separate_thread=true
+3d/physics_engine="JoltPhysics3D"
 common/physics_interpolation=true
 
 [rendering]
