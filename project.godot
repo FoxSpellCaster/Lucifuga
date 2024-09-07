@@ -12,6 +12,7 @@ config_version=5
 
 config/name="Lucifuga"
 config/description="Created by FoxSpellCaster"
+config/tags=PackedStringArray("prototype")
 run/main_scene="res://csg_fox/start.tscn"
 config/quit_on_go_back=false
 config/features=PackedStringArray("4.3", "Forward Plus")
