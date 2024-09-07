@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dwnx5semtqidx"]
-
-[ext_resource type="Texture2D" uid="uid://c6wy8j2xqcfx2" path="res://Orange_1m x 1m.png" id="1_cy1ir"]
-
-[resource]
-albedo_texture = ExtResource("1_cy1ir")
-uv1_triplanar = true
