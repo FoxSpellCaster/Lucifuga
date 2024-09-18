@@ -1,0 +1,159 @@
+[gd_scene load_steps=8 format=3 uid="uid://babglweocbocw"]
+
+[ext_resource type="Material" uid="uid://y8fxobvbqfm2" path="res://pillar_material_3d.tres" id="1_560nx"]
+[ext_resource type="Material" uid="uid://d2af6okdd4qse" path="res://default_material_3d.tres" id="2_p0mmy"]
+[ext_resource type="Texture2D" uid="uid://dew13a4vawy2e" path="res://Lucifuga_1m x 1m (2).png" id="3_0u2g5"]
+
+[sub_resource type="Environment" id="Environment_aje2x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fveb1"]
+albedo_texture = ExtResource("3_0u2g5")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_yeydg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7xidr"]
+
+[node name="WorldHub" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_aje2x")
+
+[node name="Hub" type="CSGCombiner3D" parent="."]
+use_collision = true
+
+[node name="Pillars" type="CSGCombiner3D" parent="Hub"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20.0411)
+
+[node name="CSGPillar-1" type="CSGBox3D" parent="Hub/Pillars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 3, 4)
+size = Vector3(1, 5, 1)
+material = ExtResource("1_560nx")
+
+[node name="CSGPillar-2" type="CSGBox3D" parent="Hub/Pillars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 3, -5)
+size = Vector3(1, 5, 1)
+material = ExtResource("1_560nx")
+
+[node name="CSGPillar-3" type="CSGBox3D" parent="Hub/Pillars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 3, 4)
+size = Vector3(1, 5, 1)
+material = ExtResource("1_560nx")
+
+[node name="CSGPillar-4" type="CSGBox3D" parent="Hub/Pillars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 3, -5)
+size = Vector3(1, 5, 1)
+material = ExtResource("1_560nx")
+
+[node name="SpawnRoom" type="CSGCombiner3D" parent="Hub"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20.0411)
+
+[node name="CSGFloor20x20-1" type="CSGBox3D" parent="Hub/SpawnRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20.0411)
+size = Vector3(20, 1, 20)
+material = ExtResource("2_p0mmy")
+
+[node name="CSGCeiling20x20-1" type="CSGBox3D" parent="Hub/SpawnRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 20.0411)
+size = Vector3(20, 1, 20)
+material = ExtResource("2_p0mmy")
+
+[node name="CSGWall20x5-1" type="CSGBox3D" parent="Hub/SpawnRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 30.0411)
+size = Vector3(20, 5, 1)
+material = ExtResource("2_p0mmy")
+
+[node name="CSGWall20x5-5" type="CSGBox3D" parent="Hub/SpawnRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 3, 20.0411)
+size = Vector3(1, 5, 20)
+material = ExtResource("2_p0mmy")
+
+[node name="CSGWall20x5-8" type="CSGBox3D" parent="Hub/SpawnRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 3, 20.0411)
+size = Vector3(1, 5, 20)
+material = ExtResource("2_p0mmy")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Hub"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 3, -10)
+size = Vector3(5, 5, 1)
+material = ExtResource("2_p0mmy")
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="Hub"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 3, -10)
+size = Vector3(5, 5, 1)
+material = ExtResource("2_p0mmy")
+
+[node name="CSGFloor20x20-2" type="CSGBox3D" parent="Hub"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20)
+size = Vector3(20, 1, 20)
+material = ExtResource("2_p0mmy")
+
+[node name="CSGFloor20x20-3" type="CSGBox3D" parent="Hub"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -20)
+size = Vector3(20, 1, 20)
+material = ExtResource("2_p0mmy")
+
+[node name="CSGCeiling20x20-2" type="CSGBox3D" parent="Hub"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, -20)
+size = Vector3(20, 1, 20)
+material = ExtResource("2_p0mmy")
+
+[node name="CSGCeiling20x20-2Subtract" type="CSGBox3D" parent="Hub"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, -20)
+operation = 2
+size = Vector3(7, 1, 7)
+material = ExtResource("2_p0mmy")
+
+[node name="CSGCeiling20x20-3" type="CSGBox3D" parent="Hub"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 6, -20)
+size = Vector3(20, 1, 20)
+material = ExtResource("2_p0mmy")
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Hub"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 3, -13)
+size = Vector3(1, 5, 5)
+material = ExtResource("2_p0mmy")
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="Hub"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 3, -27)
+size = Vector3(1, 5, 5)
+material = ExtResource("2_p0mmy")
+
+[node name="CSGWall20x5-2" type="CSGBox3D" parent="Hub"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -30)
+size = Vector3(20, 5, 1)
+material = ExtResource("2_p0mmy")
+
+[node name="CSGWall20x5-3" type="CSGBox3D" parent="Hub"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 3, -30)
+size = Vector3(20, 5, 1)
+material = ExtResource("2_p0mmy")
+
+[node name="CSGWall20x5-4" type="CSGBox3D" parent="Hub"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 3, -10)
+size = Vector3(20, 5, 1)
+material = ExtResource("2_p0mmy")
+
+[node name="Cortyard Window" type="CSGCombiner3D" parent="Hub"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 3, -20)
+
+[node name="CSGWall20x5-6" type="CSGBox3D" parent="Hub/Cortyard Window"]
+size = Vector3(1, 5, 20)
+material = SubResource("StandardMaterial3D_fveb1")
+
+[node name="CSGWall20x5-7" type="CSGBox3D" parent="Hub"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 3, -20)
+size = Vector3(1, 5, 20)
+material = ExtResource("2_p0mmy")
+
+[node name="NotPlayer" type="CSGCombiner3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="PlayerShape" type="CSGMesh3D" parent="NotPlayer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_yeydg")
+material = SubResource("StandardMaterial3D_7xidr")
