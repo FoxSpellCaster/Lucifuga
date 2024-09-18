@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dg34yybmf1e3r"
-path.s3tc="res://.godot/imported/Lucifuga_1m x 1m.png-8a0526ebbbda76fdf3b6a998a7ad31c5.s3tc.ctex"
+path.s3tc="res://.godot/imported/Lucifuga_1m x 1m.png-d2e30b53f1f9d5fd6a8bf8d1884806d0.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Lucifuga_1m x 1m.png"
-dest_files=["res://.godot/imported/Lucifuga_1m x 1m.png-8a0526ebbbda76fdf3b6a998a7ad31c5.s3tc.ctex"]
+source_file="res://images/Lucifuga_1m x 1m.png"
+dest_files=["res://.godot/imported/Lucifuga_1m x 1m.png-d2e30b53f1f9d5fd6a8bf8d1884806d0.s3tc.ctex"]
 
 [params]
 

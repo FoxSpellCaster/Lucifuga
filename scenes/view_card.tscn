@@ -1,0 +1,81 @@
+[gd_scene load_steps=12 format=3 uid="uid://odwsv8wat0d7"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_okhvm"]
+
+[sub_resource type="Sky" id="Sky_0tk07"]
+sky_material = SubResource("ProceduralSkyMaterial_okhvm")
+
+[sub_resource type="Environment" id="Environment_ewd5w"]
+sky = SubResource("Sky_0tk07")
+ambient_light_source = 3
+
+[sub_resource type="BoxMesh" id="BoxMesh_b157i"]
+size = Vector3(0.5, 0.7, 0.01)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cdvf6"]
+albedo_color = Color(0.945313, 0, 1, 1)
+albedo_texture_force_srgb = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_wrtpy"]
+lightmap_size_hint = Vector2i(4, 4)
+material = SubResource("StandardMaterial3D_cdvf6")
+size = Vector2(0.4, 0.4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kb2l2"]
+flip_faces = true
+size = Vector3(0.4, 0.4, 0.4)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6ld8q"]
+albedo_color = Color(0.318933, 0.683594, 0.27771, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0j6y3"]
+material = SubResource("StandardMaterial3D_6ld8q")
+size = Vector3(0.1, 0.1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3xkfq"]
+albedo_color = Color(0.27771, 0.426745, 0.683594, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_q3ul6"]
+material = SubResource("StandardMaterial3D_3xkfq")
+size = Vector3(0.1, 0.1, 0.1)
+
+[node name="ViewCard" type="Node3D"]
+editor_description = "https://www.youtube.com/watch?v=3l5XIqCrIBQ"
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ewd5w")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+
+[node name="Card" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_b157i")
+
+[node name="Window" type="MeshInstance3D" parent="Card"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0932943, 0)
+mesh = SubResource("QuadMesh_wrtpy")
+
+[node name="WindowView" type="SubViewport" parent="Card/Window"]
+size = Vector2i(1920, 1080)
+
+[node name="Camera3D2" type="Camera3D" parent="Card/Window/WindowView"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+cull_mask = 1024
+
+[node name="Room" type="MeshInstance3D" parent="Card/Window"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.204545)
+layers = 1024
+mesh = SubResource("BoxMesh_kb2l2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Card/Window/Room"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0778218, -0.109022, 0)
+layers = 1024
+mesh = SubResource("BoxMesh_0j6y3")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Card/Window/Room"]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0.0614804, -0.038514, -0.00999339)
+layers = 1024
+mesh = SubResource("BoxMesh_q3ul6")

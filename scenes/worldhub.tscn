@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://babglweocbocw"]
+[gd_scene load_steps=9 format=3 uid="uid://babglweocbocw"]
 
-[ext_resource type="Material" uid="uid://y8fxobvbqfm2" path="res://pillar_material_3d.tres" id="1_560nx"]
-[ext_resource type="Material" uid="uid://d2af6okdd4qse" path="res://default_material_3d.tres" id="2_p0mmy"]
-[ext_resource type="Texture2D" uid="uid://dew13a4vawy2e" path="res://Lucifuga_1m x 1m (2).png" id="3_0u2g5"]
+[ext_resource type="Material" uid="uid://y8fxobvbqfm2" path="res://materials/pillar_material_3d.tres" id="1_560nx"]
+[ext_resource type="Material" uid="uid://d2af6okdd4qse" path="res://materials/default_material_3d.tres" id="2_p0mmy"]
+[ext_resource type="Texture2D" uid="uid://dew13a4vawy2e" path="res://images/Lucifuga_1m x 1m (2).png" id="3_0u2g5"]
 
 [sub_resource type="Environment" id="Environment_aje2x"]
 
@@ -15,10 +15,17 @@ uv1_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7xidr"]
 
+[sub_resource type="FogMaterial" id="FogMaterial_tyr8o"]
+density = 8.0
+albedo = Color(0, 0, 0, 1)
+
 [node name="WorldHub" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 29, -39)
 shadow_enabled = true
+directional_shadow_mode = 0
+directional_shadow_fade_start = 1.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_aje2x")
@@ -157,3 +164,35 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("CapsuleMesh_yeydg")
 material = SubResource("StandardMaterial3D_7xidr")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 8, -20)
+light_energy = 8.0
+shadow_enabled = true
+spot_range = 11.074
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.80438, 0)
+light_bake_mode = 0
+shadow_enabled = true
+omni_range = 37.304
+omni_shadow_mode = 0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.80438, -20)
+light_bake_mode = 0
+shadow_enabled = true
+omni_range = 11.0
+omni_shadow_mode = 0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 1.80438, -20)
+light_bake_mode = 0
+shadow_enabled = true
+omni_range = 11.0
+omni_shadow_mode = 0
+
+[node name="FogVolume" type="FogVolume" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+size = Vector3(10, 10, 10)
+material = SubResource("FogMaterial_tyr8o")
