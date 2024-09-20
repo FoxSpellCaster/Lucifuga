@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b351rqspxqmf1"
-path="res://.godot/imported/block_stonewall.blend-e269119f4fec5a63a511afaf734edba7.scn"
+uid="uid://dgho05bon0ung"
+path="res://.godot/imported/hub.blend-c747500b352809aa9a8578b9bfe1a205.scn"
 
 [deps]
 
-source_file="res://models/block_stonewall/block_stonewall.blend"
-dest_files=["res://.godot/imported/block_stonewall.blend-e269119f4fec5a63a511afaf734edba7.scn"]
+source_file="res://models/hub/hub.blend"
+dest_files=["res://.godot/imported/hub.blend-c747500b352809aa9a8578b9bfe1a205.scn"]
 
 [params]
 

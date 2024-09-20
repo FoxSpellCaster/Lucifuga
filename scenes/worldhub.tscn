@@ -1,10 +1,59 @@
-[gd_scene load_steps=8 format=3 uid="uid://babglweocbocw"]
+[gd_scene load_steps=21 format=3 uid="uid://babglweocbocw"]
 
 [ext_resource type="Material" uid="uid://y8fxobvbqfm2" path="res://materials/pillar_material_3d.tres" id="1_560nx"]
 [ext_resource type="Material" uid="uid://d2af6okdd4qse" path="res://materials/default_material_3d.tres" id="2_p0mmy"]
 [ext_resource type="Texture2D" uid="uid://dew13a4vawy2e" path="res://images/Lucifuga_1m x 1m (2).png" id="3_0u2g5"]
+[ext_resource type="PackedScene" uid="uid://dgho05bon0ung" path="res://models/hub/hub.blend" id="4_mi332"]
+[ext_resource type="PackedScene" uid="uid://c6c1orwh1bmhe" path="res://addons/extended-strafer-controller/strafer-controller/player.tscn" id="5_80mp3"]
+[ext_resource type="Script" path="res://addons/extended-strafer-controller/modular-controller-base/Controller3DSettings.gd" id="6_my2np"]
+[ext_resource type="Script" path="res://addons/extended-strafer-controller/modular-controller-base/BaseMovementState.gd" id="7_gl561"]
+[ext_resource type="Script" path="res://addons/extended-strafer-controller/strafer-controller/states/StraferGroundState.gd" id="8_ynh4m"]
+[ext_resource type="Script" path="res://addons/extended-strafer-controller/strafer-controller/states/StraferAirState.gd" id="9_nqayg"]
+[ext_resource type="Script" path="res://addons/extended-strafer-controller/strafer-controller/states/StraferSlideState.gd" id="10_bkir2"]
 
-[sub_resource type="Environment" id="Environment_aje2x"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_u6m8s"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_iwsqj"]
+sky_material = SubResource("ProceduralSkyMaterial_u6m8s")
+
+[sub_resource type="Environment" id="Environment_tiwg1"]
+background_mode = 2
+sky = SubResource("Sky_iwsqj")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="Resource" id="Resource_paqy5"]
+script = ExtResource("6_my2np")
+MOUSE_SENS = 2.0
+CONTROL = 15.0
+MAX_SPEED = 16.0
+MAX_CROUCH_SPEED = 8.0
+MAX_POSSIBLE_SPEED = 25.0
+MAX_ACCEL = 150.0
+GRAVITY = 32.0
+JUMP_FORCE = 12.0
+COYOTE_TIME = 0.2
+
+[sub_resource type="Resource" id="Resource_xnfcm"]
+script = ExtResource("8_ynh4m")
+GROUND_DRAG = 0.86
+SLIDE_SPEED = 10.0
+
+[sub_resource type="Resource" id="Resource_buv5u"]
+script = ExtResource("9_nqayg")
+AIR_DRAG = 0.84
+AIR_LERP_SPEED = 35.1
+
+[sub_resource type="Resource" id="Resource_n483h"]
+script = ExtResource("10_bkir2")
+slide_force = 6.0
+slide_jump_force = 1.0
+SLIDE_DRAG = 1.0
+SLIDE_LERP_SPEED = 0.08
+ALLOWED_DIR_DOT_PROD = 0.7
+VEL_TRANS_THRESHOLD = 9.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fveb1"]
 albedo_texture = ExtResource("3_0u2g5")
@@ -17,14 +66,18 @@ uv1_world_triplanar = true
 
 [node name="WorldHub" type="Node3D"]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 29, -39)
-shadow_enabled = true
-directional_shadow_mode = 0
-directional_shadow_fade_start = 1.0
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_aje2x")
+environment = SubResource("Environment_tiwg1")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("5_80mp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.9121, 1.60089, 6.78407)
+floor_snap_length = 0.5
+_START_SETTINGS = SubResource("Resource_paqy5")
+_START_STATES = Array[ExtResource("7_gl561")]([SubResource("Resource_xnfcm"), SubResource("Resource_buv5u"), SubResource("Resource_n483h")])
 
 [node name="Hub" type="CSGCombiner3D" parent="."]
 use_collision = true
@@ -200,3 +253,6 @@ light_bake_mode = 0
 shadow_enabled = true
 omni_range = 11.0
 omni_shadow_mode = 0
+
+[node name="hub" parent="." instance=ExtResource("4_mi332")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.3237, 0.875462, 1.22471)

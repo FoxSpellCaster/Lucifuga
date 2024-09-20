@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc4tkbgxayser"
-path.s3tc="res://.godot/imported/Image_0.png-1caaf962fbf262b6da59bdbb04c0c12d.s3tc.ctex"
+uid="uid://c5hveycek7xjb"
+path.s3tc="res://.godot/imported/texture_13.png-9534796bd36313175d69d9b27528a40f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://models/block_stonewall/textures/Image_0.png"
-dest_files=["res://.godot/imported/Image_0.png-1caaf962fbf262b6da59bdbb04c0c12d.s3tc.ctex"]
+source_file="res://addons/extended-strafer-controller/demo-world/texture_13.png"
+dest_files=["res://.godot/imported/texture_13.png-9534796bd36313175d69d9b27528a40f.s3tc.ctex"]
 
 [params]
 
