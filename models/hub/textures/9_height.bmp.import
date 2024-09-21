@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbnkw5qtvwtpp"
-path="res://.godot/imported/9_height.bmp-f8e3f8ffaf9daaa645996e48fad2f054.ctex"
+path="res://.godot/imported/9_height.bmp-ee579b3227e4c157f906bda46cd0ab30.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://models/hub/textures/9_height.bmp"
-dest_files=["res://.godot/imported/9_height.bmp-f8e3f8ffaf9daaa645996e48fad2f054.ctex"]
+source_file="res://Models/hub/textures/9_height.bmp"
+dest_files=["res://.godot/imported/9_height.bmp-ee579b3227e4c157f906bda46cd0ab30.ctex"]
 
 [params]
 
