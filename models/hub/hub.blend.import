@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dgho05bon0ung"
-path="res://.godot/imported/hub.blend-719b0ee250b68f50b954833662cccee3.scn"
+uid="uid://cpf11bwkpvdf6"
+path="res://.godot/imported/hub.blend-c747500b352809aa9a8578b9bfe1a205.scn"
 
 [deps]
 
-source_file="res://Models/hub/hub.blend"
-dest_files=["res://.godot/imported/hub.blend-719b0ee250b68f50b954833662cccee3.scn"]
+source_file="res://models/hub/hub.blend"
+dest_files=["res://.godot/imported/hub.blend-c747500b352809aa9a8578b9bfe1a205.scn"]
 
 [params]
 

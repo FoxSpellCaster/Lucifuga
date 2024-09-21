@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3b6rfnpm7adc"
-path.s3tc="res://.godot/imported/cobblestone_0.png-f5820c9c460958922979ae9fb8ba8dbb.s3tc.ctex"
+path.s3tc="res://.godot/imported/cobblestone_0.png-727bb8f9efa654c62d8cd6dd80389e2a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Models/block_cobblestone/cobblestone_0.png"
-dest_files=["res://.godot/imported/cobblestone_0.png-f5820c9c460958922979ae9fb8ba8dbb.s3tc.ctex"]
+source_file="res://models/block_cobblestone/cobblestone_0.png"
+dest_files=["res://.godot/imported/cobblestone_0.png-727bb8f9efa654c62d8cd6dd80389e2a.s3tc.ctex"]
 
 [params]
 
