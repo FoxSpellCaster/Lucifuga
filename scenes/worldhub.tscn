@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://babglweocbocw"]
 
-[ext_resource type="PackedScene" uid="uid://dgho05bon0ung" path="res://models/hub/hub.blend" id="4_mi332"]
+[ext_resource type="PackedScene" uid="uid://dgho05bon0ung" path="res://Models/hub/hub.blend" id="4_mi332"]
 [ext_resource type="PackedScene" uid="uid://c6c1orwh1bmhe" path="res://addons/extended-strafer-controller/strafer-controller/player.tscn" id="5_80mp3"]
 [ext_resource type="Script" path="res://addons/extended-strafer-controller/modular-controller-base/Controller3DSettings.gd" id="6_my2np"]
 [ext_resource type="Script" path="res://addons/extended-strafer-controller/modular-controller-base/BaseMovementState.gd" id="7_gl561"]
@@ -80,7 +80,7 @@ Make A Level With Just A Few Textures (Blender + Unity Tutorial)
 https://www.youtube.com/watch?v=hdyBgQ77Sdg"
 
 [node name="Player" parent="." instance=ExtResource("5_80mp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2324, 0.0611446, 6.78407)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7676, 0.0611446, 0.78407)
 floor_snap_length = 0.5
 _START_SETTINGS = SubResource("Resource_paqy5")
 _START_STATES = Array[ExtResource("7_gl561")]([SubResource("Resource_xnfcm"), SubResource("Resource_buv5u"), SubResource("Resource_n483h")])
