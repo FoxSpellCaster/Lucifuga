@@ -72,3 +72,6 @@ _START_STATES = Array[ExtResource("7_gl561")]([SubResource("Resource_xnfcm"), Su
 
 [node name="hub" parent="." instance=ExtResource("4_mi332")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.592731, 0, 2.70803)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="hub"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.18423, 1.94954, -7.01608)
