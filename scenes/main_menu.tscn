@@ -3,9 +3,9 @@
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_xv7mq"]
 [ext_resource type="Texture2D" uid="uid://d1jc7dtkc6yt5" path="res://images/lowpoly_bg.webp" id="2_qxk8i"]
 [ext_resource type="FontFile" uid="uid://dk3u53iqnk23h" path="res://fonts/chunkfive/ChunkFive-Regular.otf" id="3_2es84"]
-[ext_resource type="FontFile" uid="uid://cs0y14qif3u6n" path="res://fonts/fira-code/FiraCode-Bold.otf" id="4_40n30"]
 [ext_resource type="FontFile" uid="uid://c5f2xaa5rm1uf" path="res://fonts/fira-code/FiraCode-Regular.otf" id="5_g4jri"]
 [ext_resource type="FontFile" uid="uid://dawuoxb81oct2" path="res://fonts/fira-code/FiraCode-Retina.otf" id="6_cdw8v"]
+[ext_resource type="Texture2D" uid="uid://shkm8l80uf25" path="res://images/download (1).png" id="6_yvx0v"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8x3uj"]
 texture = ExtResource("2_qxk8i")
@@ -79,25 +79,6 @@ theme_override_fonts/font = ExtResource("3_2es84")
 theme_override_font_sizes/font_size = 60
 text = "Lucifuga"
 metadata/_edit_lock_ = true
-
-[node name="label_darkworld2" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -753.0
-offset_top = -353.0
-offset_right = -236.0
-offset_bottom = -283.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 10
-theme_override_fonts/font = ExtResource("4_40n30")
-theme_override_font_sizes/font_size = 20
-text = "we are not saving the world today"
 
 [node name="Menu" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -196,6 +177,13 @@ vertical_alignment = 1
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_tyjjm")
+
+[node name="Download(1)" type="Sprite2D" parent="."]
+position = Vector2(171, 120)
+scale = Vector2(0.480001, 0.480001)
+texture = ExtResource("6_yvx0v")
+region_enabled = true
+region_rect = Rect2(137.718, 142, 524.205, 97.4359)
 
 [connection signal="pressed" from="Menu/Start Game" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Menu/Options" to="." method="_on_settings_pressed"]
