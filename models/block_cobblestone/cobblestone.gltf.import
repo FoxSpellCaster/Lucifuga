@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://qon2l5s4jql5"
-path="res://.godot/imported/cobblestone.gltf-c19df01620dc6947962640ccc19b9083.scn"
+path="res://.godot/imported/cobblestone.gltf-b1bf07e71dd3981bf6d4d1ba2278b9e2.scn"
 
 [deps]
 
-source_file="res://Models/block_cobblestone/cobblestone.gltf"
-dest_files=["res://.godot/imported/cobblestone.gltf-c19df01620dc6947962640ccc19b9083.scn"]
+source_file="res://models/block_cobblestone/cobblestone.gltf"
+dest_files=["res://.godot/imported/cobblestone.gltf-b1bf07e71dd3981bf6d4d1ba2278b9e2.scn"]
 
 [params]
 

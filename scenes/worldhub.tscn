@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://babglweocbocw"]
 
 [ext_resource type="FontFile" uid="uid://bjoskusvlelc" path="res://fonts/OpenDyslexic Mono (Windows, MacOS, Linux OTF)/OpenDyslexicMono-Regular.otf" id="1_td8jt"]
-[ext_resource type="PackedScene" uid="uid://cpf11bwkpvdf6" path="res://Models/hub/hub.blend" id="4_mi332"]
+[ext_resource type="PackedScene" uid="uid://cpf11bwkpvdf6" path="res://models/hub/hub.blend" id="4_mi332"]
 [ext_resource type="PackedScene" uid="uid://c6c1orwh1bmhe" path="res://addons/extended-strafer-controller/strafer-controller/player.tscn" id="5_80mp3"]
 [ext_resource type="Script" path="res://addons/extended-strafer-controller/modular-controller-base/Controller3DSettings.gd" id="6_my2np"]
 [ext_resource type="Script" path="res://addons/extended-strafer-controller/modular-controller-base/BaseMovementState.gd" id="7_gl561"]
@@ -70,8 +70,8 @@ bob_enabled = false
 _START_SETTINGS = SubResource("Resource_paqy5")
 _START_STATES = Array[ExtResource("7_gl561")]([SubResource("Resource_xnfcm"), SubResource("Resource_buv5u"), SubResource("Resource_n483h")])
 
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.77696, 1.94954, -4.30805)
+
 [node name="hub" parent="." instance=ExtResource("4_mi332")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.592731, 0, 2.70803)
-
-[node name="OmniLight3D" type="OmniLight3D" parent="hub"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.18423, 1.94954, -7.01608)
