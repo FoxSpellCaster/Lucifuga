@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://addons/extended-strafer-controller/strafer-controller/states/StraferAirState.gd" id="3_fgsa2"]
 [ext_resource type="Script" path="res://addons/extended-strafer-controller/strafer-controller/states/StraferGroundState.gd" id="4_jncx1"]
 [ext_resource type="Script" path="res://addons/extended-strafer-controller/strafer-controller/states/StraferSlideState.gd" id="5_55xlp"]
-[ext_resource type="FontFile" uid="uid://bjoskusvlelc" path="res://fonts/OpenDyslexic Mono (Windows, MacOS, Linux OTF)/OpenDyslexicMono-Regular.otf" id="7_4sap3"]
+[ext_resource type="FontFile" uid="uid://dawuoxb81oct2" path="res://fonts/fira-code/FiraCode-Retina.otf" id="7_1dgrn"]
 
 [sub_resource type="Resource" id="Resource_bbko0"]
 script = ExtResource("2_at1fk")
@@ -127,10 +127,12 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -40.0
-offset_bottom = 23.0
+offset_left = -122.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = 63.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("7_4sap3")
+theme_override_fonts/font = ExtResource("7_1dgrn")
 text = "Player Name
 Role"
 
@@ -139,11 +141,12 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -40.0
-offset_top = 103.0
-offset_bottom = 126.0
+offset_left = -189.0
+offset_top = 119.0
+offset_right = -16.0
+offset_bottom = 241.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("7_4sap3")
+theme_override_fonts/font = ExtResource("7_1dgrn")
 text = "Player Online List
 FoxSpellCaster
 JoeStaff
@@ -152,9 +155,11 @@ Nofe"
 
 [node name="Status" type="Label" parent="HUD"]
 layout_mode = 1
-offset_right = 40.0
-offset_bottom = 23.0
-theme_override_fonts/font = ExtResource("7_4sap3")
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 141.0
+offset_bottom = 113.0
+theme_override_fonts/font = ExtResource("7_1dgrn")
 text = "60 FPS
 Client / Solo
 0 Mon 0000
@@ -165,10 +170,11 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
+offset_left = 16.0
 offset_top = -49.0
-offset_right = 75.0
+offset_right = 103.0
 grow_vertical = 0
-theme_override_fonts/font = ExtResource("7_4sap3")
+theme_override_fonts/font = ExtResource("7_1dgrn")
 text = "0.0 Speed
 Walk"
 
@@ -177,11 +183,12 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 118.0
-offset_top = -23.0
-offset_right = 202.0
+offset_left = 134.0
+offset_top = -44.0
+offset_right = 252.0
+offset_bottom = -16.0
 grow_vertical = 0
-theme_override_fonts/font = ExtResource("7_4sap3")
+theme_override_fonts/font = ExtResource("7_1dgrn")
 text = "100 Health"
 
 [node name="Orientation" type="Node3D" parent="."]

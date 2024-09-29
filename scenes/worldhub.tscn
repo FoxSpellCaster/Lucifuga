@@ -1,13 +1,26 @@
-[gd_scene load_steps=13 format=3 uid="uid://babglweocbocw"]
+[gd_scene load_steps=16 format=3 uid="uid://babglweocbocw"]
 
-[ext_resource type="FontFile" uid="uid://bjoskusvlelc" path="res://fonts/OpenDyslexic Mono (Windows, MacOS, Linux OTF)/OpenDyslexicMono-Regular.otf" id="1_td8jt"]
-[ext_resource type="PackedScene" uid="uid://cpf11bwkpvdf6" path="res://models/hub/hub.blend" id="4_mi332"]
+[ext_resource type="FontFile" uid="uid://dawuoxb81oct2" path="res://fonts/fira-code/FiraCode-Retina.otf" id="1_6rpfi"]
 [ext_resource type="PackedScene" uid="uid://c6c1orwh1bmhe" path="res://addons/extended-strafer-controller/strafer-controller/player.tscn" id="5_80mp3"]
 [ext_resource type="Script" path="res://addons/extended-strafer-controller/modular-controller-base/Controller3DSettings.gd" id="6_my2np"]
 [ext_resource type="Script" path="res://addons/extended-strafer-controller/modular-controller-base/BaseMovementState.gd" id="7_gl561"]
+[ext_resource type="PackedScene" uid="uid://d10dlketmnmcv" path="res://models/hub/hub_test.blend" id="8_u8kma"]
 [ext_resource type="Script" path="res://addons/extended-strafer-controller/strafer-controller/states/StraferGroundState.gd" id="8_ynh4m"]
 [ext_resource type="Script" path="res://addons/extended-strafer-controller/strafer-controller/states/StraferAirState.gd" id="9_nqayg"]
 [ext_resource type="Script" path="res://addons/extended-strafer-controller/strafer-controller/states/StraferSlideState.gd" id="10_bkir2"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_lkdic"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_7asde"]
+sky_material = SubResource("ProceduralSkyMaterial_lkdic")
+
+[sub_resource type="Environment" id="Environment_v77ag"]
+background_mode = 2
+sky = SubResource("Sky_7asde")
+tonemap_mode = 2
+glow_enabled = true
 
 [sub_resource type="Resource" id="Resource_paqy5"]
 script = ExtResource("6_my2np")
@@ -42,11 +55,18 @@ VEL_TRANS_THRESHOLD = 9.0
 
 [node name="WorldHub" type="Node3D"]
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_v77ag")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
 [node name="Todo" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.51348, 2.1855, -5.27952)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3603, -1.70208, -9.88418)
 text = "Todo
 #1 Learn Level Design in Blender"
-font = ExtResource("1_td8jt")
+font = ExtResource("1_6rpfi")
 
 [node name="Clipboard" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.99705, 2.31414, -5.28938)
@@ -61,10 +81,10 @@ https://www.youtube.com/watch?v=hdyBgQ77Sdg
 
 Godot 4 - Tiled Dungeon Environment From Scratch
 https://www.youtube.com/watch?v=VjuyfBaryu8"
-font = ExtResource("1_td8jt")
+font = ExtResource("1_6rpfi")
 
 [node name="Player" parent="." instance=ExtResource("5_80mp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7676, 0.0611446, 0.78407)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.345233, -3.45521, -4.7318)
 floor_snap_length = 0.5
 bob_enabled = false
 _START_SETTINGS = SubResource("Resource_paqy5")
@@ -73,5 +93,7 @@ _START_STATES = Array[ExtResource("7_gl561")]([SubResource("Resource_xnfcm"), Su
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.77696, 1.94954, -4.30805)
 
-[node name="hub" parent="." instance=ExtResource("4_mi332")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.592731, 0, 2.70803)
+[node name="hub_test" parent="." instance=ExtResource("8_u8kma")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6727, -3.8382, -9.50656)
+
+[editable path="hub_test"]
