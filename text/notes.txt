@@ -9,3 +9,6 @@ Snap Along Vertices
 5x3m Wall
 UV Editor
 "U" and Unwrap
+"Ctrl + R" for Loopcuts
+"E" for Extrude
+"Ctrl + L" and Link Materials
