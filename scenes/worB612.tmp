@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqtvnap5ix662"]
+
+[ext_resource type="PackedScene" uid="uid://d1mpgec0aevhb" path="res://blender/test.blend" id="1_34mf0"]
+[ext_resource type="PackedScene" uid="uid://dy45els702ymt" path="res://player/player.tscn" id="2_nfqp0"]
+[ext_resource type="FontFile" uid="uid://dawuoxb81oct2" path="res://fonts/fira-code/FiraCode-Retina.otf" id="3_lqwvo"]
+[ext_resource type="Script" path="res://player/player.gd" id="4_w5lic"]
+
+[node name="world" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 10, 0)
+shadow_enabled = true
+directional_shadow_blend_splits = true
+
+[node name="test" parent="." instance=ExtResource("1_34mf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.42955, 0, -0.52245)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.938809, -0.154482, 0.307852, 0, 0.893781, 0.448504, -0.344438, -0.42106, 0.83909, 2.21457, 2.70423, 2.96097)
+visible = false
+fov = 83.0
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Control" type="Control" parent="Node2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Node2D/Control"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 104.0
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("3_lqwvo")
+text = "Lucifuga
+Demo World"
+
+[node name="Label2" type="Label" parent="Node2D/Control"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = 717.0
+offset_right = 123.0
+offset_bottom = 844.0
+grow_vertical = 0
+text = "Controls
+MOVE: WSAD
+LOOK: MOUSE
+JUMP: SPACE
+PAUSE: ESC"
+
+[node name="Player" parent="." instance=ExtResource("2_nfqp0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.61078, 2, 0)
+safe_margin = 0.01
+script = ExtResource("4_w5lic")
