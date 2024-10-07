@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://cqtvnap5ix662"]
 
-[ext_resource type="PackedScene" uid="uid://d1mpgec0aevhb" path="res://blender/test.blend" id="1_34mf0"]
 [ext_resource type="PackedScene" uid="uid://dy45els702ymt" path="res://player/player.tscn" id="3_g3lqn"]
 [ext_resource type="FontFile" uid="uid://dawuoxb81oct2" path="res://fonts/fira-code/FiraCode-Retina.otf" id="3_lqwvo"]
 [ext_resource type="Script" path="res://player/player.gd" id="4_g6xts"]
+[ext_resource type="PackedScene" uid="uid://bgu32u3amjuku" path="res://blender/lucifuga.blend" id="4_ipiw6"]
 
 [node name="world" type="Node3D"]
 
@@ -11,9 +11,6 @@
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 10, 0)
 shadow_enabled = true
 directional_shadow_blend_splits = true
-
-[node name="test" parent="." instance=ExtResource("1_34mf0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.42955, 0, -0.52245)
 
 [node name="Node2D" type="Node2D" parent="."]
 
@@ -52,3 +49,5 @@ PAUSE: ESC"
 [node name="CharacterBody3D" parent="." instance=ExtResource("3_g3lqn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.206384, 2, -3.54723)
 script = ExtResource("4_g6xts")
+
+[node name="lucifuga" parent="." instance=ExtResource("4_ipiw6")]
