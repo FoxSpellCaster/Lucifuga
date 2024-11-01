@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://cqtvnap5ix662"]
+[gd_scene load_steps=6 format=3 uid="uid://cqtvnap5ix662"]
 
+[ext_resource type="FontFile" uid="uid://c6pv1my75rxxn" path="res://fonts/strogg-font/strogg.ttf" id="2_di23l"]
 [ext_resource type="PackedScene" uid="uid://dy45els702ymt" path="res://player/player.tscn" id="3_g3lqn"]
 [ext_resource type="FontFile" uid="uid://dawuoxb81oct2" path="res://fonts/fira-code/FiraCode-Retina.otf" id="3_lqwvo"]
 [ext_resource type="Script" path="res://player/player.gd" id="4_g6xts"]
@@ -27,6 +28,16 @@ offset_top = 8.0
 offset_right = 104.0
 offset_bottom = 55.0
 theme_override_fonts/font = ExtResource("3_lqwvo")
+text = "Lucifuga
+Demo World"
+
+[node name="Label3" type="Label" parent="Node2D/Control"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 62.0
+offset_right = 99.0
+offset_bottom = 109.0
+theme_override_fonts/font = ExtResource("2_di23l")
 text = "Lucifuga
 Demo World"
 
