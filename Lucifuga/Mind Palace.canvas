@@ -1,0 +1,39 @@
+{
+	"nodes":[
+		{"id":"cec2e3366e729f5d","x":-600,"y":-440,"width":1547,"height":840,"type":"group","label":"Main Menu"},
+		{"id":"8f1869f0a323cdfa","x":1025,"y":-109,"width":929,"height":749,"type":"group","label":"Level"},
+		{"id":"40d7f1f81d317b11","x":-1920,"y":-960,"width":944,"height":693,"type":"group","label":"Player"},
+		{"id":"21e1567778a5df0f","x":181,"y":980,"width":1009,"height":279,"type":"group","label":"Features"},
+		{"id":"92d6779f06dcbbfd","type":"text","text":"**Main Menu**","x":247,"y":280,"width":153,"height":60},
+		{"id":"f27d54796a2a62e4","type":"text","text":"Credits","x":460,"y":120,"width":131,"height":60},
+		{"id":"fbe62f70bd289310","type":"file","file":"Lucifuga.md","x":120,"y":660,"width":407,"height":98},
+		{"id":"1e2c8dcf3ec88601","type":"text","text":"Cards","x":201,"y":1125,"width":250,"height":60},
+		{"id":"2c45ed1847bf5c14","type":"text","text":"Light & Dark","x":527,"y":1125,"width":250,"height":60},
+		{"id":"94d51b20c4b734ca","type":"text","text":"Player is Light","x":886,"y":1000,"width":250,"height":60},
+		{"id":"1503e6ca5417ad48","type":"text","text":"Lucifuga is Dark","x":920,"y":1179,"width":250,"height":60},
+		{"id":"1788b0967d20a19a","type":"link","url":"https://github.com/FoxSpellCaster/Lucifuga","x":-640,"y":509,"width":400,"height":400},
+		{"id":"835441911e4354c1","type":"link","url":"https://suno.com/song/010cb06a-5734-4e0e-8e28-c925cc12b72c","x":527,"y":-420,"width":400,"height":400},
+		{"id":"400ea7d485221f13","x":1534,"y":-89,"width":400,"height":400,"type":"link","url":"https://suno.com/song/e8268a4e-aec4-430b-a6bc-8b9c6d42c344"},
+		{"id":"aa66f0f04f08752c","x":-580,"y":-20,"width":400,"height":400,"type":"link","url":"https://suno.com/song/df210507-12a3-44a7-9ce0-8d3d00ff3a80"},
+		{"id":"c2444210fcf28edf","type":"text","text":"Level Design","x":1045,"y":560,"width":250,"height":60},
+		{"id":"901f4bddaed62535","type":"text","text":"Hub Level","x":1045,"y":220,"width":250,"height":60},
+		{"id":"6839375d79eec925","x":-1396,"y":-940,"width":400,"height":400,"type":"link","url":"https://www.color-hex.com/color-palette/25247"},
+		{"id":"cda9e91cd80e170c","type":"file","file":"Colors for Teams.md","x":-1900,"y":-602,"width":378,"height":124},
+		{"id":"183740776cc74d89","x":-1321,"y":-347,"width":250,"height":60,"type":"text","text":"Player"}
+	],
+	"edges":[
+		{"id":"743b31eebd628560","fromNode":"fbe62f70bd289310","fromSide":"top","toNode":"92d6779f06dcbbfd","toSide":"bottom"},
+		{"id":"5d23911b983784d1","fromNode":"c2444210fcf28edf","fromSide":"top","toNode":"901f4bddaed62535","toSide":"bottom"},
+		{"id":"869f03cf5a6646a1","fromNode":"fbe62f70bd289310","fromSide":"bottom","toNode":"1e2c8dcf3ec88601","toSide":"top"},
+		{"id":"be451ec0e60d6238","fromNode":"fbe62f70bd289310","fromSide":"bottom","toNode":"2c45ed1847bf5c14","toSide":"top"},
+		{"id":"10132c1b4d8f54ac","fromNode":"2c45ed1847bf5c14","fromSide":"right","toNode":"94d51b20c4b734ca","toSide":"left"},
+		{"id":"ef34f7bf9fd35311","fromNode":"2c45ed1847bf5c14","fromSide":"right","toNode":"1503e6ca5417ad48","toSide":"left"},
+		{"id":"41be4348e563f705","fromNode":"fbe62f70bd289310","fromSide":"right","toNode":"c2444210fcf28edf","toSide":"bottom"},
+		{"id":"426b8eb2b1fcb816","fromNode":"92d6779f06dcbbfd","fromSide":"top","toNode":"f27d54796a2a62e4","toSide":"bottom"},
+		{"id":"9c74e921395781f8","fromNode":"fbe62f70bd289310","fromSide":"left","toNode":"1788b0967d20a19a","toSide":"right"},
+		{"id":"168ad646d9b655b2","fromNode":"f27d54796a2a62e4","fromSide":"top","toNode":"835441911e4354c1","toSide":"bottom"},
+		{"id":"cd42c346488408f4","fromNode":"92d6779f06dcbbfd","fromSide":"left","toNode":"aa66f0f04f08752c","toSide":"right"},
+		{"id":"464c8b0c45f914bf","fromNode":"183740776cc74d89","fromSide":"top","toNode":"6839375d79eec925","toSide":"bottom"},
+		{"id":"76e6a5bded9be858","fromNode":"183740776cc74d89","fromSide":"top","toNode":"cda9e91cd80e170c","toSide":"bottom"}
+	]
+}
