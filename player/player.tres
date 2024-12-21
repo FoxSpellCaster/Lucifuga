@@ -1,6 +1,3 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b54iqwqsi133o"]
-
-[ext_resource type="Texture2D" uid="uid://vav0mmdh7nvt" path="res://blender/textures/player_MCCT1_2.png" id="1_wtdbg"]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b54iqwqsi133o"]
 
 [resource]
-albedo_texture = ExtResource("1_wtdbg")
