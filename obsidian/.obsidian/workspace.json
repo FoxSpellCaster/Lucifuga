@@ -1,0 +1,171 @@
+{
+  "main": {
+    "id": "3141645b16b48139",
+    "type": "split",
+    "children": [
+      {
+        "id": "32b361f3301a01e1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c4f8a7ea53a7f882",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Mind Palace.canvas",
+                "viewState": {
+                  "x": -1909.6282404991719,
+                  "y": -1493.8426551923894,
+                  "zoom": -2.2166666666666663
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Mind Palace"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "4f311ee2d26e3330",
+    "type": "split",
+    "children": [
+      {
+        "id": "35cccb4e63bd5a40",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fed8441161e627e8",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "6f378ee9e36d7dd0",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "343d3cd00f56eee7",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "5d18aff5cdf66ce0",
+    "type": "split",
+    "children": [
+      {
+        "id": "fed9382aec2e1674",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f282875a2b5b6fb5",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Mind Palace.canvas",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Mind Palace"
+            }
+          },
+          {
+            "id": "f048b6f98d2a3b65",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Mind Palace.canvas",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Mind Palace"
+            }
+          },
+          {
+            "id": "7aed9143a499b01e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "6b82cd727188557c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Mind Palace.canvas"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Mind Palace"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "c4f8a7ea53a7f882",
+  "lastOpenFiles": []
+}
