@@ -1,0 +1,43 @@
+	Game Concept:
+		Genre: Action RPG, Stealth/Exploration, with elements of Rhythm or Puzzle.
+		Setting: Dark planet ruled by Queen Lucifuga, where crystals play music.
+
+	Plot:
+Protagonist: Space Marine on a mission to harvest crystals for booster packs for their card deck.
+Antagonist/Protagonist: Queen Lucifuga, who wants peace but defends her crystals with dark creatures when threatened.
+		Plot Development: 
+Space Marine invades, initially unaware of the planet's history and culture.
+Encounter with Lucifuga's song, which is misunderstood by the Marine as a battle prelude.
+Conflict arises as the Marine attempts to take the crystals, leading to combat or possible diplomatic resolutions.
+
+	Gameplay Mechanics:
+		Crystal Interaction: 
+Crystals provide buffs, lore, or change gameplay dynamics.
+Harvesting or learning from them affects the story and gameplay.
+		Combat vs. Diplomacy: 
+Options for direct combat, stealth, or peaceful negotiation.
+		Environmental Puzzles: 
+Use darkness, light, and sound for puzzle-solving.
+		Moral Choices: 
+Decisions impact the game's ending, the planet's fate, and possibly gameplay style.
+
+Character and World:
+Lucifuga: 
+NPC with a deep backstory, offering quests, lore, and influencing player's moral choices.
+World-Building: 
+Exploration of a dark planet with unique flora, fauna, and cultural remnants.
+Multiple zones or levels representing different aspects of the planet and story.
+
+Visual and Audio:
+Aesthetics: Dark, with bioluminescent highlights, emphasizing the contrast between light and dark.
+Sound: Crystals emit music which changes with player interactions, influencing mood and gameplay.
+
+Player Experience:
+Multiple Endings: Based on player choices regarding the crystals and Lucifuga.
+Replayability: Decisions alter gameplay, encouraging multiple playthroughs.
+Community Engagement: Features for players to share their unique game experiences or strategies.
+
+Narrative Themes:
+Misunderstanding and cultural clash.
+The impact of technology and war on nature and culture.
+The possibility of peace and understanding in conflict.
