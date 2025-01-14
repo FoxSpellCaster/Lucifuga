@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b5dundsj4vrko"
+path="res://.godot/imported/Crimson Crystal_ Battle for Lucifuga (1).mp3-fd13663b866a9317c2c011c0313b64be.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Crimson Crystal_ Battle for Lucifuga (1).mp3"
+dest_files=["res://.godot/imported/Crimson Crystal_ Battle for Lucifuga (1).mp3-fd13663b866a9317c2c011c0313b64be.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

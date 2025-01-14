@@ -21,3 +21,7 @@ project/assembly_name="Lucifuga"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/Todo_Manager/plugin.cfg", "res://addons/sky_3d/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
