@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://bh6463g1bpxy3"]
 
-[ext_resource type="PackedScene" uid="uid://cvi3ms6ca7sce" path="res://scenes/player.tscn" id="1_62t3n"]
+[ext_resource type="PackedScene" uid="uid://cvi3ms6ca7sce" path="res://assets/Player/player.tscn" id="1_62t3n"]
 [ext_resource type="Terrain3DAssets" uid="uid://dal3jhw6241qg" path="res://demo/data/assets.tres" id="2_oynvy"]
 
 [sub_resource type="Gradient" id="Gradient_62t3n"]
