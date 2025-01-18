@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct7wigr8uhqpq"
-path="res://.godot/imported/Instruct1.png-698c6faa3ef3ac4960807faa3e028bd6.ctex"
+uid="uid://ru86ynav5vf5"
+path="res://.godot/imported/SteamAvatar.jpg-f3cf6cb8fce2188edea8c98dfec235ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/Todo_Manager/doc/images/Instruct1.png"
-dest_files=["res://.godot/imported/Instruct1.png-698c6faa3ef3ac4960807faa3e028bd6.ctex"]
+source_file="res://UI/SteamAvatar.jpg"
+dest_files=["res://.godot/imported/SteamAvatar.jpg-f3cf6cb8fce2188edea8c98dfec235ec.ctex"]
 
 [params]
 

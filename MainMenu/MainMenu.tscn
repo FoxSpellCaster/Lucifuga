@@ -49,6 +49,7 @@ layout_mode = 2
 text = "Quit"
 
 [node name="SettingsCenterContainer" type="CenterContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -72,3 +73,4 @@ offset_bottom = 8.0
 layout_mode = 2
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Settings" to="SettingsCenterContainer" method="show"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Settings" to="SettingsCenterContainer" method="set_mouse_filter"]

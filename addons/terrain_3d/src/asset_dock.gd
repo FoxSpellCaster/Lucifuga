@@ -406,7 +406,7 @@ func load_editor_settings() -> void:
 	set_slot(plugin.get_setting(ES_DOCK_SLOT, POS_BOTTOM))
 	if floating_btn.button_pressed:
 		make_dock_float()
-	# TODO Don't save tab until thumbnail generation more reliable
+
 	#if plugin.get_setting(ES_DOCK_TAB, 0) == 1:
 	#	_on_meshes_pressed()
 
@@ -419,7 +419,7 @@ func save_editor_settings() -> void:
 	plugin.set_setting(ES_DOCK_TILE_SIZE, size_slider.value)
 	plugin.set_setting(ES_DOCK_FLOATING, floating_btn.button_pressed)
 	plugin.set_setting(ES_DOCK_PINNED, pinned_btn.button_pressed)
-	# TODO Don't save tab until thumbnail generation more reliable
+
 	# plugin.set_setting(ES_DOCK_TAB, 0 if _current_list == texture_list else 1)
 	if window:
 		plugin.set_setting(ES_DOCK_WINDOW_SIZE, window.size)
