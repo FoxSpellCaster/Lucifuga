@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bh6463g1bpxy3"]
+[gd_scene load_steps=10 format=3 uid="uid://bh6463g1bpxy3"]
 
 [ext_resource type="PackedScene" uid="uid://cvi3ms6ca7sce" path="res://assets/Player/player.tscn" id="1_62t3n"]
 [ext_resource type="Terrain3DAssets" uid="uid://dal3jhw6241qg" path="res://demo/data/assets.tres" id="2_oynvy"]
+[ext_resource type="PackedScene" uid="uid://sa1psp5d32ej" path="res://blender/playing.blend" id="3_k4in3"]
 
 [sub_resource type="Gradient" id="Gradient_62t3n"]
 offsets = PackedFloat32Array(0.2, 1)
@@ -668,6 +669,7 @@ label_distance = 10000.0
 label_size = 56
 show_grid = true
 top_level = true
+metadata/_edit_lock_ = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ng2wx")
@@ -678,3 +680,6 @@ light_angular_distance = 69.28
 shadow_enabled = true
 directional_shadow_mode = 0
 directional_shadow_blend_splits = true
+
+[node name="playing" parent="." instance=ExtResource("3_k4in3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.35217, 2.83656, 9.98438)
