@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://coln3qu3xexsb"]
+
+[ext_resource type="Texture2D" uid="uid://brsdsghycivua" path="res://icon.svg" id="1_x8fbi"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_kd8pr"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_ib2es"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0i6ks"]
+albedo_texture = ExtResource("1_x8fbi")
+roughness = 0.4
+
+[node name="Ball" type="RigidBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_kd8pr")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_ib2es")
+surface_material_override/0 = SubResource("StandardMaterial3D_0i6ks")
+
+[node name="Marker3D" type="Marker3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Marker3D"]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 2.85, 3.5)
+current = true
