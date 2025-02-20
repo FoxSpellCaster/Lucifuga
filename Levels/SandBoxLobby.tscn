@@ -1,48 +1,60 @@
-[gd_scene load_steps=8 format=3 uid="uid://bh6463g1bpxy3"]
+[gd_scene load_steps=9 format=3 uid="uid://bh6463g1bpxy3"]
 
 [ext_resource type="Script" uid="uid://2hj4ylgkf20" path="res://Levels/sand_box_lobby.gd" id="1_n1ufb"]
-[ext_resource type="PackedScene" uid="uid://bq3p8cs31y8oy" path="res://assets/Blender/SandBoxLobby.blend" id="1_qs1hc"]
-[ext_resource type="PackedScene" uid="uid://coln3qu3xexsb" path="res://assets/Player/PlayerCore.tscn" id="2_n1ufb"]
-[ext_resource type="PackedScene" uid="uid://dg8qk648gumag" path="res://assets/FireParticles.tscn" id="3_7h0o7"]
+[ext_resource type="PackedScene" uid="uid://bq3p8cs31y8oy" path="res://Blender/SandBoxLobby.blend" id="1_qs1hc"]
+[ext_resource type="PackedScene" uid="uid://dg8qk648gumag" path="res://FireParticles.tscn" id="3_7h0o7"]
+[ext_resource type="AudioStream" uid="uid://bv24ghldrw40h" path="res://Music/LucifugaSpace.mp3" id="5_7h0o7"]
+[ext_resource type="PackedScene" uid="uid://coln3qu3xexsb" path="res://Player/PlayerCore.tscn" id="5_km3ip"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1qw4d"]
-sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
-ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7h0o7"]
+sky_top_color = Color(0.454902, 0.670588, 1, 1)
+sky_horizon_color = Color(0.964706, 0.976471, 1, 1)
+ground_bottom_color = Color(0.454902, 0.670588, 1, 1)
+ground_horizon_color = Color(0.964706, 0.976471, 1, 1)
 
-[sub_resource type="Sky" id="Sky_k4in3"]
-sky_material = SubResource("ProceduralSkyMaterial_1qw4d")
+[sub_resource type="Sky" id="Sky_f74i4"]
+sky_material = SubResource("ProceduralSkyMaterial_7h0o7")
 
-[sub_resource type="Environment" id="Environment_kd8pr"]
-background_mode = 1
-background_color = Color(0.364829, 0.385267, 1, 1)
-sky = SubResource("Sky_k4in3")
+[sub_resource type="Environment" id="Environment_km3ip"]
+background_mode = 2
+sky = SubResource("Sky_f74i4")
 ambient_light_source = 3
-ambient_light_color = Color(0.250224, 0.232018, 0.839433, 1)
-tonemap_mode = 3
+reflected_light_source = 2
+ssr_enabled = true
+ssao_enabled = true
+ssao_intensity = 2.36
+ssil_enabled = true
+sdfgi_enabled = true
+sdfgi_read_sky_light = false
 glow_enabled = true
-glow_bloom = 0.5
-fog_enabled = true
-fog_density = 0.003
-adjustment_enabled = true
-adjustment_saturation = 1.2
+glow_intensity = 2.62
+glow_strength = 0.54
+glow_bloom = 0.76
+glow_hdr_threshold = 1.48
+glow_hdr_scale = 1.31
 
 [node name="SandBoxLobby" type="Node"]
 script = ExtResource("1_n1ufb")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_kd8pr")
+environment = SubResource("Environment_km3ip")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.5, -0.75, 0.433013, 0, 0.5, 0.866025, -0.866026, -0.433013, 0.25, 0, 10, 0)
-light_color = Color(1, 0.853452, 0.78505, 1)
-light_energy = 2.0
+transform = Transform3D(-0.504503, 0.699502, 0.506136, 0.189858, -0.481981, 0.855364, 0.842277, 0.527628, 0.110355, 0, 2.11466, 0)
 shadow_enabled = true
+directional_shadow_max_distance = 40.4
 
 [node name="SandBoxLobby_Blender" parent="." instance=ExtResource("1_qs1hc")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.24581, 0, 1.6956)
 
-[node name="PlayerCore" parent="." instance=ExtResource("2_n1ufb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
-
 [node name="FireGPUParticles3D" parent="." instance=ExtResource("3_7h0o7")]
 transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, 1.6956, 2.24788, -1.24581)
+
+[node name="LucifugaSpace_AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_7h0o7")
+volume_db = -2.0
+autoplay = true
+max_distance = 100.0
+
+[node name="PlayerCore" parent="." instance=ExtResource("5_km3ip")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)

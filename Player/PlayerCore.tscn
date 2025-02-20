@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://coln3qu3xexsb"]
+
+[ext_resource type="Script" uid="uid://ckwrx1nfbcujm" path="res://Player/PlayerCoreScript.gd" id="1_l4c3f"]
+[ext_resource type="Texture2D" uid="uid://brsdsghycivua" path="res://icon.svg" id="1_x8fbi"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_l4c3f"]
+friction = 4.0
+rough = true
+bounce = 0.5
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_kd8pr"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_ib2es"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0i6ks"]
+albedo_texture = ExtResource("1_x8fbi")
+roughness = 0.4
+
+[node name="PlayerCore" type="RigidBody3D"]
+mass = 100.0
+physics_material_override = SubResource("PhysicsMaterial_l4c3f")
+angular_damp = 1.0
+script = ExtResource("1_l4c3f")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_kd8pr")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_ib2es")
+surface_material_override/0 = SubResource("StandardMaterial3D_0i6ks")
+
+[node name="BallCameraMarker3D" type="Marker3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="BallCameraMarker3D"]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 2.85, 3.5)
+current = true
+
+[node name="FloorCheckRayCast3D" type="RayCast3D" parent="."]
+target_position = Vector3(0, -1.5, 0)
+debug_shape_custom_color = Color(0, 1, 0.012712, 1)
