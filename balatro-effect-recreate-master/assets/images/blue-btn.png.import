@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://n81t0ixrdymu"
-path="res://.godot/imported/blue-btn.png-e3ef4846b8d83e1ae2fd6cbca2a8648f.ctex"
+path="res://.godot/imported/blue-btn.png-0b3014f1756a5b26bacf3799506a5fa6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/blue-btn.png"
-dest_files=["res://.godot/imported/blue-btn.png-e3ef4846b8d83e1ae2fd6cbca2a8648f.ctex"]
+source_file="res://balatro-effect-recreate-master/assets/images/blue-btn.png"
+dest_files=["res://.godot/imported/blue-btn.png-0b3014f1756a5b26bacf3799506a5fa6.ctex"]
 
 [params]
 

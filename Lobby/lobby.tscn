@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bh6463g1bpxy3"]
+[gd_scene load_steps=7 format=3 uid="uid://bh6463g1bpxy3"]
 
 [ext_resource type="PackedScene" uid="uid://bq3p8cs31y8oy" path="res://assets/blender/GradientTricking.blend" id="2_1qw4d"]
 [ext_resource type="PackedScene" uid="uid://coln3qu3xexsb" path="res://assets/Player/ball.tscn" id="2_k4in3"]
+[ext_resource type="PackedScene" uid="uid://dg8qk648gumag" path="res://FireParticles.tscn" id="3_k4in3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1qw4d"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -22,10 +23,13 @@ glow_enabled = true
 environment = SubResource("Environment_kd8pr")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0, 10, 0)
 shadow_enabled = true
 
 [node name="GradientTricking" parent="." instance=ExtResource("2_1qw4d")]
 
 [node name="Ball" parent="." instance=ExtResource("2_k4in3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="FireGPUParticles3D" parent="." instance=ExtResource("3_k4in3")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 2.94141, 2.24788, 0.449795)

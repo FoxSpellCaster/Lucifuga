@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://cgn2tcjqivlg7"
-path="res://.godot/imported/m6x11.ttf-879581dc489af7f9f23c5079607a2e0f.fontdata"
+path="res://.godot/imported/m6x11.ttf-a98aba050a71455c48a772b0669c3685.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/m6x11.ttf"
-dest_files=["res://.godot/imported/m6x11.ttf-879581dc489af7f9f23c5079607a2e0f.fontdata"]
+source_file="res://balatro-effect-recreate-master/assets/fonts/m6x11.ttf"
+dest_files=["res://.godot/imported/m6x11.ttf-a98aba050a71455c48a772b0669c3685.fontdata"]
 
 [params]
 
