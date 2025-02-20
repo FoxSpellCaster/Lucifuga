@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://k7larhahf7m7"]
+
+[ext_resource type="PackedScene" uid="uid://prh35jb6tjtd" path="res://Player/sophia_skin/sophia_skin.tscn" id="1_5wjm4"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3swsy"]
+
+[node name="Player3D" type="CharacterBody3D"]
+
+[node name="SophiaSkin" parent="." instance=ExtResource("1_5wjm4")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.733566, 0, 0, 0, 0.786877, 0, 0, 0, 0.806187, 0, 0.845398, 0)
+shape = SubResource("CapsuleShape3D_3swsy")

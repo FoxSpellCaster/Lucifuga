@@ -29,5 +29,4 @@ func _physics_process(delta):
 	#BUG Fixed jumping by adding in a *30, but it still can do an odd double jump
 	var is_on_floor = $FloorCheckRayCast3D.is_colliding()
 	if Input.is_action_just_pressed("jump") and is_on_floor:
-			apply_central_force(Vector3.UP * jump_impulse * 30)
-			print("PlayerCore JUMP!")
+			apply_central_force(Vector3.UP * jump_impulse * 20)

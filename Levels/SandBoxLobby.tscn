@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://2hj4ylgkf20" path="res://Levels/sand_box_lobby.gd" id="1_n1ufb"]
 [ext_resource type="PackedScene" uid="uid://bq3p8cs31y8oy" path="res://Blender/SandBoxLobby.blend" id="1_qs1hc"]
 [ext_resource type="PackedScene" uid="uid://dg8qk648gumag" path="res://FireParticles.tscn" id="3_7h0o7"]
-[ext_resource type="AudioStream" uid="uid://bv24ghldrw40h" path="res://Music/LucifugaSpace.mp3" id="5_7h0o7"]
-[ext_resource type="PackedScene" uid="uid://coln3qu3xexsb" path="res://Player/PlayerCore.tscn" id="5_km3ip"]
+[ext_resource type="Script" uid="uid://dqyt6n4bbc8w8" path="res://fire_particles.gd" id="4_7h0o7"]
+[ext_resource type="PackedScene" uid="uid://k7larhahf7m7" path="res://player_3d.tscn" id="5_km3ip"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7h0o7"]
 sky_top_color = Color(0.454902, 0.670588, 1, 1)
@@ -49,12 +49,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.2458
 
 [node name="FireGPUParticles3D" parent="." instance=ExtResource("3_7h0o7")]
 transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, 1.6956, 2.24788, -1.24581)
+script = ExtResource("4_7h0o7")
 
-[node name="LucifugaSpace_AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource("5_7h0o7")
-volume_db = -2.0
-autoplay = true
-max_distance = 100.0
-
-[node name="PlayerCore" parent="." instance=ExtResource("5_km3ip")]
+[node name="Player3D" parent="." instance=ExtResource("5_km3ip")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
