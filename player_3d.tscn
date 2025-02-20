@@ -1,13 +1,43 @@
-[gd_scene load_steps=3 format=3 uid="uid://k7larhahf7m7"]
+[gd_scene load_steps=7 format=3 uid="uid://k7larhahf7m7"]
 
-[ext_resource type="PackedScene" uid="uid://prh35jb6tjtd" path="res://Player/sophia_skin/sophia_skin.tscn" id="1_5wjm4"]
+[ext_resource type="Script" uid="uid://ca3jokfsvkvvm" path="res://player_3d.gd" id="1_5wjm4"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3swsy"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3n4ta"]
+radius = 0.4
+height = 1.6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3n4ta"]
+albedo_color = Color(0.785124, 0.149883, 0.692627, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_5wjm4"]
+material = SubResource("StandardMaterial3D_3n4ta")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_3n4ta"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_5wjm4"]
 
 [node name="Player3D" type="CharacterBody3D"]
-
-[node name="SophiaSkin" parent="." instance=ExtResource("1_5wjm4")]
+script = ExtResource("1_5wjm4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.733566, 0, 0, 0, 0.786877, 0, 0, 0, 0.806187, 0, 0.845398, 0)
-shape = SubResource("CapsuleShape3D_3swsy")
+shape = SubResource("CapsuleShape3D_3n4ta")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.733566, 0, 0, 0, 0.786877, 0, 0, 0, 0.806187, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_5wjm4")
+skeleton = NodePath("../CollisionShape3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(0.7, 0, 0, 0, -1.04907e-08, 0.3, 0, -0.24, -1.31134e-08, 0, 0.525751, -0.294737)
+mesh = SubResource("CylinderMesh_3n4ta")
+
+[node name="CameraPivot" type="Marker3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 0)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CameraPivot"]
+shape = SubResource("SphereShape3D_5wjm4")
+spring_length = 8.0
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot/SpringArm3D"]
+unique_name_in_owner = true

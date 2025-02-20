@@ -7,48 +7,31 @@
 [ext_resource type="PackedScene" uid="uid://k7larhahf7m7" path="res://player_3d.tscn" id="5_km3ip"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7h0o7"]
-sky_top_color = Color(0.454902, 0.670588, 1, 1)
-sky_horizon_color = Color(0.964706, 0.976471, 1, 1)
-ground_bottom_color = Color(0.454902, 0.670588, 1, 1)
-ground_horizon_color = Color(0.964706, 0.976471, 1, 1)
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
 
-[sub_resource type="Sky" id="Sky_f74i4"]
+[sub_resource type="Sky" id="Sky_km3ip"]
 sky_material = SubResource("ProceduralSkyMaterial_7h0o7")
 
-[sub_resource type="Environment" id="Environment_km3ip"]
+[sub_resource type="Environment" id="Environment_dukhs"]
 background_mode = 2
-sky = SubResource("Sky_f74i4")
-ambient_light_source = 3
-reflected_light_source = 2
-ssr_enabled = true
-ssao_enabled = true
-ssao_intensity = 2.36
-ssil_enabled = true
-sdfgi_enabled = true
-sdfgi_read_sky_light = false
-glow_enabled = true
-glow_intensity = 2.62
-glow_strength = 0.54
-glow_bloom = 0.76
-glow_hdr_threshold = 1.48
-glow_hdr_scale = 1.31
+sky = SubResource("Sky_km3ip")
 
 [node name="SandBoxLobby" type="Node"]
 script = ExtResource("1_n1ufb")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_km3ip")
+environment = SubResource("Environment_dukhs")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.504503, 0.699502, 0.506136, 0.189858, -0.481981, 0.855364, 0.842277, 0.527628, 0.110355, 0, 2.11466, 0)
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
 shadow_enabled = true
-directional_shadow_max_distance = 40.4
 
 [node name="SandBoxLobby_Blender" parent="." instance=ExtResource("1_qs1hc")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.24581, 0, 1.6956)
 
 [node name="FireGPUParticles3D" parent="." instance=ExtResource("3_7h0o7")]
-transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, 1.6956, 2.24788, -1.24581)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.67492, 2.18396, -1.22315)
 script = ExtResource("4_7h0o7")
 
 [node name="Player3D" parent="." instance=ExtResource("5_km3ip")]
