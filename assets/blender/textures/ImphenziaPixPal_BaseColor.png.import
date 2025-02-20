@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://573u1gl6hxtd"
-path.s3tc="res://.godot/imported/ImphenziaPixPal_BaseColor.png-60dc6301b63882a055d8e15b5550af60.s3tc.ctex"
+path.s3tc="res://.godot/imported/ImphenziaPixPal_BaseColor.png-c6d199689aff4bea6e17df4636cfdacb.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/blender/textures/ImphenziaPixPal_BaseColor.png"
-dest_files=["res://.godot/imported/ImphenziaPixPal_BaseColor.png-60dc6301b63882a055d8e15b5550af60.s3tc.ctex"]
+source_file="res://assets/Blender/textures/ImphenziaPixPal_BaseColor.png"
+dest_files=["res://.godot/imported/ImphenziaPixPal_BaseColor.png-c6d199689aff4bea6e17df4636cfdacb.s3tc.ctex"]
 
 [params]
 

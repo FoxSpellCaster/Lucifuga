@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cabogq2l3scaa"
-path="res://.godot/imported/Crimson Crystal_ Battle for Lucifuga.mp3-ca033b5fe90d76a9d82a0b36101b27b6.mp3str"
+path="res://.godot/imported/Crimson Crystal_ Battle for Lucifuga.mp3-2eb928cd81ff4707a04437a9437a4872.mp3str"
 
 [deps]
 
-source_file="res://assets/music/Crimson Crystal_ Battle for Lucifuga.mp3"
-dest_files=["res://.godot/imported/Crimson Crystal_ Battle for Lucifuga.mp3-ca033b5fe90d76a9d82a0b36101b27b6.mp3str"]
+source_file="res://assets/Music/Crimson Crystal_ Battle for Lucifuga.mp3"
+dest_files=["res://.godot/imported/Crimson Crystal_ Battle for Lucifuga.mp3-2eb928cd81ff4707a04437a9437a4872.mp3str"]
 
 [params]
 

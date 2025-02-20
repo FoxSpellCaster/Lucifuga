@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://db28pfdx1hvg4"
-path="res://.godot/imported/Electric Pulse (1).mp3-6e62a4927d6656b4b55f0d76c87995b8.mp3str"
+path="res://.godot/imported/Electric Pulse (1).mp3-f48ccbc1801669e276fbd150348060ca.mp3str"
 
 [deps]
 
-source_file="res://assets/music/Electric Pulse (1).mp3"
-dest_files=["res://.godot/imported/Electric Pulse (1).mp3-6e62a4927d6656b4b55f0d76c87995b8.mp3str"]
+source_file="res://assets/Music/Electric Pulse (1).mp3"
+dest_files=["res://.godot/imported/Electric Pulse (1).mp3-f48ccbc1801669e276fbd150348060ca.mp3str"]
 
 [params]
 

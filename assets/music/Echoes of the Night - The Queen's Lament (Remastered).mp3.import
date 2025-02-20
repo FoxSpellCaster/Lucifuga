@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://deges0sw2m2ql"
-path="res://.godot/imported/Echoes of the Night - The Queen's Lament (Remastered).mp3-bdca35522a20e4c1aa3940e67726792d.mp3str"
+path="res://.godot/imported/Echoes of the Night - The Queen's Lament (Remastered).mp3-abd4ccbf3d728fea3f19c991adedf994.mp3str"
 
 [deps]
 
-source_file="res://assets/music/Echoes of the Night - The Queen's Lament (Remastered).mp3"
-dest_files=["res://.godot/imported/Echoes of the Night - The Queen's Lament (Remastered).mp3-bdca35522a20e4c1aa3940e67726792d.mp3str"]
+source_file="res://assets/Music/Echoes of the Night - The Queen's Lament (Remastered).mp3"
+dest_files=["res://.godot/imported/Echoes of the Night - The Queen's Lament (Remastered).mp3-abd4ccbf3d728fea3f19c991adedf994.mp3str"]
 
 [params]
 

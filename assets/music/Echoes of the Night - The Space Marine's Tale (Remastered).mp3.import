@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bisogc62nm70b"
-path="res://.godot/imported/Echoes of the Night - The Space Marine's Tale (Remastered).mp3-d7f1d7a41e714b10cffad5bd80a7f496.mp3str"
+path="res://.godot/imported/Echoes of the Night - The Space Marine's Tale (Remastered).mp3-6b63d8d1f31135bc2ea278daeb467b82.mp3str"
 
 [deps]
 
-source_file="res://assets/music/Echoes of the Night - The Space Marine's Tale (Remastered).mp3"
-dest_files=["res://.godot/imported/Echoes of the Night - The Space Marine's Tale (Remastered).mp3-d7f1d7a41e714b10cffad5bd80a7f496.mp3str"]
+source_file="res://assets/Music/Echoes of the Night - The Space Marine's Tale (Remastered).mp3"
+dest_files=["res://.godot/imported/Echoes of the Night - The Space Marine's Tale (Remastered).mp3-6b63d8d1f31135bc2ea278daeb467b82.mp3str"]
 
 [params]
 
