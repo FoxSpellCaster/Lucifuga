@@ -1,10 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://bh6463g1bpxy3"]
+[gd_scene load_steps=14 format=3 uid="uid://bh6463g1bpxy3"]
 
 [ext_resource type="Script" uid="uid://2hj4ylgkf20" path="res://Levels/sand_box_lobby.gd" id="1_n1ufb"]
 [ext_resource type="PackedScene" uid="uid://bq3p8cs31y8oy" path="res://Blender/SandBoxLobby.blend" id="1_qs1hc"]
 [ext_resource type="PackedScene" uid="uid://dg8qk648gumag" path="res://FireParticles.tscn" id="3_7h0o7"]
 [ext_resource type="Script" uid="uid://dqyt6n4bbc8w8" path="res://fire_particles.gd" id="4_7h0o7"]
 [ext_resource type="PackedScene" uid="uid://k7larhahf7m7" path="res://player_3d.tscn" id="5_km3ip"]
+[ext_resource type="PackedScene" uid="uid://cbsngtufnmcbv" path="res://Blender/models/DarkShard.glb" id="6_km3ip"]
+[ext_resource type="Script" uid="uid://h8v0b4gb521" path="res://UI/fps_label.gd" id="7_dukhs"]
+[ext_resource type="FontFile" uid="uid://chth4yuj6m6kq" path="res://balatro-effect-recreate-master/assets/fonts/m6x11plus.ttf" id="7_iq1kk"]
+[ext_resource type="PackedScene" uid="uid://2novjawx4rnw" path="res://Blender/cave.blend" id="9_txe3p"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7h0o7"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -16,6 +20,12 @@ sky_material = SubResource("ProceduralSkyMaterial_7h0o7")
 [sub_resource type="Environment" id="Environment_dukhs"]
 background_mode = 2
 sky = SubResource("Sky_km3ip")
+
+[sub_resource type="LabelSettings" id="LabelSettings_txe3p"]
+font = ExtResource("7_iq1kk")
+font_size = 28
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
 
 [node name="SandBoxLobby" type="Node"]
 script = ExtResource("1_n1ufb")
@@ -31,8 +41,23 @@ shadow_enabled = true
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.24581, 0, 1.6956)
 
 [node name="FireGPUParticles3D" parent="." instance=ExtResource("3_7h0o7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.67492, 2.18396, -1.22315)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.71728, 1.38129, -0.534834)
 script = ExtResource("4_7h0o7")
 
 [node name="Player3D" parent="." instance=ExtResource("5_km3ip")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.20952, 1.78688, -0.0329888)
+
+[node name="DarkShard" parent="." instance=ExtResource("6_km3ip")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.75799, 1.5, -0.533757)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 24.0
+offset_top = 8.0
+offset_right = 64.0
+offset_bottom = 37.0
+text = "FPS: 00.0"
+label_settings = SubResource("LabelSettings_txe3p")
+script = ExtResource("7_dukhs")
+
+[node name="cave" parent="." instance=ExtResource("9_txe3p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.5169, 0.00374305, 1.31767)

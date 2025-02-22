@@ -15,6 +15,10 @@ run/main_scene="uid://dptexph7f4ouv"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout=""
+
 [dotnet]
 
 project/assembly_name="Lucifuga"
