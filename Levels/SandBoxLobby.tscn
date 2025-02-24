@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cbsngtufnmcbv" path="res://Blender/models/DarkShard.glb" id="6_km3ip"]
 [ext_resource type="Script" uid="uid://h8v0b4gb521" path="res://UI/fps_label.gd" id="7_dukhs"]
 [ext_resource type="FontFile" uid="uid://chth4yuj6m6kq" path="res://balatro-effect-recreate-master/assets/fonts/m6x11plus.ttf" id="7_iq1kk"]
-[ext_resource type="PackedScene" uid="uid://2novjawx4rnw" path="res://Blender/cave.blend" id="9_txe3p"]
+[ext_resource type="PackedScene" uid="uid://bvqt5nj1n34tc" path="res://Blender/ContructTomb.blend" id="9_txe3p"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7h0o7"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -59,5 +59,5 @@ text = "FPS: 00.0"
 label_settings = SubResource("LabelSettings_txe3p")
 script = ExtResource("7_dukhs")
 
-[node name="cave" parent="." instance=ExtResource("9_txe3p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.5169, 0.00374305, 1.31767)
+[node name="ContructTomb" parent="." instance=ExtResource("9_txe3p")]
+transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 29.9465, 0.0587814, 1.83579)
