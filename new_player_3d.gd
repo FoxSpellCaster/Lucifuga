@@ -11,6 +11,8 @@ extends CharacterBody3D
 @export_range(-PI/2.0, PI/2.0) var camera_vertical_min := -0.5
 ## Maximum vertical angle for camera rotation in radians (e.g., 0.5 is ~29° upward).
 @export_range(-PI/2.0, PI/2.0) var camera_vertical_max := 0.5
+## Toggle to invert vertical mouse aim (true = inverted, false = normal).
+@export var invert_aim := false
 
 @export_group("Movement")
 ## Base movement speed when walking (units per second).
@@ -24,9 +26,15 @@ extends CharacterBody3D
 ## Speed of character model rotation to face movement direction (radians per second).
 @export var rotation_speed := 12.0
 ## Upward velocity applied when jumping (units per second).
-@export var jump_impulse := 12.0
+@export var jump_impulse := 6.0
 ## Amount to reduce collision shape height when crouching (units).
 @export var crouch_height_reduction := 0.5
+## Toggle to enable/disable jumping.
+@export var enable_jump := true
+## Toggle to enable/disable sprinting.
+@export var enable_sprint := true
+## Toggle to enable/disable crouching.
+@export var enable_crouch := true
 
 ## Accumulated mouse input for camera rotation this frame.
 var _camera_input := Vector2.ZERO
@@ -72,6 +80,10 @@ func _unhandled_input(event: InputEvent) -> void:
 
 ## Updates physics-based movement and camera each frame.
 func _physics_process(delta: float) -> void:
+	
+	# Gobal debug properties
+	#Global.debug.add_property("fps", frames_per_second, 1)
+	
 	_update_camera(delta)
 	_update_movement(delta)
 	_update_skin_rotation(delta)
@@ -79,23 +91,26 @@ func _physics_process(delta: float) -> void:
 
 ## Updates camera rotation based on mouse input, using the SpringArm3D via Marker3D pivot.
 func _update_camera(delta: float) -> void:
-	_camera_pivot.rotation.x += _camera_input.y * delta  # Vertical rotation (positive up, negative down)
+	if invert_aim:
+		_camera_pivot.rotation.x -= _camera_input.y * delta  # Inverted vertical rotation
+	else:
+		_camera_pivot.rotation.x += _camera_input.y * delta  # Normal vertical rotation
 	_camera_pivot.rotation.x = clamp(_camera_pivot.rotation.x, camera_vertical_min, camera_vertical_max)
 	_camera_pivot.rotation.y -= _camera_input.x * delta  # Horizontal rotation
 	_camera_input = Vector2.ZERO  # Reset input after applying
 
 ## Updates character movement, including crouching, sprinting, and jumping.
 func _update_movement(delta: float) -> void:
-	# Toggle crouching state
-	if Input.is_action_just_pressed("crouch"):
+	# Toggle crouching state if enabled
+	if enable_crouch and Input.is_action_just_pressed("crouch"):
 		_is_crouching = !_is_crouching
 		_adjust_crouch_height(delta)
 
 	# Determine speed based on state
 	var current_speed := walk_speed
-	if _is_crouching:
+	if enable_crouch and _is_crouching:
 		current_speed = crouch_speed
-	elif Input.is_action_pressed("sprint") and is_on_floor():
+	elif enable_sprint and Input.is_action_pressed("sprint") and is_on_floor():
 		current_speed = sprint_speed
 
 	# Calculate movement direction from camera perspective
@@ -111,8 +126,8 @@ func _update_movement(delta: float) -> void:
 	velocity = velocity.move_toward(move_direction * current_speed, acceleration * delta)
 	velocity.y = y_velocity + _gravity * delta  # Apply gravity
 
-	# Handle jumping (disabled while crouching)
-	if Input.is_action_just_pressed("jump") and is_on_floor() and not _is_crouching:
+	# Handle jumping if enabled (disabled while crouching)
+	if enable_jump and Input.is_action_just_pressed("jump") and is_on_floor() and not _is_crouching:
 		velocity.y += jump_impulse
 
 	# Update last movement direction for skin rotation

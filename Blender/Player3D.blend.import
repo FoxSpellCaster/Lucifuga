@@ -32,7 +32,18 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"PlayerCore": {
+"use_external/enabled": true,
+"use_external/path": "res://Blender/PlayerCore.tres"
+},
+"PlayerGreen": {
+"use_external/enabled": true,
+"use_external/path": "res://Blender/PlayerGreen.tres"
+}
+}
+}
 blender/nodes/visible=0
 blender/nodes/active_collection_only=false
 blender/nodes/punctual_lights=true

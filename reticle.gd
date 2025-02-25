@@ -7,10 +7,5 @@ extends CenterContainer
 func _ready() -> void:
 	queue_redraw()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
 func _draw() -> void:
 	draw_circle(Vector2(0,0), dot_radius, dot_color)
