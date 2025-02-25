@@ -11,9 +11,10 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_5wjm4"]
 
 [node name="Player3D" type="CharacterBody3D"]
+floor_stop_on_slope = false
 script = ExtResource("1_dulx6")
-camera_vertical_min = -0.899796
-camera_vertical_max = 0.900204
+camera_vertical_min = -1.1998
+camera_vertical_max = 0.300204
 invert_aim = true
 rotation_speed = 8.0
 enable_crouch = false
@@ -97,3 +98,32 @@ layout_mode = 2
 [node name="VBoxContainer" type="VBoxContainer" parent="UserInterface/DebugPanel/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+
+[node name="ControlsPanel" type="PanelContainer" parent="UserInterface"]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -50.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 50.0
+grow_horizontal = 0
+theme = ExtResource("4_dulx6")
+
+[node name="MarginContainer" type="MarginContainer" parent="UserInterface/ControlsPanel"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UserInterface/ControlsPanel/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UserInterface/ControlsPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "CONTROLS
+MOVE - WSAD
+JUMP - SPACE
+SPRINT - SHIFT
+RELEASE MOUSE - ALT
+DEBUG - TILDE"
+horizontal_alignment = 1

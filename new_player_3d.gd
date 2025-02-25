@@ -78,6 +78,28 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		_camera_input = event.screen_relative * mouse_sensitivity  # Accumulate camera input
 
+# Call this function directly before move_and_slide() on your CharacterBody3D script
+#func _push_away_rigid_bodies():
+	#for i in get_slide_collision_count():
+		#var c := get_slide_collision(i)
+		#if c.get_collider() is RigidBody3D:
+			#var push_dir = -c.get_normal()
+			## How much velocity the object needs to increase to match player velocity in the push direction
+			#var velocity_diff_in_push_dir = self.velocity.dot(push_dir) - c.get_collider().linear_velocity.dot(push_dir)
+			## Only count velocity towards push dir, away from character
+			#velocity_diff_in_push_dir = max(0., velocity_diff_in_push_dir)
+			## Objects with more mass than us should be harder to push. But doesn't really make sense to push faster than we are going
+			#const MY_APPROX_MASS_KG = 80.0
+			#var mass_ratio = min(1., MY_APPROX_MASS_KG / c.get_collider().mass)
+			## Optional add: Don't push object at all if it's 4x heavier or more
+			#if mass_ratio < 0.25:
+				#continue
+			## Don't push object from above/below
+			#push_dir.y = 0
+			## 5.0 is a magic number, adjust to your needs
+			#var push_force = mass_ratio * 5.0
+			#c.get_collider().apply_impulse(push_dir * velocity_diff_in_push_dir * push_force, c.get_position() - c.get_collider().global_position)
+
 ## Updates physics-based movement and camera each frame.
 func _physics_process(delta: float) -> void:
 	
@@ -87,6 +109,7 @@ func _physics_process(delta: float) -> void:
 	_update_camera(delta)
 	_update_movement(delta)
 	_update_skin_rotation(delta)
+	#_push_away_rigid_bodies() #Call before move_and_slide()
 	move_and_slide()  # Apply movement and collision
 
 ## Updates camera rotation based on mouse input, using the SpringArm3D via Marker3D pivot.
