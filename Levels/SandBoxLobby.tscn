@@ -19,20 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://bywwx3rahfgq5" path="res://Blender/ContructCore.blend" id="17_7ymhf"]
 [ext_resource type="Shader" uid="uid://b4nwpu514u5yq" path="res://water_shader.gdshader" id="18_6gsla"]
 [ext_resource type="Shader" uid="uid://cabydecw5lll6" path="res://chromatic_shader.gdshader" id="19_tfjxx"]
-[ext_resource type="Material" uid="uid://dm4u4l8ohmyiw" path="res://crystal_material.tres" id="20_plro4"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_km3ip"]
-sky_top_color = Color(0.53241, 0.543359, 0.558594, 1)
-sky_energy_multiplier = 2.0
-ground_energy_multiplier = 2.0
-
-[sub_resource type="Sky" id="Sky_dukhs"]
-sky_material = SubResource("ProceduralSkyMaterial_km3ip")
-
-[sub_resource type="Environment" id="Environment_iq1kk"]
-sky = SubResource("Sky_dukhs")
-tonemap_mode = 3
-glow_enabled = true
+[ext_resource type="Shader" uid="uid://dx5vgik6ddqwi" path="res://Levels/water_shader_cel.gdshader" id="21_plro4"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_tfjxx"]
 
@@ -69,7 +56,7 @@ shader_parameter/uv2_offset = Vector3(0, 0, 0)
 
 [sub_resource type="BoxMesh" id="BoxMesh_uvskx"]
 material = SubResource("ShaderMaterial_unips")
-size = Vector3(2, 5, 2)
+size = Vector3(2, 1, 4)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ibbw3"]
 render_priority = 0
@@ -90,19 +77,40 @@ shader_parameter/star_move_mode = 1
 material = SubResource("ShaderMaterial_ibbw3")
 size = Vector3(2, 5, 2)
 
-[sub_resource type="BoxMesh" id="BoxMesh_unips"]
-material = ExtResource("20_plro4")
+[sub_resource type="NoiseTexture3D" id="NoiseTexture3D_ibbw3"]
+
+[sub_resource type="FogMaterial" id="FogMaterial_plro4"]
+density = 0.15
+density_texture = SubResource("NoiseTexture3D_ibbw3")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uvskx"]
+render_priority = 0
+shader = ExtResource("21_plro4")
+shader_parameter/WATER_COL = Color(0.04, 0.38, 0.88, 1)
+shader_parameter/WATER2_COL = Color(0.04, 0.35, 0.78, 1)
+shader_parameter/FOAM_COL = Color(0.8125, 0.9609, 0.9648, 1)
+shader_parameter/distortion_speed = 2.0
+shader_parameter/tile = Vector2(5, 5)
+shader_parameter/wave_speed = 2.0
+shader_parameter/wave_amplitude = 0.5
+shader_parameter/wave_frequency = 1.5
+shader_parameter/time_offset = 0.0
+shader_parameter/water_size = Vector2(128, 128)
+shader_parameter/water_transparency = 0.8
+shader_parameter/water_depth_factor = 0.1
+shader_parameter/foam_width = 0.5
+shader_parameter/foam_edge_softness = 0.05
+shader_parameter/foam_smoothness = 0.03
+shader_parameter/foam_distortion_speed = 0.5
+shader_parameter/foam_distortion_amount = 0.1
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_7udmi"]
+material = SubResource("ShaderMaterial_uvskx")
+size = Vector2(16, 16)
+subdivide_width = 32
 
 [node name="SandBoxLobby" type="Node"]
 script = ExtResource("1_n1ufb")
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_iq1kk")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
-shadow_enabled = true
-directional_shadow_mode = 0
 
 [node name="Player3D" parent="." instance=ExtResource("5_km3ip")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 1.5, -4)
@@ -806,17 +814,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -9)
 [node name="TombFloor32" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -9)
 
-[node name="TombFloor33" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -9)
-
 [node name="TombFloor34" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -11)
 
 [node name="TombFloor35" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -11)
-
-[node name="TombFloor36" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -11)
 
 [node name="TombFloor37" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -7)
@@ -1244,6 +1246,18 @@ omni_attenuation = 0.0
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="Room1/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.25, 3, -12)
+light_color = Color(0.386662, 0.38623, 0.441406, 1)
+light_energy = 2.0
+light_indirect_energy = 2.0
+light_volumetric_fog_energy = 2.0
+light_specular = 0.0
+shadow_enabled = true
+shadow_blur = 10.0
+omni_range = 6.0
+omni_attenuation = 0.0
+
+[node name="OmniLight3D27" type="OmniLight3D" parent="Room1/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.25, 0, -10)
 light_color = Color(0.386662, 0.38623, 0.441406, 1)
 light_energy = 2.0
 light_indirect_energy = 2.0
@@ -1782,13 +1796,34 @@ process_material = ExtResource("7_txe3p")
 draw_pass_1 = ExtResource("8_4yknf")
 
 [node name="WaterMeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 3, -9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -0.3, -10)
 mesh = SubResource("BoxMesh_uvskx")
 
 [node name="ChromaticInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 3, -8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 3, -8)
 mesh = SubResource("BoxMesh_plro4")
 
-[node name="CrystalInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 2, -11)
-mesh = SubResource("BoxMesh_unips")
+[node name="FogVolume" type="FogVolume" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2.0005, -5)
+size = Vector3(9, 2, 9)
+material = SubResource("FogMaterial_plro4")
+
+[node name="FogVolume2" type="FogVolume" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 2.0005, -5)
+size = Vector3(9, 2, 9)
+material = SubResource("FogMaterial_plro4")
+
+[node name="FogVolume3" type="FogVolume" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2.0005, -29)
+size = Vector3(9, 2, 9)
+material = SubResource("FogMaterial_plro4")
+
+[node name="FogVolume4" type="FogVolume" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 2.0005, -29)
+size = Vector3(9, 2, 9)
+material = SubResource("FogMaterial_plro4")
+
+[node name="WaterCelInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -8)
+visible = false
+mesh = SubResource("PlaneMesh_7udmi")

@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bkoahpd7j6eiu"]
+
+[ext_resource type="Texture2D" uid="uid://pusinsdxuu6c" path="res://Blender/textures/TombWall.png" id="1_w2a0c"]
+
+[resource]
+resource_name = "TombWall"
+shading_mode = 2
+diffuse_mode = 3
+specular_mode = 2
+albedo_texture = ExtResource("1_w2a0c")
+roughness = 0.0

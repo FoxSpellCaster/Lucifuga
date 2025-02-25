@@ -35,8 +35,8 @@ import_script/path=""
 _subresources={
 "materials": {
 "DarkShard": {
-"use_external/enabled": false,
-"use_external/path": "uid://dm4u4l8ohmyiw"
+"use_external/enabled": true,
+"use_external/path": "uid://c6mtnr31a6oxe"
 }
 }
 }
