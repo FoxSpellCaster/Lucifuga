@@ -1,10 +1,9 @@
-[gd_scene load_steps=32 format=3 uid="uid://bh6463g1bpxy3"]
+[gd_scene load_steps=33 format=3 uid="uid://bh6463g1bpxy3"]
 
 [ext_resource type="Script" uid="uid://2hj4ylgkf20" path="res://Levels/sand_box_lobby.gd" id="1_n1ufb"]
 [ext_resource type="PackedScene" uid="uid://dv8mrkvfk5mga" path="res://Blender/TombCeiling.blend" id="3_uwvgr"]
 [ext_resource type="PackedScene" uid="uid://ceylynhhwd87l" path="res://Blender/TombWall.blend" id="4_e7qse"]
 [ext_resource type="FontFile" uid="uid://cgn2tcjqivlg7" path="res://balatro-effect-recreate-master/assets/fonts/m6x11.ttf" id="5_7h0o7"]
-[ext_resource type="PackedScene" uid="uid://k7larhahf7m7" path="res://player_3d.tscn" id="5_km3ip"]
 [ext_resource type="PackedScene" uid="uid://bld2ppkwefwq8" path="res://Blender/TombFloor.blend" id="6_dukhs"]
 [ext_resource type="PackedScene" uid="uid://dg8qk648gumag" path="res://Models/FireParticles.tscn" id="6_iq1kk"]
 [ext_resource type="PackedScene" uid="uid://bq6d1vywbvad7" path="res://Models/DarkShard.tscn" id="6_km3ip"]
@@ -19,7 +18,9 @@
 [ext_resource type="PackedScene" uid="uid://bywwx3rahfgq5" path="res://Blender/ContructCore.blend" id="17_7ymhf"]
 [ext_resource type="Shader" uid="uid://b4nwpu514u5yq" path="res://water_shader.gdshader" id="18_6gsla"]
 [ext_resource type="Shader" uid="uid://cabydecw5lll6" path="res://chromatic_shader.gdshader" id="19_tfjxx"]
+[ext_resource type="PackedScene" uid="uid://cemmmm6j1uja7" path="res://Blender/PlayerContructGolem.blend" id="20_plro4"]
 [ext_resource type="Shader" uid="uid://dx5vgik6ddqwi" path="res://Levels/water_shader_cel.gdshader" id="21_plro4"]
+[ext_resource type="PackedScene" uid="uid://k7larhahf7m7" path="res://player_3d.tscn" id="21_unips"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_tfjxx"]
 
@@ -112,1127 +113,1123 @@ subdivide_width = 32
 [node name="SandBoxLobby" type="Node"]
 script = ExtResource("1_n1ufb")
 
-[node name="Player3D" parent="." instance=ExtResource("5_km3ip")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 1.5, -4)
-mouse_sensitivity = 0.15
+[node name="SpawnRoom" type="Node3D" parent="."]
 
-[node name="Room1" type="Node3D" parent="."]
+[node name="Ceiling" type="Node3D" parent="SpawnRoom"]
 
-[node name="Ceiling" type="Node3D" parent="Room1"]
-
-[node name="TombCeiling" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -1)
 
-[node name="TombCeiling2" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling2" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -1)
 
-[node name="TombCeiling3" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling3" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -1)
 
-[node name="TombCeiling4" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling4" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -3)
 
-[node name="TombCeiling5" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling5" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -5)
 
-[node name="TombCeiling6" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling6" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -5)
 
-[node name="TombCeiling7" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling7" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -5)
 
-[node name="TombCeiling8" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling8" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -3)
 
-[node name="TombCeiling9" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling9" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -1)
 
-[node name="TombCeiling10" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling10" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -1)
 
-[node name="TombCeiling11" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling11" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -1)
 
-[node name="TombCeiling12" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling12" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -3)
 
-[node name="TombCeiling13" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling13" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -5)
 
-[node name="TombCeiling14" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling14" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -5)
 
-[node name="TombCeiling15" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling15" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -5)
 
-[node name="TombCeiling16" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling16" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -3)
 
-[node name="TombCeiling17" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling17" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -1)
 
-[node name="TombCeiling18" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling18" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -1)
 
-[node name="TombCeiling19" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling19" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
 
-[node name="TombCeiling20" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling20" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -3)
 
-[node name="TombCeiling21" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling21" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -5)
 
-[node name="TombCeiling22" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling22" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -5)
 
-[node name="TombCeiling23" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling23" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -5)
 
-[node name="TombCeiling24" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling24" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -3)
 
-[node name="TombCeiling25" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling25" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -7)
 
-[node name="TombCeiling26" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling26" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -7)
 
-[node name="TombCeiling27" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling27" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -7)
 
-[node name="TombCeiling28" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling28" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -9)
 
-[node name="TombCeiling29" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling29" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -11)
 
-[node name="TombCeiling30" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling30" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -11)
 
-[node name="TombCeiling31" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling31" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -11)
 
-[node name="TombCeiling32" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling32" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -9)
 
-[node name="TombCeiling33" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling33" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -7)
 
-[node name="TombCeiling34" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling34" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -7)
 
-[node name="TombCeiling35" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling35" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -7)
 
-[node name="TombCeiling36" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling36" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -9)
 
-[node name="TombCeiling37" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling37" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -11)
 
-[node name="TombCeiling38" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling38" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -11)
 
-[node name="TombCeiling39" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling39" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -11)
 
-[node name="TombCeiling40" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling40" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -9)
 
-[node name="TombCeiling41" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling41" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -7)
 
-[node name="TombCeiling42" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling42" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -7)
 
-[node name="TombCeiling43" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling43" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -7)
 
-[node name="TombCeiling44" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling44" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -9)
 
-[node name="TombCeiling45" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling45" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -11)
 
-[node name="TombCeiling46" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling46" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -11)
 
-[node name="TombCeiling47" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling47" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -11)
 
-[node name="TombCeiling48" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling48" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -9)
 
-[node name="TombCeiling49" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling49" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -13)
 
-[node name="TombCeiling50" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling50" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -13)
 
-[node name="TombCeiling51" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling51" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -13)
 
-[node name="TombCeiling52" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling52" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -15)
 
-[node name="TombCeiling53" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling53" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -17)
 
-[node name="TombCeiling54" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling54" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -17)
 
-[node name="TombCeiling55" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling55" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -17)
 
-[node name="TombCeiling56" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling56" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -15)
 
-[node name="TombCeiling57" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling57" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -13)
 
-[node name="TombCeiling58" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling58" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -13)
 
-[node name="TombCeiling59" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling59" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -13)
 
-[node name="TombCeiling60" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling60" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -15)
 
-[node name="TombCeiling61" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling61" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -17)
 
-[node name="TombCeiling62" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling62" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -17)
 
-[node name="TombCeiling63" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling63" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -17)
 
-[node name="TombCeiling64" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling64" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -15)
 
-[node name="TombCeiling65" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling65" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -13)
 
-[node name="TombCeiling66" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling66" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -13)
 
-[node name="TombCeiling67" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling67" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -13)
 
-[node name="TombCeiling68" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling68" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -15)
 
-[node name="TombCeiling69" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling69" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -17)
 
-[node name="TombCeiling70" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling70" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -17)
 
-[node name="TombCeiling71" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling71" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -17)
 
-[node name="TombCeiling72" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling72" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -15)
 
-[node name="TombCeiling73" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling73" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -19)
 
-[node name="TombCeiling74" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling74" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -19)
 
-[node name="TombCeiling75" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling75" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -19)
 
-[node name="TombCeiling76" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling76" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -21)
 
-[node name="TombCeiling77" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling77" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -23)
 
-[node name="TombCeiling78" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling78" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -23)
 
-[node name="TombCeiling79" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling79" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -23)
 
-[node name="TombCeiling80" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling80" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -21)
 
-[node name="TombCeiling81" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling81" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -19)
 
-[node name="TombCeiling82" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling82" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -19)
 
-[node name="TombCeiling83" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling83" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -19)
 
-[node name="TombCeiling84" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling84" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -21)
 
-[node name="TombCeiling85" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling85" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -23)
 
-[node name="TombCeiling86" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling86" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -23)
 
-[node name="TombCeiling87" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling87" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -23)
 
-[node name="TombCeiling88" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling88" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -21)
 
-[node name="TombCeiling89" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling89" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -19)
 
-[node name="TombCeiling90" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling90" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -19)
 
-[node name="TombCeiling91" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling91" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -19)
 
-[node name="TombCeiling92" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling92" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -21)
 
-[node name="TombCeiling93" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling93" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -23)
 
-[node name="TombCeiling94" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling94" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -23)
 
-[node name="TombCeiling95" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling95" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -23)
 
-[node name="TombCeiling96" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling96" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -21)
 
-[node name="TombCeiling97" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling97" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -25)
 
-[node name="TombCeiling98" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling98" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -25)
 
-[node name="TombCeiling99" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling99" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -25)
 
-[node name="TombCeiling100" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling100" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -27)
 
-[node name="TombCeiling101" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling101" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -29)
 
-[node name="TombCeiling102" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling102" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -29)
 
-[node name="TombCeiling103" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling103" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -29)
 
-[node name="TombCeiling104" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling104" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -27)
 
-[node name="TombCeiling105" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling105" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -25)
 
-[node name="TombCeiling106" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling106" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -25)
 
-[node name="TombCeiling107" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling107" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -25)
 
-[node name="TombCeiling108" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling108" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -27)
 
-[node name="TombCeiling109" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling109" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -29)
 
-[node name="TombCeiling110" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling110" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -29)
 
-[node name="TombCeiling111" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling111" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -29)
 
-[node name="TombCeiling112" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling112" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -27)
 
-[node name="TombCeiling113" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling113" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -25)
 
-[node name="TombCeiling114" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling114" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -25)
 
-[node name="TombCeiling115" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling115" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -25)
 
-[node name="TombCeiling116" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling116" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -27)
 
-[node name="TombCeiling117" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling117" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -29)
 
-[node name="TombCeiling118" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling118" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -29)
 
-[node name="TombCeiling119" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling119" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -29)
 
-[node name="TombCeiling120" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling120" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -27)
 
-[node name="TombCeiling121" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling121" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -31)
 
-[node name="TombCeiling122" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling122" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -31)
 
-[node name="TombCeiling123" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling123" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -31)
 
-[node name="TombCeiling124" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling124" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -33)
 
-[node name="TombCeiling125" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling125" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -35)
 
-[node name="TombCeiling126" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling126" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -35)
 
-[node name="TombCeiling127" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling127" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -35)
 
-[node name="TombCeiling128" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling128" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -33)
 
-[node name="TombCeiling129" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling129" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -31)
 
-[node name="TombCeiling130" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling130" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -31)
 
-[node name="TombCeiling131" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling131" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -31)
 
-[node name="TombCeiling132" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling132" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -33)
 
-[node name="TombCeiling133" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling133" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -35)
 
-[node name="TombCeiling134" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling134" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -35)
 
-[node name="TombCeiling135" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling135" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -35)
 
-[node name="TombCeiling136" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling136" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -33)
 
-[node name="TombCeiling137" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling137" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -31)
 
-[node name="TombCeiling138" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling138" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -31)
 
-[node name="TombCeiling139" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling139" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -31)
 
-[node name="TombCeiling140" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling140" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -33)
 
-[node name="TombCeiling141" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling141" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -35)
 
-[node name="TombCeiling142" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling142" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -35)
 
-[node name="TombCeiling143" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling143" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -35)
 
-[node name="TombCeiling144" parent="Room1/Ceiling" instance=ExtResource("3_uwvgr")]
+[node name="TombCeiling144" parent="SpawnRoom/Ceiling" instance=ExtResource("3_uwvgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -33)
 
-[node name="Wall" type="Node3D" parent="Room1"]
+[node name="Wall" type="Node3D" parent="SpawnRoom"]
 
-[node name="TombWall" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
 
-[node name="TombWall2" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall2" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -1)
 
-[node name="TombWall3" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall3" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -1)
 
-[node name="TombWall4" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall4" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -1)
 
-[node name="TombWall5" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall5" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -1)
 
-[node name="TombWall6" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall6" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -1)
 
-[node name="TombWall7" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall7" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -1)
 
-[node name="TombWall8" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall8" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -1)
 
-[node name="TombWall9" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall9" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -1)
 
-[node name="TombWall28" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall28" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 17, 0, -35)
 
-[node name="TombWall29" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall29" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 15, 0, -35)
 
-[node name="TombWall30" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall30" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 13, 0, -35)
 
-[node name="TombWall31" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall31" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 11, 0, -35)
 
-[node name="TombWall32" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall32" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 9, 0, -35)
 
-[node name="TombWall33" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall33" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7, 0, -35)
 
-[node name="TombWall34" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall34" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5, 0, -35)
 
-[node name="TombWall35" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall35" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3, 0, -35)
 
-[node name="TombWall36" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall36" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, -35)
 
-[node name="TombWall10" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall10" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17, 0, -1)
 
-[node name="TombWall11" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall11" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17, 0, -3)
 
-[node name="TombWall12" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall12" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17, 0, -5)
 
-[node name="TombWall13" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall13" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17, 0, -7)
 
-[node name="TombWall14" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall14" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17, 0, -9)
 
-[node name="TombWall15" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall15" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17, 0, -11)
 
-[node name="TombWall16" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall16" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17, 0, -13)
 
-[node name="TombWall17" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall17" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17, 0, -15)
 
-[node name="TombWall18" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall18" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17, 0, -17)
 
-[node name="TombWall19" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall19" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17, 0, -19)
 
-[node name="TombWall20" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall20" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17, 0, -21)
 
-[node name="TombWall21" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall21" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17, 0, -23)
 
-[node name="TombWall22" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall22" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17, 0, -25)
 
-[node name="TombWall23" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall23" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17, 0, -27)
 
-[node name="TombWall24" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall24" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17, 0, -29)
 
-[node name="TombWall25" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall25" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17, 0, -31)
 
-[node name="TombWall26" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall26" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17, 0, -33)
 
-[node name="TombWall27" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall27" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17, 0, -35)
 
-[node name="TombWall37" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall37" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.999998, 0, -35)
 
-[node name="TombWall38" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall38" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.999998, 0, -33)
 
-[node name="TombWall39" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall39" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.999998, 0, -31)
 
-[node name="TombWall40" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall40" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.999998, 0, -29)
 
-[node name="TombWall41" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall41" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1, 0, -27)
 
-[node name="TombWall42" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall42" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1, 0, -25)
 
-[node name="TombWall43" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall43" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1, 0, -23)
 
-[node name="TombWall44" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall44" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1, 0, -21)
 
-[node name="TombWall45" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall45" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1, 0, -19)
 
-[node name="TombWall46" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall46" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1, 0, -17)
 
-[node name="TombWall47" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall47" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1, 0, -15)
 
-[node name="TombWall48" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall48" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1, 0, -13)
 
-[node name="TombWall49" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall49" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1, 0, -11)
 
-[node name="TombWall50" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall50" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1, 0, -9)
 
-[node name="TombWall51" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall51" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1, 0, -7)
 
-[node name="TombWall52" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall52" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1, 0, -5)
 
-[node name="TombWall53" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall53" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1, 0, -3)
 
-[node name="TombWall54" parent="Room1/Wall" instance=ExtResource("4_e7qse")]
+[node name="TombWall54" parent="SpawnRoom/Wall" instance=ExtResource("4_e7qse")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1, 0, -1)
 
-[node name="Floor" type="Node3D" parent="Room1"]
+[node name="Floor" type="Node3D" parent="SpawnRoom"]
 
-[node name="TombFloor" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
 
-[node name="TombFloor2" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor2" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -1)
 
-[node name="TombFloor3" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor3" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -1)
 
-[node name="TombFloor4" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor4" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -3)
 
-[node name="TombFloor5" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor5" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -3)
 
-[node name="TombFloor6" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor6" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -3)
 
-[node name="TombFloor7" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor7" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -5)
 
-[node name="TombFloor8" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor8" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -5)
 
-[node name="TombFloor9" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor9" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -5)
 
-[node name="TombFloor10" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor10" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -1)
 
-[node name="TombFloor11" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor11" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -1)
 
-[node name="TombFloor12" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor12" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -1)
 
-[node name="TombFloor13" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor13" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -3)
 
-[node name="TombFloor14" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor14" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -3)
 
-[node name="TombFloor15" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor15" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -3)
 
-[node name="TombFloor16" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor16" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -5)
 
-[node name="TombFloor17" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor17" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -5)
 
-[node name="TombFloor18" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor18" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -5)
 
-[node name="TombFloor19" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor19" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -1)
 
-[node name="TombFloor20" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor20" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -1)
 
-[node name="TombFloor21" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor21" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -1)
 
-[node name="TombFloor22" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor22" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -3)
 
-[node name="TombFloor23" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor23" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -3)
 
-[node name="TombFloor24" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor24" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -3)
 
-[node name="TombFloor25" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor25" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -5)
 
-[node name="TombFloor26" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor26" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -5)
 
-[node name="TombFloor27" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor27" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -5)
 
-[node name="TombFloor28" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor28" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -7)
 
-[node name="TombFloor29" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor29" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -7)
 
-[node name="TombFloor30" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor30" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -7)
 
-[node name="TombFloor31" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor31" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -9)
 
-[node name="TombFloor32" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor32" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -9)
 
-[node name="TombFloor34" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor34" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -11)
 
-[node name="TombFloor35" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor35" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -11)
 
-[node name="TombFloor37" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor37" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -7)
 
-[node name="TombFloor38" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor38" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -7)
 
-[node name="TombFloor39" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor39" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -7)
 
-[node name="TombFloor40" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor40" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -9)
 
-[node name="TombFloor41" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor41" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -9)
 
-[node name="TombFloor42" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor42" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -9)
 
-[node name="TombFloor43" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor43" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -11)
 
-[node name="TombFloor44" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor44" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -11)
 
-[node name="TombFloor45" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor45" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -11)
 
-[node name="TombFloor46" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor46" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -7)
 
-[node name="TombFloor47" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor47" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -7)
 
-[node name="TombFloor48" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor48" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -7)
 
-[node name="TombFloor49" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor49" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -9)
 
-[node name="TombFloor50" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor50" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -9)
 
-[node name="TombFloor51" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor51" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -9)
 
-[node name="TombFloor52" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor52" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -11)
 
-[node name="TombFloor53" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor53" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -11)
 
-[node name="TombFloor54" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor54" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -11)
 
-[node name="TombFloor55" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor55" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -13)
 
-[node name="TombFloor56" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor56" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -13)
 
-[node name="TombFloor57" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor57" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -13)
 
-[node name="TombFloor58" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor58" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -15)
 
-[node name="TombFloor59" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor59" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -15)
 
-[node name="TombFloor60" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor60" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -15)
 
-[node name="TombFloor61" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor61" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -17)
 
-[node name="TombFloor62" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor62" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -17)
 
-[node name="TombFloor63" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor63" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -17)
 
-[node name="TombFloor64" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor64" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -13)
 
-[node name="TombFloor65" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor65" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -13)
 
-[node name="TombFloor66" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor66" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -13)
 
-[node name="TombFloor67" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor67" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -15)
 
-[node name="TombFloor68" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor68" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -15)
 
-[node name="TombFloor69" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor69" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -15)
 
-[node name="TombFloor70" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor70" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -17)
 
-[node name="TombFloor71" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor71" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -17)
 
-[node name="TombFloor72" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor72" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -17)
 
-[node name="TombFloor73" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor73" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -13)
 
-[node name="TombFloor74" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor74" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -13)
 
-[node name="TombFloor75" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor75" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -13)
 
-[node name="TombFloor76" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor76" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -15)
 
-[node name="TombFloor77" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor77" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -15)
 
-[node name="TombFloor78" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor78" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -15)
 
-[node name="TombFloor79" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor79" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -17)
 
-[node name="TombFloor80" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor80" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -17)
 
-[node name="TombFloor81" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor81" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -17)
 
-[node name="TombFloor82" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor82" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -19)
 
-[node name="TombFloor83" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor83" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -19)
 
-[node name="TombFloor84" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor84" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -19)
 
-[node name="TombFloor85" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor85" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -21)
 
-[node name="TombFloor86" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor86" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -21)
 
-[node name="TombFloor87" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor87" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -21)
 
-[node name="TombFloor88" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor88" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -23)
 
-[node name="TombFloor89" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor89" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -23)
 
-[node name="TombFloor90" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor90" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -23)
 
-[node name="TombFloor91" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor91" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -19)
 
-[node name="TombFloor92" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor92" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -19)
 
-[node name="TombFloor93" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor93" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -19)
 
-[node name="TombFloor94" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor94" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -21)
 
-[node name="TombFloor95" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor95" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -21)
 
-[node name="TombFloor96" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor96" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -21)
 
-[node name="TombFloor97" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor97" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -23)
 
-[node name="TombFloor98" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor98" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -23)
 
-[node name="TombFloor99" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor99" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -23)
 
-[node name="TombFloor100" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor100" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -19)
 
-[node name="TombFloor101" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor101" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -19)
 
-[node name="TombFloor102" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor102" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -19)
 
-[node name="TombFloor103" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor103" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -21)
 
-[node name="TombFloor104" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor104" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -21)
 
-[node name="TombFloor105" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor105" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -21)
 
-[node name="TombFloor106" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor106" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -23)
 
-[node name="TombFloor107" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor107" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -23)
 
-[node name="TombFloor108" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor108" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -23)
 
-[node name="TombFloor109" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor109" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -25)
 
-[node name="TombFloor110" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor110" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -25)
 
-[node name="TombFloor111" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor111" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -25)
 
-[node name="TombFloor112" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor112" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -27)
 
-[node name="TombFloor113" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor113" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -27)
 
-[node name="TombFloor114" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor114" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -27)
 
-[node name="TombFloor115" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor115" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -29)
 
-[node name="TombFloor116" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor116" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -29)
 
-[node name="TombFloor117" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor117" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -29)
 
-[node name="TombFloor118" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor118" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -25)
 
-[node name="TombFloor119" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor119" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -25)
 
-[node name="TombFloor120" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor120" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -25)
 
-[node name="TombFloor121" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor121" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -27)
 
-[node name="TombFloor122" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor122" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -27)
 
-[node name="TombFloor123" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor123" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -27)
 
-[node name="TombFloor124" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor124" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -29)
 
-[node name="TombFloor125" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor125" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -29)
 
-[node name="TombFloor126" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor126" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -29)
 
-[node name="TombFloor127" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor127" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -25)
 
-[node name="TombFloor128" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor128" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -25)
 
-[node name="TombFloor129" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor129" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -25)
 
-[node name="TombFloor130" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor130" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -27)
 
-[node name="TombFloor131" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor131" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -27)
 
-[node name="TombFloor132" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor132" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -27)
 
-[node name="TombFloor133" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor133" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -29)
 
-[node name="TombFloor134" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor134" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -29)
 
-[node name="TombFloor135" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor135" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -29)
 
-[node name="TombFloor136" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor136" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -31)
 
-[node name="TombFloor137" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor137" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -31)
 
-[node name="TombFloor138" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor138" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -31)
 
-[node name="TombFloor139" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor139" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -33)
 
-[node name="TombFloor140" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor140" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -33)
 
-[node name="TombFloor141" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor141" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -33)
 
-[node name="TombFloor142" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor142" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -35)
 
-[node name="TombFloor143" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor143" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -35)
 
-[node name="TombFloor144" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor144" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -35)
 
-[node name="TombFloor145" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor145" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -31)
 
-[node name="TombFloor146" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor146" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -31)
 
-[node name="TombFloor147" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor147" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -31)
 
-[node name="TombFloor148" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor148" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -33)
 
-[node name="TombFloor149" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor149" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -33)
 
-[node name="TombFloor150" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor150" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -33)
 
-[node name="TombFloor151" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor151" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -35)
 
-[node name="TombFloor152" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor152" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -35)
 
-[node name="TombFloor153" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor153" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -35)
 
-[node name="TombFloor154" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor154" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -31)
 
-[node name="TombFloor155" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor155" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -31)
 
-[node name="TombFloor156" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor156" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -31)
 
-[node name="TombFloor157" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor157" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -33)
 
-[node name="TombFloor158" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor158" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -33)
 
-[node name="TombFloor159" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor159" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -33)
 
-[node name="TombFloor160" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor160" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -35)
 
-[node name="TombFloor161" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor161" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -35)
 
-[node name="TombFloor162" parent="Room1/Floor" instance=ExtResource("6_dukhs")]
+[node name="TombFloor162" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -35)
 
-[node name="Pillars" type="Node3D" parent="Room1"]
+[node name="Pillars" type="Node3D" parent="SpawnRoom"]
 
-[node name="TombPillar" parent="Room1/Pillars" instance=ExtResource("12_rakgj")]
+[node name="TombPillar" parent="SpawnRoom/Pillars" instance=ExtResource("12_rakgj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -6)
 
-[node name="TombPillar2" parent="Room1/Pillars" instance=ExtResource("12_rakgj")]
+[node name="TombPillar2" parent="SpawnRoom/Pillars" instance=ExtResource("12_rakgj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -6)
 
-[node name="TombPillar3" parent="Room1/Pillars" instance=ExtResource("12_rakgj")]
+[node name="TombPillar3" parent="SpawnRoom/Pillars" instance=ExtResource("12_rakgj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -12)
 
-[node name="TombPillar4" parent="Room1/Pillars" instance=ExtResource("12_rakgj")]
+[node name="TombPillar4" parent="SpawnRoom/Pillars" instance=ExtResource("12_rakgj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -12)
 
-[node name="TombPillar5" parent="Room1/Pillars" instance=ExtResource("12_rakgj")]
+[node name="TombPillar5" parent="SpawnRoom/Pillars" instance=ExtResource("12_rakgj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -18)
 
-[node name="TombPillar6" parent="Room1/Pillars" instance=ExtResource("12_rakgj")]
+[node name="TombPillar6" parent="SpawnRoom/Pillars" instance=ExtResource("12_rakgj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -18)
 
-[node name="TombPillar7" parent="Room1/Pillars" instance=ExtResource("12_rakgj")]
+[node name="TombPillar7" parent="SpawnRoom/Pillars" instance=ExtResource("12_rakgj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -24)
 
-[node name="TombPillar8" parent="Room1/Pillars" instance=ExtResource("12_rakgj")]
+[node name="TombPillar8" parent="SpawnRoom/Pillars" instance=ExtResource("12_rakgj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -24)
 
-[node name="TombPillar9" parent="Room1/Pillars" instance=ExtResource("12_rakgj")]
+[node name="TombPillar9" parent="SpawnRoom/Pillars" instance=ExtResource("12_rakgj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -30)
 
-[node name="TombPillar10" parent="Room1/Pillars" instance=ExtResource("12_rakgj")]
+[node name="TombPillar10" parent="SpawnRoom/Pillars" instance=ExtResource("12_rakgj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -30)
 
-[node name="Lights" type="Node3D" parent="Room1"]
+[node name="Lights" type="Node3D" parent="SpawnRoom"]
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Room1/Lights"]
+[node name="OmniLight3D" type="OmniLight3D" parent="SpawnRoom/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.25, 3, -6)
 light_color = Color(0.386662, 0.38623, 0.441406, 1)
 light_energy = 2.0
@@ -1244,7 +1241,7 @@ shadow_blur = 10.0
 omni_range = 6.0
 omni_attenuation = 0.0
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="Room1/Lights"]
+[node name="OmniLight3D2" type="OmniLight3D" parent="SpawnRoom/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.25, 3, -12)
 light_color = Color(0.386662, 0.38623, 0.441406, 1)
 light_energy = 2.0
@@ -1256,7 +1253,7 @@ shadow_blur = 10.0
 omni_range = 6.0
 omni_attenuation = 0.0
 
-[node name="OmniLight3D27" type="OmniLight3D" parent="Room1/Lights"]
+[node name="OmniLight3D27" type="OmniLight3D" parent="SpawnRoom/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.25, 0, -10)
 light_color = Color(0.386662, 0.38623, 0.441406, 1)
 light_energy = 2.0
@@ -1268,7 +1265,7 @@ shadow_blur = 10.0
 omni_range = 6.0
 omni_attenuation = 0.0
 
-[node name="OmniLight3D3" type="OmniLight3D" parent="Room1/Lights"]
+[node name="OmniLight3D3" type="OmniLight3D" parent="SpawnRoom/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.25, 3, -18)
 light_color = Color(0.386662, 0.38623, 0.441406, 1)
 light_energy = 2.0
@@ -1280,7 +1277,7 @@ shadow_blur = 10.0
 omni_range = 6.0
 omni_attenuation = 0.0
 
-[node name="OmniLight3D4" type="OmniLight3D" parent="Room1/Lights"]
+[node name="OmniLight3D4" type="OmniLight3D" parent="SpawnRoom/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.25, 3, -24)
 light_color = Color(0.386662, 0.38623, 0.441406, 1)
 light_energy = 2.0
@@ -1292,7 +1289,7 @@ shadow_blur = 10.0
 omni_range = 6.0
 omni_attenuation = 0.0
 
-[node name="OmniLight3D5" type="OmniLight3D" parent="Room1/Lights"]
+[node name="OmniLight3D5" type="OmniLight3D" parent="SpawnRoom/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.25, 3, -30)
 light_color = Color(0.386662, 0.38623, 0.441406, 1)
 light_energy = 2.0
@@ -1304,7 +1301,7 @@ shadow_blur = 10.0
 omni_range = 6.0
 omni_attenuation = 0.0
 
-[node name="OmniLight3D14" type="OmniLight3D" parent="Room1/Lights"]
+[node name="OmniLight3D14" type="OmniLight3D" parent="SpawnRoom/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25, 3, -30)
 light_color = Color(0.386662, 0.38623, 0.441406, 1)
 light_energy = 2.0
@@ -1316,7 +1313,7 @@ shadow_blur = 10.0
 omni_range = 6.0
 omni_attenuation = 0.0
 
-[node name="OmniLight3D15" type="OmniLight3D" parent="Room1/Lights"]
+[node name="OmniLight3D15" type="OmniLight3D" parent="SpawnRoom/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25, 3, -24)
 light_color = Color(0.386662, 0.38623, 0.441406, 1)
 light_energy = 2.0
@@ -1328,7 +1325,7 @@ shadow_blur = 10.0
 omni_range = 6.0
 omni_attenuation = 0.0
 
-[node name="OmniLight3D16" type="OmniLight3D" parent="Room1/Lights"]
+[node name="OmniLight3D16" type="OmniLight3D" parent="SpawnRoom/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25, 3, -18)
 light_color = Color(0.386662, 0.38623, 0.441406, 1)
 light_energy = 2.0
@@ -1340,7 +1337,7 @@ shadow_blur = 10.0
 omni_range = 6.0
 omni_attenuation = 0.0
 
-[node name="OmniLight3D17" type="OmniLight3D" parent="Room1/Lights"]
+[node name="OmniLight3D17" type="OmniLight3D" parent="SpawnRoom/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25, 3, -12)
 light_color = Color(0.386662, 0.38623, 0.441406, 1)
 light_energy = 2.0
@@ -1352,7 +1349,7 @@ shadow_blur = 10.0
 omni_range = 6.0
 omni_attenuation = 0.0
 
-[node name="OmniLight3D18" type="OmniLight3D" parent="Room1/Lights"]
+[node name="OmniLight3D18" type="OmniLight3D" parent="SpawnRoom/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25, 3, -5)
 light_color = Color(0.386662, 0.38623, 0.441406, 1)
 light_energy = 2.0
@@ -1364,7 +1361,7 @@ shadow_blur = 10.0
 omni_range = 6.0
 omni_attenuation = 0.0
 
-[node name="OmniLight3D19" type="OmniLight3D" parent="Room1/Lights"]
+[node name="OmniLight3D19" type="OmniLight3D" parent="SpawnRoom/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.25, 3, -30)
 light_color = Color(0.386662, 0.38623, 0.441406, 1)
 light_energy = 2.0
@@ -1376,7 +1373,7 @@ shadow_blur = 10.0
 omni_range = 6.0
 omni_attenuation = 0.0
 
-[node name="OmniLight3D20" type="OmniLight3D" parent="Room1/Lights"]
+[node name="OmniLight3D20" type="OmniLight3D" parent="SpawnRoom/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.25, 3, -24)
 light_color = Color(0.386662, 0.38623, 0.441406, 1)
 light_energy = 2.0
@@ -1388,7 +1385,7 @@ shadow_blur = 10.0
 omni_range = 6.0
 omni_attenuation = 0.0
 
-[node name="OmniLight3D21" type="OmniLight3D" parent="Room1/Lights"]
+[node name="OmniLight3D21" type="OmniLight3D" parent="SpawnRoom/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.25, 3, -18)
 light_color = Color(0.386662, 0.38623, 0.441406, 1)
 light_energy = 2.0
@@ -1400,7 +1397,7 @@ shadow_blur = 10.0
 omni_range = 6.0
 omni_attenuation = 0.0
 
-[node name="OmniLight3D22" type="OmniLight3D" parent="Room1/Lights"]
+[node name="OmniLight3D22" type="OmniLight3D" parent="SpawnRoom/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.25, 3, -12)
 light_color = Color(0.386662, 0.38623, 0.441406, 1)
 light_energy = 2.0
@@ -1412,7 +1409,7 @@ shadow_blur = 10.0
 omni_range = 6.0
 omni_attenuation = 0.0
 
-[node name="OmniLight3D23" type="OmniLight3D" parent="Room1/Lights"]
+[node name="OmniLight3D23" type="OmniLight3D" parent="SpawnRoom/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.25, 3, -5)
 light_color = Color(0.386662, 0.38623, 0.441406, 1)
 light_energy = 2.0
@@ -1424,7 +1421,7 @@ shadow_blur = 10.0
 omni_range = 6.0
 omni_attenuation = 0.0
 
-[node name="OmniLight3D6" type="OmniLight3D" parent="Room1/Lights"]
+[node name="OmniLight3D6" type="OmniLight3D" parent="SpawnRoom/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.75, 3, -6)
 light_color = Color(0.386662, 0.38623, 0.441406, 1)
 light_energy = 2.0
@@ -1436,7 +1433,7 @@ shadow_blur = 10.0
 omni_range = 6.0
 omni_attenuation = 0.0
 
-[node name="OmniLight3D7" type="OmniLight3D" parent="Room1/Lights"]
+[node name="OmniLight3D7" type="OmniLight3D" parent="SpawnRoom/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.75, 3, -12)
 light_color = Color(0.386662, 0.38623, 0.441406, 1)
 light_energy = 2.0
@@ -1448,7 +1445,7 @@ shadow_blur = 10.0
 omni_range = 6.0
 omni_attenuation = 0.0
 
-[node name="OmniLight3D8" type="OmniLight3D" parent="Room1/Lights"]
+[node name="OmniLight3D8" type="OmniLight3D" parent="SpawnRoom/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.75, 3, -18)
 light_color = Color(0.386662, 0.38623, 0.441406, 1)
 light_energy = 2.0
@@ -1460,7 +1457,7 @@ shadow_blur = 10.0
 omni_range = 6.0
 omni_attenuation = 0.0
 
-[node name="OmniLight3D9" type="OmniLight3D" parent="Room1/Lights"]
+[node name="OmniLight3D9" type="OmniLight3D" parent="SpawnRoom/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.75, 3, -24)
 light_color = Color(0.386662, 0.38623, 0.441406, 1)
 light_energy = 2.0
@@ -1472,7 +1469,7 @@ shadow_blur = 10.0
 omni_range = 6.0
 omni_attenuation = 0.0
 
-[node name="OmniLight3D10" type="OmniLight3D" parent="Room1/Lights"]
+[node name="OmniLight3D10" type="OmniLight3D" parent="SpawnRoom/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.75, 3, -30)
 light_color = Color(0.386662, 0.38623, 0.441406, 1)
 light_energy = 2.0
@@ -1484,7 +1481,7 @@ shadow_blur = 10.0
 omni_range = 6.0
 omni_attenuation = 0.0
 
-[node name="OmniLight3D11" type="OmniLight3D" parent="Room1/Lights"]
+[node name="OmniLight3D11" type="OmniLight3D" parent="SpawnRoom/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.75, 3, -34)
 light_color = Color(0.386662, 0.38623, 0.441406, 1)
 light_energy = 2.0
@@ -1496,7 +1493,7 @@ shadow_blur = 10.0
 omni_range = 6.0
 omni_attenuation = 0.0
 
-[node name="OmniLight3D13" type="OmniLight3D" parent="Room1/Lights"]
+[node name="OmniLight3D13" type="OmniLight3D" parent="SpawnRoom/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.75, 3, -34)
 light_color = Color(0.386662, 0.38623, 0.441406, 1)
 light_energy = 2.0
@@ -1508,7 +1505,7 @@ shadow_blur = 10.0
 omni_range = 6.0
 omni_attenuation = 0.0
 
-[node name="OmniLight3D12" type="OmniLight3D" parent="Room1/Lights"]
+[node name="OmniLight3D12" type="OmniLight3D" parent="SpawnRoom/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.75, 3, -34)
 light_color = Color(0.386662, 0.38623, 0.441406, 1)
 light_energy = 2.0
@@ -1520,7 +1517,7 @@ shadow_blur = 10.0
 omni_range = 6.0
 omni_attenuation = 0.0
 
-[node name="OmniLight3D24" type="OmniLight3D" parent="Room1/Lights"]
+[node name="OmniLight3D24" type="OmniLight3D" parent="SpawnRoom/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.75, 3, -2)
 light_color = Color(0.386662, 0.38623, 0.441406, 1)
 light_energy = 2.0
@@ -1532,7 +1529,7 @@ shadow_blur = 10.0
 omni_range = 6.0
 omni_attenuation = 0.0
 
-[node name="OmniLight3D25" type="OmniLight3D" parent="Room1/Lights"]
+[node name="OmniLight3D25" type="OmniLight3D" parent="SpawnRoom/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.75, 3, -2)
 light_color = Color(0.386662, 0.38623, 0.441406, 1)
 light_energy = 2.0
@@ -1544,7 +1541,7 @@ shadow_blur = 10.0
 omni_range = 6.0
 omni_attenuation = 0.0
 
-[node name="OmniLight3D26" type="OmniLight3D" parent="Room1/Lights"]
+[node name="OmniLight3D26" type="OmniLight3D" parent="SpawnRoom/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.75, 3, -2)
 light_color = Color(0.386662, 0.38623, 0.441406, 1)
 light_energy = 2.0
@@ -1556,177 +1553,177 @@ shadow_blur = 10.0
 omni_range = 6.0
 omni_attenuation = 0.0
 
-[node name="ContructCorePile" type="Node3D" parent="Room1"]
+[node name="ContructCorePile" type="Node3D" parent="SpawnRoom"]
 
-[node name="ContructCore" parent="Room1/ContructCorePile" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -2.83986)
 
-[node name="ContructCore2" parent="Room1/ContructCorePile" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore2" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -2.42975)
 
-[node name="ContructCore3" parent="Room1/ContructCorePile" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore3" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -2)
 
-[node name="ContructCore4" parent="Room1/ContructCorePile" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore4" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.54506, -2.83986)
 
-[node name="ContructCore5" parent="Room1/ContructCorePile" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore5" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.54506, -2.42975)
 
-[node name="ContructCore6" parent="Room1/ContructCorePile" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore6" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.54506, -2)
 
-[node name="ContructCore7" parent="Room1/ContructCorePile" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore7" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.08159, -2.83986)
 
-[node name="ContructCore8" parent="Room1/ContructCorePile" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore8" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.08159, -2.42975)
 
-[node name="ContructCore9" parent="Room1/ContructCorePile" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore9" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.08159, -2)
 
-[node name="ContructCore10" parent="Room1/ContructCorePile" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore10" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 1, -2.83986)
 
-[node name="ContructCore11" parent="Room1/ContructCorePile" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore11" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 1, -2.42975)
 
-[node name="ContructCore12" parent="Room1/ContructCorePile" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore12" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 1, -2)
 
-[node name="ContructCore13" parent="Room1/ContructCorePile" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore13" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 1.54506, -2.83986)
 
-[node name="ContructCore14" parent="Room1/ContructCorePile" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore14" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 1.54506, -2.42975)
 
-[node name="ContructCore15" parent="Room1/ContructCorePile" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore15" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 1.54506, -2)
 
-[node name="ContructCore16" parent="Room1/ContructCorePile" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore16" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 2.08159, -2.83986)
 
-[node name="ContructCore17" parent="Room1/ContructCorePile" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore17" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 2.08159, -2.42975)
 
-[node name="ContructCore18" parent="Room1/ContructCorePile" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore18" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 2.08159, -2)
 
-[node name="ContructCore19" parent="Room1/ContructCorePile" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore19" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 1, -2.83986)
 
-[node name="ContructCore20" parent="Room1/ContructCorePile" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore20" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 1, -2.42975)
 
-[node name="ContructCore21" parent="Room1/ContructCorePile" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore21" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 1, -2)
 
-[node name="ContructCore22" parent="Room1/ContructCorePile" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore22" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 1.54506, -2.83986)
 
-[node name="ContructCore23" parent="Room1/ContructCorePile" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore23" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 1.54506, -2.42975)
 
-[node name="ContructCore24" parent="Room1/ContructCorePile" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore24" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 1.54506, -2)
 
-[node name="ContructCore25" parent="Room1/ContructCorePile" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore25" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 2.08159, -2.83986)
 
-[node name="ContructCore26" parent="Room1/ContructCorePile" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore26" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 2.08159, -2.42975)
 
-[node name="ContructCore27" parent="Room1/ContructCorePile" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore27" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 2.08159, -2)
 
-[node name="ContructCorePile2" type="Node3D" parent="Room1"]
+[node name="ContructCorePile2" type="Node3D" parent="SpawnRoom"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.6, 0.9, -12.5)
 
-[node name="ContructCore" parent="Room1/ContructCorePile2" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -2.83986)
 
-[node name="ContructCore2" parent="Room1/ContructCorePile2" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore2" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -2.42975)
 
-[node name="ContructCore3" parent="Room1/ContructCorePile2" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore3" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -2)
 
-[node name="ContructCore4" parent="Room1/ContructCorePile2" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore4" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.54506, -2.83986)
 
-[node name="ContructCore5" parent="Room1/ContructCorePile2" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore5" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.54506, -2.42975)
 
-[node name="ContructCore6" parent="Room1/ContructCorePile2" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore6" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.54506, -2)
 
-[node name="ContructCore7" parent="Room1/ContructCorePile2" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore7" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.08159, -2.83986)
 
-[node name="ContructCore8" parent="Room1/ContructCorePile2" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore8" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.08159, -2.42975)
 
-[node name="ContructCore9" parent="Room1/ContructCorePile2" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore9" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.08159, -2)
 
-[node name="ContructCore10" parent="Room1/ContructCorePile2" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore10" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 1, -2.83986)
 
-[node name="ContructCore11" parent="Room1/ContructCorePile2" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore11" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 1, -2.42975)
 
-[node name="ContructCore12" parent="Room1/ContructCorePile2" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore12" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 1, -2)
 
-[node name="ContructCore13" parent="Room1/ContructCorePile2" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore13" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 1.54506, -2.83986)
 
-[node name="ContructCore14" parent="Room1/ContructCorePile2" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore14" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 1.54506, -2.42975)
 
-[node name="ContructCore15" parent="Room1/ContructCorePile2" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore15" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 1.54506, -2)
 
-[node name="ContructCore16" parent="Room1/ContructCorePile2" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore16" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 2.08159, -2.83986)
 
-[node name="ContructCore17" parent="Room1/ContructCorePile2" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore17" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 2.08159, -2.42975)
 
-[node name="ContructCore18" parent="Room1/ContructCorePile2" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore18" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 2.08159, -2)
 
-[node name="ContructCore19" parent="Room1/ContructCorePile2" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore19" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 1, -2.83986)
 
-[node name="ContructCore20" parent="Room1/ContructCorePile2" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore20" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 1, -2.42975)
 
-[node name="ContructCore21" parent="Room1/ContructCorePile2" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore21" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 1, -2)
 
-[node name="ContructCore22" parent="Room1/ContructCorePile2" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore22" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 1.54506, -2.83986)
 
-[node name="ContructCore23" parent="Room1/ContructCorePile2" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore23" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 1.54506, -2.42975)
 
-[node name="ContructCore24" parent="Room1/ContructCorePile2" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore24" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 1.54506, -2)
 
-[node name="ContructCore25" parent="Room1/ContructCorePile2" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore25" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 2.08159, -2.83986)
 
-[node name="ContructCore26" parent="Room1/ContructCorePile2" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore26" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 2.08159, -2.42975)
 
-[node name="ContructCore27" parent="Room1/ContructCorePile2" instance=ExtResource("17_7ymhf")]
+[node name="ContructCore27" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 2.08159, -2)
 
-[node name="DarkShard" parent="Room1" instance=ExtResource("6_km3ip")]
+[node name="DarkShard" parent="SpawnRoom" instance=ExtResource("6_km3ip")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 3, -29)
 
-[node name="TodoModel" type="Label3D" parent="Room1"]
+[node name="TodoModel" type="Label3D" parent="SpawnRoom"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 11, 4.3168, -0.527337)
 shaded = true
 text = "What model shale I make today?
@@ -1742,7 +1739,19 @@ font_size = 64
 horizontal_alignment = 0
 vertical_alignment = 0
 
-[node name="TodoOther" type="Label3D" parent="Room1"]
+[node name="TodoModel2" type="Label3D" parent="SpawnRoom"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 6, 4.3168, -0.527337)
+shaded = true
+text = "Player Character Ideas
+[ ] Ball like character (ie VectorMan)
+[ ] Start as a Contruct Core
+"
+font = ExtResource("5_7h0o7")
+font_size = 64
+horizontal_alignment = 0
+vertical_alignment = 0
+
+[node name="TodoOther" type="Label3D" parent="SpawnRoom"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 17, 4.3168, -0.527337)
 shaded = true
 text = "Things To Figure Out
@@ -1757,37 +1766,37 @@ font_size = 64
 horizontal_alignment = 0
 vertical_alignment = 0
 
-[node name="DarkGPUParticles3D" type="GPUParticles3D" parent="Room1"]
+[node name="DarkGPUParticles3D" type="GPUParticles3D" parent="SpawnRoom"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 3, -7)
 amount = 50
 amount_ratio = 0.5
 process_material = ExtResource("9_4yknf")
 draw_pass_1 = ExtResource("10_e7qse")
 
-[node name="DarkGPUParticles3D2" type="GPUParticles3D" parent="Room1"]
+[node name="DarkGPUParticles3D2" type="GPUParticles3D" parent="SpawnRoom"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 3, -16)
 amount = 50
 amount_ratio = 0.5
 process_material = ExtResource("9_4yknf")
 draw_pass_1 = ExtResource("10_e7qse")
 
-[node name="DarkGPUParticles3D3" type="GPUParticles3D" parent="Room1"]
+[node name="DarkGPUParticles3D3" type="GPUParticles3D" parent="SpawnRoom"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 3, -25)
 amount = 50
 amount_ratio = 0.5
 process_material = ExtResource("9_4yknf")
 draw_pass_1 = ExtResource("10_e7qse")
 
-[node name="TombStairs" parent="Room1" instance=ExtResource("13_uwvgr")]
+[node name="TombStairs" parent="SpawnRoom" instance=ExtResource("13_uwvgr")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9, 0, -13)
 
-[node name="TombRamp" parent="Room1" instance=ExtResource("12_kihat")]
+[node name="TombRamp" parent="SpawnRoom" instance=ExtResource("12_kihat")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9, 0, -17)
 
-[node name="TombBlock" parent="Room1" instance=ExtResource("13_7ymhf")]
+[node name="TombBlock" parent="SpawnRoom" instance=ExtResource("13_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -15)
 
-[node name="TombBlock2" parent="Room1" instance=ExtResource("13_7ymhf")]
+[node name="TombBlock2" parent="SpawnRoom" instance=ExtResource("13_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -29)
 
 [node name="FireGPUParticles3D" parent="." instance=ExtResource("6_iq1kk")]
@@ -1827,3 +1836,9 @@ material = SubResource("FogMaterial_plro4")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -8)
 visible = false
 mesh = SubResource("PlaneMesh_7udmi")
+
+[node name="PlayerContructGolem" parent="." instance=ExtResource("20_plro4")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9, 0.440883, -4)
+
+[node name="Player3D" parent="." instance=ExtResource("21_unips")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 2, -4)

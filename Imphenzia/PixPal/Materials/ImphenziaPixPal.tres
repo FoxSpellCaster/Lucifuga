@@ -43,22 +43,22 @@ default_value_enabled = true
 default_value = 20.0
 
 [sub_resource type="VisualShaderNodeFrame" id="VisualShaderNodeFrame_atka3"]
-size = Vector2(1124, 432)
+size = Vector2(1124, 382)
 title = "Animated Colors"
 attached_nodes = PackedInt32Array(9, 3, 10, 4, 8, 11)
 
 [sub_resource type="VisualShaderNodeFrame" id="VisualShaderNodeFrame_lf4tu"]
-size = Vector2(1184, 405)
+size = Vector2(1184, 322)
 title = "Attributes"
 attached_nodes = PackedInt32Array(6, 12, 7, 22)
 
 [sub_resource type="VisualShaderNodeFrame" id="VisualShaderNodeFrame_6xcqm"]
-size = Vector2(752, 405)
+size = Vector2(724, 162)
 title = "Colors"
 attached_nodes = PackedInt32Array(14, 21)
 
 [sub_resource type="VisualShaderNodeFrame" id="VisualShaderNodeFrame_1uhbc"]
-size = Vector2(864, 873)
+size = Vector2(864, 622)
 title = "Emission"
 attached_nodes = PackedInt32Array(13, 15, 16, 23)
 
