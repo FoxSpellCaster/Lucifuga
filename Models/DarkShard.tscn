@@ -13,3 +13,9 @@ stream = ExtResource("4_20lnw")
 volume_db = -20.0
 
 [node name="DarkShardBlender" parent="." instance=ExtResource("3_m44y0")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(1, 0.560784, 0.560784, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 0.25
+light_specular = 0.0

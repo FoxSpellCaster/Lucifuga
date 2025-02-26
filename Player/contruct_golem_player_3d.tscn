@@ -1,23 +1,39 @@
-[gd_scene load_steps=3 format=3 uid="uid://c6ddfnvhvdigm"]
+[gd_scene load_steps=4 format=3 uid="uid://c6ddfnvhvdigm"]
 
 [ext_resource type="Script" uid="uid://dl6eotgbjl85t" path="res://Player/contruct_golem_controller_3d.gd" id="1_d2ibd"]
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_e1kx0"]
+radius = 0.4
+height = 1.8
+
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_d2ibd"]
 
-[node name="ContructGolemPlayer3D" type="Node3D"]
-
-[node name="Player" type="CharacterBody3D" parent="."]
+[node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_d2ibd")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_e1kx0")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
+[node name="Model" type="Node3D" parent="."]
+unique_name_in_owner = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Model"]
 mesh = SubResource("CapsuleMesh_d2ibd")
+skeleton = NodePath("../../root/@EditorNode@21269/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11479/@VSplitContainer@11131/@HSplitContainer@11133/@HSplitContainer@11135/@Control@11136/@SubViewportContainer@11137/@SubViewport@11138/ContructGolemPlayer3D/Player")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Model"]
+unique_name_in_owner = true
+root_node = NodePath("../..")
 
-[node name="CameraPivot" type="Node3D" parent="Player"]
+[node name="CameraPivot" type="Node3D" parent="."]
+unique_name_in_owner = true
 
-[node name="SpringArm3D" type="SpringArm3D" parent="Player/CameraPivot"]
+[node name="SpringArm3D" type="SpringArm3D" parent="CameraPivot"]
+spring_length = 5.0
+margin = 0.1
 
-[node name="Camera3D" type="Camera3D" parent="Player/CameraPivot/SpringArm3D"]
+[node name="Camera3D" type="Camera3D" parent="CameraPivot/SpringArm3D"]
+unique_name_in_owner = true
+current = true
+
+[node name="ContructGolemPlayer3D" type="Node3D" parent="."]
