@@ -1,6 +1,5 @@
-[gd_scene load_steps=52 format=3 uid="uid://bh6463g1bpxy3"]
+[gd_scene load_steps=51 format=3 uid="uid://bh6463g1bpxy3"]
 
-[ext_resource type="Script" uid="uid://2hj4ylgkf20" path="res://Levels/sand_box_lobby.gd" id="1_n1ufb"]
 [ext_resource type="PackedScene" uid="uid://dv8mrkvfk5mga" path="res://Blender/TombCeiling.blend" id="3_uwvgr"]
 [ext_resource type="PackedScene" uid="uid://ceylynhhwd87l" path="res://Blender/TombWall.blend" id="4_e7qse"]
 [ext_resource type="FontFile" uid="uid://cgn2tcjqivlg7" path="res://Assets/balatro-effect-recreate-master/assets/fonts/m6x11.ttf" id="5_7h0o7"]
@@ -197,7 +196,6 @@ scale_curve = SubResource("5")
 color_ramp = ExtResource("26_v0uwy")
 
 [node name="SandBoxLobby" type="Node"]
-script = ExtResource("1_n1ufb")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_uvskx")
