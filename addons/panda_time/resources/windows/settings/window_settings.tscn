@@ -1,0 +1,262 @@
+[gd_scene load_steps=7 format=3 uid="uid://c3xdt0tv6t0q7"]
+
+[ext_resource type="Script" path="res://addons/panda_time/resources/windows/settings/window_settings.gd" id="1_4uy82"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wdlsn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1y74y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1msku"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rmw74"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_agdh5"]
+
+[node name="WindowSettings" type="Window"]
+title = "PandaTime Settings Window"
+position = Vector2i(0, 36)
+size = Vector2i(500, 500)
+unresizable = true
+script = ExtResource("1_4uy82")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.145098, 0.145098, 0.145098, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="ScrollContainer"]
+custom_minimum_size = Vector2(500, 780)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/Control/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Label" type="Label" parent="ScrollContainer/Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 20
+text = "--- PandaTime Settings ---"
+
+[node name="GeneralGrid" type="GridContainer" parent="ScrollContainer/Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 15
+theme_override_constants/v_separation = 5
+columns = 2
+
+[node name="SessionHSlider" type="HSlider" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/GeneralGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = 5.0
+max_value = 300.0
+step = 5.0
+value = 45.0
+
+[node name="SessionLabel" type="Label" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/GeneralGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = " Session Time: 45 min"
+
+[node name="SizeHSlider" type="HSlider" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/GeneralGrid"]
+layout_mode = 2
+size_flags_vertical = 4
+min_value = 100.0
+max_value = 200.0
+step = 5.0
+value = 100.0
+
+[node name="SizeLabel" type="Label" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/GeneralGrid"]
+layout_mode = 2
+text = " Break Window Size: 100 percent"
+
+[node name="ExclusiveButton" type="CheckButton" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/GeneralGrid"]
+layout_mode = 2
+button_pressed = true
+text = "Break Window Exclusive"
+
+[node name="MessageButton" type="CheckButton" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/GeneralGrid"]
+layout_mode = 2
+text = "Hide Break Quotes"
+
+[node name="HSeparator1" type="HSeparator" parent="ScrollContainer/Control/MarginContainer/VBoxContainer"]
+self_modulate = Color(0.372549, 0.454902, 0.839216, 1)
+layout_mode = 2
+
+[node name="TimerGrid" type="GridContainer" parent="ScrollContainer/Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 15
+theme_override_constants/v_separation = 5
+columns = 2
+
+[node name="CountdownButton" type="CheckButton" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/TimerGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+button_pressed = true
+text = "Toggle Break Countdown"
+
+[node name="CountdownTimeoutButton" type="CheckButton" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/TimerGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+button_pressed = true
+text = "Autoclose after Timeout "
+
+[node name="CountdownHSlider" type="HSlider" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/TimerGrid"]
+layout_mode = 2
+size_flags_vertical = 4
+min_value = 1.0
+max_value = 45.0
+value = 10.0
+
+[node name="CountdownLabel" type="Label" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/TimerGrid"]
+layout_mode = 2
+text = " Countdown Time: 10 min"
+
+[node name="CountdownTimeoutHSlider" type="HSlider" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/TimerGrid"]
+layout_mode = 2
+size_flags_vertical = 4
+max_value = 180.0
+step = 5.0
+value = 15.0
+
+[node name="CountdownTimeoutLabel" type="Label" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/TimerGrid"]
+layout_mode = 2
+text = " Autoclose '15' sec after Timeout"
+
+[node name="HSeparator2" type="HSeparator" parent="ScrollContainer/Control/MarginContainer/VBoxContainer"]
+self_modulate = Color(0.372549, 0.454902, 0.839216, 1)
+layout_mode = 2
+
+[node name="ImageGrid" type="GridContainer" parent="ScrollContainer/Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 15
+theme_override_constants/v_separation = 5
+columns = 2
+
+[node name="ImageLabel" type="Label" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/ImageGrid"]
+layout_mode = 2
+text = " Image Filter Color"
+
+[node name="ImageColorPickerButton" type="ColorPickerButton" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/ImageGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "IMAGE FILTER"
+color = Color(0.176471, 0.0823529, 0.219608, 1)
+
+[node name="UiLabel" type="Label" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/ImageGrid"]
+layout_mode = 2
+text = " UI Background Color"
+
+[node name="UiColorPickerButton" type="ColorPickerButton" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/ImageGrid"]
+layout_mode = 2
+text = "UI FILTER"
+color = Color(0.270588, 0.054902, 0.156863, 0.411765)
+
+[node name="HSeparator3" type="HSeparator" parent="ScrollContainer/Control/MarginContainer/VBoxContainer"]
+self_modulate = Color(0.372549, 0.454902, 0.839216, 1)
+layout_mode = 2
+
+[node name="ReminderGrid" type="GridContainer" parent="ScrollContainer/Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 15
+theme_override_constants/v_separation = 5
+columns = 2
+
+[node name="ReminderButton" type="CheckButton" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/ReminderGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+button_pressed = true
+text = "Toggle Reminder"
+
+[node name="EmptyButton" type="Button" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/ReminderGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wdlsn")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1y74y")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_1msku")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_rmw74")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_agdh5")
+disabled = true
+
+[node name="ReminderHSlider" type="HSlider" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/ReminderGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = 5.0
+max_value = 180.0
+step = 5.0
+value = 30.0
+
+[node name="ReminderLabel" type="Label" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/ReminderGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = " Reminder at '30' sec left"
+
+[node name="HSeparator4" type="HSeparator" parent="ScrollContainer/Control/MarginContainer/VBoxContainer"]
+self_modulate = Color(0.372549, 0.454902, 0.839216, 1)
+layout_mode = 2
+
+[node name="AudioGrid" type="GridContainer" parent="ScrollContainer/Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/h_separation = 15
+theme_override_constants/v_separation = 5
+columns = 2
+
+[node name="AudioButton" type="CheckButton" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/AudioGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+button_pressed = true
+text = "Toggle Audio"
+
+[node name="EmptyButton" type="Button" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/AudioGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wdlsn")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1y74y")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_1msku")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_rmw74")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_agdh5")
+disabled = true
+
+[node name="AudioHSlider" type="HSlider" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/AudioGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = -30.0
+max_value = 30.0
+step = 5.0
+
+[node name="Label" type="Label" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/AudioGrid"]
+layout_mode = 2
+text = " Audio Addend: 0 db"
+
+[node name="ResetButton" type="Button" parent="ScrollContainer/Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Reset Settings"
+
+[connection signal="pressed" from="ScrollContainer/Control/MarginContainer/VBoxContainer/ResetButton" to="." method="_on_reset_button_pressed"]

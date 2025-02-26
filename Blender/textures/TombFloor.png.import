@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://oq31jryhnlcb"
+uid="uid://bd1xty2brru5n"
 path.s3tc="res://.godot/imported/TombFloor.png-c936d3f5e9a39d401cf79aba47858618.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

@@ -1,0 +1,7 @@
+[gd_resource type="QuadMesh" load_steps=2 format=3 uid="uid://67a488bbm83s"]
+
+[ext_resource type="Material" uid="uid://e2q6tg5e80p" path="res://Materials/dark_particle_standard_material_3d.tres" id="1_tqm3v"]
+
+[resource]
+material = ExtResource("1_tqm3v")
+size = Vector2(0.1, 0.1)

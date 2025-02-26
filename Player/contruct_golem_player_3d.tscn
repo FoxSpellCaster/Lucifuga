@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6ddfnvhvdigm"]
+
+[ext_resource type="Script" uid="uid://dl6eotgbjl85t" path="res://Player/contruct_golem_controller_3d.gd" id="1_d2ibd"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_d2ibd"]
+
+[node name="ContructGolemPlayer3D" type="Node3D"]
+
+[node name="Player" type="CharacterBody3D" parent="."]
+script = ExtResource("1_d2ibd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
+mesh = SubResource("CapsuleMesh_d2ibd")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
+
+[node name="CameraPivot" type="Node3D" parent="Player"]
+
+[node name="SpringArm3D" type="SpringArm3D" parent="Player/CameraPivot"]
+
+[node name="Camera3D" type="Camera3D" parent="Player/CameraPivot/SpringArm3D"]

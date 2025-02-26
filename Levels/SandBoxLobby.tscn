@@ -1,63 +1,78 @@
-[gd_scene load_steps=33 format=3 uid="uid://bh6463g1bpxy3"]
+[gd_scene load_steps=52 format=3 uid="uid://bh6463g1bpxy3"]
 
 [ext_resource type="Script" uid="uid://2hj4ylgkf20" path="res://Levels/sand_box_lobby.gd" id="1_n1ufb"]
 [ext_resource type="PackedScene" uid="uid://dv8mrkvfk5mga" path="res://Blender/TombCeiling.blend" id="3_uwvgr"]
 [ext_resource type="PackedScene" uid="uid://ceylynhhwd87l" path="res://Blender/TombWall.blend" id="4_e7qse"]
-[ext_resource type="FontFile" uid="uid://cgn2tcjqivlg7" path="res://balatro-effect-recreate-master/assets/fonts/m6x11.ttf" id="5_7h0o7"]
+[ext_resource type="FontFile" uid="uid://cgn2tcjqivlg7" path="res://Assets/balatro-effect-recreate-master/assets/fonts/m6x11.ttf" id="5_7h0o7"]
 [ext_resource type="PackedScene" uid="uid://bld2ppkwefwq8" path="res://Blender/TombFloor.blend" id="6_dukhs"]
 [ext_resource type="PackedScene" uid="uid://dg8qk648gumag" path="res://Models/FireParticles.tscn" id="6_iq1kk"]
 [ext_resource type="PackedScene" uid="uid://bq6d1vywbvad7" path="res://Models/DarkShard.tscn" id="6_km3ip"]
 [ext_resource type="Material" uid="uid://dy68q48t7vh6i" path="res://Models/FireParticles.tres" id="7_txe3p"]
 [ext_resource type="QuadMesh" uid="uid://dmjc5jfpyxt6h" path="res://Models/FireParticlesDraw.tres" id="8_4yknf"]
-[ext_resource type="Material" uid="uid://d3c4btdutd8im" path="res://dark_particle_process_material.tres" id="9_4yknf"]
-[ext_resource type="QuadMesh" uid="uid://67a488bbm83s" path="res://dark_particle_quad_mesh.tres" id="10_e7qse"]
+[ext_resource type="Material" uid="uid://d3c4btdutd8im" path="res://Materials/dark_particle_process_material.tres" id="9_4yknf"]
+[ext_resource type="QuadMesh" uid="uid://67a488bbm83s" path="res://Materials/dark_particle_quad_mesh.tres" id="10_e7qse"]
 [ext_resource type="PackedScene" uid="uid://543tc81m757j" path="res://Blender/TombRamp.blend" id="12_kihat"]
 [ext_resource type="PackedScene" uid="uid://du5p4j78iaq6q" path="res://Blender/TombPillar.blend" id="12_rakgj"]
 [ext_resource type="PackedScene" uid="uid://bk8g34sche7lt" path="res://Blender/TombBlock.blend" id="13_7ymhf"]
 [ext_resource type="PackedScene" uid="uid://dd4oi6vxkjn74" path="res://Blender/TombStairs.blend" id="13_uwvgr"]
 [ext_resource type="PackedScene" uid="uid://bywwx3rahfgq5" path="res://Blender/ContructCore.blend" id="17_7ymhf"]
-[ext_resource type="Shader" uid="uid://b4nwpu514u5yq" path="res://water_shader.gdshader" id="18_6gsla"]
-[ext_resource type="Shader" uid="uid://cabydecw5lll6" path="res://chromatic_shader.gdshader" id="19_tfjxx"]
+[ext_resource type="Shader" uid="uid://dmcrmopyma05n" path="res://Shaders/new_water_shader.gdshader" id="17_plro4"]
+[ext_resource type="Shader" uid="uid://cabydecw5lll6" path="res://Shaders/chromatic_shader.gdshader" id="19_tfjxx"]
 [ext_resource type="PackedScene" uid="uid://cemmmm6j1uja7" path="res://Blender/PlayerContructGolem.blend" id="20_plro4"]
-[ext_resource type="Shader" uid="uid://dx5vgik6ddqwi" path="res://Levels/water_shader_cel.gdshader" id="21_plro4"]
-[ext_resource type="PackedScene" uid="uid://k7larhahf7m7" path="res://player_3d.tscn" id="21_unips"]
+[ext_resource type="Shader" uid="uid://dx5vgik6ddqwi" path="res://Shaders/water_shader_cel.gdshader" id="21_plro4"]
+[ext_resource type="PackedScene" uid="uid://k7larhahf7m7" path="res://Player/player_3d.tscn" id="21_unips"]
+[ext_resource type="Material" uid="uid://cp7fpmko6heid" path="res://Assets/ForceField/force_field_material.tres" id="22_2hjej"]
+[ext_resource type="Shader" uid="uid://d3a7pif6ajxph" path="res://Shaders/stylized_fire.gdshader" id="23_m4gnu"]
+[ext_resource type="Texture2D" uid="uid://flldwuhtdvhp" path="res://Assets/StylizedFire/HoleNoise.png" id="24_lr648"]
+[ext_resource type="Texture2D" uid="uid://bko6oayqcslrd" path="res://Assets/StylizedFire/FireMask.png" id="25_d7yf5"]
+[ext_resource type="Texture2D" uid="uid://xl22pmkk0nsk" path="res://Assets/StylizedFire/BlueFireGradient.tres" id="26_v0uwy"]
+[ext_resource type="Texture2D" uid="uid://b8wh1wkibxdsi" path="res://Assets/StylizedFire/GreenFireGradient.tres" id="27_ivn8i"]
+[ext_resource type="PackedScene" uid="uid://bm3kmdwio20uh" path="res://BlueFire.tscn" id="28_m4gnu"]
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_tfjxx"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2hjej"]
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ibbw3"]
-seamless = true
-as_normal_map = true
-noise = SubResource("FastNoiseLite_tfjxx")
+[sub_resource type="Sky" id="Sky_unips"]
+sky_material = SubResource("ProceduralSkyMaterial_2hjej")
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_plro4"]
-seamless = true
-as_normal_map = true
-noise = SubResource("FastNoiseLite_tfjxx")
+[sub_resource type="Environment" id="Environment_uvskx"]
+background_mode = 2
+sky = SubResource("Sky_unips")
+ambient_light_source = 1
+reflected_light_source = 1
+tonemap_mode = 2
+glow_enabled = true
+fog_enabled = true
+volumetric_fog_enabled = true
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_unips"]
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_plro4"]
+noise_type = 3
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_unips"]
+normalize = false
+noise = SubResource("FastNoiseLite_plro4")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_plro4"]
 render_priority = 0
-shader = ExtResource("18_6gsla")
-shader_parameter/albedo = Color(0, 0.484, 1, 0.5)
-shader_parameter/albedo_texture_size = Vector2i(0, 0)
-shader_parameter/point_size = 1.0
-shader_parameter/roughness = 0.0
-shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
-shader_parameter/specular = 0.5
-shader_parameter/metallic = 0.0
-shader_parameter/texture_refraction = SubResource("NoiseTexture2D_plro4")
-shader_parameter/refraction = 0.05
-shader_parameter/refraction_texture_channel = Vector4(1, 0, 0, 0)
-shader_parameter/texture_normal = SubResource("NoiseTexture2D_ibbw3")
-shader_parameter/normal_scale = 1.0
-shader_parameter/uv1_blend_sharpness = 1.0
-shader_parameter/uv1_scale = Vector3(0.4, 0.4, 0.4)
-shader_parameter/uv1_offset = Vector3(0, 0, 0)
-shader_parameter/uv2_scale = Vector3(1, 1, 1)
-shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader = ExtResource("17_plro4")
+shader_parameter/time_speed = 1.0
+shader_parameter/surface_speed = 1.0
+shader_parameter/spin = 0.0
+shader_parameter/brightness = 0.6
+shader_parameter/color_intensity = 0.0
+shader_parameter/horizontal_frequency = 2.0
+shader_parameter/vertical_frequency = 2.0
+shader_parameter/size = 3.0
+shader_parameter/banding_bias = 0.6
+shader_parameter/wave_texture = SubResource("NoiseTexture2D_unips")
+shader_parameter/wave_height = 0.5
+shader_parameter/texture_height = 0.5
+shader_parameter/color1 = Color(0.59, 0.761, 1, 1)
+shader_parameter/color2 = Color(0.274, 0.474, 0.98, 1)
+shader_parameter/color3 = Color(0.059, 0.389, 0.85, 1)
+shader_parameter/color4 = Color(0, 0.267, 1, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_uvskx"]
-material = SubResource("ShaderMaterial_unips")
-size = Vector3(2, 1, 4)
+[sub_resource type="SphereMesh" id="SphereMesh_unips"]
+material = SubResource("ShaderMaterial_plro4")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ibbw3"]
 render_priority = 0
@@ -110,8 +125,82 @@ material = SubResource("ShaderMaterial_uvskx")
 size = Vector2(16, 16)
 subdivide_width = 32
 
+[sub_resource type="SphereMesh" id="SphereMesh_bxeq7"]
+radius = 1.5
+height = 3.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eudvu"]
+render_priority = 0
+shader = ExtResource("23_m4gnu")
+shader_parameter/noise_texture = ExtResource("24_lr648")
+shader_parameter/texture_mask = ExtResource("25_d7yf5")
+shader_parameter/emission_intensity = 2.0
+shader_parameter/time_scale = 3.0
+shader_parameter/texture_scale = Vector2(1, 1)
+shader_parameter/edge_softness = 0.1
+
+[sub_resource type="Gradient" id="Gradient_0a5cs"]
+colors = PackedColorArray(0.980957, 0.801817, 0, 1, 1, 0, 0.447059, 0)
+
+[sub_resource type="GradientTexture2D" id="3"]
+gradient = SubResource("Gradient_0a5cs")
+width = 128
+
+[sub_resource type="Curve" id="Curve_83mts"]
+_data = [Vector2(0, 0), 0.0, 3.65289, 0, 0, Vector2(0.556561, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="5"]
+width = 128
+curve = SubResource("Curve_83mts")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vn88f"]
+lifetime_randomness = 0.81
+direction = Vector3(0, 1, 0)
+spread = 0.0
+initial_velocity_min = 0.5
+initial_velocity_max = 0.5
+gravity = Vector3(0, 0, 0)
+linear_accel_min = 4.0
+linear_accel_max = 4.0
+scale_max = 2.0
+scale_curve = SubResource("5")
+color_ramp = SubResource("3")
+
+[sub_resource type="QuadMesh" id="QuadMesh_k2qsk"]
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vjjmb"]
+lifetime_randomness = 0.81
+direction = Vector3(0, 1, 0)
+spread = 0.0
+initial_velocity_min = 0.5
+initial_velocity_max = 0.5
+gravity = Vector3(0, 0, 0)
+linear_accel_min = 4.0
+linear_accel_max = 4.0
+scale_max = 2.0
+scale_curve = SubResource("5")
+color_ramp = ExtResource("27_ivn8i")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ojrf0"]
+lifetime_randomness = 0.81
+direction = Vector3(0, 1, 0)
+spread = 0.0
+initial_velocity_min = 0.5
+initial_velocity_max = 0.5
+gravity = Vector3(0, 0, 0)
+linear_accel_min = 4.0
+linear_accel_max = 4.0
+scale_max = 2.0
+scale_curve = SubResource("5")
+color_ramp = ExtResource("26_v0uwy")
+
 [node name="SandBoxLobby" type="Node"]
 script = ExtResource("1_n1ufb")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_uvskx")
 
 [node name="SpawnRoom" type="Node3D" parent="."]
 
@@ -838,6 +927,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -9)
 [node name="TombFloor43" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -11)
 
+[node name="TombFloor163" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -9)
+
+[node name="TombFloor164" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -11)
+
 [node name="TombFloor44" parent="SpawnRoom/Floor" instance=ExtResource("6_dukhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -11)
 
@@ -1229,330 +1324,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -30)
 
 [node name="Lights" type="Node3D" parent="SpawnRoom"]
 
-[node name="OmniLight3D" type="OmniLight3D" parent="SpawnRoom/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.25, 3, -6)
-light_color = Color(0.386662, 0.38623, 0.441406, 1)
-light_energy = 2.0
-light_indirect_energy = 2.0
-light_volumetric_fog_energy = 2.0
-light_specular = 0.0
-shadow_enabled = true
-shadow_blur = 10.0
-omni_range = 6.0
-omni_attenuation = 0.0
-
-[node name="OmniLight3D2" type="OmniLight3D" parent="SpawnRoom/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.25, 3, -12)
-light_color = Color(0.386662, 0.38623, 0.441406, 1)
-light_energy = 2.0
-light_indirect_energy = 2.0
-light_volumetric_fog_energy = 2.0
-light_specular = 0.0
-shadow_enabled = true
-shadow_blur = 10.0
-omni_range = 6.0
-omni_attenuation = 0.0
-
-[node name="OmniLight3D27" type="OmniLight3D" parent="SpawnRoom/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.25, 0, -10)
-light_color = Color(0.386662, 0.38623, 0.441406, 1)
-light_energy = 2.0
-light_indirect_energy = 2.0
-light_volumetric_fog_energy = 2.0
-light_specular = 0.0
-shadow_enabled = true
-shadow_blur = 10.0
-omni_range = 6.0
-omni_attenuation = 0.0
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="SpawnRoom/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.25, 3, -18)
-light_color = Color(0.386662, 0.38623, 0.441406, 1)
-light_energy = 2.0
-light_indirect_energy = 2.0
-light_volumetric_fog_energy = 2.0
-light_specular = 0.0
-shadow_enabled = true
-shadow_blur = 10.0
-omni_range = 6.0
-omni_attenuation = 0.0
-
-[node name="OmniLight3D4" type="OmniLight3D" parent="SpawnRoom/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.25, 3, -24)
-light_color = Color(0.386662, 0.38623, 0.441406, 1)
-light_energy = 2.0
-light_indirect_energy = 2.0
-light_volumetric_fog_energy = 2.0
-light_specular = 0.0
-shadow_enabled = true
-shadow_blur = 10.0
-omni_range = 6.0
-omni_attenuation = 0.0
-
-[node name="OmniLight3D5" type="OmniLight3D" parent="SpawnRoom/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.25, 3, -30)
-light_color = Color(0.386662, 0.38623, 0.441406, 1)
-light_energy = 2.0
-light_indirect_energy = 2.0
-light_volumetric_fog_energy = 2.0
-light_specular = 0.0
-shadow_enabled = true
-shadow_blur = 10.0
-omni_range = 6.0
-omni_attenuation = 0.0
-
-[node name="OmniLight3D14" type="OmniLight3D" parent="SpawnRoom/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25, 3, -30)
-light_color = Color(0.386662, 0.38623, 0.441406, 1)
-light_energy = 2.0
-light_indirect_energy = 2.0
-light_volumetric_fog_energy = 2.0
-light_specular = 0.0
-shadow_enabled = true
-shadow_blur = 10.0
-omni_range = 6.0
-omni_attenuation = 0.0
-
-[node name="OmniLight3D15" type="OmniLight3D" parent="SpawnRoom/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25, 3, -24)
-light_color = Color(0.386662, 0.38623, 0.441406, 1)
-light_energy = 2.0
-light_indirect_energy = 2.0
-light_volumetric_fog_energy = 2.0
-light_specular = 0.0
-shadow_enabled = true
-shadow_blur = 10.0
-omni_range = 6.0
-omni_attenuation = 0.0
-
-[node name="OmniLight3D16" type="OmniLight3D" parent="SpawnRoom/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25, 3, -18)
-light_color = Color(0.386662, 0.38623, 0.441406, 1)
-light_energy = 2.0
-light_indirect_energy = 2.0
-light_volumetric_fog_energy = 2.0
-light_specular = 0.0
-shadow_enabled = true
-shadow_blur = 10.0
-omni_range = 6.0
-omni_attenuation = 0.0
-
-[node name="OmniLight3D17" type="OmniLight3D" parent="SpawnRoom/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25, 3, -12)
-light_color = Color(0.386662, 0.38623, 0.441406, 1)
-light_energy = 2.0
-light_indirect_energy = 2.0
-light_volumetric_fog_energy = 2.0
-light_specular = 0.0
-shadow_enabled = true
-shadow_blur = 10.0
-omni_range = 6.0
-omni_attenuation = 0.0
-
-[node name="OmniLight3D18" type="OmniLight3D" parent="SpawnRoom/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25, 3, -5)
-light_color = Color(0.386662, 0.38623, 0.441406, 1)
-light_energy = 2.0
-light_indirect_energy = 2.0
-light_volumetric_fog_energy = 2.0
-light_specular = 0.0
-shadow_enabled = true
-shadow_blur = 10.0
-omni_range = 6.0
-omni_attenuation = 0.0
-
-[node name="OmniLight3D19" type="OmniLight3D" parent="SpawnRoom/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.25, 3, -30)
-light_color = Color(0.386662, 0.38623, 0.441406, 1)
-light_energy = 2.0
-light_indirect_energy = 2.0
-light_volumetric_fog_energy = 2.0
-light_specular = 0.0
-shadow_enabled = true
-shadow_blur = 10.0
-omni_range = 6.0
-omni_attenuation = 0.0
-
-[node name="OmniLight3D20" type="OmniLight3D" parent="SpawnRoom/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.25, 3, -24)
-light_color = Color(0.386662, 0.38623, 0.441406, 1)
-light_energy = 2.0
-light_indirect_energy = 2.0
-light_volumetric_fog_energy = 2.0
-light_specular = 0.0
-shadow_enabled = true
-shadow_blur = 10.0
-omni_range = 6.0
-omni_attenuation = 0.0
-
-[node name="OmniLight3D21" type="OmniLight3D" parent="SpawnRoom/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.25, 3, -18)
-light_color = Color(0.386662, 0.38623, 0.441406, 1)
-light_energy = 2.0
-light_indirect_energy = 2.0
-light_volumetric_fog_energy = 2.0
-light_specular = 0.0
-shadow_enabled = true
-shadow_blur = 10.0
-omni_range = 6.0
-omni_attenuation = 0.0
-
-[node name="OmniLight3D22" type="OmniLight3D" parent="SpawnRoom/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.25, 3, -12)
-light_color = Color(0.386662, 0.38623, 0.441406, 1)
-light_energy = 2.0
-light_indirect_energy = 2.0
-light_volumetric_fog_energy = 2.0
-light_specular = 0.0
-shadow_enabled = true
-shadow_blur = 10.0
-omni_range = 6.0
-omni_attenuation = 0.0
-
-[node name="OmniLight3D23" type="OmniLight3D" parent="SpawnRoom/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.25, 3, -5)
-light_color = Color(0.386662, 0.38623, 0.441406, 1)
-light_energy = 2.0
-light_indirect_energy = 2.0
-light_volumetric_fog_energy = 2.0
-light_specular = 0.0
-shadow_enabled = true
-shadow_blur = 10.0
-omni_range = 6.0
-omni_attenuation = 0.0
-
-[node name="OmniLight3D6" type="OmniLight3D" parent="SpawnRoom/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.75, 3, -6)
-light_color = Color(0.386662, 0.38623, 0.441406, 1)
-light_energy = 2.0
-light_indirect_energy = 2.0
-light_volumetric_fog_energy = 2.0
-light_specular = 0.0
-shadow_enabled = true
-shadow_blur = 10.0
-omni_range = 6.0
-omni_attenuation = 0.0
-
-[node name="OmniLight3D7" type="OmniLight3D" parent="SpawnRoom/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.75, 3, -12)
-light_color = Color(0.386662, 0.38623, 0.441406, 1)
-light_energy = 2.0
-light_indirect_energy = 2.0
-light_volumetric_fog_energy = 2.0
-light_specular = 0.0
-shadow_enabled = true
-shadow_blur = 10.0
-omni_range = 6.0
-omni_attenuation = 0.0
-
-[node name="OmniLight3D8" type="OmniLight3D" parent="SpawnRoom/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.75, 3, -18)
-light_color = Color(0.386662, 0.38623, 0.441406, 1)
-light_energy = 2.0
-light_indirect_energy = 2.0
-light_volumetric_fog_energy = 2.0
-light_specular = 0.0
-shadow_enabled = true
-shadow_blur = 10.0
-omni_range = 6.0
-omni_attenuation = 0.0
-
-[node name="OmniLight3D9" type="OmniLight3D" parent="SpawnRoom/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.75, 3, -24)
-light_color = Color(0.386662, 0.38623, 0.441406, 1)
-light_energy = 2.0
-light_indirect_energy = 2.0
-light_volumetric_fog_energy = 2.0
-light_specular = 0.0
-shadow_enabled = true
-shadow_blur = 10.0
-omni_range = 6.0
-omni_attenuation = 0.0
-
-[node name="OmniLight3D10" type="OmniLight3D" parent="SpawnRoom/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.75, 3, -30)
-light_color = Color(0.386662, 0.38623, 0.441406, 1)
-light_energy = 2.0
-light_indirect_energy = 2.0
-light_volumetric_fog_energy = 2.0
-light_specular = 0.0
-shadow_enabled = true
-shadow_blur = 10.0
-omni_range = 6.0
-omni_attenuation = 0.0
-
-[node name="OmniLight3D11" type="OmniLight3D" parent="SpawnRoom/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.75, 3, -34)
-light_color = Color(0.386662, 0.38623, 0.441406, 1)
-light_energy = 2.0
-light_indirect_energy = 2.0
-light_volumetric_fog_energy = 2.0
-light_specular = 0.0
-shadow_enabled = true
-shadow_blur = 10.0
-omni_range = 6.0
-omni_attenuation = 0.0
-
-[node name="OmniLight3D13" type="OmniLight3D" parent="SpawnRoom/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.75, 3, -34)
-light_color = Color(0.386662, 0.38623, 0.441406, 1)
-light_energy = 2.0
-light_indirect_energy = 2.0
-light_volumetric_fog_energy = 2.0
-light_specular = 0.0
-shadow_enabled = true
-shadow_blur = 10.0
-omni_range = 6.0
-omni_attenuation = 0.0
-
-[node name="OmniLight3D12" type="OmniLight3D" parent="SpawnRoom/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.75, 3, -34)
-light_color = Color(0.386662, 0.38623, 0.441406, 1)
-light_energy = 2.0
-light_indirect_energy = 2.0
-light_volumetric_fog_energy = 2.0
-light_specular = 0.0
-shadow_enabled = true
-shadow_blur = 10.0
-omni_range = 6.0
-omni_attenuation = 0.0
-
-[node name="OmniLight3D24" type="OmniLight3D" parent="SpawnRoom/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.75, 3, -2)
-light_color = Color(0.386662, 0.38623, 0.441406, 1)
-light_energy = 2.0
-light_indirect_energy = 2.0
-light_volumetric_fog_energy = 2.0
-light_specular = 0.0
-shadow_enabled = true
-shadow_blur = 10.0
-omni_range = 6.0
-omni_attenuation = 0.0
-
-[node name="OmniLight3D25" type="OmniLight3D" parent="SpawnRoom/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.75, 3, -2)
-light_color = Color(0.386662, 0.38623, 0.441406, 1)
-light_energy = 2.0
-light_indirect_energy = 2.0
-light_volumetric_fog_energy = 2.0
-light_specular = 0.0
-shadow_enabled = true
-shadow_blur = 10.0
-omni_range = 6.0
-omni_attenuation = 0.0
-
-[node name="OmniLight3D26" type="OmniLight3D" parent="SpawnRoom/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.75, 3, -2)
-light_color = Color(0.386662, 0.38623, 0.441406, 1)
-light_energy = 2.0
-light_indirect_energy = 2.0
-light_volumetric_fog_energy = 2.0
-light_specular = 0.0
-shadow_enabled = true
-shadow_blur = 10.0
-omni_range = 6.0
-omni_attenuation = 0.0
-
 [node name="ContructCorePile" type="Node3D" parent="SpawnRoom"]
 
 [node name="ContructCore" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
@@ -1636,96 +1407,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 2.08159, -2.42975)
 [node name="ContructCore27" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 2.08159, -2)
 
-[node name="ContructCorePile2" type="Node3D" parent="SpawnRoom"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.6, 0.9, -12.5)
-
-[node name="ContructCore" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -2.83986)
-
-[node name="ContructCore2" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -2.42975)
-
-[node name="ContructCore3" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -2)
-
-[node name="ContructCore4" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.54506, -2.83986)
-
-[node name="ContructCore5" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.54506, -2.42975)
-
-[node name="ContructCore6" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.54506, -2)
-
-[node name="ContructCore7" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.08159, -2.83986)
-
-[node name="ContructCore8" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.08159, -2.42975)
-
-[node name="ContructCore9" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.08159, -2)
-
-[node name="ContructCore10" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 1, -2.83986)
-
-[node name="ContructCore11" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 1, -2.42975)
-
-[node name="ContructCore12" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 1, -2)
-
-[node name="ContructCore13" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 1.54506, -2.83986)
-
-[node name="ContructCore14" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 1.54506, -2.42975)
-
-[node name="ContructCore15" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 1.54506, -2)
-
-[node name="ContructCore16" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 2.08159, -2.83986)
-
-[node name="ContructCore17" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 2.08159, -2.42975)
-
-[node name="ContructCore18" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 2.08159, -2)
-
-[node name="ContructCore19" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 1, -2.83986)
-
-[node name="ContructCore20" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 1, -2.42975)
-
-[node name="ContructCore21" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 1, -2)
-
-[node name="ContructCore22" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 1.54506, -2.83986)
-
-[node name="ContructCore23" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 1.54506, -2.42975)
-
-[node name="ContructCore24" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 1.54506, -2)
-
-[node name="ContructCore25" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 2.08159, -2.83986)
-
-[node name="ContructCore26" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 2.08159, -2.42975)
-
-[node name="ContructCore27" parent="SpawnRoom/ContructCorePile2" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 2.08159, -2)
-
 [node name="DarkShard" parent="SpawnRoom" instance=ExtResource("6_km3ip")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 3, -29)
 
 [node name="TodoModel" type="Label3D" parent="SpawnRoom"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 11, 4.3168, -0.527337)
-shaded = true
+modulate = Color(0.0745098, 0.2, 0.34902, 1)
 text = "What model shale I make today?
 
 [ ] New Stairs
@@ -1741,7 +1428,7 @@ vertical_alignment = 0
 
 [node name="TodoModel2" type="Label3D" parent="SpawnRoom"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 6, 4.3168, -0.527337)
-shaded = true
+modulate = Color(0.0745098, 0.2, 0.34902, 1)
 text = "Player Character Ideas
 [ ] Ball like character (ie VectorMan)
 [ ] Start as a Contruct Core
@@ -1753,7 +1440,7 @@ vertical_alignment = 0
 
 [node name="TodoOther" type="Label3D" parent="SpawnRoom"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 17, 4.3168, -0.527337)
-shaded = true
+modulate = Color(0.0733337, 0.199779, 0.347656, 1)
 text = "Things To Figure Out
 
 [ ] Make Light Come from the middle of
@@ -1774,7 +1461,7 @@ process_material = ExtResource("9_4yknf")
 draw_pass_1 = ExtResource("10_e7qse")
 
 [node name="DarkGPUParticles3D2" type="GPUParticles3D" parent="SpawnRoom"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.6202, 3, -16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.6202, 3, -16)
 amount = 50
 amount_ratio = 0.5
 process_material = ExtResource("9_4yknf")
@@ -1805,11 +1492,13 @@ process_material = ExtResource("7_txe3p")
 draw_pass_1 = ExtResource("8_4yknf")
 
 [node name="WaterMeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -0.3, -10)
-mesh = SubResource("BoxMesh_uvskx")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.01564, 0.287421, -10)
+visible = false
+mesh = SubResource("SphereMesh_unips")
 
 [node name="ChromaticInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 3, -8)
+visible = false
 mesh = SubResource("BoxMesh_plro4")
 
 [node name="FogVolume" type="FogVolume" parent="."]
@@ -1842,3 +1531,77 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9, 0.4
 
 [node name="Player3D" parent="." instance=ExtResource("21_unips")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 2, -4)
+
+[node name="ForceField" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.99275, 2.61261, -15.2021)
+visible = false
+mesh = SubResource("SphereMesh_bxeq7")
+surface_material_override/0 = ExtResource("22_2hjej")
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="ForceField"]
+light_color = Color(0.839216, 0.521569, 1, 1)
+omni_range = 2.2
+
+[node name="Fire Examples" type="Node3D" parent="."]
+visible = false
+
+[node name="Fire" type="GPUParticles3D" parent="Fire Examples"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 2.26708, -27)
+visible = false
+material_override = SubResource("ShaderMaterial_eudvu")
+cast_shadow = 0
+amount = 50
+randomness = 0.74
+draw_order = 1
+process_material = SubResource("ParticleProcessMaterial_vn88f")
+draw_pass_1 = SubResource("QuadMesh_k2qsk")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Fire Examples/Fire"]
+light_color = Color(1, 0.901961, 0.560784, 1)
+light_energy = 2.0
+
+[node name="GreenFire" type="GPUParticles3D" parent="Fire Examples"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.66113, 2.26708, -27)
+visible = false
+material_override = SubResource("ShaderMaterial_eudvu")
+cast_shadow = 0
+amount = 50
+randomness = 0.74
+draw_order = 1
+process_material = SubResource("ParticleProcessMaterial_vjjmb")
+draw_pass_1 = SubResource("QuadMesh_k2qsk")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Fire Examples/GreenFire"]
+light_color = Color(0.560784, 0.752941, 1, 1)
+light_energy = 2.0
+
+[node name="BlueFire" type="GPUParticles3D" parent="Fire Examples"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.74045, 3.22638, -23.9506)
+material_override = SubResource("ShaderMaterial_eudvu")
+cast_shadow = 0
+amount = 50
+randomness = 0.74
+draw_order = 1
+process_material = SubResource("ParticleProcessMaterial_ojrf0")
+draw_pass_1 = SubResource("QuadMesh_k2qsk")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Fire Examples/BlueFire"]
+light_color = Color(0.560784, 0.752941, 1, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 0.25
+light_specular = 0.0
+
+[node name="BlueFire2" parent="." instance=ExtResource("28_m4gnu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 4, -12)
+
+[node name="BlueFire4" parent="." instance=ExtResource("28_m4gnu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 4, -24)
+
+[node name="BlueFire5" parent="." instance=ExtResource("28_m4gnu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 4, -30)
+
+[node name="BlueFire6" parent="." instance=ExtResource("28_m4gnu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 4, -6)
+
+[node name="BlueFire8" parent="." instance=ExtResource("28_m4gnu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 4, -18)

@@ -1,0 +1,255 @@
+[gd_scene load_steps=12 format=3 uid="uid://b7bhfpfiurkcb"]
+
+[ext_resource type="Script" path="res://addons/panda_time/resources/windows/break/window_break.gd" id="1_w1e1k"]
+[ext_resource type="AudioStream" uid="uid://ddjtnw18cog1l" path="res://addons/panda_time/sounds/wall_clock.mp3" id="2_tmr4n"]
+[ext_resource type="Texture2D" uid="uid://c77qs7l3wwd0w" path="res://addons/panda_time/images/AI_animals/dog02.png" id="3_mjgn5"]
+
+[sub_resource type="Animation" id="Animation_2dm14"]
+resource_name = "fade_in"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 2,
+"values": [Color(0.137255, 0.137255, 0.137255, 0.552941), Color(0.552941, 0.552941, 0.552941, 0.803922), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_uto0w"]
+resource_name = "fade_out"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 2,
+"values": [Color(1, 1, 1, 0.901961), Color(0, 0, 0, 0.721569)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Control:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_735bd"]
+_data = {
+"fade_in": SubResource("Animation_2dm14"),
+"fade_out": SubResource("Animation_uto0w")
+}
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4f0h7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eyc1i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6n2rq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bqgct"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aejk7"]
+
+[node name="Window" type="Window"]
+title = "Take A Break"
+position = Vector2i(1055, 495)
+size = Vector2i(450, 450)
+transient = true
+exclusive = true
+unresizable = true
+borderless = true
+transparent = true
+script = ExtResource("1_w1e1k")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="TimeoutAudioPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_tmr4n")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_735bd")
+}
+speed_scale = 3.0
+
+[node name="Control" type="Control" parent="."]
+modulate = Color(0.137255, 0.137255, 0.137255, 0.552941)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BgColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.403922, 0.388235, 1)
+
+[node name="BgTextureRect" type="TextureRect" parent="Control"]
+self_modulate = Color(1, 1, 1, 0.882353)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_mjgn5")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="MsgMarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -222.5
+offset_right = 222.5
+offset_bottom = 76.0
+grow_horizontal = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_bottom = 5
+
+[node name="MsgColorRect" type="ColorRect" parent="Control/MsgMarginContainer"]
+layout_mode = 2
+color = Color(0, 0, 0.254902, 0.411765)
+
+[node name="MsgLabel" type="Label" parent="Control/MsgMarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 0.823529)
+theme_override_colors/font_shadow_color = Color(0, 0.12549, 0.396078, 0.878431)
+theme_override_colors/font_outline_color = Color(0, 0.0666667, 0.25098, 0.686275)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 28
+text = "Short break, big benefits."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TimerMarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -38.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="TimerLabel" type="Label" parent="Control/TimerMarginContainer"]
+texture_filter = 6
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 0.933333)
+theme_override_colors/font_shadow_color = Color(0.141176, 0.141176, 0.141176, 0.909804)
+theme_override_colors/font_outline_color = Color(0.0885599, 0.0885599, 0.0885599, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 58
+text = "00 : 39 : 34"
+
+[node name="SettingsMarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -88.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 7
+
+[node name="SettingsColorRect" type="ColorRect" parent="Control/SettingsMarginContainer"]
+layout_mode = 2
+color = Color(0, 0, 0.254902, 0.313726)
+
+[node name="Margin" type="MarginContainer" parent="Control/SettingsMarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 13
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 1
+
+[node name="VBox" type="VBoxContainer" parent="Control/SettingsMarginContainer/Margin"]
+layout_mode = 2
+theme_override_constants/separation = -15
+
+[node name="NextButton" type="Button" parent="Control/SettingsMarginContainer/Margin/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.0745098, 0.0745098, 0.0745098, 0.909804)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4f0h7")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_eyc1i")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6n2rq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_bqgct")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aejk7")
+text = "<<<  Next Session  >>>"
+
+[node name="HBox" type="HBoxContainer" parent="Control/SettingsMarginContainer/Margin/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SessionHSlider" type="HSlider" parent="Control/SettingsMarginContainer/Margin/VBox/HBox"]
+self_modulate = Color(1, 1, 0.878431, 1)
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = 5.0
+max_value = 300.0
+step = 5.0
+value = 5.0
+
+[node name="SessionLabel" type="Label" parent="Control/SettingsMarginContainer/Margin/VBox/HBox"]
+layout_mode = 2
+text = "000 min"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

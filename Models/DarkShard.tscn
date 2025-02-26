@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dg8qk648gumag" path="res://Models/FireParticles.tscn" id="1_m44y0"]
 [ext_resource type="PackedScene" uid="uid://ck0nt8257xrfs" path="res://Blender/DarkShard.blend" id="3_m44y0"]
-[ext_resource type="AudioStream" uid="uid://cjtnd6ylp5m33" path="res://Music/Electric Pulse.mp3" id="4_20lnw"]
+[ext_resource type="AudioStream" uid="uid://cjtnd6ylp5m33" path="res://Assets/Music/Electric Pulse.mp3" id="4_20lnw"]
 
 [node name="DarkShard" type="Node3D"]
 
