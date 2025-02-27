@@ -14,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://du5p4j78iaq6q" path="res://Blender/TombPillar.blend" id="12_rakgj"]
 [ext_resource type="PackedScene" uid="uid://bk8g34sche7lt" path="res://Blender/TombBlock.blend" id="13_7ymhf"]
 [ext_resource type="PackedScene" uid="uid://dd4oi6vxkjn74" path="res://Blender/TombStairs.blend" id="13_uwvgr"]
-[ext_resource type="PackedScene" uid="uid://bywwx3rahfgq5" path="res://Blender/ContructCore.blend" id="17_7ymhf"]
 [ext_resource type="Shader" uid="uid://dmcrmopyma05n" path="res://Shaders/new_water_shader.gdshader" id="17_plro4"]
 [ext_resource type="Shader" uid="uid://cabydecw5lll6" path="res://Shaders/chromatic_shader.gdshader" id="19_tfjxx"]
 [ext_resource type="PackedScene" uid="uid://cemmmm6j1uja7" path="res://Blender/PlayerContructGolem.blend" id="20_plro4"]
@@ -24,7 +23,6 @@
 [ext_resource type="Texture2D" uid="uid://flldwuhtdvhp" path="res://Assets/StylizedFire/HoleNoise.png" id="24_lr648"]
 [ext_resource type="Texture2D" uid="uid://bko6oayqcslrd" path="res://Assets/StylizedFire/FireMask.png" id="25_d7yf5"]
 [ext_resource type="Texture2D" uid="uid://xl22pmkk0nsk" path="res://Assets/StylizedFire/BlueFireGradient.tres" id="26_v0uwy"]
-[ext_resource type="PackedScene" uid="uid://c6ddfnvhvdigm" path="res://Player/contruct_golem_player_3d.tscn" id="27_2hjej"]
 [ext_resource type="Texture2D" uid="uid://b8wh1wkibxdsi" path="res://Assets/StylizedFire/GreenFireGradient.tres" id="27_ivn8i"]
 [ext_resource type="PackedScene" uid="uid://bm3kmdwio20uh" path="res://BlueFire.tscn" id="28_m4gnu"]
 
@@ -40,7 +38,8 @@ ambient_light_source = 1
 reflected_light_source = 1
 tonemap_mode = 2
 glow_enabled = true
-fog_enabled = true
+glow_bloom = 1.0
+glow_blend_mode = 4
 volumetric_fog_enabled = true
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_plro4"]
@@ -92,11 +91,13 @@ shader_parameter/star_move_mode = 1
 material = SubResource("ShaderMaterial_ibbw3")
 size = Vector3(2, 5, 2)
 
-[sub_resource type="NoiseTexture3D" id="NoiseTexture3D_ibbw3"]
+[sub_resource type="NoiseTexture3D" id="NoiseTexture3D_1vsnf"]
 
 [sub_resource type="FogMaterial" id="FogMaterial_plro4"]
-density = 0.15
-density_texture = SubResource("NoiseTexture3D_ibbw3")
+density = 0.25
+emission = Color(0.406219, 0.474586, 0.679688, 1)
+height_falloff = 1.0
+density_texture = SubResource("NoiseTexture3D_1vsnf")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_uvskx"]
 render_priority = 0
@@ -145,13 +146,13 @@ colors = PackedColorArray(0.980957, 0.801817, 0, 1, 1, 0, 0.447059, 0)
 gradient = SubResource("Gradient_0a5cs")
 width = 128
 
-[sub_resource type="Curve" id="Curve_83mts"]
+[sub_resource type="Curve" id="Curve_pdd70"]
 _data = [Vector2(0, 0), 0.0, 3.65289, 0, 0, Vector2(0.556561, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="CurveTexture" id="5"]
 width = 128
-curve = SubResource("Curve_83mts")
+curve = SubResource("Curve_pdd70")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vn88f"]
 lifetime_randomness = 0.81
@@ -169,6 +170,14 @@ color_ramp = SubResource("3")
 [sub_resource type="QuadMesh" id="QuadMesh_k2qsk"]
 size = Vector2(0.5, 0.5)
 
+[sub_resource type="Curve" id="Curve_83mts"]
+_data = [Vector2(0, 0), 0.0, 3.65289, 0, 0, Vector2(0.556561, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_2hjej"]
+width = 128
+curve = SubResource("Curve_83mts")
+
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vjjmb"]
 lifetime_randomness = 0.81
 direction = Vector3(0, 1, 0)
@@ -179,7 +188,7 @@ gravity = Vector3(0, 0, 0)
 linear_accel_min = 4.0
 linear_accel_max = 4.0
 scale_max = 2.0
-scale_curve = SubResource("5")
+scale_curve = SubResource("CurveTexture_2hjej")
 color_ramp = ExtResource("27_ivn8i")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ojrf0"]
@@ -1323,89 +1332,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -30)
 
 [node name="Lights" type="Node3D" parent="SpawnRoom"]
 
-[node name="ContructCorePile" type="Node3D" parent="SpawnRoom"]
-
-[node name="ContructCore" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -2.83986)
-
-[node name="ContructCore2" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -2.42975)
-
-[node name="ContructCore3" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -2)
-
-[node name="ContructCore4" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.54506, -2.83986)
-
-[node name="ContructCore5" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.54506, -2.42975)
-
-[node name="ContructCore6" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.54506, -2)
-
-[node name="ContructCore7" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.08159, -2.83986)
-
-[node name="ContructCore8" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.08159, -2.42975)
-
-[node name="ContructCore9" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.08159, -2)
-
-[node name="ContructCore10" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 1, -2.83986)
-
-[node name="ContructCore11" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 1, -2.42975)
-
-[node name="ContructCore12" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 1, -2)
-
-[node name="ContructCore13" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 1.54506, -2.83986)
-
-[node name="ContructCore14" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 1.54506, -2.42975)
-
-[node name="ContructCore15" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 1.54506, -2)
-
-[node name="ContructCore16" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 2.08159, -2.83986)
-
-[node name="ContructCore17" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 2.08159, -2.42975)
-
-[node name="ContructCore18" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4454, 2.08159, -2)
-
-[node name="ContructCore19" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 1, -2.83986)
-
-[node name="ContructCore20" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 1, -2.42975)
-
-[node name="ContructCore21" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 1, -2)
-
-[node name="ContructCore22" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 1.54506, -2.83986)
-
-[node name="ContructCore23" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 1.54506, -2.42975)
-
-[node name="ContructCore24" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 1.54506, -2)
-
-[node name="ContructCore25" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 2.08159, -2.83986)
-
-[node name="ContructCore26" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 2.08159, -2.42975)
-
-[node name="ContructCore27" parent="SpawnRoom/ContructCorePile" instance=ExtResource("17_7ymhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91466, 2.08159, -2)
-
 [node name="DarkShard" parent="SpawnRoom" instance=ExtResource("6_km3ip")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 3, -29)
 
@@ -1476,22 +1402,32 @@ visible = false
 mesh = SubResource("BoxMesh_plro4")
 
 [node name="FogVolume" type="FogVolume" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1.0005, 13)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.000499964, -11)
 size = Vector3(9, 2, 9)
 material = SubResource("FogMaterial_plro4")
 
 [node name="FogVolume2" type="FogVolume" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1.0005, 13)
-size = Vector3(9, 2, 9)
-material = SubResource("FogMaterial_plro4")
-
-[node name="FogVolume3" type="FogVolume" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1.0005, -11)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.000499964, 17)
 size = Vector3(9, 2, 9)
 material = SubResource("FogMaterial_plro4")
 
 [node name="FogVolume4" type="FogVolume" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1.0005, -11)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.000499964, -17)
+size = Vector3(9, 2, 9)
+material = SubResource("FogMaterial_plro4")
+
+[node name="FogVolume5" type="FogVolume" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0.000499964, -17)
+size = Vector3(9, 2, 9)
+material = SubResource("FogMaterial_plro4")
+
+[node name="FogVolume6" type="FogVolume" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.000499964, 3)
+size = Vector3(9, 2, 9)
+material = SubResource("FogMaterial_plro4")
+
+[node name="FogVolume3" type="FogVolume" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0.000499964, 17)
 size = Vector3(9, 2, 9)
 material = SubResource("FogMaterial_plro4")
 
@@ -1501,7 +1437,7 @@ visible = false
 mesh = SubResource("PlaneMesh_7udmi")
 
 [node name="PlayerContructGolem" parent="." instance=ExtResource("20_plro4")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1, -0.559117, 14)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1, -0.559117, -9)
 
 [node name="ForceField" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00725, 1.61261, 2.7979)
@@ -1578,5 +1514,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, 12)
 [node name="BlueFire8" parent="." instance=ExtResource("28_m4gnu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, 0)
 
-[node name="ContructGolemPlayer3D" parent="." instance=ExtResource("27_2hjej")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -3)
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.965926, -7.19671e-09, 0.258819, -0.0669874, 0.965926, 0.25, -0.25, -0.258819, 0.933013, 0, 2, 1)

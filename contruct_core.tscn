@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8v3dhsxsxyed"]
+
+[ext_resource type="PackedScene" uid="uid://bywwx3rahfgq5" path="res://Blender/ContructCore.blend" id="1_sknoy"]
+
+[node name="ContructCore" type="Node3D"]
+
+[node name="ContructCore" parent="." instance=ExtResource("1_sknoy")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="ContructCore"]
+top_level = true
+light_color = Color(0.595098, 1, 0.560784, 1)
+light_energy = 5.0
+light_volumetric_fog_energy = 0.25
+light_specular = 0.0
+shadow_bias = 0.0
+omni_range = 2.5

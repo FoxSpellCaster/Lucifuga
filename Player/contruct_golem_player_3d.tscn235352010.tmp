@@ -52,7 +52,7 @@ current = true
 [node name="Label3D" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.21635, 0)
 billboard = 1
-modulate = Color(1, 1, 1, 0.15)
+shaded = true
 text = "Player"
 font = ExtResource("3_bbuwa")
 uppercase = true
