@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://bh6463g1bpxy3"]
+[gd_scene load_steps=52 format=3 uid="uid://bh6463g1bpxy3"]
 
 [ext_resource type="PackedScene" uid="uid://dv8mrkvfk5mga" path="res://Blender/TombCeiling.blend" id="3_uwvgr"]
 [ext_resource type="PackedScene" uid="uid://ceylynhhwd87l" path="res://Blender/TombWall.blend" id="4_e7qse"]
@@ -22,6 +22,7 @@
 [ext_resource type="Shader" uid="uid://d3a7pif6ajxph" path="res://Shaders/stylized_fire.gdshader" id="23_m4gnu"]
 [ext_resource type="Texture2D" uid="uid://flldwuhtdvhp" path="res://Assets/StylizedFire/HoleNoise.png" id="24_lr648"]
 [ext_resource type="Texture2D" uid="uid://bko6oayqcslrd" path="res://Assets/StylizedFire/FireMask.png" id="25_d7yf5"]
+[ext_resource type="PackedScene" uid="uid://cofu1clq7rk70" path="res://Blender/TestCube.blend" id="26_ag5q0"]
 [ext_resource type="Texture2D" uid="uid://xl22pmkk0nsk" path="res://Assets/StylizedFire/BlueFireGradient.tres" id="26_v0uwy"]
 [ext_resource type="Texture2D" uid="uid://b8wh1wkibxdsi" path="res://Assets/StylizedFire/GreenFireGradient.tres" id="27_ivn8i"]
 [ext_resource type="PackedScene" uid="uid://bm3kmdwio20uh" path="res://BlueFire.tscn" id="28_m4gnu"]
@@ -1516,3 +1517,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, 0)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.965926, -7.19671e-09, 0.258819, -0.0669874, 0.965926, 0.25, -0.25, -0.258819, 0.933013, 0, 2, 1)
+
+[node name="TestCube" parent="." instance=ExtResource("26_ag5q0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
