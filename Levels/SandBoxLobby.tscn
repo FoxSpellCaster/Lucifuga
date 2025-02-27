@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://bh6463g1bpxy3"]
+[gd_scene load_steps=53 format=3 uid="uid://bh6463g1bpxy3"]
 
 [ext_resource type="PackedScene" uid="uid://dv8mrkvfk5mga" path="res://Blender/TombCeiling.blend" id="3_uwvgr"]
 [ext_resource type="PackedScene" uid="uid://ceylynhhwd87l" path="res://Blender/TombWall.blend" id="4_e7qse"]
@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://bko6oayqcslrd" path="res://Assets/StylizedFire/FireMask.png" id="25_d7yf5"]
 [ext_resource type="PackedScene" uid="uid://cofu1clq7rk70" path="res://Blender/TestCube.blend" id="26_ag5q0"]
 [ext_resource type="Texture2D" uid="uid://xl22pmkk0nsk" path="res://Assets/StylizedFire/BlueFireGradient.tres" id="26_v0uwy"]
+[ext_resource type="PackedScene" uid="uid://b8yva5gj4p8kt" path="res://Player/golem_rigid_player_3d.tscn" id="27_2hjej"]
 [ext_resource type="Texture2D" uid="uid://b8wh1wkibxdsi" path="res://Assets/StylizedFire/GreenFireGradient.tres" id="27_ivn8i"]
 [ext_resource type="PackedScene" uid="uid://bm3kmdwio20uh" path="res://BlueFire.tscn" id="28_m4gnu"]
 
@@ -1520,3 +1521,6 @@ transform = Transform3D(0.965926, -7.19671e-09, 0.258819, -0.0669874, 0.965926, 
 
 [node name="TestCube" parent="." instance=ExtResource("26_ag5q0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+
+[node name="Node3D" parent="." instance=ExtResource("27_2hjej")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2, -4)

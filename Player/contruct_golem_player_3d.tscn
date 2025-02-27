@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://c6ddfnvhvdigm"]
+[gd_scene load_steps=5 format=3 uid="uid://c6ddfnvhvdigm"]
 
 [ext_resource type="Script" uid="uid://dl6eotgbjl85t" path="res://Player/contruct_golem_controller_3d.gd" id="1_d2ibd"]
 [ext_resource type="PackedScene" uid="uid://cemmmm6j1uja7" path="res://Blender/PlayerContructGolem.blend" id="2_6nfp4"]
@@ -8,45 +8,27 @@
 radius = 0.4
 height = 1.8
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_d2ibd"]
-
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_d2ibd")
-speed = null
-run_speed = null
-roll_speed = null
-gravity = null
-jump_strength = null
-mouse_sensitivity = null
-dodge_roll_duration = null
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_e1kx0")
 
 [node name="Model" type="Node3D" parent="."]
-unique_name_in_owner = true
 
 [node name="PlayerContructGolem" parent="Model" instance=ExtResource("2_6nfp4")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -0.895569, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Model"]
-visible = false
-mesh = SubResource("CapsuleMesh_d2ibd")
-skeleton = NodePath("../../root/@EditorNode@21269/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11479/@VSplitContainer@11131/@HSplitContainer@11133/@HSplitContainer@11135/@Control@11136/@SubViewportContainer@11137/@SubViewport@11138/ContructGolemPlayer3D/Player")
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Model"]
-unique_name_in_owner = true
 root_node = NodePath("../..")
 
 [node name="CameraPivot" type="Node3D" parent="."]
-unique_name_in_owner = true
 
 [node name="SpringArm3D" type="SpringArm3D" parent="CameraPivot"]
 spring_length = 5.0
 margin = 0.1
 
 [node name="Camera3D" type="Camera3D" parent="CameraPivot/SpringArm3D"]
-unique_name_in_owner = true
 current = true
 
 [node name="Label3D" type="Label3D" parent="."]
