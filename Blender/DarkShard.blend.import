@@ -22,7 +22,7 @@ nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
-meshes/light_baking=3
+meshes/light_baking=2
 meshes/lightmap_texel_size=0.2
 meshes/force_disable_compression=false
 skins/use_named_skins=true
@@ -34,9 +34,19 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "materials": {
-"DarkShard": {
+"diffused-material.006": {
 "use_external/enabled": true,
-"use_external/path": "uid://c6mtnr31a6oxe"
+"use_external/path": "res://Materials/diffused-material.006.tres"
+}
+},
+"meshes": {
+"DarkShard_Cylinder_001": {
+"generate/lightmap_uv": 1,
+"generate/lods": 1,
+"generate/shadow_meshes": 1,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Blender/DarkShard_Cylinder_001.res"
 }
 }
 }
