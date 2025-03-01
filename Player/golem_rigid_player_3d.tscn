@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://cipoc5ftcdoe4" path="res://Player/golem_rigid_controller_3d.gd" id="1_h4c4v"]
 [ext_resource type="PackedScene" uid="uid://cemmmm6j1uja7" path="res://Blender/PlayerContructGolem.blend" id="2_kl6l4"]
-[ext_resource type="FontFile" uid="uid://cgn2tcjqivlg7" path="res://Assets/balatro-effect-recreate-master/assets/fonts/m6x11.ttf" id="3_3wxgm"]
+[ext_resource type="FontFile" uid="uid://cgn2tcjqivlg7" path="res://Fonts/m6x11.ttf" id="3_3wxgm"]
 [ext_resource type="Script" uid="uid://cfsega75231cu" path="res://UI/reticle.gd" id="4_bqr07"]
-[ext_resource type="Theme" uid="uid://c6784ym88vsgx" path="res://Materials/debug.tres" id="5_dsw4t"]
+[ext_resource type="Theme" uid="uid://c6784ym88vsgx" path="res://Materials/Theme/debug.tres" id="5_dsw4t"]
 [ext_resource type="Script" uid="uid://ba8ayibin6gwt" path="res://UI/debug.gd" id="6_h7c18"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bqr07"]

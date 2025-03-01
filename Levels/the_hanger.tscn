@@ -1,0 +1,28 @@
+[gd_scene load_steps=7 format=3 uid="uid://b5hbtk6hdyibx"]
+
+[ext_resource type="PackedScene" uid="uid://bchkp88pul5qc" path="res://Blender/TheHanger.blend" id="1_0mp3x"]
+[ext_resource type="Material" uid="uid://d3c4btdutd8im" path="res://Materials/dark_particle_process_material.tres" id="2_r8awy"]
+[ext_resource type="QuadMesh" uid="uid://67a488bbm83s" path="res://Materials/dark_particle_quad_mesh.tres" id="3_1wqlk"]
+[ext_resource type="PackedScene" uid="uid://bm3kmdwio20uh" path="res://VFX/BlueFire.tscn" id="4_if12a"]
+[ext_resource type="PackedScene" uid="uid://xyjqxxswjilf" path="res://Blender/DarkShard.blend" id="5_vasew"]
+[ext_resource type="PackedScene" uid="uid://b8yva5gj4p8kt" path="res://Player/golem_rigid_player_3d.tscn" id="6_5t1cj"]
+
+[node name="TheHanger" type="Node3D"]
+
+[node name="TheHanger" parent="." instance=ExtResource("1_0mp3x")]
+
+[node name="DarkGPUParticles3D" type="GPUParticles3D" parent="TheHanger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 3, -7)
+amount = 50
+amount_ratio = 0.5
+process_material = ExtResource("2_r8awy")
+draw_pass_1 = ExtResource("3_1wqlk")
+
+[node name="BlueFire" parent="TheHanger" instance=ExtResource("4_if12a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 3, -1)
+
+[node name="DarkShard" parent="TheHanger" instance=ExtResource("5_vasew")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2.75348, -8)
+
+[node name="GolemPlayerPhysical" parent="TheHanger" instance=ExtResource("6_5t1cj")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3, 3, -7)

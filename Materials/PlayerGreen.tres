@@ -1,6 +1,0 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://b8cipo08qve6b"]
-
-[resource]
-resource_name = "PlayerGreen"
-cull_mode = 2
-albedo_color = Color(0.283762, 0.575948, 0.249505, 1)

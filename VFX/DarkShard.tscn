@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://bq6d1vywbvad7"]
+
+[ext_resource type="PackedScene" uid="uid://dg8qk648gumag" path="res://VFX/FireParticles.tscn" id="1_m44y0"]
+[ext_resource type="PackedScene" uid="uid://ck0nt8257xrfs" path="res://Blender/DarkShard.blend" id="3_m44y0"]
+[ext_resource type="AudioStream" uid="uid://cjtnd6ylp5m33" path="res://Music/Electric Pulse.mp3" id="4_20lnw"]
+[ext_resource type="FontFile" uid="uid://bms758tqskp3l" path="res://Fonts/m6x11.ttf" id="4_gavbc"]
+
+[node name="DarkShard" type="Node3D"]
+
+[node name="FireGPUParticles3D" parent="." instance=ExtResource("1_m44y0")]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_20lnw")
+volume_db = -20.0
+
+[node name="DarkShardBlender" parent="." instance=ExtResource("3_m44y0")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(1, 0.560784, 0.560784, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 0.25
+light_specular = 0.0
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.700078, 0)
+billboard = 1
+modulate = Color(1, 1, 1, 0.15)
+text = "Dark Shard"
+font = ExtResource("4_gavbc")
+uppercase = true

@@ -1,0 +1,14 @@
+"Ctrl + F2" to Bulk Rename
+
+"Shift + A" to Add
+3x3m Plane
+Create Material
+Viewport to Realtime
+"Shift + D" to Clone Object
+Snap Along Vertices
+5x3m Wall
+UV Editor
+"U" and Unwrap
+"Ctrl + R" for Loopcuts
+"E" for Extrude
+"Ctrl + L" and Link Materials

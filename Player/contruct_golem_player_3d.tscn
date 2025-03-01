@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dl6eotgbjl85t" path="res://Player/contruct_golem_controller_3d.gd" id="1_d2ibd"]
 [ext_resource type="PackedScene" uid="uid://cemmmm6j1uja7" path="res://Blender/PlayerContructGolem.blend" id="2_6nfp4"]
-[ext_resource type="FontFile" uid="uid://cgn2tcjqivlg7" path="res://Assets/balatro-effect-recreate-master/assets/fonts/m6x11.ttf" id="3_bbuwa"]
+[ext_resource type="FontFile" uid="uid://bms758tqskp3l" path="res://Fonts/m6x11.ttf" id="3_bbuwa"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_e1kx0"]
 radius = 0.4
