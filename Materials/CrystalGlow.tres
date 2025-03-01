@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cfjuaeat63x31"]
+
+[resource]
+resource_name = "CrystalGlow"
+cull_mode = 2
+roughness = 0.03
+emission_enabled = true
+emission = Color(1, 0, 0.0298749, 1)
+emission_energy_multiplier = 1.06271
+metadata/extras = {
+"yp": {
+"active_ypaint_node": ""
+}
+}
