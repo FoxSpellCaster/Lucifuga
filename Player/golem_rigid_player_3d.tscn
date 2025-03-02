@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cipoc5ftcdoe4" path="res://Player/golem_rigid_controller_3d.gd" id="1_h4c4v"]
 [ext_resource type="PackedScene" uid="uid://cemmmm6j1uja7" path="res://Blender/PlayerContructGolem.blend" id="2_kl6l4"]
-[ext_resource type="FontFile" uid="uid://cgn2tcjqivlg7" path="res://Fonts/m6x11.ttf" id="3_3wxgm"]
+[ext_resource type="FontFile" uid="uid://5te5n1teli3f" path="res://Fonts/m6x11.ttf" id="3_3wxgm"]
 [ext_resource type="Script" uid="uid://cfsega75231cu" path="res://UI/reticle.gd" id="4_bqr07"]
 [ext_resource type="Theme" uid="uid://c6784ym88vsgx" path="res://Materials/Theme/debug.tres" id="5_dsw4t"]
 [ext_resource type="Script" uid="uid://ba8ayibin6gwt" path="res://UI/debug.gd" id="6_h7c18"]
@@ -50,6 +50,7 @@ font = ExtResource("3_3wxgm")
 uppercase = true
 
 [node name="AudioListener3D" type="AudioListener3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.820235, 0)
 current = true
 
 [node name="UserInterface" type="Control" parent="."]
@@ -111,6 +112,7 @@ unique_name_in_owner = true
 layout_mode = 2
 
 [node name="ControlsPanel" type="PanelContainer" parent="UserInterface"]
+visible = false
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -151,3 +153,7 @@ Joypad Right Stick (Axis 2, 3)
 "
 label_settings = SubResource("LabelSettings_pev4h")
 horizontal_alignment = 1
+
+[node name="FootstepAudio3D" type="AudioStreamPlayer3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.89198, 0)

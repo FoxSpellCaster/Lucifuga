@@ -11,8 +11,9 @@ config_version=5
 [application]
 
 config/name="Lucifuga"
-run/main_scene="uid://bh6463g1bpxy3"
+run/main_scene="uid://b5hbtk6hdyibx"
 config/features=PackedStringArray("4.4", "Forward Plus")
+boot_splash/use_filter=false
 config/icon="res://icon.svg"
 
 [audio]
@@ -22,10 +23,6 @@ buses/default_bus_layout=""
 [autoload]
 
 Global="*res://UI/global.gd"
-
-[display]
-
-window/vsync/vsync_mode=0
 
 [dotnet]
 
