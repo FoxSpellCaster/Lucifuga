@@ -1,14 +1,26 @@
-[gd_scene load_steps=12 format=3 uid="uid://b5hbtk6hdyibx"]
+[gd_scene load_steps=13 format=3 uid="uid://b5hbtk6hdyibx"]
 
 [ext_resource type="PackedScene" uid="uid://bchkp88pul5qc" path="res://Blender/TheHanger.blend" id="1_0mp3x"]
-[ext_resource type="PackedScene" uid="uid://ddyh0dedcobfm" path="res://DayNight/Night.tscn" id="1_if12a"]
 [ext_resource type="Material" uid="uid://d3c4btdutd8im" path="res://Materials/dark_particle_process_material.tres" id="2_r8awy"]
 [ext_resource type="QuadMesh" uid="uid://67a488bbm83s" path="res://Materials/dark_particle_quad_mesh.tres" id="3_1wqlk"]
 [ext_resource type="PackedScene" uid="uid://bm3kmdwio20uh" path="res://VFX/BlueFire.tscn" id="4_if12a"]
 [ext_resource type="PackedScene" uid="uid://xyjqxxswjilf" path="res://Blender/DarkShard.blend" id="5_vasew"]
-[ext_resource type="LightmapGIData" uid="uid://bt3t1lsf0pr1s" path="res://Levels/the_hanger.lmbake" id="7_1wqlk"]
-[ext_resource type="PackedScene" uid="uid://dig4dm3w8di38" path="res://JumpyGolemPlayer.tscn" id="9_5t1cj"]
-[ext_resource type="Shader" uid="uid://bchmbq3d1qklv" path="res://cell_water_shader.gdshader" id="9_vasew"]
+[ext_resource type="FontFile" uid="uid://5te5n1teli3f" path="res://Fonts/m6x11.ttf" id="6_1wqlk"]
+[ext_resource type="Shader" uid="uid://bchmbq3d1qklv" path="res://Shaders/cell_water_shader.gdshader" id="9_vasew"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1wqlk"]
+sky_horizon_color = Color(0.0941176, 0.294118, 0.717647, 1)
+sky_energy_multiplier = 1.5
+ground_horizon_color = Color(0.218009, 0.270853, 0.6708, 1)
+
+[sub_resource type="Sky" id="Sky_if12a"]
+sky_material = SubResource("ProceduralSkyMaterial_1wqlk")
+
+[sub_resource type="Environment" id="Environment_vasew"]
+background_mode = 2
+sky = SubResource("Sky_if12a")
+tonemap_mode = 2
+glow_enabled = true
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5t1cj"]
 render_priority = 0
@@ -39,22 +51,19 @@ subdivide_depth = 32
 
 [node name="TheHanger" type="Node3D"]
 
-[node name="LightmapGI" type="LightmapGI" parent="."]
-quality = 0
-supersampling = true
-directional = true
-shadowmask_mode = 2
-interior = true
-generate_probes_subdiv = 3
-light_data = ExtResource("7_1wqlk")
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_vasew")
 
-[node name="Night" parent="." instance=ExtResource("1_if12a")]
-
-[node name="ReflectionProbe" type="ReflectionProbe" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0)
-size = Vector3(100, 48.775, 100)
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+light_energy = 0.2
+shadow_enabled = true
+shadow_opacity = 0.75
+shadow_blur = 0.0
+directional_shadow_blend_splits = true
 
 [node name="TheHanger" parent="." instance=ExtResource("1_0mp3x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="DarkGPUParticles3D" type="GPUParticles3D" parent="TheHanger"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 3, -7)
@@ -66,17 +75,25 @@ draw_pass_1 = ExtResource("3_1wqlk")
 [node name="BlueFire" parent="TheHanger" instance=ExtResource("4_if12a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 4, 8)
 
-[node name="BlueFire2" parent="TheHanger" instance=ExtResource("4_if12a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 4, 8)
-
 [node name="DarkShard" parent="TheHanger" instance=ExtResource("5_vasew")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2.75348, -8)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="TheHanger"]
-transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, 11, 3, 6)
+[node name="AssemblyRoom" type="Label3D" parent="TheHanger"]
+transform = Transform3D(7.54979e-08, 0, -1, 0, 1, 0, 1, 0, 7.54979e-08, 25, 5, -0.030632)
+billboard = 1
+text = "Aseembly Room
+"
+font = ExtResource("6_1wqlk")
+font_size = 64
+
+[node name="BulletinBoard" type="Label3D" parent="TheHanger"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 10, 4, 8.96937)
+text = "Bulletin Board"
+font = ExtResource("6_1wqlk")
+font_size = 64
 
 [node name="ToonWaterMeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_if12a")
 
-[node name="Root" parent="." instance=ExtResource("9_5t1cj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, -0.866025, 0, 3, -13)
