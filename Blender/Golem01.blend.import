@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cemmmm6j1uja7"
-path="res://.godot/imported/PlayerContructGolem.blend-e6cb684b8454bcf33d5bc3b5c68f4c29.scn"
+uid="uid://cyxc05dsxj1hf"
+path="res://.godot/imported/Golem01.blend-63430ee1ada38306a2016c83dd52382c.scn"
 
 [deps]
 
-source_file="res://Blender/PlayerContructGolem.blend"
-dest_files=["res://.godot/imported/PlayerContructGolem.blend-e6cb684b8454bcf33d5bc3b5c68f4c29.scn"]
+source_file="res://Blender/Golem01.blend"
+dest_files=["res://.godot/imported/Golem01.blend-63430ee1ada38306a2016c83dd52382c.scn"]
 
 [params]
 
@@ -22,7 +22,7 @@ nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
-meshes/light_baking=3
+meshes/light_baking=1
 meshes/lightmap_texel_size=0.2
 meshes/force_disable_compression=false
 skins/use_named_skins=true
@@ -32,22 +32,11 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={
-"materials": {
-"GolemCoreMaterial": {
-"use_external/enabled": true,
-"use_external/path": "res://Blender/Materials/GolemCoreMaterial.tres"
-},
-"GolemSkinMaterial": {
-"use_external/enabled": true,
-"use_external/path": "res://Blender/Materials/GolemSkinMaterial.tres"
-}
-}
-}
+_subresources={}
 blender/nodes/visible=0
 blender/nodes/active_collection_only=false
-blender/nodes/punctual_lights=false
-blender/nodes/cameras=false
+blender/nodes/punctual_lights=true
+blender/nodes/cameras=true
 blender/nodes/custom_properties=true
 blender/nodes/modifiers=1
 blender/meshes/colors=false

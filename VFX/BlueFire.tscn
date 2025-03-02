@@ -1,10 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://bm3kmdwio20uh"]
+[gd_scene load_steps=11 format=3 uid="uid://bm3kmdwio20uh"]
 
 [ext_resource type="Shader" uid="uid://d3a7pif6ajxph" path="res://Shaders/stylized_fire.gdshader" id="1_cquea"]
 [ext_resource type="Texture2D" uid="uid://flldwuhtdvhp" path="res://VFX/StylizedFire/HoleNoise.png" id="2_l1xiv"]
 [ext_resource type="Texture2D" uid="uid://bko6oayqcslrd" path="res://VFX/StylizedFire/FireMask.png" id="3_aq4is"]
 [ext_resource type="Texture2D" uid="uid://xl22pmkk0nsk" path="res://VFX/StylizedFire/BlueFireGradient.tres" id="4_fr3gu"]
-[ext_resource type="Script" uid="uid://bw3dvioueg3v7" path="res://VFX/flicker_fire_omni_light_3d.gd" id="5_v3315"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eudvu"]
 render_priority = 0
@@ -55,15 +54,13 @@ process_material = SubResource("ParticleProcessMaterial_ojrf0")
 draw_pass_1 = SubResource("QuadMesh_k2qsk")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="BlueFire"]
-light_color = Color(0.560784, 0.752941, 1, 1)
-light_energy = 1.5
 light_volumetric_fog_energy = 0.25
 light_size = 10.0
 light_specular = 0.0
+shadow_enabled = true
 shadow_transmittance_bias = 16.0
 shadow_blur = 2.818
-script = ExtResource("5_v3315")
 
-[node name="GPUParticles3D" type="GPUParticles3D" parent="BlueFire"]
+[node name="FireParticles" type="GPUParticles3D" parent="BlueFire"]
 amount = 50
 process_material = SubResource("ParticleProcessMaterial_v3315")

@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dig4dm3w8di38"]
+
+[ext_resource type="Script" uid="uid://qd86dd71jll7" path="res://mario_like_movement.gd" id="1_hvmdk"]
+[ext_resource type="Script" uid="uid://bf7frdcejlabm" path="res://thrid_person_camera_pivot.gd" id="2_v75r0"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_v75r0"]
+radius = 0.4
+height = 1.8
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_v75r0"]
+radius = 0.4
+height = 1.8
+
+[node name="Root" type="Node3D"]
+
+[node name="Player" type="RigidBody3D" parent="."]
+script = ExtResource("1_hvmdk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+shape = SubResource("CapsuleShape3D_v75r0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
+mesh = SubResource("CapsuleMesh_v75r0")
+
+[node name="FirstPersonCamera" type="Camera3D" parent="Player"]
+
+[node name="CameraPivot" type="Node3D" parent="Player"]
+script = ExtResource("2_v75r0")
+
+[node name="ThirdPersonCamera" type="Camera3D" parent="Player/CameraPivot"]

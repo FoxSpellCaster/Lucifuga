@@ -1,53 +1,58 @@
-[gd_scene load_steps=11 format=3 uid="uid://b5hbtk6hdyibx"]
+[gd_scene load_steps=12 format=3 uid="uid://b5hbtk6hdyibx"]
 
 [ext_resource type="PackedScene" uid="uid://bchkp88pul5qc" path="res://Blender/TheHanger.blend" id="1_0mp3x"]
+[ext_resource type="PackedScene" uid="uid://ddyh0dedcobfm" path="res://DayNight/Night.tscn" id="1_if12a"]
 [ext_resource type="Material" uid="uid://d3c4btdutd8im" path="res://Materials/dark_particle_process_material.tres" id="2_r8awy"]
 [ext_resource type="QuadMesh" uid="uid://67a488bbm83s" path="res://Materials/dark_particle_quad_mesh.tres" id="3_1wqlk"]
 [ext_resource type="PackedScene" uid="uid://bm3kmdwio20uh" path="res://VFX/BlueFire.tscn" id="4_if12a"]
 [ext_resource type="PackedScene" uid="uid://xyjqxxswjilf" path="res://Blender/DarkShard.blend" id="5_vasew"]
-[ext_resource type="PackedScene" uid="uid://b8yva5gj4p8kt" path="res://Player/golem_rigid_player_3d.tscn" id="6_5t1cj"]
 [ext_resource type="LightmapGIData" uid="uid://bt3t1lsf0pr1s" path="res://Levels/the_hanger.lmbake" id="7_1wqlk"]
+[ext_resource type="PackedScene" uid="uid://dig4dm3w8di38" path="res://JumpyGolemPlayer.tscn" id="9_5t1cj"]
+[ext_resource type="Shader" uid="uid://bchmbq3d1qklv" path="res://cell_water_shader.gdshader" id="9_vasew"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_if12a"]
-sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
-ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5t1cj"]
+render_priority = 0
+shader = ExtResource("9_vasew")
+shader_parameter/WATER_COL = Color(0.04, 0.38, 0.88, 1)
+shader_parameter/WATER2_COL = Color(0.04, 0.35, 0.78, 1)
+shader_parameter/FOAM_COL = Color(0.8125, 0.9609, 0.9648, 1)
+shader_parameter/distortion_speed = 2.0
+shader_parameter/tile = Vector2(256, 256)
+shader_parameter/wave_speed = 2.0
+shader_parameter/wave_amplitude = 0.25
+shader_parameter/wave_frequency = 1.5
+shader_parameter/time_offset = 0.0
+shader_parameter/water_size = Vector2(1280, 1280)
+shader_parameter/water_transparency = 1.0
+shader_parameter/water_depth_factor = 0.1
+shader_parameter/foam_width = 0.5
+shader_parameter/foam_edge_softness = 0.05
+shader_parameter/foam_smoothness = 0.03
+shader_parameter/foam_distortion_speed = 0.5
+shader_parameter/foam_distortion_amount = 0.1
 
-[sub_resource type="Sky" id="Sky_vasew"]
-sky_material = SubResource("ProceduralSkyMaterial_if12a")
-
-[sub_resource type="Environment" id="Environment_5t1cj"]
-background_mode = 1
-sky = SubResource("Sky_vasew")
-tonemap_mode = 2
-ssr_enabled = true
-ssao_enabled = true
-ssil_enabled = true
-sdfgi_enabled = true
-sdfgi_use_occlusion = true
-sdfgi_read_sky_light = false
-glow_enabled = true
-glow_normalized = true
-volumetric_fog_enabled = true
-volumetric_fog_albedo = Color(0, 0.0143713, 0.285156, 1)
+[sub_resource type="PlaneMesh" id="PlaneMesh_if12a"]
+material = SubResource("ShaderMaterial_5t1cj")
+size = Vector2(1280, 1280)
+subdivide_width = 32
+subdivide_depth = 32
 
 [node name="TheHanger" type="Node3D"]
 
 [node name="LightmapGI" type="LightmapGI" parent="."]
+quality = 0
 supersampling = true
+directional = true
 shadowmask_mode = 2
+interior = true
+generate_probes_subdiv = 3
 light_data = ExtResource("7_1wqlk")
+
+[node name="Night" parent="." instance=ExtResource("1_if12a")]
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0)
 size = Vector3(100, 48.775, 100)
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
-light_specular = 0.0
-shadow_enabled = true
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_5t1cj")
 
 [node name="TheHanger" parent="." instance=ExtResource("1_0mp3x")]
 
@@ -70,5 +75,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2.75348, -8)
 [node name="SpotLight3D" type="SpotLight3D" parent="TheHanger"]
 transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, 11, 3, 6)
 
-[node name="GolemPlayerPhysical" parent="." instance=ExtResource("6_5t1cj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2, -6.92634)
+[node name="ToonWaterMeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_if12a")
+
+[node name="Root" parent="." instance=ExtResource("9_5t1cj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
