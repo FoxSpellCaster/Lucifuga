@@ -1,5 +1,5 @@
 "Ctrl + F2" to Bulk Rename
-
+s
 "Shift + A" to Add
 3x3m Plane
 Create Material
