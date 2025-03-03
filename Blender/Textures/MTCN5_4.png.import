@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfu4auxyeo4"
-path="res://.godot/imported/Plane-col Layer.png-1aa83ff9b73b2216f0c6b5af26b979cf.ctex"
+uid="uid://bln7foaplucsl"
+path="res://.godot/imported/MTCN5_4.png-8df6181f0424b3839bfc78d325e282a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Blender/Textures/Plane-col Layer.png"
-dest_files=["res://.godot/imported/Plane-col Layer.png-1aa83ff9b73b2216f0c6b5af26b979cf.ctex"]
+source_file="res://Blender/Textures/MTCN5_4.png"
+dest_files=["res://.godot/imported/MTCN5_4.png-8df6181f0424b3839bfc78d325e282a6.ctex"]
 
 [params]
 

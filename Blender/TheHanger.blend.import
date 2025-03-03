@@ -22,7 +22,7 @@ nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
-meshes/light_baking=2
+meshes/light_baking=3
 meshes/lightmap_texel_size=0.4
 meshes/force_disable_compression=false
 skins/use_named_skins=true
@@ -32,7 +32,58 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:Bracket": {
+"mesh_instance/layers": 3
+},
+"PATH:Bracket_001": {
+"mesh_instance/layers": 3
+},
+"PATH:BuletinBoard": {
+"mesh_instance/layers": 3
+},
+"PATH:Pillar": {
+"mesh_instance/layers": 3
+},
+"PATH:Pillar_001": {
+"mesh_instance/layers": 3
+},
+"PATH:Pillar_002": {
+"mesh_instance/layers": 3
+},
+"PATH:Pillar_003": {
+"mesh_instance/layers": 3
+},
+"PATH:Pillar_004": {
+"mesh_instance/layers": 3
+},
+"PATH:Pillar_005": {
+"mesh_instance/layers": 3
+},
+"PATH:Pillar_006": {
+"mesh_instance/layers": 3
+},
+"PATH:Pillar_007": {
+"mesh_instance/layers": 3
+},
+"PATH:Pillar_008": {
+"mesh_instance/layers": 3
+},
+"PATH:Pillar_009": {
+"mesh_instance/layers": 3
+},
+"PATH:Pillar_010": {
+"mesh_instance/layers": 3
+},
+"PATH:Pillar_011": {
+"mesh_instance/layers": 3
+},
+"PATH:TheHanger": {
+"mesh_instance/layers": 3
+}
+}
+}
 blender/nodes/visible=0
 blender/nodes/active_collection_only=false
 blender/nodes/punctual_lights=false

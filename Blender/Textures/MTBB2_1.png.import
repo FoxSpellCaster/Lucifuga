@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bo5f8ty5nst48"
-path.s3tc="res://.godot/imported/Ucupaint Plane-col Color.png-b735b192a956fb40c53d09af54a3ff33.s3tc.ctex"
+uid="uid://sd3erp63mw3v"
+path.s3tc="res://.godot/imported/MTBB2_1.png-b6222afc6570ea573ae0d552a380891e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://Blender/Textures/Ucupaint Plane-col Color.png"
-dest_files=["res://.godot/imported/Ucupaint Plane-col Color.png-b735b192a956fb40c53d09af54a3ff33.s3tc.ctex"]
+source_file="res://Blender/Textures/MTBB2_1.png"
+dest_files=["res://.godot/imported/MTBB2_1.png-b6222afc6570ea573ae0d552a380891e.s3tc.ctex"]
 
 [params]
 

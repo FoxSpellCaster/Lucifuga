@@ -416,10 +416,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 [node name="Lights" type="Node3D" parent="TheHanger"]
 
 [node name="BlueFire" parent="TheHanger/Lights" instance=ExtResource("4_if12a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7713, 4.22351, 9.23141)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 4, 8.2422)
 
 [node name="BlueFire2" parent="TheHanger/Lights" instance=ExtResource("4_if12a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5728, 4.28861, 5.38788)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 4, 8.2422)
 
 [node name="BlueFire3" parent="TheHanger/Lights" instance=ExtResource("4_if12a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 4, 4.2422)
@@ -439,7 +439,7 @@ draw_pass_1 = ExtResource("3_1wqlk")
 [node name="Clutter" type="Node3D" parent="TheHanger"]
 
 [node name="DarkShard" parent="TheHanger/Clutter" instance=ExtResource("5_vasew")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59, 5.75, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 1.75, 8)
 
 [node name="AssemblyRoom" type="Label3D" parent="TheHanger/Clutter"]
 transform = Transform3D(7.54979e-08, 0, -1, 0, 1, 0, 1, 0, 7.54979e-08, 25, 5, -0.030632)
@@ -449,7 +449,7 @@ font = ExtResource("6_1wqlk")
 font_size = 64
 
 [node name="BulletinBoard" type="Label3D" parent="TheHanger/Clutter"]
-transform = Transform3D(-0.857697, 0, -0.514155, 0, 1, 0, 0.514155, 0, -0.857697, 15, 4, 7.72421)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 10, 4, 8.96937)
 text = "Bulletin Board"
 font = ExtResource("6_1wqlk")
 font_size = 64
@@ -467,4 +467,4 @@ mesh = SubResource("PlaneMesh_if12a")
 transform = Transform3D(-0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, -0.965926, 0, 3, -13)
 
 [node name="Player" parent="." instance=ExtResource("7_1wqlk")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -1, 2, -10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, 6)
