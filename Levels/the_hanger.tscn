@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bm3kmdwio20uh" path="res://VFX/BlueFire.tscn" id="4_if12a"]
 [ext_resource type="PackedScene" uid="uid://xyjqxxswjilf" path="res://Blender/DarkShard.blend" id="5_vasew"]
 [ext_resource type="FontFile" uid="uid://5te5n1teli3f" path="res://Fonts/m6x11.ttf" id="6_1wqlk"]
-[ext_resource type="PackedScene" uid="uid://dddvpqu50lm7x" path="res://Player/player.tscn" id="7_1wqlk"]
+[ext_resource type="PackedScene" uid="uid://de1eao2jnsfxk" path="res://Player/player.tscn" id="7_1wqlk"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1wqlk"]
 sky_horizon_color = Color(0.0941176, 0.294118, 0.717647, 1)
@@ -467,4 +467,4 @@ mesh = SubResource("PlaneMesh_if12a")
 transform = Transform3D(-0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, -0.965926, 0, 3, -13)
 
 [node name="Player" parent="." instance=ExtResource("7_1wqlk")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -1, 2, -10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 3, -6)

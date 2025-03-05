@@ -1,0 +1,139 @@
+[gd_scene load_steps=6 format=3 uid="uid://de1eao2jnsfxk"]
+
+[ext_resource type="PackedScene" uid="uid://bv63bh1xgsdnd" path="res://Player/3DGodotRobot.glb" id="1_l8h54"]
+
+[sub_resource type="GDScript" id="GDScript_hvfyp"]
+resource_name = "characterbody3d"
+script/source = "extends CharacterBody3D
+
+# Exported variables for tweaking in the editor
+@export var speed := 5.0
+@export var sprint_speed := 8.0
+@export var jump_velocity := 4.5
+@export var mouse_sensitivity := 0.2
+@export var crouch_speed := 2.0
+@export var crouch_height := 0.5
+@export var head_bob_frequency := 2.0
+@export var head_bob_amplitude := 0.05
+
+# Internal variables
+var gravity := ProjectSettings.get_setting(\"physics/3d/default_gravity\")
+var current_speed := speed
+var is_crouching := false
+var default_height := 2.0
+var head_bob_time := 0.0
+var original_head_position := Vector3.ZERO
+
+# Node references
+@onready var head = $Head
+@onready var camera = $Head/Camera3D
+@onready var collision_shape = $CollisionShape3D
+
+func _ready():
+    Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+    original_head_position = head.position
+    default_height = collision_shape.shape.height
+
+func _input(event):
+    if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+        rotate_y(deg_to_rad(-event.relative.x * mouse_sensitivity))
+        head.rotate_x(deg_to_rad(-event.relative.y * mouse_sensitivity))
+        head.rotation.x = clamp(head.rotation.x, deg_to_rad(-80), deg_to_rad(80))
+
+func _physics_process(delta):
+    # Apply gravity
+    if not is_on_floor():
+        velocity.y -= gravity * delta
+
+    # Handle crouching
+    handle_crouching(delta)
+
+    # Handle jumping
+    if Input.is_action_just_pressed(\"jump\") and is_on_floor() and not is_crouching:
+        velocity.y = jump_velocity
+
+    # Handle movement
+    var input_dir := Vector3.ZERO
+    input_dir.x = Input.get_axis(\"move_left\", \"move_right\")
+    input_dir.z = Input.get_axis(\"move_forward\", \"move_backward\")
+
+    if input_dir.length() > 1:
+        input_dir = input_dir.normalized()
+
+    var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.z)).normalized()
+
+    # Sprinting
+    if Input.is_action_pressed(\"sprint\") and not is_crouching and is_on_floor():
+        current_speed = sprint_speed
+    else:
+        current_speed = crouch_speed if is_crouching else speed  # Proper GDScript ternary
+
+    # Apply movement
+    if direction:
+        velocity.x = direction.x * current_speed
+        velocity.z = direction.z * current_speed
+    else:
+        velocity.x = move_toward(velocity.x, 0, current_speed)
+        velocity.z = move_toward(velocity.z, 0, current_speed)
+
+    move_and_slide()
+
+    # Head bobbing
+    if is_on_floor() and direction and not is_crouching:
+        head_bobbing(delta)
+    else:
+        head.position = original_head_position
+
+    # Toggle mouse capture
+    if Input.is_action_just_pressed(\"ui_cancel\"):
+        if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+            Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+        else:
+            Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+func handle_crouching(delta):
+    if Input.is_action_just_pressed(\"crouch\"):
+        is_crouching = not is_crouching
+    
+    var target_height := default_height if not is_crouching else default_height * crouch_height
+    collision_shape.shape.height = lerp(collision_shape.shape.height, target_height, delta * 10)
+    
+    var target_head_y := original_head_position.y if not is_crouching else original_head_position.y - (default_height - collision_shape.shape.height) / 2
+    head.position.y = lerp(head.position.y, target_head_y, delta * 10)
+
+func head_bobbing(delta):
+    head_bob_time += delta * current_speed * head_bob_frequency
+    head.position.y = original_head_position.y + sin(head_bob_time) * head_bob_amplitude
+    head.position.x = original_head_position.x + cos(head_bob_time * 0.5) * head_bob_amplitude * 0.5
+"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l8h54"]
+albedo_color = Color(0.546875, 0.546875, 0.546875, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_4ntmi"]
+material = SubResource("StandardMaterial3D_l8h54")
+radius = 0.4
+height = 1.8
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_btcbx"]
+radius = 0.4
+height = 1.8
+
+[node name="Player" type="Node3D"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+script = SubResource("GDScript_hvfyp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
+mesh = SubResource("CapsuleMesh_4ntmi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("CapsuleShape3D_btcbx")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.487746, 0.333969)
+current = true
+
+[node name="3DGodotRobot" parent="CharacterBody3D" instance=ExtResource("1_l8h54")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9, 0)
