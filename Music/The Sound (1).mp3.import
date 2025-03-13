@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://biwbhdj68pwqy"
+path="res://.godot/imported/The Sound (1).mp3-3d10464fdd379fd8e6392c1dcab200fe.mp3str"
+
+[deps]
+
+source_file="res://Music/The Sound (1).mp3"
+dest_files=["res://.godot/imported/The Sound (1).mp3-3d10464fdd379fd8e6392c1dcab200fe.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

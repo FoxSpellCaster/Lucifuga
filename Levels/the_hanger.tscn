@@ -1,11 +1,14 @@
-[gd_scene load_steps=23 format=3 uid="uid://b5hbtk6hdyibx"]
+[gd_scene load_steps=26 format=3 uid="uid://b5hbtk6hdyibx"]
 
 [ext_resource type="PackedScene" uid="uid://bchkp88pul5qc" path="res://Blender/TheHanger.blend" id="1_0mp3x"]
 [ext_resource type="Texture2D" uid="uid://dh6rx7e17j16c" path="res://Images/DarkParticle.png" id="3_r8awy"]
 [ext_resource type="PackedScene" uid="uid://bm3kmdwio20uh" path="res://VFX/BlueFire.tscn" id="4_if12a"]
+[ext_resource type="AudioStream" uid="uid://fbwtiv6pdld3" path="res://Music/The Sound.mp3" id="5_1wqlk"]
 [ext_resource type="PackedScene" uid="uid://xyjqxxswjilf" path="res://Blender/DarkShard.blend" id="5_vasew"]
 [ext_resource type="FontFile" uid="uid://5te5n1teli3f" path="res://Fonts/m6x11.ttf" id="6_1wqlk"]
 [ext_resource type="PackedScene" uid="uid://de1eao2jnsfxk" path="res://Player/player.tscn" id="6_r8awy"]
+[ext_resource type="AudioStream" uid="uid://biwbhdj68pwqy" path="res://Music/The Sound (1).mp3" id="7_if12a"]
+[ext_resource type="AudioStream" uid="uid://cmwaf4l8o38yk" path="res://Music/On Your Shoulder.mp3" id="8_vasew"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1wqlk"]
 sky_horizon_color = Color(0.0941176, 0.294118, 0.717647, 1)
@@ -160,6 +163,35 @@ transform = Transform3D(-0.857697, 0, -0.514155, 0, 1, 0, 0.514155, 0, -0.857697
 text = "Bulletin Board"
 font = ExtResource("6_1wqlk")
 font_size = 64
+
+[node name="AssemblyAudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="TheHanger/Clutter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, 8.75, 0)
+stream = ExtResource("5_1wqlk")
+max_db = -1.0
+pitch_scale = 0.5
+autoplay = true
+max_distance = 20.0
+panning_strength = 0.0
+parameters/looping = true
+
+[node name="GardenAudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="TheHanger/Clutter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 9.5, 39)
+stream = ExtResource("7_if12a")
+max_db = -1.0
+pitch_scale = 0.5
+autoplay = true
+max_distance = 21.0
+panning_strength = 0.0
+parameters/looping = true
+
+[node name="LobbyAudioStreamPlayer" type="AudioStreamPlayer3D" parent="TheHanger/Clutter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 9.5, 0)
+stream = ExtResource("8_vasew")
+max_db = -1.0
+autoplay = true
+max_distance = 20.0
+panning_strength = 0.0
+parameters/looping = true
 
 [node name="RigidBody3D" type="RigidBody3D" parent="TheHanger"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
