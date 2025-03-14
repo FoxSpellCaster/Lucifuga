@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://y40ga5p2ijqb"
+path="res://.godot/imported/Crazy Eyes Golem Strobe (Remastered).mp3-0438bc1e96f987c5776b3328a50a4441.mp3str"
+
+[deps]
+
+source_file="res://Music/Crazy Eyes Golem Strobe (Remastered).mp3"
+dest_files=["res://.godot/imported/Crazy Eyes Golem Strobe (Remastered).mp3-0438bc1e96f987c5776b3328a50a4441.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

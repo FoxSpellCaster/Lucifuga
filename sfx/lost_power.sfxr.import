@@ -1,0 +1,17 @@
+[remap]
+
+importer="com.timothyqiu.gdfxr.importer"
+type="AudioStreamWAV"
+uid="uid://cc6yh2iwfcw3m"
+path="res://.godot/imported/lost_power.sfxr-4479790903465f18391eaafb87be5272.sample"
+
+[deps]
+
+source_file="res://sfx/lost_power.sfxr"
+dest_files=["res://.godot/imported/lost_power.sfxr-4479790903465f18391eaafb87be5272.sample"]
+
+[params]
+
+loop=false
+bit_depth=0
+sample_rate=0

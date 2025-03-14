@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://b5hbtk6hdyibx"]
+[gd_scene load_steps=27 format=3 uid="uid://b5hbtk6hdyibx"]
 
 [ext_resource type="PackedScene" uid="uid://bchkp88pul5qc" path="res://Blender/TheHanger.blend" id="1_0mp3x"]
 [ext_resource type="Texture2D" uid="uid://dh6rx7e17j16c" path="res://Images/DarkParticle.png" id="3_r8awy"]
@@ -8,7 +8,8 @@
 [ext_resource type="FontFile" uid="uid://5te5n1teli3f" path="res://Fonts/m6x11.ttf" id="6_1wqlk"]
 [ext_resource type="PackedScene" uid="uid://de1eao2jnsfxk" path="res://Player/player.tscn" id="6_r8awy"]
 [ext_resource type="AudioStream" uid="uid://biwbhdj68pwqy" path="res://Music/The Sound (1).mp3" id="7_if12a"]
-[ext_resource type="AudioStream" uid="uid://cmwaf4l8o38yk" path="res://Music/On Your Shoulder.mp3" id="8_vasew"]
+[ext_resource type="AudioStream" uid="uid://y40ga5p2ijqb" path="res://Music/Crazy Eyes Golem Strobe (Remastered).mp3" id="8_vasew"]
+[ext_resource type="AudioStream" uid="uid://1dd8c7ugigca" path="res://sfx/creepy_clicking.sfxr" id="9_5t1cj"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1wqlk"]
 sky_horizon_color = Color(0.0941176, 0.294118, 0.717647, 1)
@@ -167,28 +168,23 @@ font_size = 64
 [node name="AssemblyAudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="TheHanger/Clutter"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, 8.75, 0)
 stream = ExtResource("5_1wqlk")
-max_db = -1.0
-pitch_scale = 0.5
-autoplay = true
-max_distance = 20.0
-panning_strength = 0.0
+max_db = -8.0
+max_distance = 30.0
 parameters/looping = true
 
 [node name="GardenAudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="TheHanger/Clutter"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 9.5, 39)
 stream = ExtResource("7_if12a")
-max_db = -1.0
-pitch_scale = 0.5
-autoplay = true
-max_distance = 21.0
+max_db = -8.0
+max_distance = 25.0
 panning_strength = 0.0
 parameters/looping = true
 
 [node name="LobbyAudioStreamPlayer" type="AudioStreamPlayer3D" parent="TheHanger/Clutter"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 9.5, 0)
 stream = ExtResource("8_vasew")
+volume_db = -5.0
 max_db = -1.0
-autoplay = true
 max_distance = 20.0
 panning_strength = 0.0
 parameters/looping = true
@@ -203,6 +199,14 @@ mesh = SubResource("BoxMesh_1wqlk")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="TheHanger/RigidBody3D"]
 shape = SubResource("ConvexPolygonShape3D_if12a")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="TheHanger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 3, 0)
+stream = ExtResource("9_5t1cj")
+autoplay = true
+
+[node name="SpotLight3D" type="SpotLight3D" parent="TheHanger"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 3.07648, 5.65784, -6.25273)
 
 [node name="Player" parent="." instance=ExtResource("6_r8awy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -12)
