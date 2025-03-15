@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://bq6d1vywbvad7"]
 
-[ext_resource type="PackedScene" uid="uid://dg8qk648gumag" path="res://VFX/FireParticle/FireParticles.tscn" id="1_m44y0"]
+[ext_resource type="PackedScene" uid="uid://dg8qk648gumag" path="res://vfx/FireParticle/FireParticles.tscn" id="1_m44y0"]
 [ext_resource type="PackedScene" uid="uid://xyjqxxswjilf" path="res://Blender/DarkShard.blend" id="3_m44y0"]
-[ext_resource type="AudioStream" uid="uid://cjtnd6ylp5m33" path="res://Music/Electric Pulse.mp3" id="4_20lnw"]
-[ext_resource type="FontFile" uid="uid://5te5n1teli3f" path="res://Fonts/m6x11.ttf" id="4_gavbc"]
+[ext_resource type="AudioStream" path="res://Music/Electric Pulse.mp3" id="4_20lnw"]
+[ext_resource type="FontFile" uid="uid://5te5n1teli3f" path="res://fonts/m6x11.ttf" id="4_gavbc"]
 
 [node name="DarkShard" type="Node3D"]
 

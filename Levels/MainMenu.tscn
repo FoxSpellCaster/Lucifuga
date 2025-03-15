@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dptexph7f4ouv"]
 
-[ext_resource type="Script" uid="uid://bv04inbv8mtr6" path="res://Levels/MainMenu.gd" id="1_cruaa"]
-[ext_resource type="Theme" uid="uid://cq1dh8n557t88" path="res://UI/MainMenu.tres" id="2_b76km"]
-[ext_resource type="AudioStream" uid="uid://bv24ghldrw40h" path="res://Music/LucifugaSpace.mp3" id="3_2k6u6"]
+[ext_resource type="Script" uid="uid://bv04inbv8mtr6" path="res://levels/MainMenu.gd" id="1_cruaa"]
+[ext_resource type="Theme" uid="uid://cq1dh8n557t88" path="res://ui/MainMenu.tres" id="2_b76km"]
+[ext_resource type="AudioStream" path="res://Music/LucifugaSpace.mp3" id="3_2k6u6"]
 
 [node name="Control" type="Control"]
 layout_mode = 3

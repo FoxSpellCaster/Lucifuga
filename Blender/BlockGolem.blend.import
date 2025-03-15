@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dvcqyyo56nhpj"
-path="res://.godot/imported/BlockGolem.blend-569f0a7352610076755a60478c4e60f1.scn"
+path="res://.godot/imported/BlockGolem.blend-34343566da573fadcb5d4bfe8ec09edd.scn"
 
 [deps]
 
-source_file="res://Blender/BlockGolem.blend"
-dest_files=["res://.godot/imported/BlockGolem.blend-569f0a7352610076755a60478c4e60f1.scn"]
+source_file="res://blender/BlockGolem.blend"
+dest_files=["res://.godot/imported/BlockGolem.blend-34343566da573fadcb5d4bfe8ec09edd.scn"]
 
 [params]
 

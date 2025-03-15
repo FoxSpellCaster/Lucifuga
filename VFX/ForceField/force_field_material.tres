@@ -1,7 +1,7 @@
 [gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://cp7fpmko6heid"]
 
-[ext_resource type="Shader" uid="uid://b4mp3uckodv4y" path="res://Shaders/force_field.gdshader" id="1_hm6s7"]
-[ext_resource type="Texture2D" uid="uid://b2skoftifgi55" path="res://VFX/ForceField/hexagon_grid.png" id="2_tm5w2"]
+[ext_resource type="Shader" uid="uid://b4mp3uckodv4y" path="res://shaders/force_field.gdshader" id="1_hm6s7"]
+[ext_resource type="Texture2D" uid="uid://b2skoftifgi55" path="res://vfx/ForceField/hexagon_grid.png" id="2_tm5w2"]
 
 [resource]
 render_priority = 0

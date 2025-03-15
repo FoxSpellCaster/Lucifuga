@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://de1eao2jnsfxk"]
 
-[ext_resource type="Script" uid="uid://bphyt8f5wrc0u" path="res://Player/character_body_3d.gd" id="1_4ntmi"]
-[ext_resource type="PackedScene" uid="uid://buwc5xv45um7d" path="res://Blender/Golem2Rig.blend" id="2_4ntmi"]
+[ext_resource type="Script" uid="uid://ctaueltyrvak5" path="res://player/character_body_3d.gd" id="1_4ntmi"]
+[ext_resource type="PackedScene" uid="uid://buwc5xv45um7d" path="res://blender/Golem2Rig.blend" id="2_4ntmi"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_btcbx"]
 radius = 0.4

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://12lrc84ycydu"
-path="res://.godot/imported/dungeon_pillar_texture.png-ec46483eb884bff209cd5c8187eb927f.ctex"
+path="res://.godot/imported/dungeon_pillar_texture.png-e7792728654b66704a4ac8bde0f8b417.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/dungeon_pillar_texture.png"
-dest_files=["res://.godot/imported/dungeon_pillar_texture.png-ec46483eb884bff209cd5c8187eb927f.ctex"]
+source_file="res://images/dungeon_pillar_texture.png"
+dest_files=["res://.godot/imported/dungeon_pillar_texture.png-e7792728654b66704a4ac8bde0f8b417.ctex"]
 
 [params]
 

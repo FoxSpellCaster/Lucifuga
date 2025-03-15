@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://xyjqxxswjilf"
-path="res://.godot/imported/DarkShard.blend-3ae6f20b8d8018f7353571e8f4637e62.scn"
+path="res://.godot/imported/DarkShard.blend-85703ab7205c174c21b80109df78f3f5.scn"
 
 [deps]
 
-source_file="res://Blender/DarkShard.blend"
-dest_files=["res://.godot/imported/DarkShard.blend-3ae6f20b8d8018f7353571e8f4637e62.scn"]
+source_file="res://blender/DarkShard.blend"
+dest_files=["res://.godot/imported/DarkShard.blend-85703ab7205c174c21b80109df78f3f5.scn"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bfc5ytp68yi7o"
-path="res://.godot/imported/TrashGolem.blend-bcfd84bb9b645cdda8877e961c69ebd0.scn"
+path="res://.godot/imported/TrashGolem.blend-cc33b2d41500a97acdda3483bdc02341.scn"
 
 [deps]
 
-source_file="res://Blender/TrashGolem.blend"
-dest_files=["res://.godot/imported/TrashGolem.blend-bcfd84bb9b645cdda8877e961c69ebd0.scn"]
+source_file="res://blender/TrashGolem.blend"
+dest_files=["res://.godot/imported/TrashGolem.blend-cc33b2d41500a97acdda3483bdc02341.scn"]
 
 [params]
 

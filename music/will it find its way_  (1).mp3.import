@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cotwvyqml4uwo"
+path="res://.godot/imported/will it find its way_  (1).mp3-b8bb01bb38e516e37ff95a3fc275211f.mp3str"
+
+[deps]
+
+source_file="res://music/will it find its way_  (1).mp3"
+dest_files=["res://.godot/imported/will it find its way_  (1).mp3-b8bb01bb38e516e37ff95a3fc275211f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

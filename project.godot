@@ -22,7 +22,7 @@ buses/default_bus_layout=""
 
 [autoload]
 
-Global="*res://UI/global.gd"
+Global="*res://ui/global.gd"
 
 [dotnet]
 
@@ -30,7 +30,7 @@ project/assembly_name="Lucifuga"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/Todo_Manager/plugin.cfg", "res://addons/gdfxr/plugin.cfg")
+enabled=PackedStringArray("res://addons/Todo_Manager/plugin.cfg")
 
 [input]
 

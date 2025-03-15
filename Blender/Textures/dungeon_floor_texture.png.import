@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxrpixocipd3a"
-path.s3tc="res://.godot/imported/dungeon_floor_texture.png-a529e79affd70c5b8b611b4e42246959.s3tc.ctex"
+path.s3tc="res://.godot/imported/dungeon_floor_texture.png-240ee1a61530c78a0dbd6892aa646d84.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://Blender/Textures/dungeon_floor_texture.png"
-dest_files=["res://.godot/imported/dungeon_floor_texture.png-a529e79affd70c5b8b611b4e42246959.s3tc.ctex"]
+source_file="res://blender/textures/dungeon_floor_texture.png"
+dest_files=["res://.godot/imported/dungeon_floor_texture.png-240ee1a61530c78a0dbd6892aa646d84.s3tc.ctex"]
 
 [params]
 

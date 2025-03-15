@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://hx7dp2iimd2n"
+path="res://.godot/imported/Echoes in the Spin.mp3-289e56ace3a4805d6c21ab7e8ddc004d.mp3str"
+
+[deps]
+
+source_file="res://music/Echoes in the Spin.mp3"
+dest_files=["res://.godot/imported/Echoes in the Spin.mp3-289e56ace3a4805d6c21ab7e8ddc004d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

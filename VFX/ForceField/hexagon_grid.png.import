@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b2skoftifgi55"
-path.s3tc="res://.godot/imported/hexagon_grid.png-1d70e87acf27b66597af8a65b5d09c75.s3tc.ctex"
+path.s3tc="res://.godot/imported/hexagon_grid.png-801a0dcccbc96c1fb993591df034fece.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://VFX/ForceField/hexagon_grid.png"
-dest_files=["res://.godot/imported/hexagon_grid.png-1d70e87acf27b66597af8a65b5d09c75.s3tc.ctex"]
+source_file="res://vfx/ForceField/hexagon_grid.png"
+dest_files=["res://.godot/imported/hexagon_grid.png-801a0dcccbc96c1fb993591df034fece.s3tc.ctex"]
 
 [params]
 

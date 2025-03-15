@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bko6oayqcslrd"
-path.s3tc="res://.godot/imported/FireMask.png-b9d4f24cdd9b54957892aae4bd9a46cb.s3tc.ctex"
+path.s3tc="res://.godot/imported/FireMask.png-c079662ac9049442c49a42d105827cd3.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://VFX/StylizedFire/FireMask.png"
-dest_files=["res://.godot/imported/FireMask.png-b9d4f24cdd9b54957892aae4bd9a46cb.s3tc.ctex"]
+source_file="res://vfx/StylizedFire/FireMask.png"
+dest_files=["res://.godot/imported/FireMask.png-c079662ac9049442c49a42d105827cd3.s3tc.ctex"]
 
 [params]
 

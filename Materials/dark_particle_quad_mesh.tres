@@ -1,6 +1,6 @@
 [gd_resource type="QuadMesh" load_steps=3 format=3 uid="uid://67a488bbm83s"]
 
-[ext_resource type="Texture2D" uid="uid://dh6rx7e17j16c" path="res://Images/DarkParticle.png" id="1_ybty8"]
+[ext_resource type="Texture2D" uid="uid://dh6rx7e17j16c" path="res://images/DarkParticle.png" id="1_ybty8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_if12a"]
 transparency = 1

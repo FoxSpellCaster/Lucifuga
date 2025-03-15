@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://61tawl8u1rug"
-path="res://.godot/imported/m6x11plus.ttf-7be677cbfcfdac6c33f2ebb2ee813d85.fontdata"
+uid="uid://d0d8alv2uhk3b"
+path="res://.godot/imported/m6x11plus.ttf-da24b475ec7afa97e0300e429f4f80f9.fontdata"
 
 [deps]
 
-source_file="res://Fonts/m6x11plus.ttf"
-dest_files=["res://.godot/imported/m6x11plus.ttf-7be677cbfcfdac6c33f2ebb2ee813d85.fontdata"]
+source_file="res://fonts/m6x11plus.ttf"
+dest_files=["res://.godot/imported/m6x11plus.ttf-da24b475ec7afa97e0300e429f4f80f9.fontdata"]
 
 [params]
 
@@ -29,12 +29,7 @@ Fallbacks=null
 fallbacks=[]
 Compress=null
 compress=true
-preload=[{
-"chars": [],
-"glyphs": [],
-"name": "New Configuration",
-"size": Vector2i(16, 0)
-}]
+preload=[]
 language_support={}
 script_support={}
 opentype_features={}

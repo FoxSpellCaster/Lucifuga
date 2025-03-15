@@ -3,7 +3,7 @@
 importer="2d_array_texture"
 type="CompressedTexture2DArray"
 uid="uid://dwdglmjiyug5a"
-path.bptc="res://.godot/imported/the_hanger.exr-dae5a80a4ed41a5d2d637d17b45856b0.bptc.ctexarray"
+path.bptc="res://.godot/imported/the_hanger.exr-7404448d324b47ef95afc2daace0c89f.bptc.ctexarray"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Levels/the_hanger.exr"
-dest_files=["res://.godot/imported/the_hanger.exr-dae5a80a4ed41a5d2d637d17b45856b0.bptc.ctexarray"]
+source_file="res://levels/the_hanger.exr"
+dest_files=["res://.godot/imported/the_hanger.exr-7404448d324b47ef95afc2daace0c89f.bptc.ctexarray"]
 
 [params]
 

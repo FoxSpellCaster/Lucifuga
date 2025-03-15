@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpuhv3via8bqv"
-path.s3tc="res://.godot/imported/dungeon_door_wall_texture.png-50d90a2befd8d1ae7ced62da8b84831c.s3tc.ctex"
+path.s3tc="res://.godot/imported/dungeon_door_wall_texture.png-9a52cd68db67e7a2fec6cbee15577531.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://Blender/Textures/dungeon_door_wall_texture.png"
-dest_files=["res://.godot/imported/dungeon_door_wall_texture.png-50d90a2befd8d1ae7ced62da8b84831c.s3tc.ctex"]
+source_file="res://blender/textures/dungeon_door_wall_texture.png"
+dest_files=["res://.godot/imported/dungeon_door_wall_texture.png-9a52cd68db67e7a2fec6cbee15577531.s3tc.ctex"]
 
 [params]
 
