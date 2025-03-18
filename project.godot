@@ -69,10 +69,24 @@ exit={
 
 3d/run_on_separate_thread=true
 3d/physics_engine="Jolt Physics"
+jolt_physics_3d/simulation/areas_detect_static_bodies=true
+jolt_physics_3d/simulation/generate_all_kinematic_contacts=true
+jolt_physics_3d/queries/use_enhanced_internal_edge_removal=true
+jolt_physics_3d/queries/enable_ray_cast_face_index=true
 
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
 textures/lossless_compression/force_png=true
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality=3
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality.mobile=3
+lights_and_shadows/positional_shadow/soft_shadow_filter_quality=3
+lights_and_shadows/positional_shadow/soft_shadow_filter_quality.mobile=3
+global_illumination/gi/use_half_resolution=true
+anti_aliasing/quality/msaa_3d=1
+scaling_3d/mode=2
 textures/decals/filter=4
 textures/light_projectors/filter=4
+environment/screen_space_reflection/roughness_quality=2
+environment/subsurface_scattering/subsurface_scattering_quality=2
+anti_aliasing/quality/screen_space_aa=1

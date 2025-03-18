@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bhfj3mt1dppqa"
+path.s3tc="res://.godot/imported/DungeonPillar_UE4_1m x 1m (4).png-1fa11f878286982971e47105a447591b.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "a68db7c4cc60c6af8256afe212fbd944"
+}
+
+[deps]
+
+source_file="res://blender/DungeonPillar_UE4_1m x 1m (4).png"
+dest_files=["res://.godot/imported/DungeonPillar_UE4_1m x 1m (4).png-1fa11f878286982971e47105a447591b.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
