@@ -1,10 +1,10 @@
-[gd_scene load_steps=22 format=3 uid="uid://b5hbtk6hdyibx"]
+[gd_scene load_steps=23 format=3 uid="uid://b5hbtk6hdyibx"]
 
 [ext_resource type="PackedScene" uid="uid://bckmpodmrvps1" path="res://blender/ground.blend" id="2_0rto7"]
 [ext_resource type="Texture2D" uid="uid://dh6rx7e17j16c" path="res://images/DarkParticle.png" id="3_r8awy"]
 [ext_resource type="PackedScene" uid="uid://bm3kmdwio20uh" path="res://vfx/BlueFire.tscn" id="4_if12a"]
+[ext_resource type="FontFile" uid="uid://1l088rgolrnr" path="res://fonts/m3x6.ttf" id="5_08en3"]
 [ext_resource type="PackedScene" uid="uid://xyjqxxswjilf" path="res://blender/DarkShard.blend" id="5_vasew"]
-[ext_resource type="FontFile" uid="uid://xsp3ywfu7r01" path="res://fonts/m6x11.ttf" id="6_1wqlk"]
 [ext_resource type="PackedScene" uid="uid://de1eao2jnsfxk" path="res://player/player.tscn" id="6_r8awy"]
 [ext_resource type="PackedScene" uid="uid://co1l26jlgrfxa" path="res://blender/DungeonPillar.blend" id="7_0o2ir"]
 [ext_resource type="PackedScene" uid="uid://blkh6h7ba4lvn" path="res://blender/DungeonFloorTile_Thin.blend" id="8_renes"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://hocctgsyrcun" path="res://blender/Ruby.blend" id="9_sclua"]
 [ext_resource type="PackedScene" uid="uid://dwta4y53a8hqq" path="res://blender/Gem.blend" id="10_b8mqe"]
 [ext_resource type="PackedScene" uid="uid://cucman75xbs2n" path="res://blender/FunBox.blend" id="12_nem26"]
+[ext_resource type="PackedScene" uid="uid://bjxievqpcgw1s" path="res://blender/barrell.blend" id="13_08en3"]
 
 [sub_resource type="Gradient" id="Gradient_2nkpo"]
 offsets = PackedFloat32Array(0, 0.799283, 1)
@@ -85,6 +86,7 @@ directional_shadow_mode = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.37971, 10.2293, -8.12896)
 
 [node name="Ground" parent="." instance=ExtResource("2_0rto7")]
+metadata/_edit_lock_ = true
 
 [node name="Building" type="Node3D" parent="."]
 
@@ -92,218 +94,173 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.37971, 10.2293, -8.12896)
 
 [node name="DungeonFloorTile_Thin" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 10.0359, -8.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin2" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 10.0359, -7.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin3" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 10.0359, -6.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin4" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 10.0359, -5.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin5" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 10.0359, -4.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin6" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 10.0359, -8.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin7" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 10.0359, -7.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin8" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 10.0359, -6.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin9" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 10.0359, -5.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin10" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 10.0359, -4.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin11" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 10.0359, -8.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin12" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 10.0359, -7.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin13" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 10.0359, -6.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin14" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 10.0359, -5.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin15" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 10.0359, -4.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin16" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 10.0359, -8.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin17" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 10.0359, -7.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin18" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 10.0359, -6.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin19" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 10.0359, -5.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin20" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 10.0359, -4.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin21" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 10.0359, -8.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin22" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 10.0359, -7.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin23" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 10.0359, -6.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin24" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 10.0359, -5.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin25" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 10.0359, -4.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin26" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.33457, 11.0359, -8.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin27" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.33457, 11.0359, -7.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin28" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.33457, 11.0359, -6.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin29" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.33457, 11.0359, -5.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin30" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.33457, 11.0359, -4.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin31" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.33457, 11.0359, -8.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin32" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.33457, 11.0359, -7.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin33" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.33457, 11.0359, -6.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin34" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.33457, 11.0359, -5.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin35" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.33457, 11.0359, -4.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin36" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.33457, 11.0359, -8.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin37" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.33457, 11.0359, -7.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin38" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.33457, 11.0359, -6.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin39" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.33457, 11.0359, -5.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin40" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.33457, 11.0359, -4.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin41" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.33457, 11.0359, -8.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin42" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.33457, 11.0359, -7.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin43" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.33457, 11.0359, -6.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin44" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.33457, 11.0359, -5.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin45" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.33457, 11.0359, -4.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin46" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.33457, 11.0359, -8.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin47" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.33457, 11.0359, -7.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin48" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.33457, 11.0359, -6.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin49" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.33457, 11.0359, -5.01376)
-metadata/_edit_lock_ = true
 
 [node name="DungeonFloorTile_Thin50" parent="Building/Floor" instance=ExtResource("8_renes")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.33457, 11.0359, -4.01376)
-metadata/_edit_lock_ = true
 
 [node name="Clutter" type="Node3D" parent="Building"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 0)
 
 [node name="DarkShard" parent="Building/Clutter" instance=ExtResource("5_vasew")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 2.97777, -7)
-
-[node name="BulletinBoard" type="Label3D" parent="Building/Clutter"]
-transform = Transform3D(0.746812, 0, -0.665035, 0, 1, 0, 0.665035, 0, 0.746812, 8.52125, 3, -8.51899)
-text = "Bulletin Board"
-font = ExtResource("6_1wqlk")
-font_size = 64
+transform = Transform3D(1, 0, 0, 0, 0.952023, -0.306028, 0, 0.306028, 0.952023, 4.3, 3.33184, -3.9442)
 
 [node name="DungeonPillar" parent="Building/Clutter" instance=ExtResource("7_0o2ir")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 4.55957, -4)
+transform = Transform3D(-2.98023e-08, 0, 1, 0, 1, 0, -1, 0, -2.98023e-08, 6, 4.55957, -4)
+
+[node name="A1" type="Label3D" parent="Building/Clutter/DungeonPillar"]
+transform = Transform3D(-0.057825, 0.25746, 0.964557, -9.31323e-10, 0.966174, -0.257892, -0.998326, -0.0149126, -0.055869, 0.177633, -0.572489, -0.0236664)
+modulate = Color(0, 0, 0, 1)
+outline_modulate = Color(0.741496, 0.76444, 0.988783, 1)
+text = "A1"
+font = ExtResource("5_08en3")
+font_size = 82
+
+[node name="BlueFire" parent="Building/Clutter/DungeonPillar" instance=ExtResource("4_if12a")]
+transform = Transform3D(-2.98023e-08, 0, -1, 0, 1, 0, 1, 0, -2.98023e-08, 0.69836, -0.336061, -0.2287)
 
 [node name="Ruby" parent="Building/Clutter" instance=ExtResource("9_sclua")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2.32832, -4)
@@ -344,6 +301,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2.73181, -4.57839)
 [node name="FunBox" parent="Building/Clutter" instance=ExtResource("12_nem26")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.38022, -4.24638)
 
+[node name="FunBoxLabel" type="Label3D" parent="Building/Clutter/FunBox"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.0157754, 0.0848112, -0.513908)
+text = "FunBox"
+font = ExtResource("5_08en3")
+font_size = 64
+
 [node name="VFX" type="Node3D" parent="Building"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 0)
 metadata/_edit_lock_ = true
@@ -359,25 +322,22 @@ draw_pass_1 = SubResource("QuadMesh_vasew")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 0)
 metadata/_edit_lock_ = true
 
-[node name="BlueFire" parent="Building/Lights" instance=ExtResource("4_if12a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.7713, 4.22351, -4.69836)
-
 [node name="Walls" type="Node3D" parent="Building"]
 
 [node name="DungeonWall_Thin" parent="Building/Walls" instance=ExtResource("8_sclua")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.12288, 11.0885, -7.90417)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11231, 11.3155, -8.02182)
 
 [node name="DungeonWall_Thin2" parent="Building/Walls" instance=ExtResource("8_sclua")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.12288, 11.0885, -6.90417)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11231, 11.3155, -7.02182)
 
 [node name="DungeonWall_Thin3" parent="Building/Walls" instance=ExtResource("8_sclua")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.12288, 11.0885, -5.90417)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11231, 11.3155, -6.02182)
 
 [node name="DungeonWall_Thin4" parent="Building/Walls" instance=ExtResource("8_sclua")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.12288, 11.0885, -4.90417)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11231, 11.3155, -5.02182)
 
 [node name="DungeonWall_Thin5" parent="Building/Walls" instance=ExtResource("8_sclua")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.12288, 11.0885, -3.90417)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11231, 11.3155, -4.02182)
 
-[node name="DungeonWall_Thin6" parent="Building/Walls" instance=ExtResource("8_sclua")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.12288, 11.0885, -2.90417)
+[node name="barrell" parent="Building" instance=ExtResource("13_08en3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3, 11.5348, -4.01677)
