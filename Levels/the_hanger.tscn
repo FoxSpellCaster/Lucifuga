@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://b5hbtk6hdyibx"]
+[gd_scene load_steps=28 format=3 uid="uid://b5hbtk6hdyibx"]
 
 [ext_resource type="PackedScene" uid="uid://bckmpodmrvps1" path="res://blender/ground.blend" id="2_0rto7"]
 [ext_resource type="Shader" uid="uid://ctbjfgq5qc4x" path="res://shaders/water.gdshader" id="3_7w4qb"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dwta4y53a8hqq" path="res://blender/Gem.blend" id="10_b8mqe"]
 [ext_resource type="PackedScene" uid="uid://cucman75xbs2n" path="res://blender/FunBox.blend" id="12_nem26"]
 [ext_resource type="PackedScene" uid="uid://bjxievqpcgw1s" path="res://blender/barrell.blend" id="13_08en3"]
+[ext_resource type="PackedScene" uid="uid://0u5angag58jh" path="res://blender/toolbox.blend" id="15_87x2n"]
 
 [sub_resource type="Environment" id="Environment_7w4qb"]
 ambient_light_source = 1
@@ -155,7 +156,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.37971, 10.2293, -8.12896)
 
 [node name="Ground" parent="." instance=ExtResource("2_0rto7")]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+[node name="Water2" type="MeshInstance3D" parent="Ground"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.15982, 0)
 mesh = SubResource("PlaneMesh_oir2e")
 metadata/_edit_lock_ = true
@@ -653,3 +654,6 @@ transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 3.40923,
 
 [node name="barrell" parent="Building" instance=ExtResource("13_08en3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3, 11.5348, -4.01677)
+
+[node name="toolbox" parent="." instance=ExtResource("15_87x2n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 11.3634, -7)
