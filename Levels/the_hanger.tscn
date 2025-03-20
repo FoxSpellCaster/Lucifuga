@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://b5hbtk6hdyibx"]
+[gd_scene load_steps=31 format=3 uid="uid://b5hbtk6hdyibx"]
 
 [ext_resource type="PackedScene" uid="uid://bckmpodmrvps1" path="res://blender/ground.blend" id="2_0rto7"]
 [ext_resource type="Shader" uid="uid://ctbjfgq5qc4x" path="res://shaders/water.gdshader" id="3_7w4qb"]
@@ -15,21 +15,20 @@
 [ext_resource type="PackedScene" uid="uid://cucman75xbs2n" path="res://blender/FunBox.blend" id="12_nem26"]
 [ext_resource type="PackedScene" uid="uid://bjxievqpcgw1s" path="res://blender/barrell.blend" id="13_08en3"]
 [ext_resource type="PackedScene" uid="uid://0u5angag58jh" path="res://blender/toolbox.blend" id="15_87x2n"]
+[ext_resource type="PackedScene" uid="uid://cjhc82yq4a8nk" path="res://blender/Bomb.blend" id="16_oir2e"]
 
-[sub_resource type="Environment" id="Environment_7w4qb"]
-ambient_light_source = 1
-reflected_light_source = 1
-tonemap_mode = 3
-ssr_enabled = true
-ssao_enabled = true
-ssil_enabled = true
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_87x2n"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_oir2e"]
+sky_material = SubResource("ProceduralSkyMaterial_87x2n")
+
+[sub_resource type="Environment" id="Environment_l28y5"]
+background_mode = 2
+sky = SubResource("Sky_oir2e")
+tonemap_mode = 2
 glow_enabled = true
-fog_enabled = true
-volumetric_fog_enabled = true
-adjustment_enabled = true
-adjustment_brightness = 0.8
-adjustment_contrast = 1.1
-adjustment_saturation = 0.8
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_87x2n"]
 render_priority = 0
@@ -140,16 +139,11 @@ size = Vector2(0.1, 0.1)
 [node name="TheHanger" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_7w4qb")
+environment = SubResource("Environment_l28y5")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.849316, -0.498321, 0.174177, 0.109716, 0.15611, 0.981628, -0.516356, 0.852822, -0.0779131, 0, 0, 0)
-light_energy = 0.4
-light_indirect_energy = 0.4
-light_volumetric_fog_energy = 0.4
-light_specular = 0.2
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
 shadow_enabled = true
-directional_shadow_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("6_r8awy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.37971, 10.2293, -8.12896)
@@ -657,3 +651,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3, 11.5348, -4.01677)
 
 [node name="toolbox" parent="." instance=ExtResource("15_87x2n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 11.3634, -7)
+
+[node name="Bomb" parent="." instance=ExtResource("16_oir2e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 12, -6)
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
