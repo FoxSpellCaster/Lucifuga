@@ -1,5 +1,6 @@
-[gd_scene load_steps=31 format=3 uid="uid://b5hbtk6hdyibx"]
+[gd_scene load_steps=32 format=3 uid="uid://b5hbtk6hdyibx"]
 
+[ext_resource type="Shader" uid="uid://dndyugn7jitow" path="res://levels/sky_box.gdshader" id="1_l28y5"]
 [ext_resource type="PackedScene" uid="uid://bckmpodmrvps1" path="res://blender/ground.blend" id="2_0rto7"]
 [ext_resource type="Shader" uid="uid://ctbjfgq5qc4x" path="res://shaders/water.gdshader" id="3_7w4qb"]
 [ext_resource type="Texture2D" uid="uid://dh6rx7e17j16c" path="res://images/DarkParticle.png" id="3_r8awy"]
@@ -17,18 +18,29 @@
 [ext_resource type="PackedScene" uid="uid://0u5angag58jh" path="res://blender/toolbox.blend" id="15_87x2n"]
 [ext_resource type="PackedScene" uid="uid://cjhc82yq4a8nk" path="res://blender/Bomb.blend" id="16_oir2e"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_87x2n"]
-sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
-ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bj5b0"]
+shader = ExtResource("1_l28y5")
+shader_parameter/background_dark = true
 
 [sub_resource type="Sky" id="Sky_oir2e"]
-sky_material = SubResource("ProceduralSkyMaterial_87x2n")
+sky_material = SubResource("ShaderMaterial_bj5b0")
 
 [sub_resource type="Environment" id="Environment_l28y5"]
 background_mode = 2
 sky = SubResource("Sky_oir2e")
+ambient_light_source = 3
+reflected_light_source = 2
 tonemap_mode = 2
+sdfgi_enabled = true
+sdfgi_use_occlusion = true
 glow_enabled = true
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.279935, 0.182179, 0.384593, 1)
+fog_density = 1.0
+fog_sky_affect = 0.0
+volumetric_fog_enabled = true
+volumetric_fog_sky_affect = 0.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_87x2n"]
 render_priority = 0
@@ -144,6 +156,7 @@ environment = SubResource("Environment_l28y5")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
 shadow_enabled = true
+sky_mode = 2
 
 [node name="Player" parent="." instance=ExtResource("6_r8awy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.37971, 10.2293, -8.12896)

@@ -68,7 +68,7 @@ initial_velocity_max = 2.0
 angular_velocity_min = 30.0
 angular_velocity_max = 60.0
 gravity = Vector3(0, 0, 0)
-scale_max = 1.5
+scale_min = 0.5
 scale_curve = SubResource("CurveTexture_2m678")
 color = Color(0.143187, 0.142639, 0.160156, 1)
 color_ramp = SubResource("GradientTexture1D_iquev")
@@ -116,5 +116,6 @@ shadow_blur = 2.818
 [node name="BlueGPUParticles3D" type="GPUParticles3D" parent="BlueFire"]
 amount = 50
 amount_ratio = 0.5
+trail_lifetime = 4.0
 process_material = SubResource("ParticleProcessMaterial_m3keo")
 draw_pass_1 = SubResource("QuadMesh_63ddk")
