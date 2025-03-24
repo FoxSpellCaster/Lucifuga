@@ -1,0 +1,152 @@
+[gd_scene load_steps=22 format=3 uid="uid://bc17jjm28vkbj"]
+
+[ext_resource type="PackedScene" uid="uid://cd1eu057ah6pp" path="res://assets/mesh/waterfall_scene.glb" id="1_08yfn"]
+[ext_resource type="Texture2D" uid="uid://c4237p06d45dr" path="res://assets/texture/rock_texture/stone2.png" id="2_w6njj"]
+[ext_resource type="Shader" uid="uid://r86j8h8vgsav" path="res://shader/displacement_n_uvscroll.tres" id="3_e14yi"]
+[ext_resource type="Texture2D" uid="uid://bj11t3mci6jsy" path="res://assets/texture/waterfall_textures/waterfall_texture_inv.png" id="5_qrup6"]
+[ext_resource type="Texture2D" uid="uid://bpug207fxqixc" path="res://assets/texture/glow.png" id="6_2mclw"]
+[ext_resource type="Texture2D" uid="uid://pmsldaf7chtt" path="res://assets/texture/waterfall_textures/waterfall_texture.png" id="6_6ldqu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_trel4"]
+albedo_texture = ExtResource("2_w6njj")
+metallic = 0.5
+roughness = 0.75
+
+[sub_resource type="Gradient" id="Gradient_a0348"]
+offsets = PackedFloat32Array(0, 0.54918, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.06, 0.796333, 1, 1, 0.06, 0.357667, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wjkg5"]
+gradient = SubResource("Gradient_a0348")
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7pbl3"]
+render_priority = 0
+shader = ExtResource("3_e14yi")
+shader_parameter/uv_dis_scale = Vector2(2, 2)
+shader_parameter/dis_scroll = Vector2(0, -1.5)
+shader_parameter/displacement_tut = ExtResource("6_6ldqu")
+shader_parameter/displace_parameter = 0.05
+shader_parameter/base_color_texture = SubResource("GradientTexture2D_wjkg5")
+shader_parameter/uv_scale = Vector2(1, 1.5)
+shader_parameter/scroll = Vector2(0.5, -2)
+shader_parameter/water_texture = ExtResource("6_6ldqu")
+shader_parameter/uv_scale2 = Vector2(1, 1.5)
+shader_parameter/scroll2 = Vector2(-0.5, -2)
+shader_parameter/water_texture2 = ExtResource("6_6ldqu")
+shader_parameter/overlay_alpha = 1.0
+shader_parameter/normal_depth = 0.5
+
+[sub_resource type="Gradient" id="Gradient_pdd5h"]
+offsets = PackedFloat32Array(0, 0.360656, 0.737705, 1)
+colors = PackedColorArray(0.06, 0.686666, 1, 1, 0.03, 0.1755, 1, 1, 0, 0.666667, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_h5xvs"]
+gradient = SubResource("Gradient_pdd5h")
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 0.11828)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nsxsr"]
+render_priority = 0
+shader = ExtResource("3_e14yi")
+shader_parameter/uv_dis_scale = Vector2(1, 1)
+shader_parameter/dis_scroll = Vector2(0, 0.5)
+shader_parameter/displacement_tut = ExtResource("6_6ldqu")
+shader_parameter/displace_parameter = 0.05
+shader_parameter/base_color_texture = SubResource("GradientTexture2D_h5xvs")
+shader_parameter/uv_scale = Vector2(2, 4)
+shader_parameter/scroll = Vector2(0.5, -0.5)
+shader_parameter/water_texture = ExtResource("5_qrup6")
+shader_parameter/uv_scale2 = Vector2(2, 4)
+shader_parameter/scroll2 = Vector2(-0.25, -0.5)
+shader_parameter/water_texture2 = ExtResource("5_qrup6")
+shader_parameter/overlay_alpha = 0.5
+shader_parameter/normal_depth = 0.25
+
+[sub_resource type="Curve" id="Curve_66a30"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.442029, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_cccmc"]
+curve = SubResource("Curve_66a30")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7ofq5"]
+lifetime_randomness = 1.0
+emission_shape_scale = Vector3(0.25, 0.25, 0)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+velocity_pivot = Vector3(0, 1, 0)
+direction = Vector3(0, 1, 0)
+initial_velocity_min = 2.0
+initial_velocity_max = 3.0
+scale_min = 0.13
+scale_max = 0.25
+scale_curve = SubResource("CurveTexture_cccmc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rquir"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("6_2mclw")
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_dt2ps"]
+material = SubResource("StandardMaterial3D_rquir")
+size = Vector2(0.25, 0.25)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_wo8gc"]
+lifetime_randomness = 0.5
+emission_shape_scale = Vector3(0.15, 0, 0.1)
+emission_shape = 2
+emission_sphere_radius = 2.54
+direction = Vector3(0, 0, 0.5)
+spread = 30.0
+initial_velocity_min = 0.1
+initial_velocity_max = 0.5
+gravity = Vector3(0, -1, 0)
+damping_min = 0.5
+damping_max = 1.0
+scale_max = 1.5
+scale_curve = SubResource("CurveTexture_cccmc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qnpft"]
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 0.5
+
+[sub_resource type="SphereMesh" id="SphereMesh_ummkm"]
+material = SubResource("StandardMaterial3D_qnpft")
+radius = 0.1
+height = 0.2
+
+[node name="waterfall_scene" instance=ExtResource("1_08yfn")]
+
+[node name="stone1" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_trel4")
+
+[node name="waterfall" parent="." index="1"]
+transform = Transform3D(0.999987, -0.004838, 0.00165634, 0.00483806, 0.999988, -2.9676e-05, -0.00165618, 3.76755e-05, 0.999999, -0.0416546, -0.114094, -0.0467275)
+material_override = SubResource("ShaderMaterial_7pbl3")
+
+[node name="waterpuddle" parent="." index="2"]
+transform = Transform3D(1.26685, 0, 0, 0, 1.26685, 0, 0, 0, 1.26685, 0, -0.895629, 0.293835)
+material_override = SubResource("ShaderMaterial_nsxsr")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.151694, 0.548823)
+amount = 256
+lifetime = 0.5
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_7ofq5")
+draw_pass_1 = SubResource("QuadMesh_dt2ps")
+
+[node name="GPUParticles3D2" type="GPUParticles3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0481549, 0.458227)
+amount = 256
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_wo8gc")
+draw_pass_1 = SubResource("SphereMesh_ummkm")

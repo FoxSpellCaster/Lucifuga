@@ -1,0 +1,61 @@
+[gd_resource type="VisualShader" load_steps=6 format=3 uid="uid://qaacm0so4bp6"]
+
+[sub_resource type="VisualShaderNodeTexture2DParameter" id="VisualShaderNodeTexture2DParameter_2peui"]
+parameter_name = "main_texture"
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_farcj"]
+source = 5
+
+[sub_resource type="VisualShaderNodeUVFunc" id="VisualShaderNodeUVFunc_jw3cs"]
+default_input_values = [1, Vector2(0, -1), 2, Vector2(0, 0)]
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_bpkqe"]
+input_name = "time"
+
+[sub_resource type="VisualShaderNodeVec2Parameter" id="VisualShaderNodeVec2Parameter_y5g4a"]
+parameter_name = "scroll_dir"
+
+[resource]
+code = "shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert, specular_schlick_ggx;
+
+uniform vec2 scroll_dir;
+uniform sampler2D main_texture;
+
+
+
+void fragment() {
+// Vector2Parameter:6
+	vec2 n_out6p0 = scroll_dir;
+
+
+// Input:5
+	float n_out5p0 = TIME;
+
+
+// UVFunc:4
+	vec2 n_out4p0 = vec2(n_out5p0) * n_out6p0 + UV;
+
+
+	vec4 n_out3p0;
+// Texture2D:3
+	n_out3p0 = texture(main_texture, n_out4p0);
+
+
+// Output:0
+	ALBEDO = vec3(n_out3p0.xyz);
+
+
+}
+"
+nodes/fragment/2/node = SubResource("VisualShaderNodeTexture2DParameter_2peui")
+nodes/fragment/2/position = Vector2(-880, 420)
+nodes/fragment/3/node = SubResource("VisualShaderNodeTexture_farcj")
+nodes/fragment/3/position = Vector2(-80, 220)
+nodes/fragment/4/node = SubResource("VisualShaderNodeUVFunc_jw3cs")
+nodes/fragment/4/position = Vector2(-580, 140)
+nodes/fragment/5/node = SubResource("VisualShaderNodeInput_bpkqe")
+nodes/fragment/5/position = Vector2(-1220, 400)
+nodes/fragment/6/node = SubResource("VisualShaderNodeVec2Parameter_y5g4a")
+nodes/fragment/6/position = Vector2(-1180, 220)
+nodes/fragment/connections = PackedInt32Array(2, 0, 3, 2, 3, 0, 0, 0, 4, 0, 3, 0, 5, 0, 4, 2, 6, 0, 4, 1)

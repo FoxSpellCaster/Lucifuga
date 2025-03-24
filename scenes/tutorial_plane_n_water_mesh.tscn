@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://fr8lpgtvy0ww"]
+
+[ext_resource type="Shader" uid="uid://qaacm0so4bp6" path="res://shader/uv_scroll_tut.tres" id="1_pyb2b"]
+[ext_resource type="Texture2D" uid="uid://cou4peya0bh0e" path="res://assets/texture/waterfall_textures/waterfall_texture_colored.png" id="2_s6r46"]
+[ext_resource type="PackedScene" uid="uid://b7tgti1wp0b0g" path="res://assets/mesh/water_tut.glb" id="3_j6irk"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4bgya"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nryjh"]
+render_priority = 0
+shader = ExtResource("1_pyb2b")
+shader_parameter/scroll_dir = Vector2(0, -1)
+shader_parameter/main_texture = ExtResource("2_s6r46")
+
+[node name="root" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_4bgya")
+surface_material_override/0 = SubResource("ShaderMaterial_nryjh")
+
+[node name="water_tut" parent="." instance=ExtResource("3_j6irk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.20762, 0, -0.388517)
+
+[node name="Plane" parent="water_tut" index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_nryjh")
+
+[editable path="water_tut"]

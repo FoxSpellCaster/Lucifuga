@@ -26,6 +26,12 @@ project/assembly_name="Lucifuga"
 
 enabled=PackedStringArray("res://addons/Todo_Manager/plugin.cfg")
 
+[importer_defaults]
+
+animation_library={
+&"fbx/importer": 1
+}
+
 [input]
 
 move_forward={

@@ -107,9 +107,8 @@ process_material = SubResource("ParticleProcessMaterial_ojrf0")
 draw_pass_1 = SubResource("QuadMesh_k2qsk")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="BlueFire"]
-light_volumetric_fog_energy = 0.25
-light_size = 10.0
-light_specular = 0.0
+light_color = Color(0.329011, 0.513917, 1, 1)
+light_energy = 2.0
 shadow_transmittance_bias = 16.0
 shadow_blur = 2.818
 

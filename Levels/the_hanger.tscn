@@ -1,8 +1,6 @@
-[gd_scene load_steps=32 format=3 uid="uid://b5hbtk6hdyibx"]
+[gd_scene load_steps=31 format=3 uid="uid://b5hbtk6hdyibx"]
 
 [ext_resource type="Shader" uid="uid://dndyugn7jitow" path="res://levels/sky_box.gdshader" id="1_l28y5"]
-[ext_resource type="PackedScene" uid="uid://bckmpodmrvps1" path="res://blender/ground.blend" id="2_0rto7"]
-[ext_resource type="Shader" uid="uid://ctbjfgq5qc4x" path="res://shaders/water.gdshader" id="3_7w4qb"]
 [ext_resource type="Texture2D" uid="uid://dh6rx7e17j16c" path="res://images/DarkParticle.png" id="3_r8awy"]
 [ext_resource type="PackedScene" uid="uid://bm3kmdwio20uh" path="res://vfx/BlueFire.tscn" id="4_if12a"]
 [ext_resource type="FontFile" uid="uid://1l088rgolrnr" path="res://fonts/m3x6.ttf" id="5_08en3"]
@@ -17,6 +15,9 @@
 [ext_resource type="PackedScene" uid="uid://bjxievqpcgw1s" path="res://blender/barrell.blend" id="13_08en3"]
 [ext_resource type="PackedScene" uid="uid://0u5angag58jh" path="res://blender/toolbox.blend" id="15_87x2n"]
 [ext_resource type="PackedScene" uid="uid://cjhc82yq4a8nk" path="res://blender/Bomb.blend" id="16_oir2e"]
+[ext_resource type="PackedScene" uid="uid://bc17jjm28vkbj" path="res://assets/mesh/waterfall_scene.tscn" id="17_bj5b0"]
+[ext_resource type="PackedScene" uid="uid://fr8lpgtvy0ww" path="res://scenes/tutorial_plane_n_water_mesh.tscn" id="18_bj5b0"]
+[ext_resource type="PackedScene" uid="uid://bakvrgkxqa27i" path="res://blender/Island2.blend" id="18_i2v3i"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bj5b0"]
 shader = ExtResource("1_l28y5")
@@ -27,69 +28,21 @@ sky_material = SubResource("ShaderMaterial_bj5b0")
 
 [sub_resource type="Environment" id="Environment_l28y5"]
 background_mode = 2
+background_energy_multiplier = 2.0
 sky = SubResource("Sky_oir2e")
 ambient_light_source = 3
 reflected_light_source = 2
-tonemap_mode = 2
+tonemap_mode = 3
 sdfgi_enabled = true
 sdfgi_use_occlusion = true
 glow_enabled = true
 fog_enabled = true
 fog_mode = 1
-fog_light_color = Color(0.279935, 0.182179, 0.384593, 1)
 fog_density = 1.0
 fog_sky_affect = 0.0
 volumetric_fog_enabled = true
+volumetric_fog_albedo = Color(0.409551, 0.19775, 0.411747, 1)
 volumetric_fog_sky_affect = 0.0
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_87x2n"]
-render_priority = 0
-shader = ExtResource("3_7w4qb")
-shader_parameter/wave_1 = Vector4(0.3, 4, 0.2, 0.6)
-shader_parameter/wave_2 = Vector4(-0.26, -0.19, 0.01, 0.47)
-shader_parameter/wave_3 = Vector4(-7.67, 5.63, 0.1, 0.38)
-shader_parameter/wave_4 = Vector4(-0.42, -1.63, 0.1, 0.28)
-shader_parameter/wave_5 = Vector4(1.66, 0.07, 0.15, 1.81)
-shader_parameter/wave_6 = Vector4(1.2, 1.14, 0.01, 0.33)
-shader_parameter/wave_7 = Vector4(-1.6, 7.3, 0.11, 0.73)
-shader_parameter/wave_8 = Vector4(-0.42, -1.63, 0.15, 1.52)
-shader_parameter/time_factor = 2.5
-shader_parameter/noise_zoom = 2.0
-shader_parameter/noise_amp = 1.0
-shader_parameter/base_water_color = Color(0.150662, 0.49231, 0.880165, 1)
-shader_parameter/fresnel_water_color = Color(0.342164, 1, 0.994538, 1)
-shader_parameter/deep_water_color = Color(0.213519, 0.169062, 0.778335, 1)
-shader_parameter/shallow_water_color = Color(0.506111, 0.779706, 0.961629, 1)
-shader_parameter/beers_law = 0.5
-shader_parameter/depth_offset = -1.2
-shader_parameter/near = 7.0
-shader_parameter/far = 10000.0
-shader_parameter/edge_texture_scale = 3.5
-shader_parameter/edge_texture_offset = 1.0
-shader_parameter/edge_texture_speed = 0.1
-shader_parameter/edge_foam_intensity = 2.0
-shader_parameter/edge_fade_start = -3.0
-shader_parameter/edge_fade_end = 6.6
-shader_parameter/peak_height_threshold = 1.0
-shader_parameter/peak_color = Vector3(1, 1, 1)
-shader_parameter/peak_intensity = 1.0
-shader_parameter/foam_intensity = 1.0
-shader_parameter/foam_scale = 1.0
-shader_parameter/metallic = 0.6
-shader_parameter/roughness = 0.045
-shader_parameter/uv_scale_text_a = 0.1
-shader_parameter/uv_speed_text_a = Vector2(0.42, 0.3)
-shader_parameter/uv_scale_text_b = 0.6
-shader_parameter/uv_speed_text_b = Vector2(0.15, 0.1)
-shader_parameter/normal_strength = 1.0
-shader_parameter/uv_sampler_scale = 0.3
-shader_parameter/blend_factor = 0.28
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_oir2e"]
-material = SubResource("ShaderMaterial_87x2n")
-size = Vector2(200, 200)
-subdivide_width = 150
-subdivide_depth = 150
 
 [sub_resource type="Gradient" id="Gradient_2nkpo"]
 offsets = PackedFloat32Array(0, 0.799283, 1)
@@ -154,332 +107,327 @@ size = Vector2(0.1, 0.1)
 environment = SubResource("Environment_l28y5")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0, -7, 0)
+light_energy = 0.35
+light_specular = 0.5
 shadow_enabled = true
-sky_mode = 2
+shadow_opacity = 0.5
 
 [node name="Player" parent="." instance=ExtResource("6_r8awy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.37971, 10.2293, -8.12896)
-
-[node name="Ground" parent="." instance=ExtResource("2_0rto7")]
-
-[node name="Water2" type="MeshInstance3D" parent="Ground"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.15982, 0)
-mesh = SubResource("PlaneMesh_oir2e")
-metadata/_edit_lock_ = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.37971, 0.2293, -8.12896)
 
 [node name="Building" type="Node3D" parent="."]
 
 [node name="Floor" type="Node3D" parent="Building"]
 
 [node name="DungeonFloorTile_Thin" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 10.0359, -8.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 0.0359001, -8.01376)
 
 [node name="DungeonFloorTile_Thin2" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 10.0359, -7.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 0.0359001, -7.01376)
 
 [node name="DungeonFloorTile_Thin3" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 10.0359, -6.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 0.0359001, -6.01376)
 
 [node name="DungeonFloorTile_Thin4" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 10.0359, -5.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 0.0359001, -5.01376)
 
 [node name="DungeonFloorTile_Thin5" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 10.0359, -4.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 0.0359001, -4.01376)
 
 [node name="DungeonFloorTile_Thin6" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 10.0359, -8.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 0.0359001, -8.01376)
 
 [node name="DungeonFloorTile_Thin7" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 10.0359, -7.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 0.0359001, -7.01376)
 
 [node name="DungeonFloorTile_Thin8" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 10.0359, -6.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 0.0359001, -6.01376)
 
 [node name="DungeonFloorTile_Thin9" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 10.0359, -5.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 0.0359001, -5.01376)
 
 [node name="DungeonFloorTile_Thin10" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 10.0359, -4.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 0.0359001, -4.01376)
 
 [node name="DungeonFloorTile_Thin11" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 10.0359, -8.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 0.0359001, -8.01376)
 
 [node name="DungeonFloorTile_Thin12" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 10.0359, -7.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 0.0359001, -7.01376)
 
 [node name="DungeonFloorTile_Thin13" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 10.0359, -6.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 0.0359001, -6.01376)
 
 [node name="DungeonFloorTile_Thin14" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 10.0359, -5.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 0.0359001, -5.01376)
 
 [node name="DungeonFloorTile_Thin15" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 10.0359, -4.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 0.0359001, -4.01376)
 
 [node name="DungeonFloorTile_Thin16" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 10.0359, -8.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 0.0359001, -8.01376)
 
 [node name="DungeonFloorTile_Thin17" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 10.0359, -7.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 0.0359001, -7.01376)
 
 [node name="DungeonFloorTile_Thin18" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 10.0359, -6.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 0.0359001, -6.01376)
 
 [node name="DungeonFloorTile_Thin19" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 10.0359, -5.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 0.0359001, -5.01376)
 
 [node name="DungeonFloorTile_Thin20" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 10.0359, -4.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 0.0359001, -4.01376)
 
 [node name="DungeonFloorTile_Thin21" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 10.0359, -8.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 0.0359001, -8.01376)
 
 [node name="DungeonFloorTile_Thin22" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 10.0359, -7.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 0.0359001, -7.01376)
 
 [node name="DungeonFloorTile_Thin23" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 10.0359, -6.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 0.0359001, -6.01376)
 
 [node name="DungeonFloorTile_Thin24" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 10.0359, -5.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 0.0359001, -5.01376)
 
 [node name="DungeonFloorTile_Thin25" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 10.0359, -4.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 0.0359001, -4.01376)
 
 [node name="DungeonFloorTile_Thin26" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.33457, 11.0359, -8.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.33457, 1.0359, -8.01376)
 
 [node name="DungeonFloorTile_Thin27" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.33457, 11.0359, -7.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.33457, 1.0359, -7.01376)
 
 [node name="DungeonFloorTile_Thin28" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.33457, 11.0359, -6.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.33457, 1.0359, -6.01376)
 
 [node name="DungeonFloorTile_Thin29" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.33457, 11.0359, -5.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.33457, 1.0359, -5.01376)
 
 [node name="DungeonFloorTile_Thin30" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.33457, 11.0359, -4.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.33457, 1.0359, -4.01376)
 
 [node name="DungeonFloorTile_Thin31" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.33457, 11.0359, -8.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.33457, 1.0359, -8.01376)
 
 [node name="DungeonFloorTile_Thin32" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.33457, 11.0359, -7.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.33457, 1.0359, -7.01376)
 
 [node name="DungeonFloorTile_Thin33" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.33457, 11.0359, -6.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.33457, 1.0359, -6.01376)
 
 [node name="DungeonFloorTile_Thin34" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.33457, 11.0359, -5.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.33457, 1.0359, -5.01376)
 
 [node name="DungeonFloorTile_Thin35" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.33457, 11.0359, -4.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.33457, 1.0359, -4.01376)
 
 [node name="DungeonFloorTile_Thin36" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.33457, 11.0359, -8.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.33457, 1.0359, -8.01376)
 
 [node name="DungeonFloorTile_Thin37" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.33457, 11.0359, -7.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.33457, 1.0359, -7.01376)
 
 [node name="DungeonFloorTile_Thin38" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.33457, 11.0359, -6.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.33457, 1.0359, -6.01376)
 
 [node name="DungeonFloorTile_Thin39" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.33457, 11.0359, -5.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.33457, 1.0359, -5.01376)
 
 [node name="DungeonFloorTile_Thin40" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.33457, 11.0359, -4.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.33457, 1.0359, -4.01376)
 
 [node name="DungeonFloorTile_Thin41" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.33457, 11.0359, -8.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.33457, 1.0359, -8.01376)
 
 [node name="DungeonFloorTile_Thin42" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.33457, 11.0359, -7.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.33457, 1.0359, -7.01376)
 
 [node name="DungeonFloorTile_Thin43" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.33457, 11.0359, -6.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.33457, 1.0359, -6.01376)
 
 [node name="DungeonFloorTile_Thin44" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.33457, 11.0359, -5.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.33457, 1.0359, -5.01376)
 
 [node name="DungeonFloorTile_Thin45" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.33457, 11.0359, -4.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.33457, 1.0359, -4.01376)
 
 [node name="DungeonFloorTile_Thin46" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.33457, 11.0359, -8.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.33457, 1.0359, -8.01376)
 
 [node name="DungeonFloorTile_Thin47" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.33457, 11.0359, -7.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.33457, 1.0359, -7.01376)
 
 [node name="DungeonFloorTile_Thin48" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.33457, 11.0359, -6.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.33457, 1.0359, -6.01376)
 
 [node name="DungeonFloorTile_Thin49" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.33457, 11.0359, -5.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.33457, 1.0359, -5.01376)
 
 [node name="DungeonFloorTile_Thin50" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.33457, 11.0359, -4.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.33457, 1.0359, -4.01376)
 
 [node name="DungeonFloorTile_Thin51" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 10.0359, -3.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 0.0359001, -3.01376)
 
 [node name="DungeonFloorTile_Thin52" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 10.0359, -2.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 0.0359001, -2.01376)
 
 [node name="DungeonFloorTile_Thin53" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 10.0359, -1.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 0.0359001, -1.01376)
 
 [node name="DungeonFloorTile_Thin54" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 10.0359, -0.0137601)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 0.0359001, -0.0137601)
 
 [node name="DungeonFloorTile_Thin55" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 10.0359, 0.98624)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 0.0359001, 0.98624)
 
 [node name="DungeonFloorTile_Thin56" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 10.0359, -3.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 0.0359001, -3.01376)
 
 [node name="DungeonFloorTile_Thin57" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 10.0359, -2.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 0.0359001, -2.01376)
 
 [node name="DungeonFloorTile_Thin58" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 10.0359, -1.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 0.0359001, -1.01376)
 
 [node name="DungeonFloorTile_Thin59" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 10.0359, -0.0137601)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 0.0359001, -0.0137601)
 
 [node name="DungeonFloorTile_Thin60" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 10.0359, 0.98624)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 0.0359001, 0.98624)
 
 [node name="DungeonFloorTile_Thin61" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 10.0359, -3.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 0.0359001, -3.01376)
 
 [node name="DungeonFloorTile_Thin62" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 10.0359, -2.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 0.0359001, -2.01376)
 
 [node name="DungeonFloorTile_Thin63" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 10.0359, -1.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 0.0359001, -1.01376)
 
 [node name="DungeonFloorTile_Thin64" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 10.0359, -0.0137601)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 0.0359001, -0.0137601)
 
 [node name="DungeonFloorTile_Thin65" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 10.0359, 0.98624)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 0.0359001, 0.98624)
 
 [node name="DungeonFloorTile_Thin66" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 10.0359, -3.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 0.0359001, -3.01376)
 
 [node name="DungeonFloorTile_Thin67" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 10.0359, -2.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 0.0359001, -2.01376)
 
 [node name="DungeonFloorTile_Thin68" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 10.0359, -1.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 0.0359001, -1.01376)
 
 [node name="DungeonFloorTile_Thin69" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 10.0359, -0.0137601)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 0.0359001, -0.0137601)
 
 [node name="DungeonFloorTile_Thin70" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 10.0359, 0.98624)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 0.0359001, 0.98624)
 
 [node name="DungeonFloorTile_Thin71" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 10.0359, -3.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 0.0359001, -3.01376)
 
 [node name="DungeonFloorTile_Thin72" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 10.0359, -2.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 0.0359001, -2.01376)
 
 [node name="DungeonFloorTile_Thin73" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 10.0359, -1.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 0.0359001, -1.01376)
 
 [node name="DungeonFloorTile_Thin74" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 10.0359, -0.0137601)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 0.0359001, -0.0137601)
 
 [node name="DungeonFloorTile_Thin75" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 10.0359, 0.98624)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 0.0359001, 0.98624)
 
 [node name="DungeonFloorTile_Thin76" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 12.539, -3.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 2.539, -3.01376)
 
 [node name="DungeonFloorTile_Thin77" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 12.539, -2.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 2.539, -2.01376)
 
 [node name="DungeonFloorTile_Thin78" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 12.539, -1.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 2.539, -1.01376)
 
 [node name="DungeonFloorTile_Thin79" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 12.539, -0.0137601)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 2.539, -0.0137601)
 
 [node name="DungeonFloorTile_Thin80" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 12.539, 0.98624)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.33457, 2.539, 0.98624)
 
 [node name="DungeonFloorTile_Thin81" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 12.539, -3.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 2.539, -3.01376)
 
 [node name="DungeonFloorTile_Thin82" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 12.539, -2.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 2.539, -2.01376)
 
 [node name="DungeonFloorTile_Thin83" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 12.539, -1.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 2.539, -1.01376)
 
 [node name="DungeonFloorTile_Thin85" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 12.539, 0.98624)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 2.539, 0.98624)
 
 [node name="DungeonFloorTile_Thin86" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 12.539, -3.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 2.539, -3.01376)
 
 [node name="DungeonFloorTile_Thin87" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 12.539, -2.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 2.539, -2.01376)
 
 [node name="DungeonFloorTile_Thin88" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 12.539, -1.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 2.539, -1.01376)
 
 [node name="DungeonFloorTile_Thin89" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 12.539, -0.0137601)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 2.539, -0.0137601)
 
 [node name="DungeonFloorTile_Thin90" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 12.539, 0.98624)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.66543, 2.539, 0.98624)
 
 [node name="DungeonFloorTile_Thin91" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 12.539, -3.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 2.539, -3.01376)
 
 [node name="DungeonFloorTile_Thin92" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 12.539, -2.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 2.539, -2.01376)
 
 [node name="DungeonFloorTile_Thin93" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 12.539, -1.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 2.539, -1.01376)
 
 [node name="DungeonFloorTile_Thin94" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 12.539, -0.0137601)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 2.539, -0.0137601)
 
 [node name="DungeonFloorTile_Thin95" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 12.539, 0.98624)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.33457, 2.539, 0.98624)
 
 [node name="DungeonFloorTile_Thin96" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 12.539, -3.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 2.539, -3.01376)
 
 [node name="DungeonFloorTile_Thin97" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 12.539, -2.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 2.539, -2.01376)
 
 [node name="DungeonFloorTile_Thin98" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 12.539, -1.01376)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 2.539, -1.01376)
 
 [node name="DungeonFloorTile_Thin99" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 12.539, -0.0137601)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 2.539, -0.0137601)
 
 [node name="DungeonFloorTile_Thin100" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 12.539, 0.98624)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.33457, 2.539, 0.98624)
 
 [node name="DungeonFloorTile_Thin84" parent="Building/Floor" instance=ExtResource("8_renes")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 12.539, -0.0137601)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.33457, 2.539, -0.0137601)
 
 [node name="Clutter" type="Node3D" parent="Building"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 0)
 
 [node name="DarkShard" parent="Building/Clutter" instance=ExtResource("5_vasew")]
-transform = Transform3D(1, 0, 0, 0, 0.952023, -0.306028, 0, 0.306028, 0.952023, 4.3, 3.33184, -3.9442)
+transform = Transform3D(1, 0, 0, 0, 0.952023, -0.306028, 0, 0.306028, 0.952023, 4.3, -6.66816, -3.9442)
 
 [node name="DungeonPillar" parent="Building/Clutter" instance=ExtResource("7_0o2ir")]
-transform = Transform3D(-2.98023e-08, 0, 1, 0, 1, 0, -1, 0, -2.98023e-08, 6, 4.55957, -4)
+transform = Transform3D(-2.98023e-08, 0, 1, 0, 1, 0, -1, 0, -2.98023e-08, 6, -5.44043, -4)
 
 [node name="A1" type="Label3D" parent="Building/Clutter/DungeonPillar"]
 transform = Transform3D(-0.057825, 0.25746, 0.964557, -9.31323e-10, 0.966174, -0.257892, -0.998326, -0.0149126, -0.055869, 0.177633, -0.572489, -0.0236664)
@@ -493,7 +441,7 @@ font_size = 82
 transform = Transform3D(-2.98023e-08, 0, -1, 0, 1, 0, 1, 0, -2.98023e-08, 0.69836, -0.336061, -0.2287)
 
 [node name="FunBox" parent="Building/Clutter" instance=ExtResource("12_nem26")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.38022, -4.24638)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -8.61978, -4.24638)
 
 [node name="FunBoxLabel" type="Label3D" parent="Building/Clutter/FunBox"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.0157754, 0.0848112, -0.513908)
@@ -538,7 +486,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.60436, -0.33201)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.35159, -0.33201)
 
 [node name="FunBox2" parent="Building/Clutter" instance=ExtResource("12_nem26")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.38022, -0.24638)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -8.61978, -0.24638)
 
 [node name="FunBoxLabel" type="Label3D" parent="Building/Clutter/FunBox2"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.0157754, 0.0848112, -0.513908)
@@ -587,7 +535,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 0)
 metadata/_edit_lock_ = true
 
 [node name="DarkGPUParticles3D" type="GPUParticles3D" parent="Building/VFX"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -7, -4)
 amount = 50
 amount_ratio = 0.5
 process_material = SubResource("ParticleProcessMaterial_1wqlk")
@@ -600,72 +548,81 @@ metadata/_edit_lock_ = true
 [node name="Walls" type="Node3D" parent="Building"]
 
 [node name="DungeonWall_Thin" parent="Building/Walls" instance=ExtResource("8_sclua")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11231, 11.3155, -8.02182)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11231, 1.3155, -8.02182)
 
 [node name="DungeonWall_Thin2" parent="Building/Walls" instance=ExtResource("8_sclua")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11231, 11.3155, -7.02182)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11231, 1.3155, -7.02182)
 
 [node name="DungeonWall_Thin3" parent="Building/Walls" instance=ExtResource("8_sclua")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11231, 11.3155, -6.02182)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11231, 1.3155, -6.02182)
 
 [node name="DungeonWall_Thin4" parent="Building/Walls" instance=ExtResource("8_sclua")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11231, 11.3155, -5.02182)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11231, 1.3155, -5.02182)
 
 [node name="DungeonWall_Thin5" parent="Building/Walls" instance=ExtResource("8_sclua")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11231, 11.3155, -4.02182)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11231, 1.3155, -4.02182)
 
 [node name="DungeonWall_Thin6" parent="Building/Walls" instance=ExtResource("8_sclua")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11231, 11.3155, -3.02182)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11231, 1.3155, -3.02182)
 
 [node name="DungeonWall_Thin7" parent="Building/Walls" instance=ExtResource("8_sclua")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11231, 11.3155, -2.02182)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11231, 1.3155, -2.02182)
 
 [node name="DungeonWall_Thin8" parent="Building/Walls" instance=ExtResource("8_sclua")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11231, 11.3155, -1.02182)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11231, 1.3155, -1.02182)
 
 [node name="DungeonWall_Thin9" parent="Building/Walls" instance=ExtResource("8_sclua")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11231, 11.3155, -0.0218201)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11231, 1.3155, -0.0218201)
 
 [node name="DungeonWall_Thin10" parent="Building/Walls" instance=ExtResource("8_sclua")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11231, 11.3155, 0.97818)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11231, 1.3155, 0.97818)
 
 [node name="DungeonWall_Thin11" parent="Building/Walls" instance=ExtResource("8_sclua")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 3.86679, 11.3155, 0.97818)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 3.86679, 1.3155, 0.97818)
 
 [node name="DungeonWall_Thin12" parent="Building/Walls" instance=ExtResource("8_sclua")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 3.86679, 11.3155, -0.0218201)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 3.86679, 1.3155, -0.0218201)
 
 [node name="DungeonWall_Thin13" parent="Building/Walls" instance=ExtResource("8_sclua")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 3.86679, 11.3155, -1.02182)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 3.86679, 1.3155, -1.02182)
 
 [node name="DungeonWall_Thin14" parent="Building/Walls" instance=ExtResource("8_sclua")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 3.86679, 11.3155, -2.02182)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 3.86679, 1.3155, -2.02182)
 
 [node name="DungeonWall_Thin15" parent="Building/Walls" instance=ExtResource("8_sclua")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 3.86679, 11.3155, -3.02182)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 3.86679, 1.3155, -3.02182)
 
 [node name="DungeonWall_Thin16" parent="Building/Walls" instance=ExtResource("8_sclua")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -0.590774, 11.3155, 1.44389)
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -0.590774, 1.3155, 1.44389)
 
 [node name="DungeonWall_Thin17" parent="Building/Walls" instance=ExtResource("8_sclua")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 0.409226, 11.3155, 1.44389)
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 0.409226, 1.3155, 1.44389)
 
 [node name="DungeonWall_Thin18" parent="Building/Walls" instance=ExtResource("8_sclua")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 1.40923, 11.3155, 1.44389)
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 1.40923, 1.3155, 1.44389)
 
 [node name="DungeonWall_Thin19" parent="Building/Walls" instance=ExtResource("8_sclua")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 2.40923, 11.3155, 1.44389)
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 2.40923, 1.3155, 1.44389)
 
 [node name="DungeonWall_Thin20" parent="Building/Walls" instance=ExtResource("8_sclua")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 3.40923, 11.3155, 1.44389)
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 3.40923, 1.3155, 1.44389)
 
 [node name="barrell" parent="Building" instance=ExtResource("13_08en3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3, 11.5348, -4.01677)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3, 1.5348, -4.01677)
 
 [node name="toolbox" parent="." instance=ExtResource("15_87x2n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 11.3634, -7)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1.3634, -7)
 
 [node name="Bomb" parent="." instance=ExtResource("16_oir2e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 12, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2, -6)
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="waterfall_scene" parent="." instance=ExtResource("17_bj5b0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1.84717, -11)
+
+[node name="root" parent="." instance=ExtResource("18_bj5b0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.0531275, -13)
+
+[node name="Island2" parent="." instance=ExtResource("18_i2v3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, 0)
