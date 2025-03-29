@@ -116,6 +116,9 @@ shadow_opacity = 0.5
 [node name="Player" parent="." instance=ExtResource("6_r8awy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.37971, 0.2293, -8.12896)
 
+[node name="Island" parent="." instance=ExtResource("18_i2v3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, 0)
+
 [node name="Building" type="Node3D" parent="."]
 
 [node name="Floor" type="Node3D" parent="Building"]
@@ -530,6 +533,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.60436, -0.33201)
 [node name="Gem6" parent="Building/Clutter/FunBox2" instance=ExtResource("10_b8mqe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.35159, -0.33201)
 
+[node name="toolbox" parent="Building/Clutter" instance=ExtResource("15_87x2n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -7.6366, -7)
+
+[node name="Bomb" parent="Building/Clutter" instance=ExtResource("16_oir2e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -7, -6)
+
 [node name="VFX" type="Node3D" parent="Building"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 0)
 metadata/_edit_lock_ = true
@@ -610,12 +619,6 @@ transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 3.40923,
 [node name="barrell" parent="Building" instance=ExtResource("13_08en3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3, 1.5348, -4.01677)
 
-[node name="toolbox" parent="." instance=ExtResource("15_87x2n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1.3634, -7)
-
-[node name="Bomb" parent="." instance=ExtResource("16_oir2e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2, -6)
-
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
 [node name="waterfall_scene" parent="." instance=ExtResource("17_bj5b0")]
@@ -623,6 +626,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1.84717, -11)
 
 [node name="root" parent="." instance=ExtResource("18_bj5b0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.0531275, -13)
-
-[node name="Island2" parent="." instance=ExtResource("18_i2v3i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, 0)
