@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Lucifuga"
-run/main_scene="uid://b5hbtk6hdyibx"
+run/main_scene="uid://cjderif15v6ki"
 config/features=PackedStringArray("4.4", "Forward Plus")
 
 [autoload]

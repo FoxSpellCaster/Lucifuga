@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjderif15v6ki"]
+
+[ext_resource type="Script" uid="uid://c7taek14scvhr" path="res://loading_screen.gd" id="1_mggpi"]
+[ext_resource type="PackedScene" uid="uid://b5hbtk6hdyibx" path="res://levels/the_hanger.tscn" id="2_htrc2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_htrc2"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_mggpi")
+next_scene = ExtResource("2_htrc2")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "The Knight of Darkness, Yami, guards a hollow throne.
+In his madness, he crowns his Shadow Princess, Lucifugia.
+A seat of power forsaken—tears stain all that remains.
+"
+label_settings = SubResource("LabelSettings_htrc2")
+horizontal_alignment = 1
+vertical_alignment = 1
