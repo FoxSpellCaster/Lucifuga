@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cjderif15v6ki"]
+[gd_scene load_steps=5 format=3 uid="uid://cjderif15v6ki"]
 
 [ext_resource type="Script" uid="uid://c7taek14scvhr" path="res://loading_screen.gd" id="1_mggpi"]
 [ext_resource type="PackedScene" uid="uid://b5hbtk6hdyibx" path="res://levels/the_hanger.tscn" id="2_htrc2"]
+[ext_resource type="AudioStream" uid="uid://c0a55700jx6vc" path="res://music/MachineDrum.ogg" id="3_weff3"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_htrc2"]
 
@@ -34,3 +35,8 @@ A seat of power forsaken—tears stain all that remains.
 label_settings = SubResource("LabelSettings_htrc2")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_weff3")
+volume_db = -20.0
+autoplay = true

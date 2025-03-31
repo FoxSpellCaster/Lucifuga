@@ -1,10 +1,11 @@
-[gd_scene load_steps=20 format=3 uid="uid://bm3kmdwio20uh"]
+[gd_scene load_steps=21 format=3 uid="uid://bm3kmdwio20uh"]
 
 [ext_resource type="Shader" uid="uid://d3a7pif6ajxph" path="res://shaders/stylized_fire.gdshader" id="1_cquea"]
 [ext_resource type="Texture2D" uid="uid://flldwuhtdvhp" path="res://vfx/StylizedFire/HoleNoise.png" id="2_l1xiv"]
 [ext_resource type="Texture2D" uid="uid://bko6oayqcslrd" path="res://vfx/StylizedFire/FireMask.png" id="3_aq4is"]
 [ext_resource type="Texture2D" uid="uid://xl22pmkk0nsk" path="res://vfx/StylizedFire/BlueFireGradient.tres" id="4_fr3gu"]
 [ext_resource type="Texture2D" uid="uid://bknqu5qraok7o" path="res://images/BlueParticle.png" id="5_v3315"]
+[ext_resource type="AudioStream" uid="uid://drurufavhrlo6" path="res://sfx/FireSound.ogg" id="6_fdbrt"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eudvu"]
 render_priority = 0
@@ -107,6 +108,7 @@ process_material = SubResource("ParticleProcessMaterial_ojrf0")
 draw_pass_1 = SubResource("QuadMesh_k2qsk")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="BlueFire"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.266733, 0)
 light_color = Color(0.329011, 0.513917, 1, 1)
 light_energy = 2.0
 shadow_transmittance_bias = 16.0
@@ -118,3 +120,9 @@ amount_ratio = 0.5
 trail_lifetime = 4.0
 process_material = SubResource("ParticleProcessMaterial_m3keo")
 draw_pass_1 = SubResource("QuadMesh_63ddk")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="BlueFire"]
+stream = ExtResource("6_fdbrt")
+volume_db = -30.0
+autoplay = true
+doppler_tracking = 2

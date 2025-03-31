@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://b5hbtk6hdyibx"]
+[gd_scene load_steps=33 format=3 uid="uid://b5hbtk6hdyibx"]
 
 [ext_resource type="Shader" uid="uid://dndyugn7jitow" path="res://levels/sky_box.gdshader" id="1_l28y5"]
 [ext_resource type="Texture2D" uid="uid://dh6rx7e17j16c" path="res://images/DarkParticle.png" id="3_r8awy"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://bc17jjm28vkbj" path="res://assets/mesh/waterfall_scene.tscn" id="17_bj5b0"]
 [ext_resource type="PackedScene" uid="uid://fr8lpgtvy0ww" path="res://scenes/tutorial_plane_n_water_mesh.tscn" id="18_bj5b0"]
 [ext_resource type="PackedScene" uid="uid://bakvrgkxqa27i" path="res://blender/Island2.blend" id="18_i2v3i"]
+[ext_resource type="AudioStream" uid="uid://d4huwj5np6i5w" path="res://sfx/WaterSplashRumble.ogg" id="18_k0ukk"]
 [ext_resource type="AudioStream" uid="uid://1ibilikfa3s4" path="res://music/GeneralBackgroundMusic.ogg" id="19_i2v3i"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bj5b0"]
@@ -551,10 +552,6 @@ amount_ratio = 0.5
 process_material = SubResource("ParticleProcessMaterial_1wqlk")
 draw_pass_1 = SubResource("QuadMesh_vasew")
 
-[node name="Lights" type="Node3D" parent="Building"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 0)
-metadata/_edit_lock_ = true
-
 [node name="Walls" type="Node3D" parent="Building"]
 
 [node name="DungeonWall_Thin" parent="Building/Walls" instance=ExtResource("8_sclua")]
@@ -625,10 +622,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3, 1.5348, -4.01677)
 [node name="waterfall_scene" parent="." instance=ExtResource("17_bj5b0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1.84717, -11)
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="waterfall_scene"]
+stream = ExtResource("18_k0ukk")
+volume_db = -20.0
+autoplay = true
+
 [node name="root" parent="." instance=ExtResource("18_bj5b0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.0531275, -13)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("19_i2v3i")
-volume_db = -20.0
+max_db = -15.0
 autoplay = true
+max_distance = 50.0
