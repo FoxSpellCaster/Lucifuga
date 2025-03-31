@@ -541,6 +541,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -7.6366, -7)
 [node name="Bomb" parent="Building/Clutter" instance=ExtResource("16_oir2e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -7, -6)
 
+[node name="DarkShard2" parent="Building/Clutter" instance=ExtResource("5_vasew")]
+transform = Transform3D(1, 0, 0, 0, 0.812695, -0.582691, 0, 0.582691, 0.812695, 1.6, -7.80937, -2.73981)
+
 [node name="VFX" type="Node3D" parent="Building"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 0)
 metadata/_edit_lock_ = true
@@ -621,17 +624,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3, 1.5348, -4.01677)
 
 [node name="waterfall_scene" parent="." instance=ExtResource("17_bj5b0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1.84717, -11)
+visible = false
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="waterfall_scene"]
 stream = ExtResource("18_k0ukk")
-volume_db = -20.0
-autoplay = true
+max_db = -1.0
+max_distance = 20.0
 
 [node name="root" parent="." instance=ExtResource("18_bj5b0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.0531275, -13)
+visible = false
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("19_i2v3i")
-max_db = -15.0
+volume_db = -3.0
+max_db = -6.0
 autoplay = true
-max_distance = 50.0
+max_distance = 10.0
