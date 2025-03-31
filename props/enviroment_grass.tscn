@@ -1,0 +1,91 @@
+[gd_scene load_steps=7 format=4 uid="uid://m3li1v5imgs0"]
+
+[ext_resource type="Texture2D" uid="uid://6ibcbb2mfjuu" path="res://images/grass_texture.png" id="1_54huv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uupa2"]
+resource_name = "GrassImage"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_54huv")
+roughness = 0.5
+metadata/extras = {
+"yp": {
+"active_ypaint_node": ""
+}
+}
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_74x31"]
+_surfaces = [{
+"aabb": AABB(-3.7749e-08, -0.5, -0.5, 1e-05, 1, 1),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "GrassImage",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAD/////AADuAQAAAAAAAO4BAAD//wAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_asqso"]
+resource_name = "Enviroment_Grass_Plane"
+_surfaces = [{
+"aabb": AABB(-3.7749e-08, -0.5, -0.5, 1e-05, 1, 1),
+"attribute_data": PackedByteArray("AAAAAP////8AAP////8AAA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_uupa2"),
+"name": "GrassImage",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAD//////7/uAQAAAAD/v+4BAAD///+/AAD//wAA/7//fwAA/38AAP9/AAD/fwAA")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_74x31")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_747i4"]
+_surfaces = [{
+"aabb": AABB(-0.5, -0.5, -2.18557e-08, 1, 1, 1e-05),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "GrassImage",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("////PgEAAD8uvbuy////vgEAAL8uvbsyAQAAP////74uvbuyAQAAv////z4uvbsy")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_lhbtc"]
+resource_name = "Enviroment_Grass_Plane_001"
+_surfaces = [{
+"aabb": AABB(-0.5, -0.5, -2.18557e-08, 1, 1, 1e-05),
+"attribute_data": PackedByteArray("/v9/PwAAAAAAAMAzAACAPwAAgD/+/38/AAAAAAAAADQ="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_uupa2"),
+"name": "GrassImage",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("////PgEAAD8uvbuy////vgEAAL8uvbsyAQAAP////74uvbuyAQAAv////z4uvbsy/////////z//////////P/////////8//////////z8=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_747i4")
+
+[node name="Enviroment_Grass" type="Node3D"]
+
+[node name="Plane" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("ArrayMesh_asqso")
+skeleton = NodePath("")
+
+[node name="Plane_001" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("ArrayMesh_lhbtc")
+skeleton = NodePath("")

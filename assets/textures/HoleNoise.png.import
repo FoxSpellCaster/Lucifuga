@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://flldwuhtdvhp"
-path.s3tc="res://.godot/imported/HoleNoise.png-b9f826fca9a1dfd51fb0da94818c82a0.s3tc.ctex"
-path.etc2="res://.godot/imported/HoleNoise.png-b9f826fca9a1dfd51fb0da94818c82a0.etc2.ctex"
+path.s3tc="res://.godot/imported/HoleNoise.png-b397944df31b23fa483bb5604ea7d008.s3tc.ctex"
+path.etc2="res://.godot/imported/HoleNoise.png-b397944df31b23fa483bb5604ea7d008.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://vfx/StylizedFire/HoleNoise.png"
-dest_files=["res://.godot/imported/HoleNoise.png-b9f826fca9a1dfd51fb0da94818c82a0.s3tc.ctex", "res://.godot/imported/HoleNoise.png-b9f826fca9a1dfd51fb0da94818c82a0.etc2.ctex"]
+source_file="res://assets/textures/HoleNoise.png"
+dest_files=["res://.godot/imported/HoleNoise.png-b397944df31b23fa483bb5604ea7d008.s3tc.ctex", "res://.godot/imported/HoleNoise.png-b397944df31b23fa483bb5604ea7d008.etc2.ctex"]
 
 [params]
 
