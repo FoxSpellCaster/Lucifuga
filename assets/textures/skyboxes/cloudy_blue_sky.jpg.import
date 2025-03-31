@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bko6oayqcslrd"
-path.s3tc="res://.godot/imported/FireMask.png-c079662ac9049442c49a42d105827cd3.s3tc.ctex"
-path.etc2="res://.godot/imported/FireMask.png-c079662ac9049442c49a42d105827cd3.etc2.ctex"
+uid="uid://b0rmuunh31geo"
+path.bptc="res://.godot/imported/cloudy_blue_sky.jpg-dc46a23765facafa04984b6b2b3c3977.bptc.ctex"
+path.astc="res://.godot/imported/cloudy_blue_sky.jpg-dc46a23765facafa04984b6b2b3c3977.astc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,13 +12,13 @@ metadata={
 
 [deps]
 
-source_file="res://vfx/StylizedFire/FireMask.png"
-dest_files=["res://.godot/imported/FireMask.png-c079662ac9049442c49a42d105827cd3.s3tc.ctex", "res://.godot/imported/FireMask.png-c079662ac9049442c49a42d105827cd3.etc2.ctex"]
+source_file="res://assets/textures/skyboxes/cloudy_blue_sky.jpg"
+dest_files=["res://.godot/imported/cloudy_blue_sky.jpg-dc46a23765facafa04984b6b2b3c3977.bptc.ctex", "res://.godot/imported/cloudy_blue_sky.jpg-dc46a23765facafa04984b6b2b3c3977.astc.ctex"]
 
 [params]
 
 compress/mode=2
-compress/high_quality=false
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0

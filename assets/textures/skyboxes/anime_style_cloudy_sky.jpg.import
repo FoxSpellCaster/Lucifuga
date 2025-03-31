@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bko6oayqcslrd"
-path.s3tc="res://.godot/imported/FireMask.png-c079662ac9049442c49a42d105827cd3.s3tc.ctex"
-path.etc2="res://.godot/imported/FireMask.png-c079662ac9049442c49a42d105827cd3.etc2.ctex"
+uid="uid://d1cv8jvu6b5oe"
+path.bptc="res://.godot/imported/anime_style_cloudy_sky.jpg-48c003918c14fd53ef09cd762b335e01.bptc.ctex"
+path.astc="res://.godot/imported/anime_style_cloudy_sky.jpg-48c003918c14fd53ef09cd762b335e01.astc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,13 +12,13 @@ metadata={
 
 [deps]
 
-source_file="res://vfx/StylizedFire/FireMask.png"
-dest_files=["res://.godot/imported/FireMask.png-c079662ac9049442c49a42d105827cd3.s3tc.ctex", "res://.godot/imported/FireMask.png-c079662ac9049442c49a42d105827cd3.etc2.ctex"]
+source_file="res://assets/textures/skyboxes/anime_style_cloudy_sky.jpg"
+dest_files=["res://.godot/imported/anime_style_cloudy_sky.jpg-48c003918c14fd53ef09cd762b335e01.bptc.ctex", "res://.godot/imported/anime_style_cloudy_sky.jpg-48c003918c14fd53ef09cd762b335e01.astc.ctex"]
 
 [params]
 
 compress/mode=2
-compress/high_quality=false
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0

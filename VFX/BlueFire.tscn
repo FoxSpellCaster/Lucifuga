@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bko6oayqcslrd" path="res://vfx/StylizedFire/FireMask.png" id="3_aq4is"]
 [ext_resource type="Texture2D" uid="uid://xl22pmkk0nsk" path="res://vfx/StylizedFire/BlueFireGradient.tres" id="4_fr3gu"]
 [ext_resource type="Texture2D" uid="uid://bknqu5qraok7o" path="res://images/BlueParticle.png" id="5_v3315"]
-[ext_resource type="AudioStream" uid="uid://drurufavhrlo6" path="res://sfx/FireSound.ogg" id="6_fdbrt"]
+[ext_resource type="AudioStream" uid="uid://drurufavhrlo6" path="res://assets/sfx/FireSound.ogg" id="6_fdbrt"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eudvu"]
 render_priority = 0
@@ -21,7 +21,7 @@ shader_parameter/edge_softness = 0.1
 _data = [Vector2(0, 0), 0.0, 3.65289, 0, 0, Vector2(0.556561, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
-[sub_resource type="CurveTexture" id="5"]
+[sub_resource type="CurveTexture" id="CurveTexture_fdbrt"]
 width = 128
 curve = SubResource("Curve_83mts")
 
@@ -35,7 +35,7 @@ gravity = Vector3(0, 0, 0)
 linear_accel_min = 4.0
 linear_accel_max = 4.0
 scale_max = 2.0
-scale_curve = SubResource("5")
+scale_curve = SubResource("CurveTexture_fdbrt")
 color_ramp = ExtResource("4_fr3gu")
 
 [sub_resource type="QuadMesh" id="QuadMesh_k2qsk"]
@@ -45,7 +45,7 @@ size = Vector2(0.5, 0.5)
 offsets = PackedFloat32Array(0, 0.799283, 1)
 colors = PackedColorArray(0, 0, 0, 1, 0.845878, 0.845878, 0.845878, 1, 1, 1, 1, 0)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_iquev"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_qxm2v"]
 gradient = SubResource("Gradient_2nkpo")
 
 [sub_resource type="Curve" id="Curve_cbyxs"]
@@ -53,14 +53,14 @@ _limits = [0.0, 100.0, 0.0, 100.0]
 _data = [Vector2(0, 100), 0.0, 0.0, 0, 0, Vector2(100, 0), -4.67433, 0.0, 0, 0]
 point_count = 2
 
-[sub_resource type="CurveTexture" id="CurveTexture_pgohb"]
+[sub_resource type="CurveTexture" id="CurveTexture_wstgd"]
 curve = SubResource("Curve_cbyxs")
 
 [sub_resource type="Curve" id="Curve_xqqj5"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.1733, 0.0, 0, 0]
 point_count = 2
 
-[sub_resource type="CurveTexture" id="CurveTexture_2m678"]
+[sub_resource type="CurveTexture" id="CurveTexture_br30e"]
 curve = SubResource("Curve_xqqj5")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_m3keo"]
@@ -70,17 +70,17 @@ angular_velocity_min = 30.0
 angular_velocity_max = 60.0
 gravity = Vector3(0, 0, 0)
 scale_min = 0.5
-scale_curve = SubResource("CurveTexture_2m678")
+scale_curve = SubResource("CurveTexture_br30e")
 color = Color(0.143187, 0.142639, 0.160156, 1)
-color_ramp = SubResource("GradientTexture1D_iquev")
-emission_curve = SubResource("CurveTexture_pgohb")
+color_ramp = SubResource("GradientTexture1D_qxm2v")
+emission_curve = SubResource("CurveTexture_wstgd")
 turbulence_enabled = true
 turbulence_noise_scale = 5.0
 collision_mode = 1
 collision_friction = 1.0
 collision_bounce = 0.0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_haxyn"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fi52j"]
 transparency = 1
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("5_v3315")
@@ -93,10 +93,10 @@ particles_anim_v_frames = 1
 particles_anim_loop = false
 
 [sub_resource type="QuadMesh" id="QuadMesh_63ddk"]
-material = SubResource("StandardMaterial3D_haxyn")
+material = SubResource("StandardMaterial3D_fi52j")
 size = Vector2(0.1, 0.1)
 
-[node name="Node3D" type="Node3D"]
+[node name="BlueFire VFX" type="Node3D"]
 
 [node name="BlueFire" type="GPUParticles3D" parent="."]
 material_override = SubResource("ShaderMaterial_eudvu")

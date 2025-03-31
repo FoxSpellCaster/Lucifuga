@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://cjderif15v6ki"]
+
+[ext_resource type="Script" uid="uid://c7taek14scvhr" path="res://scenes/loading_screen.gd" id="1_mggpi"]
+[ext_resource type="PackedScene" uid="uid://b5hbtk6hdyibx" path="res://levels/Spawn.tscn" id="2_htrc2"]
+[ext_resource type="FontFile" uid="uid://xsp3ywfu7r01" path="res://assets/fonts/m6x11.ttf" id="3_fgney"]
+[ext_resource type="AudioStream" uid="uid://c0a55700jx6vc" path="res://assets/music/MachineDrum.ogg" id="3_weff3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_htrc2"]
+font = ExtResource("3_fgney")
+font_size = 36
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mggpi")
+next_scene = ExtResource("2_htrc2")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -223.0
+offset_top = -50.5
+offset_right = 223.0
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "The Knight of Darkness, Yami, guards a hollow throne.
+In his madness, he crowns his Shadow Princess, Lucifugia.
+A seat of power forsaken—tears stain all that remains."
+label_settings = SubResource("LabelSettings_htrc2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_weff3")
+volume_db = -9.0
+autoplay = true
+parameters/looping = true
