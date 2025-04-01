@@ -1,0 +1,94 @@
+{
+	"connections": [
+		{
+			"from": "skewed_bricks",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 0
+		}
+	],
+	"label": "Graph",
+	"longdesc": "",
+	"name": "_Node_491",
+	"node_position": {
+		"x": 0.0,
+		"y": 0.0
+	},
+	"nodes": [
+		{
+			"export_last_target": "Godot/Godot 4 Standard",
+			"export_paths": {
+				"Godot/Godot 4 Standard": "C:/Users/FoxSpellCaster/Documents/GitHub/Lucifuga/assets/materials/DungeonFloor"
+			},
+			"name": "Material",
+			"node_position": {
+				"x": 202.0,
+				"y": 105.0
+			},
+			"parameters": {
+				"albedo_color": {
+					"a": 1.0,
+					"b": 0.63671875,
+					"g": 0.263641357421875,
+					"r": 0.0,
+					"type": "Color"
+				},
+				"ao": 1.0,
+				"depth_scale": 0.5,
+				"emission_energy": 1.0,
+				"flags_transparent": true,
+				"metallic": 0.0,
+				"normal": 10.0,
+				"roughness": 1.0,
+				"size": 6,
+				"sss": 1.0
+			},
+			"seed_int": 0,
+			"type": "material"
+		},
+		{
+			"name": "skewed_bricks",
+			"node_position": {
+				"x": -302.0,
+				"y": 48.0
+			},
+			"parameters": {
+				"bevel": 0.1,
+				"columns": 4.0,
+				"corner": 0.54,
+				"mortar": 0.03,
+				"offset": 0.5,
+				"randomness": 1.0,
+				"round": 0.2,
+				"rows": 5.0
+			},
+			"seed_int": 0,
+			"type": "skewed_bricks"
+		},
+		{
+			"name": "skewed_bricks_2",
+			"node_position": {
+				"x": -271.0,
+				"y": 344.0
+			},
+			"parameters": {
+				"bevel": 0.1,
+				"columns": 4.0,
+				"corner": 0.54,
+				"mortar": 0.03,
+				"offset": 0.5,
+				"randomness": 1.0,
+				"round": 0.2,
+				"rows": 5.0
+			},
+			"seed_int": 0,
+			"type": "skewed_bricks"
+		}
+	],
+	"parameters": {
+
+	},
+	"seed_int": 0,
+	"shortdesc": "",
+	"type": "graph"
+}

@@ -1,7 +1,6 @@
 extends Control
 
 func _ready():
-	$AudioStreamPlayer2D.play()
 	%Play.pressed.connect(play)
 	%Quit.pressed.connect(quit_game)
 
@@ -9,7 +8,7 @@ func _ready():
 #BUG: Error calling from signal 'pressed' to callable: 'CenterContainer::set_mouse_filter': Method expected 1 arguments, but called with 0.
 
 func play():
-	get_tree().change_scene_to_file("res://Levels/SandBoxLobby.tscn")
+	get_tree().change_scene_to_file("res://scenes/LoadingScreen.tscn")
 	
 func quit_game():
 	get_tree().quit()

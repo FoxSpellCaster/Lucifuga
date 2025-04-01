@@ -1,12 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cjderif15v6ki"]
+[gd_scene load_steps=5 format=3 uid="uid://cjderif15v6ki"]
 
-[ext_resource type="Script" uid="uid://c7taek14scvhr" path="res://scenes/loading_screen.gd" id="1_mggpi"]
-[ext_resource type="PackedScene" uid="uid://b5hbtk6hdyibx" path="res://levels/Spawn.tscn" id="2_htrc2"]
-[ext_resource type="FontFile" uid="uid://xsp3ywfu7r01" path="res://assets/fonts/m6x11.ttf" id="3_fgney"]
-[ext_resource type="AudioStream" uid="uid://c0a55700jx6vc" path="res://assets/music/MachineDrum.ogg" id="3_weff3"]
+[ext_resource type="Script" uid="uid://c7taek14scvhr" path="res://scenes/loading_screen.gd" id="1_ij0l4"]
+[ext_resource type="PackedScene" uid="uid://b5hbtk6hdyibx" path="res://scenes/Spawn.tscn" id="2_814mh"]
+[ext_resource type="FontFile" uid="uid://xsp3ywfu7r01" path="res://assets/fonts/m6x11.ttf" id="3_3gg4b"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_htrc2"]
-font = ExtResource("3_fgney")
+font = ExtResource("3_3gg4b")
 font_size = 36
 
 [node name="Control" type="Control"]
@@ -16,8 +15,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_mggpi")
-next_scene = ExtResource("2_htrc2")
+script = ExtResource("1_ij0l4")
+next_scene = ExtResource("2_814mh")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -50,6 +49,4 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_weff3")
 volume_db = -9.0
-parameters/looping = true

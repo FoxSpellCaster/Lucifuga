@@ -1,0 +1,135 @@
+{
+	"connections": [
+		{
+			"from": "dirt",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 5
+		},
+		{
+			"from": "emboss_2",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 4
+		},
+		{
+			"from": "runes",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 0
+		}
+	],
+	"label": "Graph",
+	"longdesc": "",
+	"name": "_Node_58625",
+	"node_position": {
+		"x": 0.0,
+		"y": 0.0
+	},
+	"nodes": [
+		{
+			"export_paths": {
+
+			},
+			"name": "Material",
+			"node_position": {
+				"x": 228.0,
+				"y": 39.0
+			},
+			"parameters": {
+				"albedo_color": {
+					"a": 1.0,
+					"b": 0.077362060546875,
+					"g": 0.309401750564575,
+					"r": 0.5078125,
+					"type": "Color"
+				},
+				"ao": 1.0,
+				"depth_scale": 0.5,
+				"emission_energy": 1.0,
+				"flags_transparent": true,
+				"metallic": 0.0,
+				"normal": 1.0,
+				"roughness": 1.0,
+				"size": 6,
+				"sss": 1.0
+			},
+			"seed_int": 0,
+			"type": "material"
+		},
+		{
+			"name": "runes",
+			"node_position": {
+				"x": -309.0,
+				"y": 146.0
+			},
+			"parameters": {
+				"columns": 4.0,
+				"rows": 4.0
+			},
+			"seed_int": 987794368,
+			"type": "runes"
+		},
+		{
+			"name": "dirt",
+			"node_position": {
+				"x": -265.0,
+				"y": 289.0
+			},
+			"parameters": {
+				"d_scale": 1.0,
+				"param0": 1.0,
+				"param1": 6.0
+			},
+			"seed_int": 0,
+			"type": "dirt"
+		},
+		{
+			"name": "dirt_2",
+			"node_position": {
+				"x": -269.227325439453,
+				"y": 460.975738525391
+			},
+			"parameters": {
+				"d_scale": 1.0,
+				"param0": 1.0,
+				"param1": 6.0
+			},
+			"seed_int": 0,
+			"type": "dirt"
+		},
+		{
+			"name": "emboss_2",
+			"node_position": {
+				"x": -303.006439208984,
+				"y": -41.6063270568848
+			},
+			"parameters": {
+				"param0": 9.0,
+				"param1": 0.0,
+				"param2": 5.0,
+				"param3": 1.0
+			},
+			"seed_int": 0,
+			"type": "emboss"
+		},
+		{
+			"name": "randomize",
+			"node_position": {
+				"x": -24.9235954284668,
+				"y": 552.757507324219
+			},
+			"parameters": {
+
+			},
+			"seed_int": 3343348224,
+			"type": "randomize"
+		}
+	],
+	"parameters": {
+
+	},
+	"seed_int": 0,
+	"shortdesc": "",
+	"type": "graph"
+}

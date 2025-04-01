@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=4 uid="uid://hh6uyrjqtmhm"]
 
-[ext_resource type="Texture2D" uid="uid://c0rspibqlpyhy" path="res://images/FireParticle.png" id="2_wf6ua"]
+[ext_resource type="Texture2D" uid="uid://civvs38dnjy5a" path="res://images/FireParticle.png" id="2_wf6ua"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5gcjx"]
 resource_name = "Material.001"
@@ -31,7 +31,6 @@ _surfaces = [{
 "format": 34896613377,
 "index_count": 60,
 "index_data": PackedByteArray("AAABAAIAAwABAAAAAAAEAAMAAAACAAQAAwAFAAEAAQAFAAYABAAHAAMAAwAHAAUAAgAIAAQABAAIAAcACQAIAAIABwAKAAUABQAKAAYACAAKAAcAAQALAAIAAQAGAAsACwAJAAIABgAKAAsACQALAAgACwAKAAgA"),
-"name": "Material.001",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 12,
@@ -86,7 +85,7 @@ data = PackedVector3Array(0.0440164, -0.694284, 0.0319796, 0.127532, -0.415235, 
 offsets = PackedFloat32Array(0, 0.799283, 1)
 colors = PackedColorArray(0, 0, 0, 1, 0.845878, 0.845878, 0.845878, 1, 1, 1, 1, 0)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_iquev"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ltx2h"]
 gradient = SubResource("Gradient_2nkpo")
 
 [sub_resource type="Curve" id="Curve_cbyxs"]
@@ -94,14 +93,14 @@ _limits = [0.0, 100.0, 0.0, 100.0]
 _data = [Vector2(0, 100), 0.0, 0.0, 0, 0, Vector2(100, 0), -4.67433, 0.0, 0, 0]
 point_count = 2
 
-[sub_resource type="CurveTexture" id="CurveTexture_pgohb"]
+[sub_resource type="CurveTexture" id="CurveTexture_wf6ua"]
 curve = SubResource("Curve_cbyxs")
 
 [sub_resource type="Curve" id="Curve_xqqj5"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.1733, 0.0, 0, 0]
 point_count = 2
 
-[sub_resource type="CurveTexture" id="CurveTexture_2m678"]
+[sub_resource type="CurveTexture" id="CurveTexture_a8h7l"]
 curve = SubResource("Curve_xqqj5")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_kd8pr"]
@@ -114,17 +113,17 @@ angular_velocity_min = 30.0
 angular_velocity_max = 60.0
 gravity = Vector3(0, 0, 0)
 scale_max = 1.5
-scale_curve = SubResource("CurveTexture_2m678")
+scale_curve = SubResource("CurveTexture_a8h7l")
 color = Color(1, 0.374832, 0.216994, 1)
-color_ramp = SubResource("GradientTexture1D_iquev")
-emission_curve = SubResource("CurveTexture_pgohb")
+color_ramp = SubResource("GradientTexture1D_ltx2h")
+emission_curve = SubResource("CurveTexture_wf6ua")
 turbulence_enabled = true
 turbulence_noise_scale = 5.0
 collision_mode = 1
 collision_friction = 1.0
 collision_bounce = 0.0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kd8pr"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_21swo"]
 transparency = 1
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("2_wf6ua")
@@ -135,7 +134,7 @@ particles_anim_v_frames = 1
 particles_anim_loop = false
 
 [sub_resource type="QuadMesh" id="QuadMesh_ib2es"]
-material = SubResource("StandardMaterial3D_kd8pr")
+material = SubResource("StandardMaterial3D_21swo")
 size = Vector2(0.1, 0.1)
 
 [node name="Prop_Dark_Shard" type="Node3D"]
