@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=4 uid="uid://de51uhu5rpcsl"]
 
-[ext_resource type="Texture2D" uid="uid://civvs38dnjy5a" path="res://images/FireParticle.png" id="1_c1y11"]
+[ext_resource type="Texture2D" uid="uid://bmlug0og7qrnj" path="res://images/GoldParticle.png" id="1_vu3dq"]
 [ext_resource type="FontFile" uid="uid://d0d8alv2uhk3b" path="res://assets/fonts/m6x11plus.ttf" id="2_vu3dq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sufdi"]
@@ -71,7 +71,8 @@ point_count = 2
 [sub_resource type="CurveTexture" id="CurveTexture_2m678"]
 curve = SubResource("Curve_xek10")
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dq0ux"]
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_6xcah"]
+lifetime_randomness = 0.5
 emission_shape_scale = Vector3(0.5, 0.5, 0.5)
 emission_shape = 1
 emission_sphere_radius = 1.0
@@ -82,7 +83,7 @@ angular_velocity_max = 60.0
 gravity = Vector3(0, 0, 0)
 scale_max = 1.5
 scale_curve = SubResource("CurveTexture_2m678")
-color = Color(1, 0.374832, 0.216994, 1)
+color = Color(1, 0.744741, 0.216994, 1)
 color_ramp = SubResource("GradientTexture1D_iquev")
 emission_curve = SubResource("CurveTexture_pgohb")
 turbulence_enabled = true
@@ -94,16 +95,16 @@ collision_bounce = 0.0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kd8pr"]
 transparency = 1
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("1_c1y11")
+albedo_texture = ExtResource("1_vu3dq")
 billboard_mode = 3
 billboard_keep_scale = true
 particles_anim_h_frames = 1
 particles_anim_v_frames = 1
 particles_anim_loop = false
 
-[sub_resource type="QuadMesh" id="QuadMesh_nf63h"]
+[sub_resource type="QuadMesh" id="QuadMesh_xek10"]
 material = SubResource("StandardMaterial3D_kd8pr")
-size = Vector2(0.1, 0.1)
+size = Vector2(0.05, 0.05)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_yvb0h"]
 points = PackedVector3Array(0, 0, -1, -0.195184, 0, -0.980814, 0, 0.361587, -1, 0.194988, 0, -0.980814, -0.195184, 0.361587, -0.980814, -0.382733, 0, -0.924041, 0.194988, 0.5005, -0.980814, 0.382537, 0, -0.924041, -0.382733, 0.361587, -0.924041, -0.555599, 0, -0.831637, 1, 0.702543, 0, 0.382537, 0.41839, -0.924041, -0.555599, 0.361587, -0.831637, -0.707126, 0.361587, -0.707126, -0.831637, 0.361587, -0.555599, -0.924041, 0.361587, -0.382733, 0.555403, 0, -0.831637, -0.707126, 0, -0.707126, 1, 0, 0, 0.980619, 0.456282, -0.195184, 0.923845, 0.361587, -0.382733, 0.831441, 0.361587, -0.555599, 0.70693, 0.361587, -0.707126, -0.980814, 0.361587, -0.195184, -1, 0.361587, 0, -0.980814, 0.361587, 0.194988, -0.924041, 0.361587, 0.382537, 0.194988, 0.5005, 0.980619, 0.382537, 0.41839, 0.923845, 0.70693, 0.361587, 0.70693, 0.831441, 0.361587, 0.555403, 0.923845, 0.361587, 0.382537, 0.980619, 0.456282, 0.194988, 0.555403, 0.361587, -0.831637, -0.831637, 0, -0.555599, -0.924041, 0, -0.382733, 0.70693, 0, -0.707126, 0.980619, 0, 0.194988, 0.980619, 0, -0.195184, 0.923845, 0, -0.382733, 0.831441, 0, -0.555599, -0.980814, 0, -0.195184, -1, 0, 0, -0.980814, 0, 0.194988, -0.924041, 0, 0.382537, -0.831637, 0.361587, 0.555403, 0, 0.361587, 1, 0.194988, 0, 0.980619, -0.707126, 0.361587, 0.70693, -0.555599, 0.361587, 0.831441, -0.382733, 0.361587, 0.923845, -0.195184, 0.361587, 0.980619, 0.382537, 0, 0.923845, 0.555403, 0.361587, 0.831441, 0.70693, 0, 0.70693, 0.831441, 0, 0.555403, 0.923845, 0, 0.382537, -0.831637, 0, 0.555403, 0, 0, 1, -0.707126, 0, 0.70693, -0.555599, 0, 0.831441, -0.382733, 0, 0.923845, -0.195184, 0, 0.980619, 0.555403, 0, 0.831441)
@@ -125,19 +126,20 @@ shape = SubResource("ConcavePolygonShape3D_cin3o")
 [node name="OmniLight3D" type="OmniLight3D" parent="Circle-rigid/Circle-rigid"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0287209, 0.0573927, 0)
 light_color = Color(0.998174, 1, 0, 1)
+light_energy = 0.5
 
 [node name="FogVolume" type="FogVolume" parent="Circle-rigid/Circle-rigid/OmniLight3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0287209, -0.0573927, 0)
 shape = 0
 
-[node name="FireGPUParticles3D" type="GPUParticles3D" parent="Circle-rigid/Circle-rigid"]
-visible = false
+[node name="GoldGPUParticles3D" type="GPUParticles3D" parent="Circle-rigid/Circle-rigid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.997424, 0.283599, 0)
 amount = 50
 amount_ratio = 0.5
 lifetime = 10.0
 randomness = 1.0
-process_material = SubResource("ParticleProcessMaterial_dq0ux")
-draw_pass_1 = SubResource("QuadMesh_nf63h")
+process_material = SubResource("ParticleProcessMaterial_6xcah")
+draw_pass_1 = SubResource("QuadMesh_xek10")
 
 [node name="Label3D" type="Label3D" parent="Circle-rigid/Circle-rigid"]
 transform = Transform3D(3.9965, 0, 0, 0, 3.9965, 0, 0, 0, 3.9965, 0, 1.40024, 0)
