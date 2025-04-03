@@ -1,6 +1,5 @@
-[gd_scene load_steps=25 format=3 uid="uid://b5hbtk6hdyibx"]
+[gd_scene load_steps=24 format=3 uid="uid://b5hbtk6hdyibx"]
 
-[ext_resource type="Script" uid="uid://dyo5rcvy4o7l3" path="res://scripts/discord.gd" id="1_ar3th"]
 [ext_resource type="PackedScene" uid="uid://de1eao2jnsfxk" path="res://player/player.tscn" id="1_ptqup"]
 [ext_resource type="Shader" uid="uid://dndyugn7jitow" path="res://shaders/sky_box.gdshader" id="2_apglo"]
 [ext_resource type="AudioStream" uid="uid://1ibilikfa3s4" path="res://assets/music/GeneralBackgroundMusic.ogg" id="4_2mxkm"]
@@ -8,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://v0gkmsib708l" path="res://assets/meshes/Island_Spawn.glb" id="6_rw26e"]
 [ext_resource type="PackedScene" uid="uid://hh6uyrjqtmhm" path="res://props/prop_dark_shard.tscn" id="7_apglo"]
 [ext_resource type="PackedScene" uid="uid://b7wh257kan8qj" path="res://props/temple_pillar.tscn" id="9_ar3th"]
-[ext_resource type="PackedScene" uid="uid://m3li1v5imgs0" path="res://props/enviroment_grass.tscn" id="10_8f2nx"]
 [ext_resource type="PackedScene" uid="uid://c4k8mv3i2l23a" path="res://assets/Prop_Rock.blend" id="11_ptepl"]
 [ext_resource type="PackedScene" uid="uid://de51uhu5rpcsl" path="res://props/prop_crown.tscn" id="12_8f2nx"]
 [ext_resource type="PackedScene" uid="uid://bhp1bcvhj2md5" path="res://spawn_enviroment.tscn" id="12_ulqxx"]
@@ -21,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://cp81gewk8dldv" path="res://assets/Prop_Yellow_Box.blend" id="19_rhf24"]
 [ext_resource type="PackedScene" uid="uid://bc1lhitm2nplq" path="res://assets/Temple_FloorTile_Thin.blend" id="20_q8i8p"]
 [ext_resource type="PackedScene" uid="uid://dmawf4526wnti" path="res://assets/Temple_Wall_Thin.blend" id="21_orj0l"]
+[ext_resource type="PackedScene" uid="uid://dlpgsocxd16hl" path="res://assets/Enviroment_Grass.blend" id="21_ulqxx"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ar3th"]
 shader = ExtResource("2_apglo")
@@ -42,7 +41,6 @@ volumetric_fog_density = 0.1
 volumetric_fog_sky_affect = 0.5
 
 [node name="Spawn" type="Node3D"]
-script = ExtResource("1_ar3th")
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
@@ -85,9 +83,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -8, -4)
 
 [node name="Temple_Pillar" parent="Island_Spawn/Other" instance=ExtResource("9_ar3th")]
 transform = Transform3D(-0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, -0.965926, 4, -7, -5)
-
-[node name="Enviroment_Grass" parent="Island_Spawn/Other" instance=ExtResource("10_8f2nx")]
-transform = Transform3D(0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, 0.5, -2, -8.74965, -6)
 
 [node name="Prop_Rock" parent="Island_Spawn/Other" instance=ExtResource("11_ptepl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -8.9904, -6)
@@ -158,3 +153,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 6.00995, -5)
 
 [node name="Temple_Wall_Thin" parent="Island_Spawn" instance=ExtResource("21_orj0l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 7.20995, -6)
+
+[node name="Enviroment_Grass" parent="." instance=ExtResource("21_ulqxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -3)
