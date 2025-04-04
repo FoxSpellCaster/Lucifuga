@@ -1,7 +1,7 @@
-[gd_scene load_steps=24 format=3 uid="uid://b5hbtk6hdyibx"]
+[gd_scene load_steps=25 format=3 uid="uid://b5hbtk6hdyibx"]
 
-[ext_resource type="PackedScene" uid="uid://de1eao2jnsfxk" path="res://player/player.tscn" id="1_ptqup"]
-[ext_resource type="Shader" uid="uid://dndyugn7jitow" path="res://shaders/sky_box.gdshader" id="2_apglo"]
+[ext_resource type="PackedScene" uid="uid://de1eao2jnsfxk" path="res://Player/player.tscn" id="1_ptqup"]
+[ext_resource type="Shader" uid="uid://dndyugn7jitow" path="res://Shaders/sky_box.gdshader" id="2_apglo"]
 [ext_resource type="AudioStream" uid="uid://1ibilikfa3s4" path="res://assets/music/GeneralBackgroundMusic.ogg" id="4_2mxkm"]
 [ext_resource type="FontFile" uid="uid://d0d8alv2uhk3b" path="res://assets/fonts/m6x11plus.ttf" id="6_mxnfm"]
 [ext_resource type="PackedScene" uid="uid://v0gkmsib708l" path="res://assets/meshes/Island_Spawn.glb" id="6_rw26e"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://cbc6v57qjx7tu" path="res://assets/Prop_Toolbox.blend" id="18_3vfng"]
 [ext_resource type="PackedScene" uid="uid://cp81gewk8dldv" path="res://assets/Prop_Yellow_Box.blend" id="19_rhf24"]
 [ext_resource type="PackedScene" uid="uid://bc1lhitm2nplq" path="res://assets/Temple_FloorTile_Thin.blend" id="20_q8i8p"]
+[ext_resource type="PackedScene" uid="uid://cursmfths2rf" path="res://ui_test.tscn" id="21_k8sp5"]
 [ext_resource type="PackedScene" uid="uid://dmawf4526wnti" path="res://assets/Temple_Wall_Thin.blend" id="21_orj0l"]
 [ext_resource type="PackedScene" uid="uid://dlpgsocxd16hl" path="res://assets/Enviroment_Grass.blend" id="21_ulqxx"]
 
@@ -156,3 +157,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 7.20995, -6)
 
 [node name="Enviroment_Grass" parent="." instance=ExtResource("21_ulqxx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -3)
+
+[node name="Control" parent="." instance=ExtResource("21_k8sp5")]

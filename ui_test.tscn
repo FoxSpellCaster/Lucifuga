@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://cursmfths2rf"]
+
+[ext_resource type="Theme" uid="uid://c2saum2pkraju" path="res://ui_top_horz.tres" id="1_bbsb6"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+color = Color(0.0192837, 0.106254, 0.191406, 0.670588)
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
+custom_minimum_size = Vector2(3.02, 0)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 12.0
+offset_top = 5.0
+offset_right = -10.0
+offset_bottom = 36.0
+grow_horizontal = 2
+
+[node name="MenuBar" type="MenuBar" parent="ColorRect/MarginContainer"]
+layout_mode = 2
+
+[node name="File" type="PopupMenu" parent="ColorRect/MarginContainer/MenuBar"]
+size = Vector2i(241, 100)
+theme = ExtResource("1_bbsb6")
+item_count = 2
+item_0/text = "Save"
+item_0/id = 0
+item_1/text = "Quit"
+item_1/id = 1
