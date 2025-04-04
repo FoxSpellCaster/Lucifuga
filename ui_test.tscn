@@ -10,7 +10,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="TopColorRect" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 1
 anchors_preset = 10
@@ -18,7 +18,7 @@ anchor_right = 1.0
 grow_horizontal = 2
 color = Color(0.0192837, 0.106254, 0.191406, 0.670588)
 
-[node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
+[node name="MarginContainer" type="MarginContainer" parent="TopColorRect"]
 custom_minimum_size = Vector2(3.02, 0)
 layout_mode = 1
 anchors_preset = 10
@@ -29,10 +29,13 @@ offset_right = -10.0
 offset_bottom = 36.0
 grow_horizontal = 2
 
-[node name="MenuBar" type="MenuBar" parent="ColorRect/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="TopColorRect/MarginContainer"]
 layout_mode = 2
 
-[node name="Settings" type="PopupMenu" parent="ColorRect/MarginContainer/MenuBar"]
+[node name="MenuBar" type="MenuBar" parent="TopColorRect/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Settings" type="PopupMenu" parent="TopColorRect/MarginContainer/HBoxContainer/MenuBar"]
 size = Vector2i(241, 100)
 theme = ExtResource("1_bbsb6")
 item_count = 5
@@ -47,9 +50,9 @@ item_3/id = 3
 item_4/text = "Notifications"
 item_4/id = 4
 
-[node name="Enhancements" type="PopupMenu" parent="ColorRect/MarginContainer/MenuBar"]
+[node name="Enhancements" type="PopupMenu" parent="TopColorRect/MarginContainer/HBoxContainer/MenuBar"]
 
-[node name="Network" type="PopupMenu" parent="ColorRect/MarginContainer/MenuBar"]
+[node name="Network" type="PopupMenu" parent="TopColorRect/MarginContainer/HBoxContainer/MenuBar"]
 auto_translate_mode = 1
 item_count = 2
 item_0/text = "Position"
@@ -57,10 +60,24 @@ item_0/id = 0
 item_1/text = "Test"
 item_1/id = 1
 
-[node name="Dev Tools" type="PopupMenu" parent="ColorRect/MarginContainer/MenuBar"]
+[node name="Dev Tools" type="PopupMenu" parent="TopColorRect/MarginContainer/HBoxContainer/MenuBar"]
 auto_translate_mode = 1
 item_count = 2
 item_0/text = "General"
 item_0/id = 0
 item_1/text = "Stats"
 item_1/id = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="TopColorRect/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="Label" type="Label" parent="TopColorRect/MarginContainer/HBoxContainer/PanelContainer"]
+layout_mode = 2
+text = " POINTS:  000 "
+
+[node name="LeftColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
