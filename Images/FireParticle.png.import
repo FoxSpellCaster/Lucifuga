@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://civvs38dnjy5a"
-path.s3tc="res://.godot/imported/FireParticle.png-b0e5b618f7b035835fb3dff04fa44d20.s3tc.ctex"
-path.etc2="res://.godot/imported/FireParticle.png-b0e5b618f7b035835fb3dff04fa44d20.etc2.ctex"
+path.s3tc="res://.godot/imported/FireParticle.png-cc6fd57b9ec090984a586a3d0f7bbb76.s3tc.ctex"
+path.etc2="res://.godot/imported/FireParticle.png-cc6fd57b9ec090984a586a3d0f7bbb76.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://images/FireParticle.png"
-dest_files=["res://.godot/imported/FireParticle.png-b0e5b618f7b035835fb3dff04fa44d20.s3tc.ctex", "res://.godot/imported/FireParticle.png-b0e5b618f7b035835fb3dff04fa44d20.etc2.ctex"]
+source_file="res://Images/FireParticle.png"
+dest_files=["res://.godot/imported/FireParticle.png-cc6fd57b9ec090984a586a3d0f7bbb76.s3tc.ctex", "res://.godot/imported/FireParticle.png-cc6fd57b9ec090984a586a3d0f7bbb76.etc2.ctex"]
 
 [params]
 

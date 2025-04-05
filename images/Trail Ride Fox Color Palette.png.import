@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvijwtvnk6v8h"
-path="res://.godot/imported/Trail Ride Fox Color Palette.png-4029d6d9bd0a43633d7c03c071eb6b4a.ctex"
+path="res://.godot/imported/Trail Ride Fox Color Palette.png-eb992d3a54fb4540967da9abb1762bb3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/Trail Ride Fox Color Palette.png"
-dest_files=["res://.godot/imported/Trail Ride Fox Color Palette.png-4029d6d9bd0a43633d7c03c071eb6b4a.ctex"]
+source_file="res://Images/Trail Ride Fox Color Palette.png"
+dest_files=["res://.godot/imported/Trail Ride Fox Color Palette.png-eb992d3a54fb4540967da9abb1762bb3.ctex"]
 
 [params]
 
