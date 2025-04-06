@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://b5hbtk6hdyibx"]
+[gd_scene load_steps=25 format=3 uid="uid://b5hbtk6hdyibx"]
 
 [ext_resource type="PackedScene" uid="uid://de1eao2jnsfxk" path="res://player/player.tscn" id="1_ptqup"]
 [ext_resource type="Shader" uid="uid://dndyugn7jitow" path="res://shaders/sky_box.gdshader" id="2_apglo"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://hh6uyrjqtmhm" path="res://props/prop_dark_shard.tscn" id="7_apglo"]
 [ext_resource type="PackedScene" uid="uid://b7wh257kan8qj" path="res://props/temple_pillar.tscn" id="9_ar3th"]
 [ext_resource type="PackedScene" uid="uid://c4k8mv3i2l23a" path="res://assets/Prop_Rock.blend" id="11_ptepl"]
+[ext_resource type="AudioStream" uid="uid://d3lc7onmv5hbo" path="res://assets/sfx/ambient_wind.ogg" id="11_ulqxx"]
 [ext_resource type="PackedScene" uid="uid://de51uhu5rpcsl" path="res://props/prop_crown.tscn" id="12_8f2nx"]
 [ext_resource type="PackedScene" uid="uid://bhp1bcvhj2md5" path="res://spawn_enviroment.tscn" id="12_ulqxx"]
 [ext_resource type="PackedScene" uid="uid://b04o6t8w2g3gt" path="res://assets/Item_Gem.blend" id="14_frphs"]
@@ -94,19 +95,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.69596, -4.46233, -4.70607)
 
 [node name="AmbientEnviromentStreamPlayer3D" type="AudioStreamPlayer3D" parent="Island_Spawn"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, -4)
+stream = ExtResource("11_ulqxx")
 volume_db = -3.0
 max_db = -6.0
 autoplay = true
-max_distance = 10.0
-
-[node name="Label3D" type="Label3D" parent="Island_Spawn/AmbientEnviromentStreamPlayer3D"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.553192, 0, -0.781959)
-pixel_size = 0.006
-billboard = 1
-text = "Music was made in
-LMMS by FoxSpellCaster
-Simple and Effective"
-font = ExtResource("6_mxnfm")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Island_Spawn"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 2, 12, -3)

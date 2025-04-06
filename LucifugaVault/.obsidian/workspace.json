@@ -6,34 +6,34 @@
       {
         "id": "66bb03083bb79660",
         "type": "tabs",
-        "dimension": 78.55329949238579,
         "children": [
           {
             "id": "c5c139634b6e852b",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "canvas",
               "state": {
-                "file": "Lucifuga Idea Canvas.canvas",
+                "file": "IDEAS.canvas",
                 "viewState": {
-                  "x": -158.5847334410338,
-                  "y": -7.673990306946735,
-                  "zoom": -0.9385183856961243
+                  "x": 132.475258351476,
+                  "y": 620.8367115651372,
+                  "zoom": -2.6666666666666665
                 }
               },
+              "pinned": true,
               "icon": "lucide-layout-dashboard",
-              "title": "Lucifuga Idea Canvas"
+              "title": "IDEAS"
             }
           }
         ]
       },
       {
-        "id": "1cc921a5a7e1f8d2",
+        "id": "c107e6a2c5e9ad85",
         "type": "tabs",
-        "dimension": 21.446700507614214,
         "children": [
           {
-            "id": "272500a1ac04a6d9",
+            "id": "5b3bc1217c24719a",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -74,7 +74,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#Capture",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -115,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lucifuga Idea Canvas.canvas",
+                "file": "IDEAS.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +125,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Lucifuga Idea Canvas"
+              "title": "Backlinks for IDEAS"
             }
           },
           {
@@ -163,16 +163,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Lucifuga Idea Canvas.canvas",
+                "file": "IDEAS.canvas",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Lucifuga Idea Canvas"
+              "title": "Outline of IDEAS"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -186,15 +187,46 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false,
+      "command-palette:Open command palette": true,
       "audio-recorder:Start/stop recording": false
     }
   },
   "active": "c5c139634b6e852b",
   "lastOpenFiles": [
-    "2025-04-06.md",
-    "Lucifuga Idea Canvas.canvas",
-    "Welcome.md",
-    "Voice Chat.md"
+    "Stats/Battery Points.md",
+    "Items/Trash.md",
+    "Items/Gem.md",
+    "Items/Barrel.md",
+    "Items/Dark Shard.md",
+    "IDEAS.canvas",
+    "Items/ToolBox.md",
+    "Items/Ruby.md",
+    "Land/Spawn Island/Zen Garden.md",
+    "Items/Crown of Power.md",
+    "Player/Construct Golem Player.md",
+    "Items/Tune Crystal.md",
+    "Items/Untitled.md",
+    "Stations/Construct Golem Reanimator Station.md",
+    "Player/Player Inventory.md",
+    "Land/Spawn Island/Construct Temple.md",
+    "Land/Island 1",
+    "Land/Spawn Island",
+    "Land/Spawn Island/Spawn Island.md",
+    "Stats",
+    "Creatures/Mystery Race.md",
+    "Land/Island 1/Island 1.md",
+    "Stations/Battery Station.md",
+    "Player/Weapons, Skills, Gadgets.md",
+    "Player/Cosmetic.md",
+    "Player/Abilities.md",
+    "Player/Voice Chat.md",
+    "Player/Player.md",
+    "Daily Notes/2025-04-06.md",
+    "Daily Notes",
+    "Items",
+    "Creatures",
+    "Land",
+    "Player",
+    "Stations"
   ]
 }
