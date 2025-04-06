@@ -1,0 +1,30 @@
+{
+	"nodes":[
+		{"id":"a0a93ed14e66c6b0","type":"text","text":"The Knight of Darkness, Yami, guards a hollow throne.\nIn his madness, he crowns his Shadow Princess, Lucifugia.\nA seat of power forsaken tears stain all that remains.","x":-420,"y":-660,"width":480,"height":100,"color":"6"},
+		{"id":"477d9eaf57b775d1","type":"text","text":"**Trash**\n- Gem (color based?)\n\t1. Small\n\t2. Medium\n\t3. Medium\n\t4. Large","x":-870,"y":-526,"width":360,"height":240},
+		{"id":"5e8ebc847e0da9cd","type":"text","text":"Player Inventory\nPhysic Basic System","x":-420,"y":-466,"width":250,"height":60,"color":"4"},
+		{"id":"8502dcd885bbce58","type":"text","text":"**Battery Points**","x":-385,"y":-140,"width":180,"height":60,"color":"3"},
+		{"id":"1c0dc65b16a32392","type":"text","text":"Automation","x":-330,"y":60,"width":250,"height":60,"color":"5"},
+		{"id":"87585f7e90cdc722","type":"text","text":"Player Battery\n\tBase 1,000","x":-80,"y":-140,"width":250,"height":60,"color":"4"},
+		{"id":"ab820e61a4231fce","type":"text","text":"Battery Station\nPoor Name needs a change","x":-425,"y":-332,"width":260,"height":93},
+		{"id":"c4b57aed90d3abd4","type":"text","text":"Cosmetic\nHead\nBody + Arms\nLegs\nFeet","x":-1262,"y":220,"width":250,"height":164,"color":"1"},
+		{"id":"ad069f2eeb01f8ec","type":"text","text":"\"Leveling Up\"","x":-940,"y":265,"width":250,"height":60,"color":"1"},
+		{"id":"2140aba18bcaadf2","type":"text","text":"Weapons, Skills, Gagets","x":-604,"y":295,"width":250,"height":60,"color":"1"},
+		{"id":"52f8c968db9ab4e4","type":"text","text":"Golem (player) Upgrades","x":-920,"y":30,"width":250,"height":60,"color":"4"},
+		{"id":"7fc2ba6316ed4f7e","type":"text","text":"Spawn Island","x":580,"y":-392,"width":300,"height":153,"color":"4"},
+		{"id":"3d9db8e3dabf9738","x":645,"y":-162,"width":250,"height":60,"type":"text","text":"Temple"}
+	],
+	"edges":[
+		{"id":"d52896016c764ed5","fromNode":"8502dcd885bbce58","fromSide":"bottom","toNode":"52f8c968db9ab4e4","toSide":"top","color":"3"},
+		{"id":"d574345c33d1a56e","fromNode":"8502dcd885bbce58","fromSide":"bottom","toNode":"1c0dc65b16a32392","toSide":"top","color":"3"},
+		{"id":"99f052ca799fc7db","fromNode":"8502dcd885bbce58","fromSide":"right","toNode":"87585f7e90cdc722","toSide":"left","color":"3"},
+		{"id":"51d36844e52c184a","fromNode":"5e8ebc847e0da9cd","fromSide":"bottom","toNode":"ab820e61a4231fce","toSide":"top"},
+		{"id":"05c113b36905c2e6","fromNode":"ab820e61a4231fce","fromSide":"bottom","toNode":"8502dcd885bbce58","toSide":"top"},
+		{"id":"a7d31752222db1fe","fromNode":"477d9eaf57b775d1","fromSide":"right","toNode":"5e8ebc847e0da9cd","toSide":"left"},
+		{"id":"ec6dd0df928d422a","fromNode":"87585f7e90cdc722","fromSide":"top","toNode":"5e8ebc847e0da9cd","toSide":"right","color":"3"},
+		{"id":"9d0d0b95a9a04567","fromNode":"52f8c968db9ab4e4","fromSide":"bottom","toNode":"c4b57aed90d3abd4","toSide":"top"},
+		{"id":"fa4b0532f62d52d2","fromNode":"52f8c968db9ab4e4","fromSide":"bottom","toNode":"ad069f2eeb01f8ec","toSide":"top"},
+		{"id":"5346044b1311b5bf","fromNode":"52f8c968db9ab4e4","fromSide":"bottom","toNode":"2140aba18bcaadf2","toSide":"top"},
+		{"id":"d598afafade0101e","fromNode":"7fc2ba6316ed4f7e","fromSide":"bottom","toNode":"3d9db8e3dabf9738","toSide":"top"}
+	]
+}

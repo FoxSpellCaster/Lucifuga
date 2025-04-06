@@ -1,0 +1,200 @@
+{
+  "main": {
+    "id": "384aacb6953a4331",
+    "type": "split",
+    "children": [
+      {
+        "id": "66bb03083bb79660",
+        "type": "tabs",
+        "dimension": 78.55329949238579,
+        "children": [
+          {
+            "id": "c5c139634b6e852b",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Lucifuga Idea Canvas.canvas",
+                "viewState": {
+                  "x": -158.5847334410338,
+                  "y": -7.673990306946735,
+                  "zoom": -0.9385183856961243
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Lucifuga Idea Canvas"
+            }
+          }
+        ]
+      },
+      {
+        "id": "1cc921a5a7e1f8d2",
+        "type": "tabs",
+        "dimension": 21.446700507614214,
+        "children": [
+          {
+            "id": "272500a1ac04a6d9",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8e032c2414d35c5c",
+    "type": "split",
+    "children": [
+      {
+        "id": "720bdb3abe39832b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "eea79251ad1dba83",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "79b194b6af86380b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "7cb13a3228f6d77a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "02f20076ff10375c",
+    "type": "split",
+    "children": [
+      {
+        "id": "b5724c1e060d5203",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "abb8444181839e33",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Lucifuga Idea Canvas.canvas",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Lucifuga Idea Canvas"
+            }
+          },
+          {
+            "id": "3a118eb9fe77f708",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Lucifuga Idea Canvas.canvas",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Lucifuga Idea Canvas"
+            }
+          },
+          {
+            "id": "bd3e80c65b242665",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "3f9e2a95b250ccb3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Lucifuga Idea Canvas.canvas",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Lucifuga Idea Canvas"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "audio-recorder:Start/stop recording": false
+    }
+  },
+  "active": "c5c139634b6e852b",
+  "lastOpenFiles": [
+    "2025-04-06.md",
+    "Lucifuga Idea Canvas.canvas",
+    "Welcome.md",
+    "Voice Chat.md"
+  ]
+}
