@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bmlug0og7qrnj"
-path.s3tc="res://.godot/imported/GoldParticle.png-9eb1d6b4e8e92cec49d21d45f0b14875.s3tc.ctex"
-path.etc2="res://.godot/imported/GoldParticle.png-9eb1d6b4e8e92cec49d21d45f0b14875.etc2.ctex"
+path.s3tc="res://.godot/imported/GoldParticle.png-2a7d1dbea83d788907b40df1cc904d55.s3tc.ctex"
+path.etc2="res://.godot/imported/GoldParticle.png-2a7d1dbea83d788907b40df1cc904d55.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Images/GoldParticle.png"
-dest_files=["res://.godot/imported/GoldParticle.png-9eb1d6b4e8e92cec49d21d45f0b14875.s3tc.ctex", "res://.godot/imported/GoldParticle.png-9eb1d6b4e8e92cec49d21d45f0b14875.etc2.ctex"]
+source_file="res://images/GoldParticle.png"
+dest_files=["res://.godot/imported/GoldParticle.png-2a7d1dbea83d788907b40df1cc904d55.s3tc.ctex", "res://.godot/imported/GoldParticle.png-2a7d1dbea83d788907b40df1cc904d55.etc2.ctex"]
 
 [params]
 

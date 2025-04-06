@@ -1,8 +1,7 @@
-[gd_scene load_steps=25 format=3 uid="uid://b5hbtk6hdyibx"]
+[gd_scene load_steps=24 format=3 uid="uid://b5hbtk6hdyibx"]
 
-[ext_resource type="PackedScene" uid="uid://de1eao2jnsfxk" path="res://Player/player.tscn" id="1_ptqup"]
-[ext_resource type="Shader" uid="uid://dndyugn7jitow" path="res://Shaders/sky_box.gdshader" id="2_apglo"]
-[ext_resource type="AudioStream" uid="uid://1ibilikfa3s4" path="res://assets/music/GeneralBackgroundMusic.ogg" id="4_2mxkm"]
+[ext_resource type="PackedScene" uid="uid://de1eao2jnsfxk" path="res://player/player.tscn" id="1_ptqup"]
+[ext_resource type="Shader" uid="uid://dndyugn7jitow" path="res://shaders/sky_box.gdshader" id="2_apglo"]
 [ext_resource type="FontFile" uid="uid://d0d8alv2uhk3b" path="res://assets/fonts/m6x11plus.ttf" id="6_mxnfm"]
 [ext_resource type="PackedScene" uid="uid://v0gkmsib708l" path="res://assets/meshes/Island_Spawn.glb" id="6_rw26e"]
 [ext_resource type="PackedScene" uid="uid://hh6uyrjqtmhm" path="res://props/prop_dark_shard.tscn" id="7_apglo"]
@@ -93,15 +92,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.69596, -4.46233, -4.70607)
 
 [node name="Spawn_Enviroment" parent="Island_Spawn" instance=ExtResource("12_ulqxx")]
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Island_Spawn"]
+[node name="AmbientEnviromentStreamPlayer3D" type="AudioStreamPlayer3D" parent="Island_Spawn"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, -4)
-stream = ExtResource("4_2mxkm")
 volume_db = -3.0
 max_db = -6.0
 autoplay = true
 max_distance = 10.0
 
-[node name="Label3D" type="Label3D" parent="Island_Spawn/AudioStreamPlayer3D"]
+[node name="Label3D" type="Label3D" parent="Island_Spawn/AmbientEnviromentStreamPlayer3D"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.553192, 0, -0.781959)
 pixel_size = 0.006
 billboard = 1
@@ -156,6 +154,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 6.00995, -5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 7.20995, -6)
 
 [node name="Enviroment_Grass" parent="." instance=ExtResource("21_ulqxx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.38824, -3)
 
 [node name="Control" parent="." instance=ExtResource("21_k8sp5")]
