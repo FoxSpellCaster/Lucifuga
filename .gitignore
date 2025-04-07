@@ -1,9 +1,19 @@
 # Godot 4+ specific ignores
 .godot/
-/android/
-Lucifuga_win_Debug.exe
-Lucifuga_win_Debug.console.exe
+
+# Godot-specific ignores
+.import/
+export.cfg
+export_credentials.cfg
+
+# Imported translations (automatically generated from CSV files)
+*.translation
+
+# Mono-specific ignores
+.mono/
+data_*/
+mono_crash.*.json
+
 Lucifuga_Vulkan_x84_64.exe
 *.import
-*.blend1
 *.blend1
