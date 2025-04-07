@@ -35,32 +35,51 @@ layout_mode = 2
 [node name="MenuBar" type="MenuBar" parent="TopColorRect/MarginContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="Settings" type="PopupMenu" parent="TopColorRect/MarginContainer/HBoxContainer/MenuBar"]
+[node name="Game" type="PopupMenu" parent="TopColorRect/MarginContainer/HBoxContainer/MenuBar"]
 size = Vector2i(241, 100)
 theme = ExtResource("1_bbsb6")
-item_count = 5
-item_0/text = "General"
+item_count = 1
+item_0/text = "QUIT"
 item_0/id = 0
-item_1/text = "Audio"
+
+[node name="Player" type="PopupMenu" parent="TopColorRect/MarginContainer/HBoxContainer/MenuBar"]
+item_count = 5
+item_0/text = "Abilities"
+item_0/id = 0
+item_1/text = "Cosmetic"
 item_1/id = 1
-item_2/text = "Graphics"
+item_2/text = "Inventory"
 item_2/id = 2
-item_3/text = "Controls"
+item_3/text = "Voice Chat"
 item_3/id = 3
-item_4/text = "Notifications"
+item_4/text = "Weapons, Skills, Gadgets"
 item_4/id = 4
 
-[node name="Enhancements" type="PopupMenu" parent="TopColorRect/MarginContainer/HBoxContainer/MenuBar"]
+[node name="Item" type="PopupMenu" parent="TopColorRect/MarginContainer/HBoxContainer/MenuBar"]
+auto_translate_mode = 1
+item_count = 6
+item_0/text = "Barrel"
+item_0/id = 0
+item_1/text = "Crown of Power"
+item_1/id = 1
+item_2/text = "Dark Shard"
+item_2/id = 2
+item_3/text = "Gem"
+item_3/id = 3
+item_4/text = "ToolBox"
+item_4/id = 4
+item_5/text = "Tune Crystal"
+item_5/id = 5
 
-[node name="Network" type="PopupMenu" parent="TopColorRect/MarginContainer/HBoxContainer/MenuBar"]
+[node name="Land" type="PopupMenu" parent="TopColorRect/MarginContainer/HBoxContainer/MenuBar"]
 auto_translate_mode = 1
 item_count = 2
-item_0/text = "Position"
+item_0/text = "Spawn Island"
 item_0/id = 0
-item_1/text = "Test"
+item_1/text = "Island 1"
 item_1/id = 1
 
-[node name="Dev Tools" type="PopupMenu" parent="TopColorRect/MarginContainer/HBoxContainer/MenuBar"]
+[node name="DevTools" type="PopupMenu" parent="TopColorRect/MarginContainer/HBoxContainer/MenuBar"]
 auto_translate_mode = 1
 item_count = 2
 item_0/text = "General"

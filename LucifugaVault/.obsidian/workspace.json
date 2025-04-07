@@ -16,33 +16,32 @@
               "state": {
                 "file": "IDEAS.canvas",
                 "viewState": {
-                  "x": 132.475258351476,
-                  "y": 620.8367115651372,
-                  "zoom": -2.6666666666666665
+                  "x": 342.9452531025785,
+                  "y": 780.4219594671077,
+                  "zoom": -1.6666666666666665
                 }
               },
               "pinned": true,
               "icon": "lucide-layout-dashboard",
               "title": "IDEAS"
             }
-          }
-        ]
-      },
-      {
-        "id": "c107e6a2c5e9ad85",
-        "type": "tabs",
-        "children": [
+          },
           {
-            "id": "5b3bc1217c24719a",
+            "id": "ab304ce3fac57868",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Random Ideas/Ghost or Demo Recording. Especially for debugging.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Ghost or Demo Recording. Especially for debugging"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -191,42 +190,47 @@
       "audio-recorder:Start/stop recording": false
     }
   },
-  "active": "c5c139634b6e852b",
+  "active": "ab304ce3fac57868",
   "lastOpenFiles": [
-    "Stats/Battery Points.md",
-    "Items/Trash.md",
-    "Items/Gem.md",
-    "Items/Barrel.md",
-    "Items/Dark Shard.md",
+    "Random Ideas/Lightning Effect.md",
+    "Random Ideas/Ghost or Demo Recording. Especially for debugging.md",
+    "Player/Companion",
+    "Random Ideas/Selfie Camera (Windwaker Style).md",
+    "Random Ideas/Nofe Hole.md",
+    "Random Ideas/Boom and Bane Mechanic.md",
+    "Random Ideas",
     "IDEAS.canvas",
+    "Player/Construct Golem Player.md",
+    "Player/Godot_v4.4.1-stable_win64_8ctATLZB5L.png",
+    "Player Inventory.md",
+    "Items/Trash.md",
+    "Items/Item Rarity Color Palette - color-hex.com.png",
+    "Images/Godot_v4.4.1-stable_win64_ml6vTjdDWS.png.import",
+    "Items/Item Rarity Color Palette - color-hex.com.png.import",
+    "Stations/Battery Station.md",
+    "Images",
+    "Images/Godot_v4.4.1-stable_win64_ml6vTjdDWS.png",
+    "Abilities.md",
+    "Stations/Construct Golem Reanimator Station.md",
+    "Stats/Battery Points.md",
+    "Stats/Health Points.md",
     "Items/ToolBox.md",
     "Items/Ruby.md",
+    "Items/Gem.md",
+    "Player/Player Inventory.md",
+    "Player/Weapons, Skills, Gadgets.md",
+    "Player/Voice Chat.md",
+    "Player/Abilities.md",
+    "Player/Cosmetic.md",
+    "Items/Barrel.md",
+    "Items/Dark Shard.md",
     "Land/Spawn Island/Zen Garden.md",
     "Items/Crown of Power.md",
-    "Player/Construct Golem Player.md",
     "Items/Tune Crystal.md",
-    "Items/Untitled.md",
-    "Stations/Construct Golem Reanimator Station.md",
-    "Player/Player Inventory.md",
-    "Land/Spawn Island/Construct Temple.md",
     "Land/Island 1",
     "Land/Spawn Island",
-    "Land/Spawn Island/Spawn Island.md",
     "Stats",
-    "Creatures/Mystery Race.md",
-    "Land/Island 1/Island 1.md",
-    "Stations/Battery Station.md",
-    "Player/Weapons, Skills, Gadgets.md",
-    "Player/Cosmetic.md",
-    "Player/Abilities.md",
-    "Player/Voice Chat.md",
-    "Player/Player.md",
-    "Daily Notes/2025-04-06.md",
     "Daily Notes",
-    "Items",
-    "Creatures",
-    "Land",
-    "Player",
-    "Stations"
+    "Items"
   ]
 }

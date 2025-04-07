@@ -1,15 +1,12 @@
-#stat
+#stat ^fd08ff
 
-# Harvest
+# Harvestable
 Can be harvested from these items
 
-## [[Trash]]
-[[Gem]]
-[[Ruby]]
+#### [[Trash]]
 
-## [[Dark Shard]]
-
-# Charge
+#### [[Dark Shard]]
+# Chargeable
 These item can be charged by Battery Points
 
 ## [[Tune Crystal]]

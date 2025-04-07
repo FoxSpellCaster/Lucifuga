@@ -105,12 +105,13 @@ size = Vector2(0.1, 0.1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 8, -4)
 amount = 50
 amount_ratio = 0.5
+visibility_aabb = AABB(-4, -4, -4, 13.24, 4.325, 13.68)
 process_material = SubResource("ParticleProcessMaterial_1wqlk")
 draw_pass_1 = SubResource("QuadMesh_vasew")
 
 [node name="GoldGPUParticles3D" type="GPUParticles3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 8, -4)
-amount = 50
+amount = 25
 amount_ratio = 0.5
 process_material = SubResource("ParticleProcessMaterial_xx2ht")
 draw_pass_1 = SubResource("QuadMesh_thrhl")
