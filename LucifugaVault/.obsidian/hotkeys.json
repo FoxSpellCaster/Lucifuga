@@ -1,0 +1,11 @@
+{
+  "gitlab-wiki-export:export-vault": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "Numpad1"
+    }
+  ]
+}

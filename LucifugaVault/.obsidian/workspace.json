@@ -16,14 +16,42 @@
               "state": {
                 "file": "IDEAS.canvas",
                 "viewState": {
-                  "x": 600,
-                  "y": 1050,
-                  "zoom": -1.9740047914670555
+                  "x": 899.6726791120766,
+                  "y": 862.550625270324,
+                  "zoom": -0.6666666666666665
                 }
               },
               "pinned": true,
               "icon": "lucide-layout-dashboard",
               "title": "IDEAS"
+            }
+          },
+          {
+            "id": "a7246be020d82355",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Stations/Battery-Station.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Battery-Station"
+            }
+          },
+          {
+            "id": "b0d48b637a4ff9cd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Random Ideas/Bane and Boon.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Bane and Boon"
             }
           }
         ]
@@ -46,7 +74,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": true
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -58,7 +86,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Capture",
+                "query": "tag:#idea",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -177,26 +205,29 @@
   },
   "active": "c5c139634b6e852b",
   "lastOpenFiles": [
-    "Images/Godot_v4.4.1-stable_win64_qqFeUK9K9W.png.import",
-    "Random Ideas/Selfie Camera (Windwaker Style).md",
-    "Lore/TitleCard.md",
-    "Items/Barrel.md",
-    "Player/Construct Golem Core.md",
-    "Stats/Health Points.md",
+    "Random Ideas/Bane and Boon.md",
     "IDEAS.canvas",
+    "Stations/Battery-Station.md",
+    "Player/Construct Golem Player.md",
+    "Images/Godot_v4.4.1-stable_win64_ml6vTjdDWS.png",
+    "Images/Godot_v4.4.1-stable_win64_qqFeUK9K9W.png",
+    "Player/Construct Golem Core.md",
+    "Home.md",
+    "Daily Notes/2025-04-07.md",
+    "Daily Notes/2025-04-06.md",
     "Lore/Songs.md",
     "Lore/Lucifuga.md",
+    "Lore/TitleCard.md",
+    "Images/Godot_v4.4.1-stable_win64_qqFeUK9K9W.png.import",
+    "Random Ideas/Selfie Camera (Windwaker Style).md",
+    "Items/Barrel.md",
+    "Stats/Health-Points.md",
     "Random Ideas/Nofe Hole.md",
     "Random Ideas/Lightning Effect.md",
     "Random Ideas/Ghost or Demo Recording. Especially for debugging.md",
     "Random Ideas/Boom and Bane Mechanic.md",
-    "2025-04-07.md",
-    "Images/Godot_v4.4.1-stable_win64_qqFeUK9K9W.png",
-    "Player/Construct Golem Player.md",
     "Creatures/Mystery Race.md",
-    "Daily Notes/2025-04-06.md",
     "Images/Godot_v4.4.1-stable_win64_8ctATLZB5L.png",
-    "Images/Godot_v4.4.1-stable_win64_ml6vTjdDWS.png",
     "Player/Godot_v4.4.1-stable_win64_8ctATLZB5L.png.import",
     "Lore",
     "Items/Tune Crystal.md",
@@ -210,13 +241,9 @@
     "Items/Item Rarity Color Palette - color-hex.com.png",
     "Images/Godot_v4.4.1-stable_win64_ml6vTjdDWS.png.import",
     "Items/Item Rarity Color Palette - color-hex.com.png.import",
-    "Stations/Battery Station.md",
     "Images",
-    "Stations/Construct Golem Reanimator Station.md",
-    "Stats/Battery Points.md",
-    "Items/ToolBox.md",
+    "Stations/Construct-Golem-Reanimator-Station.md",
     "Land/Island 1",
-    "Land/Spawn Island",
-    "Stats"
+    "Land/Spawn Island"
   ]
 }

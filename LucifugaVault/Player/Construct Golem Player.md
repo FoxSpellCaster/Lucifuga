@@ -1,7 +1,7 @@
 #player
 
 # ScreenShot
-![[Godot_v4.4.1-stable_win64_qqFeUK9K9W.png]]
+![](../Images/Godot_v4.4.1-stable_win64_qqFeUK9K9W.png)
 
 # Abilities
 ## Core
@@ -44,7 +44,7 @@ When players use the grab [[#Abilities]] the item will drop into a UI box and sc
 
 When the inventory is full the item will tumble out of the player and back into the environment
 
-[[Trash]] get deposited in the [[Battery Station]]
+[[Trash]] get deposited in the [[../Stations/Battery-Station]]
 
 # Cosmetics
 These are only for the fashion
