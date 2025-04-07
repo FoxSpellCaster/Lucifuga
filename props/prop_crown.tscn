@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=4 uid="uid://de51uhu5rpcsl"]
 
-[ext_resource type="Texture2D" uid="uid://bmlug0og7qrnj" path="res://images/GoldParticle.png" id="1_vu3dq"]
+[ext_resource type="Texture2D" uid="uid://bmlug0og7qrnj" path="res://assets/images/GoldParticle.png" id="1_vu3dq"]
 [ext_resource type="FontFile" uid="uid://d0d8alv2uhk3b" path="res://assets/fonts/m6x11plus.ttf" id="2_vu3dq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sufdi"]

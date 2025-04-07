@@ -16,32 +16,17 @@
               "state": {
                 "file": "IDEAS.canvas",
                 "viewState": {
-                  "x": 342.9452531025785,
-                  "y": 780.4219594671077,
-                  "zoom": -1.6666666666666665
+                  "x": 600,
+                  "y": 1050,
+                  "zoom": -1.9740047914670555
                 }
               },
               "pinned": true,
               "icon": "lucide-layout-dashboard",
               "title": "IDEAS"
             }
-          },
-          {
-            "id": "ab304ce3fac57868",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Random Ideas/Ghost or Demo Recording. Especially for debugging.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Ghost or Demo Recording. Especially for debugging"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -183,54 +168,55 @@
     "hiddenItems": {
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
+      "canvas:Create new canvas": true,
       "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
+      "templates:Insert template": true,
       "command-palette:Open command palette": true,
       "audio-recorder:Start/stop recording": false
     }
   },
-  "active": "ab304ce3fac57868",
+  "active": "c5c139634b6e852b",
   "lastOpenFiles": [
+    "Images/Godot_v4.4.1-stable_win64_qqFeUK9K9W.png.import",
+    "Random Ideas/Selfie Camera (Windwaker Style).md",
+    "Lore/TitleCard.md",
+    "Items/Barrel.md",
+    "Player/Construct Golem Core.md",
+    "Stats/Health Points.md",
+    "IDEAS.canvas",
+    "Lore/Songs.md",
+    "Lore/Lucifuga.md",
+    "Random Ideas/Nofe Hole.md",
     "Random Ideas/Lightning Effect.md",
     "Random Ideas/Ghost or Demo Recording. Especially for debugging.md",
-    "Player/Companion",
-    "Random Ideas/Selfie Camera (Windwaker Style).md",
-    "Random Ideas/Nofe Hole.md",
     "Random Ideas/Boom and Bane Mechanic.md",
-    "Random Ideas",
-    "IDEAS.canvas",
+    "2025-04-07.md",
+    "Images/Godot_v4.4.1-stable_win64_qqFeUK9K9W.png",
     "Player/Construct Golem Player.md",
-    "Player/Godot_v4.4.1-stable_win64_8ctATLZB5L.png",
-    "Player Inventory.md",
+    "Creatures/Mystery Race.md",
+    "Daily Notes/2025-04-06.md",
+    "Images/Godot_v4.4.1-stable_win64_8ctATLZB5L.png",
+    "Images/Godot_v4.4.1-stable_win64_ml6vTjdDWS.png",
+    "Player/Godot_v4.4.1-stable_win64_8ctATLZB5L.png.import",
+    "Lore",
+    "Items/Tune Crystal.md",
     "Items/Trash.md",
+    "Items/Dark Shard.md",
+    "Items/Crown of Power.md",
+    "Abilities.md",
+    "Player Inventory.md",
+    "Player/Companion",
+    "Random Ideas",
     "Items/Item Rarity Color Palette - color-hex.com.png",
     "Images/Godot_v4.4.1-stable_win64_ml6vTjdDWS.png.import",
     "Items/Item Rarity Color Palette - color-hex.com.png.import",
     "Stations/Battery Station.md",
     "Images",
-    "Images/Godot_v4.4.1-stable_win64_ml6vTjdDWS.png",
-    "Abilities.md",
     "Stations/Construct Golem Reanimator Station.md",
     "Stats/Battery Points.md",
-    "Stats/Health Points.md",
     "Items/ToolBox.md",
-    "Items/Ruby.md",
-    "Items/Gem.md",
-    "Player/Player Inventory.md",
-    "Player/Weapons, Skills, Gadgets.md",
-    "Player/Voice Chat.md",
-    "Player/Abilities.md",
-    "Player/Cosmetic.md",
-    "Items/Barrel.md",
-    "Items/Dark Shard.md",
-    "Land/Spawn Island/Zen Garden.md",
-    "Items/Crown of Power.md",
-    "Items/Tune Crystal.md",
     "Land/Island 1",
     "Land/Spawn Island",
-    "Stats",
-    "Daily Notes",
-    "Items"
+    "Stats"
   ]
 }

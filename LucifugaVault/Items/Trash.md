@@ -11,8 +11,8 @@
 | Large  | 8      | Orange |
 Scales down and dumps into [[Player/Construct Golem Player#Player Inventory]]
 
-# Rarity Colors
+## Rarity Colors
 ![[Item Rarity Color Palette - color-hex.com.png]]
 
-# Other
+## Other
 ![[Godot_v4.4.1-stable_win64_ml6vTjdDWS.png]]

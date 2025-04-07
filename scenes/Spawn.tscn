@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://de1eao2jnsfxk" path="res://player/player.tscn" id="1_ptqup"]
 [ext_resource type="Shader" uid="uid://dndyugn7jitow" path="res://shaders/sky_box.gdshader" id="2_apglo"]
+[ext_resource type="PackedScene" uid="uid://cv5ig05cueeis" path="res://assets/Island_Spawn.blend" id="3_3yy1u"]
 [ext_resource type="FontFile" uid="uid://d0d8alv2uhk3b" path="res://assets/fonts/m6x11plus.ttf" id="6_mxnfm"]
-[ext_resource type="PackedScene" uid="uid://v0gkmsib708l" path="res://assets/meshes/Island_Spawn.glb" id="6_rw26e"]
 [ext_resource type="PackedScene" uid="uid://hh6uyrjqtmhm" path="res://props/prop_dark_shard.tscn" id="7_apglo"]
 [ext_resource type="PackedScene" uid="uid://b7wh257kan8qj" path="res://props/temple_pillar.tscn" id="9_ar3th"]
 [ext_resource type="PackedScene" uid="uid://c4k8mv3i2l23a" path="res://assets/Prop_Rock.blend" id="11_ptepl"]
@@ -29,7 +29,6 @@ sky_material = SubResource("ShaderMaterial_ar3th")
 [sub_resource type="Environment" id="Environment_ptepl"]
 background_mode = 2
 sky = SubResource("Sky_lf0ao")
-fog_enabled = true
 fog_mode = 1
 fog_light_color = Color(0, 0, 0, 1)
 fog_density = 1.0
@@ -291,13 +290,12 @@ points = PackedVector3Array(-5.96046e-08, -1.00017, -1, -5.96046e-08, -1.43069, 
 environment = SubResource("Environment_ptepl")
 
 [node name="Player" parent="." instance=ExtResource("1_ptqup")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.37971, 0.2293, -8.12896)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.37971, 5.95995, -8.12896)
 
-[node name="Island_Spawn" parent="." instance=ExtResource("6_rw26e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, 0)
+[node name="Island_Spawn" parent="." instance=ExtResource("3_3yy1u")]
 
 [node name="Player_Golem_Rig" parent="Island_Spawn" instance=ExtResource("16_2fdwt")]
-transform = Transform3D(-0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, -0.866025, 3, 6, -3)
+transform = Transform3D(-0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, -0.866025, 3, 5.95668, -3)
 
 [node name="Label3D" type="Label3D" parent="Island_Spawn/Player_Golem_Rig"]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 1.52691, 1.53611, -0.219785)
@@ -308,73 +306,74 @@ Only Leg has a Rig"
 font = ExtResource("6_mxnfm")
 
 [node name="Other" type="Node3D" parent="Island_Spawn"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.4257, 0)
 
 [node name="Prop_Dark_Shard2" parent="Island_Spawn/Other" instance=ExtResource("7_apglo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -8, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -8.77143, -4)
 
 [node name="Temple_Pillar" parent="Island_Spawn/Other" instance=ExtResource("9_ar3th")]
-transform = Transform3D(-0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, -0.965926, 4, -7, -5)
+transform = Transform3D(-0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, -0.965926, 4, -6.96571, -5)
 
 [node name="Prop_Rock" parent="Island_Spawn/Other" instance=ExtResource("11_ptepl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -8.9904, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -9.41606, -2)
 
 [node name="Prop_Crown" parent="Island_Spawn/Other" instance=ExtResource("12_8f2nx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.69596, -4.46233, -4.70607)
 
 [node name="Prop_Barrel" parent="Island_Spawn/Other" instance=ExtResource("16_p5ah2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -8.5987, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -9.02436, 1)
 
 [node name="Prop_Bomb" parent="Island_Spawn/Other" instance=ExtResource("17_0bect")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -8.54005, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -8.96571, -1)
 
 [node name="Prop_Toolbox" parent="Island_Spawn/Other" instance=ExtResource("18_3vfng")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -8.79005, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -9.21571, -3)
 
 [node name="Prop_Yellow_Box" parent="Island_Spawn/Other" instance=ExtResource("19_rhf24")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -8.79005, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -9.21571, 0)
 
 [node name="Temple_FloorTile_Thin" parent="Island_Spawn/Other" instance=ExtResource("20_q8i8p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -8.99005, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -9.41571, -5)
 
 [node name="Temple_Wall_Thin" parent="Island_Spawn/Other" instance=ExtResource("21_orj0l")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 12, -7.79005, -6)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 12, -8.21571, -6)
 
 [node name="Enviroment_Grass" parent="Island_Spawn/Other" instance=ExtResource("21_ulqxx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -8.61176, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -9.05293, -3)
 
 [node name="Spawn_Enviroment" parent="Island_Spawn" instance=ExtResource("12_ulqxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.42566, 0)
 
 [node name="AmbientEnviromentStreamPlayer3D" type="AudioStreamPlayer3D" parent="Island_Spawn"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.4257, -4)
 stream = ExtResource("11_ulqxx")
 volume_db = -3.0
 max_db = -6.0
 autoplay = true
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Island_Spawn"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 2, 12, -3)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 2, 12.4257, -3)
 light_energy = 5.0
 light_volumetric_fog_energy = 0.0
 spot_range = 10.0
 spot_angle = 51.33
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="Island_Spawn"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -4, 12, -5)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -4, 12.4257, -5)
 light_energy = 5.0
 light_volumetric_fog_energy = 0.0
 spot_range = 10.0
 spot_angle = 51.33
 
 [node name="SpotLight3D3" type="SpotLight3D" parent="Island_Spawn"]
-transform = Transform3D(0.836516, 0.258819, -0.482963, 0.5, -3.78552e-08, 0.866025, 0.224144, -0.965926, -0.12941, 11, 11, -4)
+transform = Transform3D(0.836516, 0.258819, -0.482963, 0.5, 1.11156e-07, 0.866025, 0.224144, -0.965926, -0.12941, 11, 11.4257, -4)
 light_energy = 5.0
 light_volumetric_fog_energy = 0.0
 spot_range = 10.0
 spot_angle = 51.33
 
 [node name="Item_Trash_Group" type="Node3D" parent="Island_Spawn"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 7, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 7.42566, -6)
 
 [node name="Item_Gem_Blue" type="Node3D" parent="Island_Spawn/Item_Trash_Group"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.118981, 0)
@@ -440,6 +439,7 @@ size = Vector3(1, 1, 1)
 shape = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Island_Spawn/Item_Trash_Group/Item_Gem_Orange/Ruby-rigid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.76837e-07, -1.87714, 0)
 shape = SubResource("ConvexPolygonShape3D_y7tva")
 
 [node name="Item_Gem_Purple" type="Node3D" parent="Island_Spawn/Item_Trash_Group"]
@@ -486,7 +486,7 @@ shape = 0
 shape = SubResource("ConvexPolygonShape3D_xrqkp")
 
 [node name="Item_Trash_Group2" type="Node3D" parent="Island_Spawn"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 7, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 7.42566, -6)
 
 [node name="Item_Gem_Blue" type="Node3D" parent="Island_Spawn/Item_Trash_Group2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.118981, 0)
@@ -508,6 +508,7 @@ size = Vector3(1, 1, 1)
 shape = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Island_Spawn/Item_Trash_Group2/Item_Gem_Blue/Ruby-rigid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.87714, 0)
 shape = SubResource("ConvexPolygonShape3D_apses")
 
 [node name="Item_Gem_Green" type="Node3D" parent="Island_Spawn/Item_Trash_Group2"]
@@ -530,6 +531,7 @@ size = Vector3(1, 1, 1)
 shape = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Island_Spawn/Item_Trash_Group2/Item_Gem_Green/Ruby-rigid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.87714, 0)
 shape = SubResource("ConvexPolygonShape3D_davgr")
 
 [node name="Item_Gem_Orange" type="Node3D" parent="Island_Spawn/Item_Trash_Group2"]
@@ -552,6 +554,7 @@ size = Vector3(1, 1, 1)
 shape = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Island_Spawn/Item_Trash_Group2/Item_Gem_Orange/Ruby-rigid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.87714, 0)
 shape = SubResource("ConvexPolygonShape3D_y7tva")
 
 [node name="Item_Gem_Purple" type="Node3D" parent="Island_Spawn/Item_Trash_Group2"]
@@ -574,6 +577,7 @@ size = Vector3(1, 1, 1)
 shape = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Island_Spawn/Item_Trash_Group2/Item_Gem_Purple/Ruby-rigid"]
+transform = Transform3D(1, -2.84217e-14, 0, 2.84217e-14, 1, 0, 0, 0, 1, 0, -1.87714, 0)
 shape = SubResource("ConvexPolygonShape3D_b0etn")
 
 [node name="Item_Gem_White" type="Node3D" parent="Island_Spawn/Item_Trash_Group2"]
@@ -595,4 +599,5 @@ size = Vector3(1, 1, 1)
 shape = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Island_Spawn/Item_Trash_Group2/Item_Gem_White/Ruby-rigid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.87714, 0)
 shape = SubResource("ConvexPolygonShape3D_xrqkp")
