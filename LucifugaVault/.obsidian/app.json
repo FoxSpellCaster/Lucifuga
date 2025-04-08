@@ -7,5 +7,7 @@
     "downscalePercent": 100
   },
   "useMarkdownLinks": true,
-  "newLinkFormat": "relative"
+  "newLinkFormat": "relative",
+  "showLineNumber": false,
+  "readableLineLength": true
 }

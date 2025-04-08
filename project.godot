@@ -16,12 +16,8 @@ In his madness, he crowns his Shadow Princess, Lucifugia.
 A seat of power forsaken—tears stain all that remains."
 config/version="0.7"
 run/main_scene="uid://b5hbtk6hdyibx"
-run/print_header=false
 config/features=PackedStringArray("4.4", "Forward Plus")
-boot_splash/fullsize=false
-boot_splash/use_filter=false
-boot_splash/image="uid://cbf3g340i8oms"
-config/icon="uid://birkh5xpc8c3g"
+config/icon="uid://ba8ygc6xtsg7n"
 
 [autoload]
 
