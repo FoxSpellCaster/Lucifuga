@@ -145,6 +145,7 @@ Dark, elusive, with a mysterious or intangible edge.
 # Voice Chat
 - [ ] Mimic
 - [ ] Proximity
+- [ ] Fade out death audio
 
 # Weapons, Skills, Gadgets
 - [ ] Chips

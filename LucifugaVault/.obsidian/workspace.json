@@ -16,8 +16,8 @@
               "state": {
                 "file": "IDEAS.canvas",
                 "viewState": {
-                  "x": 265.300837322824,
-                  "y": 775.290158674784,
+                  "x": 4234.268207202829,
+                  "y": 505.3594503602387,
                   "zoom": -1.6666666666666667
                 }
               },
@@ -27,7 +27,17 @@
             }
           },
           {
-            "id": "ef7b8747fe7a3aff",
+            "id": "e1d5cd05e2413e10",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          },
+          {
+            "id": "505bd47f47a24e05",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -40,8 +50,7 @@
               "title": "CREDITS"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -190,16 +199,17 @@
       "audio-recorder:Start/stop recording": false
     }
   },
-  "active": "ef7b8747fe7a3aff",
+  "active": "c5c139634b6e852b",
   "lastOpenFiles": [
-    "IDEAS.canvas",
-    "README.md",
     "CREDITS.md",
+    "IDEAS.canvas",
+    "Items/Ingredients/Thread.md",
+    "Items/Ingredients/Plate.md",
+    "Items/Ingredients/Gear.md",
     "Items/Ingredients/Element.md",
     "Items/Ingredients/Aether.md",
-    "Items/Ingredients/Plate.md",
-    "Items/Ingredients/Thread.md",
-    "Items/Ingredients/Gear.md",
+    "Items/Item Rarity Color Palette - color-hex.com.png",
+    "README.md",
     "Items/Ingredients",
     "Items/Tune Crystal.md",
     "Player/Construct Golem Player.md",
@@ -213,7 +223,6 @@
     "Random Ideas/Boom and Bane Mechanic.md",
     "Player/Construct Golem Core.md",
     "Items/Trash.md",
-    "Items/Item Rarity Color Palette - color-hex.com.png",
     "Items/Dark Shard.md",
     "Random Ideas/Bane and Boon.md",
     "Home.md",
