@@ -1,4 +1,8 @@
-### Godot v4.4.1.stable.official
+### GitHub
+[FoxSpellCaster/Lucifuga: "Lucifuga" is pronounced as "loo-chee-FOO-ga."](https://github.com/FoxSpellCaster/Lucifuga)
+
+[GitHub Desktop | Simple collaboration from your desktop](https://github.com/apps/desktop)
+### Godot v4.4.1
 [Godot Engine - Free and open source 2D and 3D game engine](https://godotengine.org/)
 
 [Jolt Physics](https://github.com/jrouwe/JoltPhysics)
@@ -24,6 +28,8 @@
 [Krita | Digital Painting. Creative Freedom.](https://krita.org/en/)
 ### Inkscape
 [Inkscape - Draw Freely. | Inkscape](https://inkscape.org/)
+### Material Maker
+[Material Maker](https://www.materialmaker.org/)
 ### LMMS
 [LMMS | Let's make music with a free, cross-platform tool for your computer.](https://lmms.io/)
 ### OBS
@@ -42,7 +48,7 @@
 ##### Sounds
 [Essentials Series - Free Sound Effect by Nox_Sound_Design](https://nox-sound-design.itch.io/essentials-series-sfx-nox-sound)
 ### AI Assistance
-Explanation on how the AI is only used as assistance with text based operations, lore, syntax, formatting.
+*All AI usage in this project was limited to assistance with text-based operations, including lore development, syntax refinement, and formatting support.*
 
-GROK
-ChatGPT
+[Grok 3 beta](https://x.com/i/grok)
+[ChatGPT - Godot 4 Copilot](https://chatgpt.com/g/g-YlRxZ8nT8-godot-4-copilot)

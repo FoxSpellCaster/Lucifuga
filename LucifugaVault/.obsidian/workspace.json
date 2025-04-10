@@ -16,70 +16,14 @@
               "state": {
                 "file": "IDEAS.canvas",
                 "viewState": {
-                  "x": 766.4869199376772,
-                  "y": 1129.931393190064,
+                  "x": 830.99451478579,
+                  "y": 538.2605304966797,
                   "zoom": -2.333333333333333
                 }
               },
               "pinned": true,
               "icon": "lucide-layout-dashboard",
               "title": "IDEAS"
-            }
-          },
-          {
-            "id": "935b437e127ea7a9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Items/Unified Crafting Components.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Unified Crafting Components"
-            }
-          },
-          {
-            "id": "ccfb998bd5fb1507",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ACKNOWLEDGMENTS.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "ACKNOWLEDGMENTS"
-            }
-          },
-          {
-            "id": "4d0acc853b556789",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "README"
-            }
-          },
-          {
-            "id": "456390022483b8e7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Player/Construct Golem Player.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Construct Golem Player"
             }
           }
         ]
@@ -233,13 +177,13 @@
   },
   "active": "c5c139634b6e852b",
   "lastOpenFiles": [
+    "ACKNOWLEDGMENTS.md",
+    "FUNDING.md",
+    "IDEAS.canvas",
+    "Items/Unified Crafting Components.md",
     "Player/Construct Golem Player.md",
     "Player/Construct Golem Core.md",
-    "IDEAS.canvas",
     "README.md",
-    "FUNDING.md",
-    "Items/Unified Crafting Components.md",
-    "ACKNOWLEDGMENTS.md",
     "Untitled",
     "Images/logo 1.svg",
     "Images/logo.svg",
@@ -269,7 +213,6 @@
     "Items/ToolBox.md",
     "Items/Ruby.md",
     "Items/Item Rarity Color Palette - color-hex.com.png.import",
-    "Items/Dark Shard.md",
     "Items/Ingredients",
     "Daily Notes",
     "Images/Item Rarity Color Palette - color-hex.com.png",
