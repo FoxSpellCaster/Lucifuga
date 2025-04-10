@@ -1,5 +1,3 @@
-Certainly! Here's a basic README template for your repository **"Lucifuga"** written in Markdown:
-
 ```markdown
 # Lucifuga
 
@@ -56,10 +54,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 - Thanks to the [Godot Engine](https://godotengine.org/) community for their fantastic resources.
 - Any other acknowledgments or credits.
-
----
-
-Feel free to expand or customize this README further to best describe your project!
 ``` 
-
-Let me know if you'd like me to adjust this further!
