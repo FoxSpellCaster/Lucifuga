@@ -1,7 +1,10 @@
 ### Godot v4.4.1.stable.official 49a5bc7b6
 [Godot Engine - Free and open source 2D and 3D game engine](https://godotengine.org/)
+
+![Godot Jolt](Images/logo.svg)
 ##### Assets
 [TODO Manager (Godot 4) 2.3.1](https://godotengine.org/asset-library/asset/1327)
+[TerraBrush 0.12.4Alpha](https://godotengine.org/asset-library/asset/2700)
 ### Blender
 [blender.org - Home of the Blender project - Free and Open 3D Creation Software](https://www.blender.org/)
 ##### Plugins
@@ -29,4 +32,8 @@
 [Peaberry Pixel Font by emhuo](https://emhuo.itch.io/peaberry-pixel-font)
 ##### Sounds
 [Essentials Series - Free Sound Effect by Nox_Sound_Design](https://nox-sound-design.itch.io/essentials-series-sfx-nox-sound)
+### AI Assistance
+Explanation on how the AI is only used as assistance with text based operations, lore, syntax, formatting.
 
+GROK
+ChatGPT

@@ -12,7 +12,7 @@
 Scales down and dumps into [[Player/Construct Golem Player#Player Inventory]]
 
 ## Rarity Colors
-![[Item Rarity Color Palette - color-hex.com.png]]
+![[../Images/Item Rarity Color Palette - color-hex.com.png]]
 
 ## Other
 ![[Godot_v4.4.1-stable_win64_ml6vTjdDWS.png]]
