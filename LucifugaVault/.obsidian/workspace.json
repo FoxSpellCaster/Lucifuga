@@ -16,17 +16,46 @@
               "state": {
                 "file": "IDEAS.canvas",
                 "viewState": {
-                  "x": 760,
-                  "y": 835.5,
-                  "zoom": -2.2257009347925645
+                  "x": 3405.0833333333335,
+                  "y": 63.13102114030437,
+                  "zoom": -0.938599455335857
                 }
               },
               "pinned": true,
               "icon": "lucide-layout-dashboard",
               "title": "IDEAS"
             }
+          },
+          {
+            "id": "935b437e127ea7a9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Items/Unified Crafting Components.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Unified Crafting Components"
+            }
+          },
+          {
+            "id": "ccfb998bd5fb1507",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ACKNOWLEDGMENTS.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "ACKNOWLEDGMENTS"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -175,50 +204,50 @@
       "audio-recorder:Start/stop recording": false
     }
   },
-  "active": "c5c139634b6e852b",
+  "active": "ccfb998bd5fb1507",
   "lastOpenFiles": [
+    "FUNDING.md",
     "IDEAS.canvas",
+    "Items/Unified Crafting Components.md",
+    "Random Ideas/Random Plant Idea.md",
+    "TODO.md",
+    "Player/Construct Golem Player.md",
+    "Items/Ingredients/Aether.md",
+    "Player/Construct Golem Core.md",
+    "Items/Ingredients/Element.md",
+    "Items/Ingredients/Gear.md",
+    "Items/Ingredients/Plate.md",
+    "Items/Ingredients/Thread.md",
+    "Land/Island 1/Island 1.md",
+    "Land/Island 1/Island 1 Resources.md",
+    "Images/logo.svg",
+    "Images/Item Rarity Color Palette - color-hex.com.png",
+    "Images/Godot_v4.4.1-stable_win64_ml6vTjdDWS.png",
+    "Images/Godot_v4.4.1-stable_win64_qqFeUK9K9W.png",
+    "ACKNOWLEDGMENTS.md",
+    "README.md",
+    "Images/logo 1.svg",
+    "Untitled",
     "Daily Notes/2025-04-07.md",
     "Daily Notes/2025-04-06.md",
     "Creatures/Mystery Race.md",
-    "Land/Island 1/Island 1 Resources.md",
     "Lore/TitleCard.md",
-    "Images/logo.svg",
     "Seed 2 Green.md",
-    "Land/Island 1/Island 1.md",
-    "CREDITS.md",
     "Images/logo.svg.import",
     "logo.svg.import",
     "Images/fire_particle_S.svg.import",
     "Images/fire_particle_S.svg",
-    "logo.svg",
-    "Items/Ingredients/Thread.md",
-    "Items/Ingredients/Plate.md",
-    "Items/Ingredients/Gear.md",
-    "Items/Ingredients/Element.md",
-    "Items/Ingredients/Aether.md",
-    "Images/Item Rarity Color Palette - color-hex.com.png",
-    "README.md",
     "Items/Ingredients",
     "Items/Tune Crystal.md",
-    "Player/Construct Golem Player.md",
     "Items/Ruby.md",
     "Items/ToolBox.md",
-    "FUNDING.md",
     "Stations/Construct-Golem-Reanimator-Station.md",
     "Stations/Battery-Station.md",
-    "Random Ideas/Ghost or Demo Recording. Especially for debugging.md",
-    "Random Ideas/Boom and Bane Mechanic.md",
-    "Player/Construct Golem Core.md",
-    "Items/Trash.md",
     "FUNDING",
     "Images/Godot_v4.4.1-stable_win64_ml6vTjdDWS.png.import",
     "Items/Item Rarity Color Palette - color-hex.com.png.import",
     "Images/Godot_v4.4.1-stable_win64_qqFeUK9K9W.png.import",
-    "Images/Godot_v4.4.1-stable_win64_ml6vTjdDWS.png",
-    "Images/Godot_v4.4.1-stable_win64_qqFeUK9K9W.png",
     "Images/Godot_v4.4.1-stable_win64_8ctATLZB5L.png",
-    "Player/Godot_v4.4.1-stable_win64_8ctATLZB5L.png.import",
-    "Lore"
+    "Player/Godot_v4.4.1-stable_win64_8ctATLZB5L.png.import"
   ]
 }

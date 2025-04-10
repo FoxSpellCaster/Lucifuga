@@ -1,66 +1,71 @@
 #lore
-
-"Lucifuga" is pronounced as "loo-chee-FOO-ga."
-
 # Lucifuga
 
-Simple overview of use/purpose.
+Lucifuga Banner
 
-## Description
+A dark, atmospheric game built in Godot.
 
-An in-depth paragraph about your project and overview of use.
+Lucifuga is a game project by FoxSpellCaster, designed to immerse players in a dark, atmospheric environment. The name draws inspiration from the Latin roots "luci" (light) and "fuga" (fleeing), reflecting its thematic focus on a light-averse world. Currently in early development, the project is built using Godot 4.4.1.
+## Features
 
-## Getting Started
+- Built with Godot 4.4.1 for lightweight performance.
+- Open for community contributions and feedback.
+## Installation
+To explore or contribute to Lucifuga, follow these steps:
 
-### Dependencies
-
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
-
-### Installing
-
-* How/where to download your program
-* Any modifications needed to be made to files/folders
-
-### Executing program
-
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
+1. Clone the Repository:
+```bash
+git clone https://github.com/FoxSpellCaster/Lucifuga.git
 ```
 
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
+2. Navigate to the Project Directory:
+```bash
+cd Lucifuga
 ```
 
-## Authors
+3. Install Godot 4.4.1
+- Download and install [Godot 4.4.1](https://godotengine.org/download/4.x/) for your platform (Windows, macOS, Linux).
 
-Contributors names and contact info
+4. Open the Project:
+- Launch Godot 4.4.1, click "Import," and select the ==project.godot== file in the repository.
+- Click "Open" to load the project in the editor.
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+5. Run the Project:
+- Press the "Play" button in Godot to test the game in the editor.
+- Alternatively, export the project for your platform via ==Project > Export==.
 
-## Version History
+*Note*: If you encounter issues, check the [Issues](https://github.com/FoxSpellCaster/Lucifuga/issues) tab for known bugs or solutions.
+## Contributing
 
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
+We welcome contributions! To get started:
 
-## License
+1. Fork the repository.
+2. Create a new branch (==git checkout -b feature/your-feature==).
+3. Commit your changes (==git commit -m "Add your feature"==).
+4. Push to your branch (==git push origin feature/your-feature==).
+5. Open a Pull Request.
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+Please read our Contributing Guidelines (CONTRIBUTING.md) for more details.
+## Contact
 
-## Acknowledgments
+- Creator: FoxSpellCaster
+- Twitch: [FoxSpellCaster](https://www.twitch.tv/FoxSpellCaster)
+- YouTube: [FoxSpellCaster](https://www.youtube.com/@FoxSpellCaster)
+- GitHub Issues: Report bugs or suggest features [here](https://github.com/FoxSpellCaster/Lucifuga/issues).
 
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+
+
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
+
+> [!WARNING]
+> Urgent info that needs immediate user attention to avoid problems.
+
+> [!CAUTION]
+> Advises about risks or negative outcomes of certain actions.
