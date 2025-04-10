@@ -1,12 +1,9 @@
-[gd_scene load_steps=7 format=4 uid="uid://m3li1v5imgs0"]
-
-[ext_resource type="Texture2D" uid="uid://6ibcbb2mfjuu" path="res://images/grass_texture.png" id="1_54huv"]
+[gd_scene load_steps=6 format=4 uid="uid://bl5nx6j6jiexs"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uupa2"]
 resource_name = "GrassImage"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("1_54huv")
 roughness = 0.5
 metadata/extras = {
 "yp": {

@@ -72,5 +72,5 @@ offset_bottom = 8.0
 [node name="MarginContainer" type="MarginContainer" parent="SettingsCenterContainer"]
 layout_mode = 2
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Settings" to="SettingsCenterContainer" method="show"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Settings" to="SettingsCenterContainer" method="set_mouse_filter"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Settings" to="SettingsCenterContainer" method="show"]

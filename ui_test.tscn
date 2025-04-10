@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://cursmfths2rf"]
+[gd_scene load_steps=3 format=3 uid="uid://cursmfths2rf"]
 
-[ext_resource type="Theme" uid="uid://c2saum2pkraju" path="res://ui_top_horz.tres" id="1_bbsb6"]
+[ext_resource type="FontFile" uid="uid://ccso2edoeec7x" path="res://assets/fonts/PeaberryBase.ttf" id="1_bbsb6"]
+
+[sub_resource type="Theme" id="Theme_phn2e"]
+default_font = ExtResource("1_bbsb6")
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -37,7 +40,7 @@ layout_mode = 2
 
 [node name="Game" type="PopupMenu" parent="TopColorRect/MarginContainer/HBoxContainer/MenuBar"]
 size = Vector2i(241, 100)
-theme = ExtResource("1_bbsb6")
+theme = SubResource("Theme_phn2e")
 item_count = 1
 item_0/text = "QUIT"
 item_0/id = 0

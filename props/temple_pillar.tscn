@@ -1,12 +1,12 @@
 [gd_scene load_steps=29 format=4 uid="uid://b7wh257kan8qj"]
 
 [ext_resource type="Shader" uid="uid://d3a7pif6ajxph" path="res://shaders/stylized_fire.gdshader" id="1_8dc3d"]
-[ext_resource type="Texture2D" uid="uid://flldwuhtdvhp" path="res://assets/textures/HoleNoise.png" id="2_88wp7"]
-[ext_resource type="Texture2D" uid="uid://bko6oayqcslrd" path="res://assets/textures/FireMask.png" id="3_lvlvw"]
+[ext_resource type="Texture2D" uid="uid://xfq7muddsl53" path="res://assets/textures/HoleNoise.png" id="2_88wp7"]
+[ext_resource type="Texture2D" uid="uid://4wa4an5x18bv" path="res://assets/textures/FireMask.png" id="3_lvlvw"]
 [ext_resource type="Texture2D" uid="uid://xl22pmkk0nsk" path="res://assets/textures/BlueFireGradient.tres" id="4_2o082"]
-[ext_resource type="FontFile" uid="uid://d0d8alv2uhk3b" path="res://assets/fonts/m6x11plus.ttf" id="5_88wp7"]
-[ext_resource type="Texture2D" uid="uid://umm7e546s02d" path="res://assets/images/BlueParticle.png" id="5_i2la1"]
-[ext_resource type="AudioStream" uid="uid://drurufavhrlo6" path="res://assets/sfx/FireSound.ogg" id="6_huy1k"]
+[ext_resource type="FontFile" uid="uid://c32bdprq2rbnp" path="res://assets/fonts/m6x11plus.ttf" id="5_88wp7"]
+[ext_resource type="Texture2D" uid="uid://dbu7botfaiot5" path="res://assets/images/BlueParticle.png" id="5_i2la1"]
+[ext_resource type="AudioStream" uid="uid://cqxtpf7kcwcbl" path="res://assets/sfx/FireSound.ogg" id="6_huy1k"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1jhly"]
 resource_name = "PillarDark"

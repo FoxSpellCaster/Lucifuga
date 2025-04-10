@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://de1eao2jnsfxk"]
 
 [ext_resource type="Script" uid="uid://ctaueltyrvak5" path="res://player/character_body_3d.gd" id="1_4ntmi"]
-[ext_resource type="PackedScene" uid="uid://bi1gykoxrsvjn" path="res://assets/Player_Golem_Rig.blend" id="2_4ntmi"]
+[ext_resource type="PackedScene" uid="uid://c8jademwauey7" path="res://assets/Player_Golem_Rig.blend" id="2_4ntmi"]
 [ext_resource type="PackedScene" uid="uid://cursmfths2rf" path="res://ui_test.tscn" id="3_g1dw6"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_btcbx"]

@@ -1,8 +1,0 @@
-## Clutter
-Glowspire (20 Points) – A short, glowing crystal spike.
-Hexacrest (25 Points) – A hexagonal crystal with a sharp top.
-Drusebit (30 Points) – A small cluster of tiny crystal points.
-Lusterbar (40 Points) – An elongated crystal with a glossy sheen.
-Cubevein (50 Points) – A cubic crystal with faint internal lines.
-
-## 
