@@ -51,4 +51,8 @@
 *All AI usage in this project was limited to assistance with text-based operations, including lore development, syntax refinement, and formatting support.*
 
 [Grok 3 beta](https://x.com/i/grok)
+
 [ChatGPT - Godot 4 Copilot](https://chatgpt.com/g/g-YlRxZ8nT8-godot-4-copilot)
+
+### Learning Materials
+[Godot 4 Game Development Mini-Degree – Zenva Academy](https://academy.zenva.com/product/godot-game-development-mini-degree/)
