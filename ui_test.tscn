@@ -1,7 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://cursmfths2rf"]
+[gd_scene load_steps=7 format=3 uid="uid://cursmfths2rf"]
 
 [ext_resource type="FontFile" uid="uid://ccso2edoeec7x" path="res://assets/fonts/PeaberryBase.ttf" id="1_bbsb6"]
+[ext_resource type="FontFile" uid="uid://c32bdprq2rbnp" path="res://assets/fonts/m6x11plus.ttf" id="2_aw5hp"]
 [ext_resource type="Script" uid="uid://d52p83jkma87" path="res://scripts/steam/steam_avatar.gd" id="2_phn2e"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_aw5hp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_aaiuy"]
+font = ExtResource("2_aw5hp")
 
 [sub_resource type="Theme" id="Theme_phn2e"]
 default_font = ExtResource("1_bbsb6")
@@ -26,6 +32,27 @@ offset_bottom = 324.0
 grow_vertical = 2
 color = Color(0, 0, 0, 0.686275)
 
+[node name="VBoxContainer" type="VBoxContainer" parent="LeftColorRect"]
+custom_minimum_size = Vector2(114, 0)
+layout_mode = 0
+offset_top = 16.0
+offset_right = 114.0
+offset_bottom = 316.0
+
+[node name="SteamAvatar" type="TextureRect" parent="LeftColorRect/VBoxContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = SubResource("PlaceholderTexture2D_aw5hp")
+script = ExtResource("2_phn2e")
+
+[node name="Label" type="Label" parent="LeftColorRect/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "%PlayerName"
+label_settings = SubResource("LabelSettings_aaiuy")
+
 [node name="RightColorRect" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(114, 648)
 layout_mode = 1
@@ -42,6 +69,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0.686275)
 
 [node name="TopColorRect" type="ColorRect" parent="."]
+visible = false
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 1
 anchors_preset = 10
@@ -126,12 +154,3 @@ size_flags_horizontal = 10
 [node name="Label" type="Label" parent="TopColorRect/MarginContainer/HBoxContainer/PanelContainer"]
 layout_mode = 2
 text = " POINTS:  000 "
-
-[node name="SteamAvatar" type="TextureRect" parent="."]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 0
-offset_left = 135.0
-offset_top = 63.0
-offset_right = 175.0
-offset_bottom = 103.0
-script = ExtResource("2_phn2e")

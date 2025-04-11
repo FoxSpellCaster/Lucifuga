@@ -3,7 +3,7 @@ extends Node
 func _init():
 	# Connects to 480 Space War for testing
 	var response : Dictionary = Steam.steamInitEx(480, true)
-	print(response)
+	print("Did Steam initialize?: %s " % response)
 	
 	# returns player's NAME
 	var username : String = Steam.getPersonaName()

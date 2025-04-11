@@ -9,7 +9,7 @@
 | Medium | 3      | Blue   |
 | Large  | 4      | Purple |
 | Large  | 8      | Orange |
-Scales down and dumps into [[Player/Construct Golem Player#Player Inventory]]
+Scales down and dumps into [[../Player/Player#Player Inventory]]
 
 ## Rarity Colors
 ![[../Images/Item Rarity Color Palette - color-hex.com.png]]
