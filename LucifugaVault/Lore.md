@@ -1,5 +1,10 @@
-#lore 
-# Echoes in the Spin
+![](Images/fire%20particle.svg)
+The Knight of Darkness, Yami, guards a hollow throne.
+In his madness, he crowns his Shadow Princess, Lucifugia.
+A seat of power forsaken tears stain all that remains.
+
+# Songs
+## Echoes in the Spin
 Verse 1
 I trace the air with every turn,
 A melody where starlight burns,
@@ -49,7 +54,7 @@ A fleeting sign to find a friend.
 The rhythm weaves where none can see,
 A shadowed wish—will you reach me?
 
-# Welcome to the Construct Hanger (Remastered)
+## Welcome to the Construct Hanger (Remastered)
 Verse 1
 In shadows deep where silence dwells,
 Yami rose, the tales all tell,
@@ -108,7 +113,7 @@ A song of loss, beyond repair.
 The music holds what words can’t say,
 A story drifts, then fades away. 
 
-# will it find its way?
+## will it find its way?
 Verse 1
 I paint the air with golden tones,
 A rhythm born of silent stones,
@@ -156,7 +161,7 @@ A song to guide what none believe.
 The rhythm fades where shadows play,
 A silent wish—will it find its way?
 
-# will you find me? 
+## will you find me? 
 Verse 1
 I thread my voice through silver haze,
 A melody in endless maze,

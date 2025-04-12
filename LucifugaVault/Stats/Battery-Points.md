@@ -3,7 +3,7 @@
 # Harvestable
 Can be harvested from these items
 
-#### [[Trash]]
+#### [[../Trash]]
 
 #### [[Dark Shard]]
 # Chargeable

@@ -3,8 +3,13 @@
 - [ ] Rig Player Golem
 - [ ] Create Mini Golem
 - [ ] Make Wood Cosmetic
+- [ ] Flappy Mouth
+### lsakfj
+- [ ] 
+# creatures
+- [ ] Goofy Salamander AI Model
 # steam
-- [ ] create basic connection script
-- [ ] Get Steam APP ID
+- [x] create basic connection script
+- [ ] Get Steam APP ID (waiting for response)
 # items
 - [ ] Fix Gem Scale

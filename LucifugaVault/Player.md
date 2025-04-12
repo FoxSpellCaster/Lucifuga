@@ -1,7 +1,7 @@
 #player
 
 # ScreenShot
-![](../Images/Godot_v4.4.1-stable_win64_qqFeUK9K9W.png)
+![](Images/player.png)
 # Abilities
 ## Core
 - [ ]  **Run**
