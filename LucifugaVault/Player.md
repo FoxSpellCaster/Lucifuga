@@ -1,7 +1,4 @@
 #player
-
-# ScreenShot
-![](Images/player.png)
 # Abilities
 ## Core
 - [ ]  **Run**
@@ -44,6 +41,20 @@ When the inventory is full the item will tumble out of the player and back into 
 
 [[Trash]] get deposited in the [[../Stations/Battery-Station]]
 
+# Stats
+## Health Points
+## Battery Points
+### Harvestable
+Can be harvested from these items
+
+#### [[../Trash]]
+
+#### [[Dark Shard]]
+### Chargeable
+These item can be charged by Battery Points
+
+## [[Tune Crystal]]
+## Thread Points (Currency?)
 # Cosmetics
 These are only for the fashion
 ## Wood
@@ -133,6 +144,5 @@ Dark, elusive, with a mysterious or intangible edge.
 # Weapons, Skills, Gadgets
 - [ ] Chips
 - [ ] Hands
-- [ ] HandCannon
-# UI
-## FillME
+- [ ] Hand Cannon
+# User Interface
