@@ -16,14 +16,24 @@
               "state": {
                 "file": "IDEAS.canvas",
                 "viewState": {
-                  "x": -50.739901847939194,
-                  "y": 1454.2219939370668,
-                  "zoom": -1.5824580047917505
+                  "x": 916.9496465750619,
+                  "y": 1210.7169627860412,
+                  "zoom": -2.249124671458417
                 }
               },
               "pinned": true,
               "icon": "lucide-layout-dashboard",
               "title": "IDEAS"
+            }
+          },
+          {
+            "id": "dc29eb6ff796223a",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -177,11 +187,11 @@
   },
   "active": "c5c139634b6e852b",
   "lastOpenFiles": [
+    "IDEAS.canvas",
     "Player.md",
     "Creatures.md",
     "CREDITS.md",
     "FUNDING.md",
-    "IDEAS.canvas",
     "Islands.md",
     "Items.md",
     "Lore.md",

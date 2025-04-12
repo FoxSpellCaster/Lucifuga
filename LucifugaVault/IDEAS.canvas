@@ -5,7 +5,7 @@
 		{"id":"93eab7a3a99473f0","type":"group","x":-1840,"y":1560,"width":1720,"height":1320,"color":"4","label":"Land"},
 		{"id":"3f4dfdfd9f7148ce","type":"group","x":-40,"y":560,"width":1400,"height":920,"color":"2","label":"UI"},
 		{"id":"17f5ed5cecd86f12","type":"group","x":-40,"y":1630,"width":1100,"height":460,"color":"6","label":"Lore"},
-		{"id":"38c0b653c2d1af3d","type":"file","file":"Player.md","subpath":"#UI","x":180,"y":622,"width":400,"height":151,"color":"2"},
+		{"id":"38c0b653c2d1af3d","type":"file","file":"Player.md","subpath":"#User Interface","x":180,"y":622,"width":400,"height":151,"color":"2"},
 		{"id":"78cee067c7817bef","type":"file","file":"Player.md","subpath":"#Battery Points","x":460,"y":895,"width":400,"height":531,"color":"2"},
 		{"id":"c9994f25ee6b0e76","type":"file","file":"Player.md","subpath":"#Player Inventory","x":894,"y":895,"width":400,"height":369,"color":"4"},
 		{"id":"225ab7c6f164dd87","type":"file","file":"Lore.md","subpath":"#Songs","x":520,"y":1683,"width":440,"height":348},
@@ -20,7 +20,6 @@
 		{"id":"fdf5dbc44d069fb8","type":"file","file":"Player.md","subpath":"#Cosmetics","x":1000,"y":-527,"width":640,"height":865,"color":"4"},
 		{"id":"3081036e9ff789f2","type":"file","file":"Player.md","subpath":"#Voice Chat","x":1680,"y":-285,"width":400,"height":191,"color":"4"},
 		{"id":"f07d3cbf4bf60171","type":"file","file":"README.md","x":2240,"y":-495,"width":640,"height":2329},
-		{"id":"11f38c69abe6630a","type":"file","file":"TODO.md","x":1640,"y":698,"width":390,"height":678},
 		{"id":"887590b1ffe46d28","type":"file","file":"Items.md","x":-1800,"y":-507,"width":608,"height":347,"subpath":"#Trash"},
 		{"id":"022ade0ea7314e28","type":"file","file":"CREDITS.md","x":2960,"y":-495,"width":680,"height":2255},
 		{"id":"63a055da758184be","type":"file","file":"Items.md","subpath":"#Vertex Shard","x":-1505,"y":1650,"width":400,"height":267},
@@ -31,7 +30,8 @@
 		{"id":"ae5c94b6aec752af","type":"file","file":"Islands.md","x":-999,"y":2031,"width":250,"height":197,"color":"4","subpath":"#Island (Forest)"},
 		{"id":"58a18e7f6eac9ca5","x":-1760,"y":644,"width":400,"height":400,"type":"file","file":"Player.md"},
 		{"id":"de04924590f89a17","x":-596,"y":644,"width":400,"height":400,"type":"file","file":"Stations.md"},
-		{"id":"12e0cbb2054df966","type":"file","file":"Stations.md","subpath":"#Battery / Power","x":-978,"y":-40,"width":420,"height":137,"color":"1"}
+		{"id":"12e0cbb2054df966","type":"file","file":"Stations.md","subpath":"#Battery / Power","x":-978,"y":-40,"width":420,"height":137,"color":"1"},
+		{"id":"11f38c69abe6630a","type":"file","file":"TODO.md","x":1640,"y":700,"width":390,"height":678}
 	],
 	"edges":[
 		{"id":"51d36844e52c184a","fromNode":"770b82087666fe08","fromSide":"bottom","toNode":"12e0cbb2054df966","toSide":"top"},

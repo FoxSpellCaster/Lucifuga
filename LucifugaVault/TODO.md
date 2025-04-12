@@ -4,8 +4,6 @@
 - [ ] Create Mini Golem
 - [ ] Make Wood Cosmetic
 - [ ] Flappy Mouth
-### lsakfj
-- [ ] 
 # creatures
 - [ ] Goofy Salamander AI Model
 # steam
