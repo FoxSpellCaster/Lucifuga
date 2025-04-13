@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ds0h080e51l1p" path="res://assets/Prop_Rock.blend" id="11_ptepl"]
 [ext_resource type="AudioStream" uid="uid://cwot3xghq7fn0" path="res://assets/sfx/ambient_wind.ogg" id="11_ulqxx"]
 [ext_resource type="PackedScene" uid="uid://de51uhu5rpcsl" path="res://props/prop_crown.tscn" id="12_8f2nx"]
-[ext_resource type="PackedScene" uid="uid://bhp1bcvhj2md5" path="res://spawn_enviroment.tscn" id="12_ulqxx"]
+[ext_resource type="PackedScene" uid="uid://bhp1bcvhj2md5" path="res://scenes/spawn_enviroment.tscn" id="12_ulqxx"]
 [ext_resource type="PackedScene" uid="uid://c8jademwauey7" path="res://assets/Player_Golem_Rig.blend" id="16_2fdwt"]
 [ext_resource type="PackedScene" uid="uid://dlxc72xs26wj8" path="res://assets/Prop_Barrel.blend" id="16_p5ah2"]
 [ext_resource type="PackedScene" uid="uid://c5rp53055885o" path="res://assets/Prop_Bomb.blend" id="17_0bect"]

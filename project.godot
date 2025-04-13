@@ -25,9 +25,8 @@ SteamController="*res://scripts/steam/steam_controller.gd"
 
 [display]
 
-window/size/initial_position_type=4
-window/size/resizable=false
-window/stretch/mode="viewport"
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 
 [dotnet]
 
