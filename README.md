@@ -1,4 +1,3 @@
-#lore
 # Lucifuga
 
 Lucifuga Banner
@@ -52,20 +51,3 @@ Please read our Contributing Guidelines (CONTRIBUTING.md) for more details.
 - Twitch: [FoxSpellCaster](https://www.twitch.tv/FoxSpellCaster)
 - YouTube: [FoxSpellCaster](https://www.youtube.com/@FoxSpellCaster)
 - GitHub Issues: Report bugs or suggest features [here](https://github.com/FoxSpellCaster/Lucifuga/issues).
-
-
-
-> [!NOTE]
-> Useful information that users should know, even when skimming content.
-
-> [!TIP]
-> Helpful advice for doing things better or more easily.
-
-> [!IMPORTANT]
-> Key information users need to know to achieve their goal.
-
-> [!WARNING]
-> Urgent info that needs immediate user attention to avoid problems.
-
-> [!CAUTION]
-> Advises about risks or negative outcomes of certain actions.
