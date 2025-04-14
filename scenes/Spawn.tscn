@@ -1,20 +1,16 @@
-[gd_scene load_steps=42 format=4 uid="uid://b5hbtk6hdyibx"]
+[gd_scene load_steps=18 format=3 uid="uid://b5hbtk6hdyibx"]
 
+[ext_resource type="LightmapGIData" uid="uid://csvjckfidtahs" path="res://scenes/Spawn.lmbake" id="1_6pvjs"]
 [ext_resource type="PackedScene" uid="uid://de1eao2jnsfxk" path="res://player/player.tscn" id="1_ptqup"]
 [ext_resource type="Shader" uid="uid://dndyugn7jitow" path="res://shaders/sky_box.gdshader" id="2_apglo"]
-[ext_resource type="PackedScene" uid="uid://cm2pairlmqd8n" path="res://assets/Island_Spawn.blend" id="3_3yy1u"]
-[ext_resource type="FontFile" uid="uid://c32bdprq2rbnp" path="res://assets/fonts/m6x11plus.ttf" id="6_mxnfm"]
-[ext_resource type="PackedScene" uid="uid://hh6uyrjqtmhm" path="res://props/prop_dark_shard.tscn" id="7_apglo"]
+[ext_resource type="PackedScene" uid="uid://b3pakgo4tgcyt" path="res://assets/Contruct_Temple.blend" id="3_3yy1u"]
 [ext_resource type="PackedScene" uid="uid://b7wh257kan8qj" path="res://props/temple_pillar.tscn" id="9_ar3th"]
-[ext_resource type="PackedScene" uid="uid://ds0h080e51l1p" path="res://assets/Prop_Rock.blend" id="11_ptepl"]
-[ext_resource type="AudioStream" uid="uid://cwot3xghq7fn0" path="res://assets/sfx/ambient_wind.ogg" id="11_ulqxx"]
-[ext_resource type="PackedScene" uid="uid://de51uhu5rpcsl" path="res://props/prop_crown.tscn" id="12_8f2nx"]
+[ext_resource type="PackedScene" uid="uid://ds0h080e51l1p" path="res://assets/Enviroment_Rock.blend" id="11_ptepl"]
 [ext_resource type="PackedScene" uid="uid://bhp1bcvhj2md5" path="res://scenes/spawn_enviroment.tscn" id="12_ulqxx"]
+[ext_resource type="PackedScene" uid="uid://djeh4ih26prk1" path="res://assets/Land_GroundHex.blend" id="13_lf0fo"]
+[ext_resource type="PackedScene" uid="uid://cwh1msyi3klts" path="res://item_trash_gem.tscn" id="14_27nms"]
 [ext_resource type="PackedScene" uid="uid://c8jademwauey7" path="res://assets/Player_Golem_Rig.blend" id="16_2fdwt"]
 [ext_resource type="PackedScene" uid="uid://dlxc72xs26wj8" path="res://assets/Prop_Barrel.blend" id="16_p5ah2"]
-[ext_resource type="PackedScene" uid="uid://c5rp53055885o" path="res://assets/Prop_Bomb.blend" id="17_0bect"]
-[ext_resource type="PackedScene" uid="uid://cs4t07kxktbms" path="res://assets/Prop_Toolbox.blend" id="18_3vfng"]
-[ext_resource type="PackedScene" uid="uid://dilnoehehth75" path="res://assets/Prop_Yellow_Box.blend" id="19_rhf24"]
 [ext_resource type="PackedScene" uid="uid://stt8tabvvvnk" path="res://assets/Temple_FloorTile_Thin.blend" id="20_q8i8p"]
 [ext_resource type="PackedScene" uid="uid://brojcku7qsy0x" path="res://assets/Temple_Wall_Thin.blend" id="21_orj0l"]
 [ext_resource type="PackedScene" uid="uid://ehkm4ml4u0pb" path="res://assets/Enviroment_Grass.blend" id="21_ulqxx"]
@@ -37,252 +33,22 @@ volumetric_fog_enabled = true
 volumetric_fog_density = 0.1
 volumetric_fog_sky_affect = 0.5
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cs2ic"]
-resource_name = "GemWhite"
-transparency = 4
-cull_mode = 2
-albedo_color = Color(0, 0.439216, 0.866667, 0.75)
-roughness = 0.5
-metadata/extras = {
-"yp": {
-"active_ypaint_node": ""
-}
-}
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_py24o"]
-_surfaces = [{
-"aabb": AABB(-0.974928, -1.43069, -1, 1.94986, 1.87714, 1.90097),
-"format": 34896613377,
-"index_count": 78,
-"index_data": PackedByteArray("CgAEAAIACAAEAAoACwAEAAgACwABAAQABAABAAIABwABAAsACAAHAAsABwAMAAEAAQAMAAIADQAMAAcACAAKAA4ADQAGAAwADAAGAAIABwAJAA0ACQAGAA0ACAAJAAcABgADAAIACQADAAYAAAAKAAIAAwAAAAIADgAKAAAABQADAAkACQAIAAUABQAAAAMABQAIAA4ADgAAAAUA"),
-"lods": [0.351706, PackedByteArray("BAABAAIAAQAGAAIABwAGAAEABwABAAQAAAAEAAIACAAHAAQAAwAAAAIABgADAAIABQAEAAAACAAEAAUABQAAAAMACAAJAAcACQAIAAUABwAJAAYABQADAAkACQADAAYA"), 0.639129, PackedByteArray("BAABAAIAAQADAAIAAAAEAAIAAwAAAAIABAAFAAEAAQAFAAMABQAEAAAABQAAAAMA"), 0.693829, PackedByteArray("AAABAAIAAQADAAIAAwAAAAIAAQAAAAMA")],
-"name": "GemWhite",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 15,
-"vertex_data": PackedByteArray("WhlnPbQyAAD//7w6oaQAAP9///+qhgAAAABnPaGkAACk5rw6tDIAAPo7AAAGTwAACEdnPf//AAC/pQAAEdcAAATEAAAGTwAALSsAAIWaAAD/f7w6AAAAANHUAACFmgAA9rhnPf//AABAWgAAEdcAAP9/AABtLQAA")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_yo3ct"]
-resource_name = "Item_Gem_Blue_Cone"
-_surfaces = [{
-"aabb": AABB(-0.974928, -1.43069, -1, 1.94986, 1.87714, 1.90097),
-"attribute_data": PackedByteArray("9g+wmeV7q83/P/+/GQSrzf8//7//P/+/5furzfaPsJkZhKvNCHCwmSqgnKYI8LCZVyVa99PfnKap0a3kVqVa906YDsn/P46CCHCwmeV7q83/P/+/qFpa9/8//7+oWlr3VyVa9/8//7//v0iXqdGt5FWureSw5w7JGQSrzfYPsJn/P46C/z//v9PfnKb/v46C/79Il7DnDskI8LCZ09+cpuX7q82p0a3ksOcOyafaWvdVrq3kp9pa906YDslWpVr3Va6t5CqgnKYZhKvNTpgOyfaPsJn/v0iXKqCcpv+/joI="),
-"format": 34896613399,
-"index_count": 78,
-"index_data": PackedByteArray("EQAJAAIAEgATABQAAQAVABYAFwAMAAQAGAADABkACgANABoAEAANAAoADQAQABsAGwAQABwADQAbAB0AHgAfAAUAAAAgACEAIgAjACQAIgALACMAJQAmACcAJQAoACYAKQAGACoAKQArAAYALAAtAA4ALAAPAC0ALgAvADAALgAIAC8AMQAyADMAMQA0ADIANQAHADYANQA3AAcA"),
-"lods": [0.351706, PackedByteArray("CQABAAIAAAAJAAIAAwAAAAUADAADAAQAAQAMAAQADQAOAAsADgAGAAsADgAPAAYADQALAAoACgALAAcACgAHAAgAEAANAAoADQAQAA4ACgAIABAADgAQAA8AEAAIAA8A"), 0.639129, PackedByteArray("CQABAAIAAAAJAAIAAQADAAQAAwAAAAUABgAKAAgACgAHAAgACwAKAAYACgALAAcA"), 0.693829, PackedByteArray("AAABAAIAAQADAAQAAwAAAAUABgAHAAgA")],
-"material": SubResource("StandardMaterial3D_cs2ic"),
-"name": "GemWhite",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 56,
-"vertex_data": PackedByteArray("WhlnPbQy+uT//7w6oaR8tv9///+qhtTkAABnPaGk+7X/f///qobxlv9///+qhpfP//+8OqGk6kpaGWc9tDLkHAAAZz2hpHZKpOa8OrQy1OT6OwAABk//P6TmvDq0MhgdCEdnPf//8ZYExAAABk//P7+lAAAR185nCEdnPf//zmctKwAAhZr/P/9/vDoAANTkpOa8OrQytc///7w6oaS1z/9///+qhrXP9rhnPf//fLb/f///qoZ8tva4Zz3///GWCEdnPf//+7X/f///qob7tf9/AABtLf8/v6UAABHX/z9AWgAAEdf/P9HUAACFmv8/AABnPaGkl89aGWc9tDKXz/9/vDoAAPrk/3///6qG+uQExAAABk8YHf9/vDoAABgd/38AAG0tGB3R1AAAhZpiMaTmvDq0MmIxBMQAAAZPYjH//7w6oaRiMb+lAAAR1+RK0dQAAIWa/Ur2uGc9///WSkBaAAAR185n9rhnPf//zmctKwAAhZp2SghHZz3//3ZKQFoAABHXdkr6OwAABk/9MAAAZz2hpP0wLSsAAIWa/TBaGWc9tDL9MP9/AABtLeQc+jsAAAZP5Rz/f7w6AADjHHDkh6WptpZlmNneY9LlNsn///9/E93Hv5kZ9jgCJaqalEfSmZjZ3mMAAP9//BnhW////38AAP9/AAD/fwAA/38AAP9/mNneY/2/8Vz9v/Fc/b/xXKm2lmWptpZl////f9LlNsnS5TbJAAD/fwAA/38AAP9/AAD/fxPdx78T3ce/cOSHpXDkh6X8GeFb/BnhW/wZ4VvEISFCxCEhQsQhIULEISFCkBn2OLYZ+Th8GfQ4AAD/fwAA/3+UR9KZlEfSmZRH0pmmPjyipj48oqY+PKKmPjyiACWnmgYlspr9JKGa")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_py24o")
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_apses"]
-points = PackedVector3Array(-5.96046e-08, -1.00017, -1, -5.96046e-08, -1.43069, -0.662827, -0.518193, -1.43069, -0.413297, -0.781965, -0.98051, -0.623565, -5.96046e-08, 0.446458, -1.90139e-05, 0.781775, -1.00017, -0.623565, 0.518002, -1.43069, -0.413297, -0.646071, -1.43069, 0.147354, -0.974928, -0.98051, 0.222344, 0.433831, -0.98051, 0.900969, 0.974928, -1.00017, 0.222344, -0.434022, -0.98051, 0.900969, 0.64588, -1.43069, 0.147354, -0.28763, -1.43069, 0.596918, 0.28744, -1.43069, 0.596918)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3ny04"]
-resource_name = "GemWhite"
-transparency = 4
-cull_mode = 2
-albedo_color = Color(0.117642, 1, 0, 0.75)
-roughness = 0.5
-metadata/extras = {
-"yp": {
-"active_ypaint_node": ""
-}
-}
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_r1bej"]
-_surfaces = [{
-"aabb": AABB(-0.974928, -1.43069, -1, 1.94986, 1.87714, 1.90097),
-"format": 34896613377,
-"index_count": 78,
-"index_data": PackedByteArray("CgAEAAIACAAEAAoACwAEAAgACwABAAQABAABAAIABwABAAsACAAHAAsABwAMAAEAAQAMAAIADQAMAAcACAAKAA4ADQAGAAwADAAGAAIABwAJAA0ACQAGAA0ACAAJAAcABgADAAIACQADAAYAAAAKAAIAAwAAAAIADgAKAAAABQADAAkACQAIAAUABQAAAAMABQAIAA4ADgAAAAUA"),
-"lods": [0.351706, PackedByteArray("BAABAAIAAQAGAAIABwAGAAEABwABAAQAAAAEAAIACAAHAAQAAwAAAAIABgADAAIABQAEAAAACAAEAAUABQAAAAMACAAJAAcACQAIAAUABwAJAAYABQADAAkACQADAAYA"), 0.639129, PackedByteArray("BAABAAIAAQADAAIAAAAEAAIAAwAAAAIABAAFAAEAAQAFAAMABQAEAAAABQAAAAMA"), 0.693829, PackedByteArray("AAABAAIAAQADAAIAAwAAAAIAAQAAAAMA")],
-"name": "GemWhite",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 15,
-"vertex_data": PackedByteArray("WhlnPbQyAAD//7w6oaQAAP9///+qhgAAAABnPaGkAACk5rw6tDIAAPo7AAAGTwAACEdnPf//AAC/pQAAEdcAAATEAAAGTwAALSsAAIWaAAD/f7w6AAAAANHUAACFmgAA9rhnPf//AABAWgAAEdcAAP9/AABtLQAA")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_3gydo"]
-resource_name = "Item_Gem_Green_Cone"
-_surfaces = [{
-"aabb": AABB(-0.974928, -1.43069, -1, 1.94986, 1.87714, 1.90097),
-"attribute_data": PackedByteArray("9g+wmeV7q83/P/+/GQSrzf8//7//P/+/5furzfaPsJkZhKvNCHCwmSqgnKYI8LCZVyVa99PfnKap0a3kVqVa906YDsn/P46CCHCwmeV7q83/P/+/qFpa9/8//7+oWlr3VyVa9/8//7//v0iXqdGt5FWureSw5w7JGQSrzfYPsJn/P46C/z//v9PfnKb/v46C/79Il7DnDskI8LCZ09+cpuX7q82p0a3ksOcOyafaWvdVrq3kp9pa906YDslWpVr3Va6t5CqgnKYZhKvNTpgOyfaPsJn/v0iXKqCcpv+/joI="),
-"format": 34896613399,
-"index_count": 78,
-"index_data": PackedByteArray("EQAJAAIAEgATABQAAQAVABYAFwAMAAQAGAADABkACgANABoAEAANAAoADQAQABsAGwAQABwADQAbAB0AHgAfAAUAAAAgACEAIgAjACQAIgALACMAJQAmACcAJQAoACYAKQAGACoAKQArAAYALAAtAA4ALAAPAC0ALgAvADAALgAIAC8AMQAyADMAMQA0ADIANQAHADYANQA3AAcA"),
-"lods": [0.351706, PackedByteArray("CQABAAIAAAAJAAIAAwAAAAUADAADAAQAAQAMAAQADQAOAAsADgAGAAsADgAPAAYADQALAAoACgALAAcACgAHAAgAEAANAAoADQAQAA4ACgAIABAADgAQAA8AEAAIAA8A"), 0.639129, PackedByteArray("CQABAAIAAAAJAAIAAQADAAQAAwAAAAUABgAKAAgACgAHAAgACwAKAAYACgALAAcA"), 0.693829, PackedByteArray("AAABAAIAAQADAAQAAwAAAAUABgAHAAgA")],
-"material": SubResource("StandardMaterial3D_3ny04"),
-"name": "GemWhite",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 56,
-"vertex_data": PackedByteArray("WhlnPbQy+uT//7w6oaR8tv9///+qhtTkAABnPaGk+7X/f///qobxlv9///+qhpfP//+8OqGk6kpaGWc9tDLkHAAAZz2hpHZKpOa8OrQy1OT6OwAABk//P6TmvDq0MhgdCEdnPf//8ZYExAAABk//P7+lAAAR185nCEdnPf//zmctKwAAhZr/P/9/vDoAANTkpOa8OrQytc///7w6oaS1z/9///+qhrXP9rhnPf//fLb/f///qoZ8tva4Zz3///GWCEdnPf//+7X/f///qob7tf9/AABtLf8/v6UAABHX/z9AWgAAEdf/P9HUAACFmv8/AABnPaGkl89aGWc9tDKXz/9/vDoAAPrk/3///6qG+uQExAAABk8YHf9/vDoAABgd/38AAG0tGB3R1AAAhZpiMaTmvDq0MmIxBMQAAAZPYjH//7w6oaRiMb+lAAAR1+RK0dQAAIWa/Ur2uGc9///WSkBaAAAR185n9rhnPf//zmctKwAAhZp2SghHZz3//3ZKQFoAABHXdkr6OwAABk/9MAAAZz2hpP0wLSsAAIWa/TBaGWc9tDL9MP9/AABtLeQc+jsAAAZP5Rz/f7w6AADjHHDkh6WptpZlmNneY9LlNsn///9/E93Hv5kZ9jgCJaqalEfSmZjZ3mMAAP9//BnhW////38AAP9/AAD/fwAA/38AAP9/mNneY/2/8Vz9v/Fc/b/xXKm2lmWptpZl////f9LlNsnS5TbJAAD/fwAA/38AAP9/AAD/fxPdx78T3ce/cOSHpXDkh6X8GeFb/BnhW/wZ4VvEISFCxCEhQsQhIULEISFCkBn2OLYZ+Th8GfQ4AAD/fwAA/3+UR9KZlEfSmZRH0pmmPjyipj48oqY+PKKmPjyiACWnmgYlspr9JKGa")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_r1bej")
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_davgr"]
-points = PackedVector3Array(-5.96046e-08, -1.00017, -1, -5.96046e-08, -1.43069, -0.662827, -0.518193, -1.43069, -0.413297, -0.781965, -0.98051, -0.623565, -5.96046e-08, 0.446458, -1.90139e-05, 0.781775, -1.00017, -0.623565, 0.518002, -1.43069, -0.413297, -0.646071, -1.43069, 0.147354, -0.974928, -0.98051, 0.222344, 0.433831, -0.98051, 0.900969, 0.974928, -1.00017, 0.222344, -0.434022, -0.98051, 0.900969, 0.64588, -1.43069, 0.147354, -0.28763, -1.43069, 0.596918, 0.28744, -1.43069, 0.596918)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qxg2o"]
-resource_name = "GemWhite"
-transparency = 4
-cull_mode = 2
-albedo_color = Color(0.999998, 0.501961, 8.8809e-07, 0.75)
-roughness = 0.5
-metadata/extras = {
-"yp": {
-"active_ypaint_node": ""
-}
-}
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_2l4qb"]
-_surfaces = [{
-"aabb": AABB(-0.974928, -1.43069, -1, 1.94986, 1.87714, 1.90097),
-"format": 34896613377,
-"index_count": 78,
-"index_data": PackedByteArray("CgAEAAIACAAEAAoACwAEAAgACwABAAQABAABAAIABwABAAsACAAHAAsABwAMAAEAAQAMAAIADQAMAAcACAAKAA4ADQAGAAwADAAGAAIABwAJAA0ACQAGAA0ACAAJAAcABgADAAIACQADAAYAAAAKAAIAAwAAAAIADgAKAAAABQADAAkACQAIAAUABQAAAAMABQAIAA4ADgAAAAUA"),
-"lods": [0.351706, PackedByteArray("BAABAAIAAQAGAAIABwAGAAEABwABAAQAAAAEAAIACAAHAAQAAwAAAAIABgADAAIABQAEAAAACAAEAAUABQAAAAMACAAJAAcACQAIAAUABwAJAAYABQADAAkACQADAAYA"), 0.639129, PackedByteArray("BAABAAIAAQADAAIAAAAEAAIAAwAAAAIABAAFAAEAAQAFAAMABQAEAAAABQAAAAMA"), 0.693829, PackedByteArray("AAABAAIAAQADAAIAAwAAAAIAAQAAAAMA")],
-"name": "GemWhite",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 15,
-"vertex_data": PackedByteArray("WhlnPbQyAAD//7w6oaQAAP9///+qhgAAAABnPaGkAACk5rw6tDIAAPo7AAAGTwAACEdnPf//AAC/pQAAEdcAAATEAAAGTwAALSsAAIWaAAD/f7w6AAAAANHUAACFmgAA9rhnPf//AABAWgAAEdcAAP9/AABtLQAA")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_bl3g0"]
-resource_name = "Item_Gem_Orange_Cone"
-_surfaces = [{
-"aabb": AABB(-0.974928, -1.43069, -1, 1.94986, 1.87714, 1.90097),
-"attribute_data": PackedByteArray("9g+wmeV7q83/P/+/GQSrzf8//7//P/+/5furzfaPsJkZhKvNCHCwmSqgnKYI8LCZVyVa99PfnKap0a3kVqVa906YDsn/P46CCHCwmeV7q83/P/+/qFpa9/8//7+oWlr3VyVa9/8//7//v0iXqdGt5FWureSw5w7JGQSrzfYPsJn/P46C/z//v9PfnKb/v46C/79Il7DnDskI8LCZ09+cpuX7q82p0a3ksOcOyafaWvdVrq3kp9pa906YDslWpVr3Va6t5CqgnKYZhKvNTpgOyfaPsJn/v0iXKqCcpv+/joI="),
-"format": 34896613399,
-"index_count": 78,
-"index_data": PackedByteArray("EQAJAAIAEgATABQAAQAVABYAFwAMAAQAGAADABkACgANABoAEAANAAoADQAQABsAGwAQABwADQAbAB0AHgAfAAUAAAAgACEAIgAjACQAIgALACMAJQAmACcAJQAoACYAKQAGACoAKQArAAYALAAtAA4ALAAPAC0ALgAvADAALgAIAC8AMQAyADMAMQA0ADIANQAHADYANQA3AAcA"),
-"lods": [0.351706, PackedByteArray("CQABAAIAAAAJAAIAAwAAAAUADAADAAQAAQAMAAQADQAOAAsADgAGAAsADgAPAAYADQALAAoACgALAAcACgAHAAgAEAANAAoADQAQAA4ACgAIABAADgAQAA8AEAAIAA8A"), 0.639129, PackedByteArray("CQABAAIAAAAJAAIAAQADAAQAAwAAAAUABgAKAAgACgAHAAgACwAKAAYACgALAAcA"), 0.693829, PackedByteArray("AAABAAIAAQADAAQAAwAAAAUABgAHAAgA")],
-"material": SubResource("StandardMaterial3D_qxg2o"),
-"name": "GemWhite",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 56,
-"vertex_data": PackedByteArray("WhlnPbQy+uT//7w6oaR8tv9///+qhtTkAABnPaGk+7X/f///qobxlv9///+qhpfP//+8OqGk6kpaGWc9tDLkHAAAZz2hpHZKpOa8OrQy1OT6OwAABk//P6TmvDq0MhgdCEdnPf//8ZYExAAABk//P7+lAAAR185nCEdnPf//zmctKwAAhZr/P/9/vDoAANTkpOa8OrQytc///7w6oaS1z/9///+qhrXP9rhnPf//fLb/f///qoZ8tva4Zz3///GWCEdnPf//+7X/f///qob7tf9/AABtLf8/v6UAABHX/z9AWgAAEdf/P9HUAACFmv8/AABnPaGkl89aGWc9tDKXz/9/vDoAAPrk/3///6qG+uQExAAABk8YHf9/vDoAABgd/38AAG0tGB3R1AAAhZpiMaTmvDq0MmIxBMQAAAZPYjH//7w6oaRiMb+lAAAR1+RK0dQAAIWa/Ur2uGc9///WSkBaAAAR185n9rhnPf//zmctKwAAhZp2SghHZz3//3ZKQFoAABHXdkr6OwAABk/9MAAAZz2hpP0wLSsAAIWa/TBaGWc9tDL9MP9/AABtLeQc+jsAAAZP5Rz/f7w6AADjHHDkh6WptpZlmNneY9LlNsn///9/E93Hv5kZ9jgCJaqalEfSmZjZ3mMAAP9//BnhW////38AAP9/AAD/fwAA/38AAP9/mNneY/2/8Vz9v/Fc/b/xXKm2lmWptpZl////f9LlNsnS5TbJAAD/fwAA/38AAP9/AAD/fxPdx78T3ce/cOSHpXDkh6X8GeFb/BnhW/wZ4VvEISFCxCEhQsQhIULEISFCkBn2OLYZ+Th8GfQ4AAD/fwAA/3+UR9KZlEfSmZRH0pmmPjyipj48oqY+PKKmPjyiACWnmgYlspr9JKGa")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_2l4qb")
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_y7tva"]
-points = PackedVector3Array(-5.96046e-08, -1.00017, -1, -5.96046e-08, -1.43069, -0.662827, -0.518193, -1.43069, -0.413297, -0.781965, -0.98051, -0.623565, -5.96046e-08, 0.446458, -1.90139e-05, 0.781775, -1.00017, -0.623565, 0.518002, -1.43069, -0.413297, -0.646071, -1.43069, 0.147354, -0.974928, -0.98051, 0.222344, 0.433831, -0.98051, 0.900969, 0.974928, -1.00017, 0.222344, -0.434022, -0.98051, 0.900969, 0.64588, -1.43069, 0.147354, -0.28763, -1.43069, 0.596918, 0.28744, -1.43069, 0.596918)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bt2fv"]
-resource_name = "GemWhite"
-transparency = 4
-cull_mode = 2
-albedo_color = Color(0.639214, 0.207842, 0.933333, 0.75)
-roughness = 0.5
-metadata/extras = {
-"yp": {
-"active_ypaint_node": ""
-}
-}
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_c0v8v"]
-_surfaces = [{
-"aabb": AABB(-0.974928, -1.43069, -1, 1.94986, 1.87714, 1.90097),
-"format": 34896613377,
-"index_count": 78,
-"index_data": PackedByteArray("CgAEAAIACAAEAAoACwAEAAgACwABAAQABAABAAIABwABAAsACAAHAAsABwAMAAEAAQAMAAIADQAMAAcACAAKAA4ADQAGAAwADAAGAAIABwAJAA0ACQAGAA0ACAAJAAcABgADAAIACQADAAYAAAAKAAIAAwAAAAIADgAKAAAABQADAAkACQAIAAUABQAAAAMABQAIAA4ADgAAAAUA"),
-"lods": [0.351706, PackedByteArray("BAABAAIAAQAGAAIABwAGAAEABwABAAQAAAAEAAIACAAHAAQAAwAAAAIABgADAAIABQAEAAAACAAEAAUABQAAAAMACAAJAAcACQAIAAUABwAJAAYABQADAAkACQADAAYA"), 0.639129, PackedByteArray("BAABAAIAAQADAAIAAAAEAAIAAwAAAAIABAAFAAEAAQAFAAMABQAEAAAABQAAAAMA"), 0.693829, PackedByteArray("AAABAAIAAQADAAIAAwAAAAIAAQAAAAMA")],
-"name": "GemWhite",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 15,
-"vertex_data": PackedByteArray("WhlnPbQyAAD//7w6oaQAAP9///+qhgAAAABnPaGkAACk5rw6tDIAAPo7AAAGTwAACEdnPf//AAC/pQAAEdcAAATEAAAGTwAALSsAAIWaAAD/f7w6AAAAANHUAACFmgAA9rhnPf//AABAWgAAEdcAAP9/AABtLQAA")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_8dxdw"]
-resource_name = "Item_Gem_Purple_Cone"
-_surfaces = [{
-"aabb": AABB(-0.974928, -1.43069, -1, 1.94986, 1.87714, 1.90097),
-"attribute_data": PackedByteArray("9g+wmeV7q83/P/+/GQSrzf8//7//P/+/5furzfaPsJkZhKvNCHCwmSqgnKYI8LCZVyVa99PfnKap0a3kVqVa906YDsn/P46CCHCwmeV7q83/P/+/qFpa9/8//7+oWlr3VyVa9/8//7//v0iXqdGt5FWureSw5w7JGQSrzfYPsJn/P46C/z//v9PfnKb/v46C/79Il7DnDskI8LCZ09+cpuX7q82p0a3ksOcOyafaWvdVrq3kp9pa906YDslWpVr3Va6t5CqgnKYZhKvNTpgOyfaPsJn/v0iXKqCcpv+/joI="),
-"format": 34896613399,
-"index_count": 78,
-"index_data": PackedByteArray("EQAJAAIAEgATABQAAQAVABYAFwAMAAQAGAADABkACgANABoAEAANAAoADQAQABsAGwAQABwADQAbAB0AHgAfAAUAAAAgACEAIgAjACQAIgALACMAJQAmACcAJQAoACYAKQAGACoAKQArAAYALAAtAA4ALAAPAC0ALgAvADAALgAIAC8AMQAyADMAMQA0ADIANQAHADYANQA3AAcA"),
-"lods": [0.351706, PackedByteArray("CQABAAIAAAAJAAIAAwAAAAUADAADAAQAAQAMAAQADQAOAAsADgAGAAsADgAPAAYADQALAAoACgALAAcACgAHAAgAEAANAAoADQAQAA4ACgAIABAADgAQAA8AEAAIAA8A"), 0.639129, PackedByteArray("CQABAAIAAAAJAAIAAQADAAQAAwAAAAUABgAKAAgACgAHAAgACwAKAAYACgALAAcA"), 0.693829, PackedByteArray("AAABAAIAAQADAAQAAwAAAAUABgAHAAgA")],
-"material": SubResource("StandardMaterial3D_bt2fv"),
-"name": "GemWhite",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 56,
-"vertex_data": PackedByteArray("WhlnPbQy+uT//7w6oaR8tv9///+qhtTkAABnPaGk+7X/f///qobxlv9///+qhpfP//+8OqGk6kpaGWc9tDLkHAAAZz2hpHZKpOa8OrQy1OT6OwAABk//P6TmvDq0MhgdCEdnPf//8ZYExAAABk//P7+lAAAR185nCEdnPf//zmctKwAAhZr/P/9/vDoAANTkpOa8OrQytc///7w6oaS1z/9///+qhrXP9rhnPf//fLb/f///qoZ8tva4Zz3///GWCEdnPf//+7X/f///qob7tf9/AABtLf8/v6UAABHX/z9AWgAAEdf/P9HUAACFmv8/AABnPaGkl89aGWc9tDKXz/9/vDoAAPrk/3///6qG+uQExAAABk8YHf9/vDoAABgd/38AAG0tGB3R1AAAhZpiMaTmvDq0MmIxBMQAAAZPYjH//7w6oaRiMb+lAAAR1+RK0dQAAIWa/Ur2uGc9///WSkBaAAAR185n9rhnPf//zmctKwAAhZp2SghHZz3//3ZKQFoAABHXdkr6OwAABk/9MAAAZz2hpP0wLSsAAIWa/TBaGWc9tDL9MP9/AABtLeQc+jsAAAZP5Rz/f7w6AADjHHDkh6WptpZlmNneY9LlNsn///9/E93Hv5kZ9jgCJaqalEfSmZjZ3mMAAP9//BnhW////38AAP9/AAD/fwAA/38AAP9/mNneY/2/8Vz9v/Fc/b/xXKm2lmWptpZl////f9LlNsnS5TbJAAD/fwAA/38AAP9/AAD/fxPdx78T3ce/cOSHpXDkh6X8GeFb/BnhW/wZ4VvEISFCxCEhQsQhIULEISFCkBn2OLYZ+Th8GfQ4AAD/fwAA/3+UR9KZlEfSmZRH0pmmPjyipj48oqY+PKKmPjyiACWnmgYlspr9JKGa")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_c0v8v")
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_b0etn"]
-points = PackedVector3Array(-5.96046e-08, -1.00017, -1, -5.96046e-08, -1.43069, -0.662827, -0.518193, -1.43069, -0.413297, -0.781965, -0.98051, -0.623565, -5.96046e-08, 0.446458, -1.90139e-05, 0.781775, -1.00017, -0.623565, 0.518002, -1.43069, -0.413297, -0.646071, -1.43069, 0.147354, -0.974928, -0.98051, 0.222344, 0.433831, -0.98051, 0.900969, 0.974928, -1.00017, 0.222344, -0.434022, -0.98051, 0.900969, 0.64588, -1.43069, 0.147354, -0.28763, -1.43069, 0.596918, 0.28744, -1.43069, 0.596918)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kx28k"]
-resource_name = "GemWhite"
-transparency = 4
-cull_mode = 2
-albedo_color = Color(0.735357, 0.735357, 0.735357, 0.75)
-roughness = 0.5
-metadata/extras = {
-"yp": {
-"active_ypaint_node": ""
-}
-}
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_gc4va"]
-_surfaces = [{
-"aabb": AABB(-0.974928, -1.43069, -1, 1.94986, 1.87714, 1.90097),
-"format": 34896613377,
-"index_count": 78,
-"index_data": PackedByteArray("CgAEAAIACAAEAAoACwAEAAgACwABAAQABAABAAIABwABAAsACAAHAAsABwAMAAEAAQAMAAIADQAMAAcACAAKAA4ADQAGAAwADAAGAAIABwAJAA0ACQAGAA0ACAAJAAcABgADAAIACQADAAYAAAAKAAIAAwAAAAIADgAKAAAABQADAAkACQAIAAUABQAAAAMABQAIAA4ADgAAAAUA"),
-"lods": [0.351706, PackedByteArray("BAABAAIAAQAGAAIABwAGAAEABwABAAQAAAAEAAIACAAHAAQAAwAAAAIABgADAAIABQAEAAAACAAEAAUABQAAAAMACAAJAAcACQAIAAUABwAJAAYABQADAAkACQADAAYA"), 0.639129, PackedByteArray("BAABAAIAAQADAAIAAAAEAAIAAwAAAAIABAAFAAEAAQAFAAMABQAEAAAABQAAAAMA"), 0.693829, PackedByteArray("AAABAAIAAQADAAIAAwAAAAIAAQAAAAMA")],
-"name": "GemWhite",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 15,
-"vertex_data": PackedByteArray("WhlnPbQyAAD//7w6oaQAAP9///+qhgAAAABnPaGkAACk5rw6tDIAAPo7AAAGTwAACEdnPf//AAC/pQAAEdcAAATEAAAGTwAALSsAAIWaAAD/f7w6AAAAANHUAACFmgAA9rhnPf//AABAWgAAEdcAAP9/AABtLQAA")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_tlbbv"]
-resource_name = "Item_Gem_White_Cone"
-_surfaces = [{
-"aabb": AABB(-0.974928, -1.43069, -1, 1.94986, 1.87714, 1.90097),
-"attribute_data": PackedByteArray("9g+wmeV7q83/P/+/GQSrzf8//7//P/+/5furzfaPsJkZhKvNCHCwmSqgnKYI8LCZVyVa99PfnKap0a3kVqVa906YDsn/P46CCHCwmeV7q83/P/+/qFpa9/8//7+oWlr3VyVa9/8//7//v0iXqdGt5FWureSw5w7JGQSrzfYPsJn/P46C/z//v9PfnKb/v46C/79Il7DnDskI8LCZ09+cpuX7q82p0a3ksOcOyafaWvdVrq3kp9pa906YDslWpVr3Va6t5CqgnKYZhKvNTpgOyfaPsJn/v0iXKqCcpv+/joI="),
-"format": 34896613399,
-"index_count": 78,
-"index_data": PackedByteArray("EQAJAAIAEgATABQAAQAVABYAFwAMAAQAGAADABkACgANABoAEAANAAoADQAQABsAGwAQABwADQAbAB0AHgAfAAUAAAAgACEAIgAjACQAIgALACMAJQAmACcAJQAoACYAKQAGACoAKQArAAYALAAtAA4ALAAPAC0ALgAvADAALgAIAC8AMQAyADMAMQA0ADIANQAHADYANQA3AAcA"),
-"lods": [0.351706, PackedByteArray("CQABAAIAAAAJAAIAAwAAAAUADAADAAQAAQAMAAQADQAOAAsADgAGAAsADgAPAAYADQALAAoACgALAAcACgAHAAgAEAANAAoADQAQAA4ACgAIABAADgAQAA8AEAAIAA8A"), 0.639129, PackedByteArray("CQABAAIAAAAJAAIAAQADAAQAAwAAAAUABgAKAAgACgAHAAgACwAKAAYACgALAAcA"), 0.693829, PackedByteArray("AAABAAIAAQADAAQAAwAAAAUABgAHAAgA")],
-"material": SubResource("StandardMaterial3D_kx28k"),
-"name": "GemWhite",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 56,
-"vertex_data": PackedByteArray("WhlnPbQy+uT//7w6oaR8tv9///+qhtTkAABnPaGk+7X/f///qobxlv9///+qhpfP//+8OqGk6kpaGWc9tDLkHAAAZz2hpHZKpOa8OrQy1OT6OwAABk//P6TmvDq0MhgdCEdnPf//8ZYExAAABk//P7+lAAAR185nCEdnPf//zmctKwAAhZr/P/9/vDoAANTkpOa8OrQytc///7w6oaS1z/9///+qhrXP9rhnPf//fLb/f///qoZ8tva4Zz3///GWCEdnPf//+7X/f///qob7tf9/AABtLf8/v6UAABHX/z9AWgAAEdf/P9HUAACFmv8/AABnPaGkl89aGWc9tDKXz/9/vDoAAPrk/3///6qG+uQExAAABk8YHf9/vDoAABgd/38AAG0tGB3R1AAAhZpiMaTmvDq0MmIxBMQAAAZPYjH//7w6oaRiMb+lAAAR1+RK0dQAAIWa/Ur2uGc9///WSkBaAAAR185n9rhnPf//zmctKwAAhZp2SghHZz3//3ZKQFoAABHXdkr6OwAABk/9MAAAZz2hpP0wLSsAAIWa/TBaGWc9tDL9MP9/AABtLeQc+jsAAAZP5Rz/f7w6AADjHHDkh6WptpZlmNneY9LlNsn///9/E93Hv5kZ9jgCJaqalEfSmZjZ3mMAAP9//BnhW////38AAP9/AAD/fwAA/38AAP9/mNneY/2/8Vz9v/Fc/b/xXKm2lmWptpZl////f9LlNsnS5TbJAAD/fwAA/38AAP9/AAD/fxPdx78T3ce/cOSHpXDkh6X8GeFb/BnhW/wZ4VvEISFCxCEhQsQhIULEISFCkBn2OLYZ+Th8GfQ4AAD/fwAA/3+UR9KZlEfSmZRH0pmmPjyipj48oqY+PKKmPjyiACWnmgYlspr9JKGa")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_gc4va")
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_xrqkp"]
-points = PackedVector3Array(-5.96046e-08, -1.00017, -1, -5.96046e-08, -1.43069, -0.662827, -0.518193, -1.43069, -0.413297, -0.781965, -0.98051, -0.623565, -5.96046e-08, 0.446458, -1.90139e-05, 0.781775, -1.00017, -0.623565, 0.518002, -1.43069, -0.413297, -0.646071, -1.43069, 0.147354, -0.974928, -0.98051, 0.222344, 0.433831, -0.98051, 0.900969, 0.974928, -1.00017, 0.222344, -0.434022, -0.98051, 0.900969, 0.64588, -1.43069, 0.147354, -0.28763, -1.43069, 0.596918, 0.28744, -1.43069, 0.596918)
-
 [node name="Spawn" type="Node3D"]
+
+[node name="LightmapGI" type="LightmapGI" parent="."]
+quality = 0
+bounces = 1
+directional = true
+shadowmask_mode = 2
+light_data = ExtResource("1_6pvjs")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+light_volumetric_fog_energy = 0.5
+light_specular = 0.1
+shadow_enabled = true
+shadow_opacity = 0.5
+directional_shadow_blend_splits = true
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
@@ -290,314 +56,59 @@ points = PackedVector3Array(-5.96046e-08, -1.00017, -1, -5.96046e-08, -1.43069, 
 environment = SubResource("Environment_ptepl")
 
 [node name="Player" parent="." instance=ExtResource("1_ptqup")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.37971, 5.95995, -8.12896)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.37971, 0.5, -8.12896)
 
-[node name="Island_Spawn" parent="." instance=ExtResource("3_3yy1u")]
+[node name="Contruct_Temple" parent="." instance=ExtResource("3_3yy1u")]
+transform = Transform3D(1.01436, 0, 0, 0, 1.01436, 0, 0, 0, 1.01436, 0, -0.0413022, -0.314929)
+visible = false
 
-[node name="Player_Golem_Rig" parent="Island_Spawn" instance=ExtResource("16_2fdwt")]
-transform = Transform3D(-0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, -0.866025, 3, 5.95668, -3)
+[node name="Player_Golem_Rig" parent="." instance=ExtResource("16_2fdwt")]
+transform = Transform3D(-0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, -0.866025, 0.881374, 0.49673, 0.0647359)
 
-[node name="Label3D" type="Label3D" parent="Island_Spawn/Player_Golem_Rig"]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 1.52691, 1.53611, -0.219785)
-pixel_size = 0.006
-billboard = 1
-text = "Golem Prototype
-Only Leg has a Rig"
-font = ExtResource("6_mxnfm")
+[node name="Other" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.93159, 0)
 
-[node name="Other" type="Node3D" parent="Island_Spawn"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.4257, 0)
-
-[node name="Prop_Dark_Shard2" parent="Island_Spawn/Other" instance=ExtResource("7_apglo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -8.77143, -4)
-
-[node name="Temple_Pillar" parent="Island_Spawn/Other" instance=ExtResource("9_ar3th")]
-transform = Transform3D(-0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, -0.965926, 4, -6.96571, -5)
-
-[node name="Prop_Rock" parent="Island_Spawn/Other" instance=ExtResource("11_ptepl")]
+[node name="Prop_Rock" parent="Other" instance=ExtResource("11_ptepl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -9.41606, -2)
 
-[node name="Prop_Crown" parent="Island_Spawn/Other" instance=ExtResource("12_8f2nx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.69596, -4.46233, -4.70607)
-
-[node name="Prop_Barrel" parent="Island_Spawn/Other" instance=ExtResource("16_p5ah2")]
+[node name="Prop_Barrel" parent="Other" instance=ExtResource("16_p5ah2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -9.02436, 1)
 
-[node name="Prop_Bomb" parent="Island_Spawn/Other" instance=ExtResource("17_0bect")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -8.96571, -1)
-
-[node name="Prop_Toolbox" parent="Island_Spawn/Other" instance=ExtResource("18_3vfng")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -9.21571, -3)
-
-[node name="Prop_Yellow_Box" parent="Island_Spawn/Other" instance=ExtResource("19_rhf24")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -9.21571, 0)
-
-[node name="Temple_FloorTile_Thin" parent="Island_Spawn/Other" instance=ExtResource("20_q8i8p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -9.41571, -5)
-
-[node name="Temple_Wall_Thin" parent="Island_Spawn/Other" instance=ExtResource("21_orj0l")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 12, -8.21571, -6)
-
-[node name="Enviroment_Grass" parent="Island_Spawn/Other" instance=ExtResource("21_ulqxx")]
+[node name="Enviroment_Grass" parent="Other" instance=ExtResource("21_ulqxx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -9.05293, -3)
 
-[node name="Spawn_Enviroment" parent="Island_Spawn" instance=ExtResource("12_ulqxx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.42566, 0)
+[node name="Spawn_Enviroment" parent="." instance=ExtResource("12_ulqxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.91549, 0)
+visible = false
 
-[node name="AmbientEnviromentStreamPlayer3D" type="AudioStreamPlayer3D" parent="Island_Spawn"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.4257, -4)
-stream = ExtResource("11_ulqxx")
-volume_db = -3.0
-max_db = -6.0
-autoplay = true
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Island_Spawn"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 2, 12.4257, -3)
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.0965271, 7.08455, 0.131213)
 light_energy = 5.0
 light_volumetric_fog_energy = 0.0
 spot_range = 10.0
 spot_angle = 51.33
 
-[node name="SpotLight3D2" type="SpotLight3D" parent="Island_Spawn"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -4, 12.4257, -5)
-light_energy = 5.0
-light_volumetric_fog_energy = 0.0
-spot_range = 10.0
-spot_angle = 51.33
+[node name="Temple_Pillar" parent="." instance=ExtResource("9_ar3th")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 14.9791, 3, 4.7815)
 
-[node name="SpotLight3D3" type="SpotLight3D" parent="Island_Spawn"]
-transform = Transform3D(0.836516, 0.258819, -0.482963, 0.5, 1.11156e-07, 0.866025, 0.224144, -0.965926, -0.12941, 11, 11.4257, -4)
-light_energy = 5.0
-light_volumetric_fog_energy = 0.0
-spot_range = 10.0
-spot_angle = 51.33
+[node name="Temple_FloorTile_Thin" parent="." instance=ExtResource("20_q8i8p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7967, 0.55, -5.99851)
 
-[node name="Item_Trash_Group" type="Node3D" parent="Island_Spawn"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 7.42566, -6)
+[node name="Temple_Wall_Thin" parent="." instance=ExtResource("21_orj0l")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 16.2503, 1.83035, -6)
 
-[node name="Item_Gem_Blue" type="Node3D" parent="Island_Spawn/Item_Trash_Group"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.118981, 0)
+[node name="Land_GroundHex" parent="." instance=ExtResource("13_lf0fo")]
 
-[node name="Ruby-rigid" type="RigidBody3D" parent="Island_Spawn/Item_Trash_Group/Item_Gem_Blue"]
-transform = Transform3D(-0.133042, -4.33506e-08, 0, 4.33506e-08, -0.133042, 0, 0, 0, 0.133042, 0, 0, 0)
+[node name="Land_GroundHex2" parent="." instance=ExtResource("13_lf0fo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.5745, 0, 0)
 
-[node name="Ruby-rigid" type="MeshInstance3D" parent="Island_Spawn/Item_Trash_Group/Item_Gem_Blue/Ruby-rigid"]
-mesh = SubResource("ArrayMesh_yo3ct")
-skeleton = NodePath("")
+[node name="Land_GroundHex3" parent="." instance=ExtResource("13_lf0fo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.3016, 0, 29.9743)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Island_Spawn/Item_Trash_Group/Item_Gem_Blue/Ruby-rigid/Ruby-rigid"]
-transform = Transform3D(-1, 3.89414e-07, 0, -3.89414e-07, -1, 0, 0, 0, 1, -0.215878, -0.431388, 0)
-light_color = Color(0, 0.439216, 0.866667, 1)
+[node name="Land_GroundHex4" parent="." instance=ExtResource("13_lf0fo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.3016, 0, -29.9978)
 
-[node name="FogVolume" type="FogVolume" parent="Island_Spawn/Item_Trash_Group/Item_Gem_Blue/Ruby-rigid/Ruby-rigid/OmniLight3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0287209, -0.0573927, 0)
-size = Vector3(1, 1, 1)
-shape = 0
+[node name="Contruct_Temple2" parent="." instance=ExtResource("3_3yy1u")]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Island_Spawn/Item_Trash_Group/Item_Gem_Blue/Ruby-rigid"]
-shape = SubResource("ConvexPolygonShape3D_apses")
-
-[node name="Item_Gem_Green" type="Node3D" parent="Island_Spawn/Item_Trash_Group"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.118981, 1)
-
-[node name="Ruby-rigid" type="RigidBody3D" parent="Island_Spawn/Item_Trash_Group/Item_Gem_Green"]
-transform = Transform3D(-0.133042, -4.33506e-08, 0, 4.33506e-08, -0.133042, 0, 0, 0, 0.133042, 0, 0, 0)
-
-[node name="Ruby-rigid" type="MeshInstance3D" parent="Island_Spawn/Item_Trash_Group/Item_Gem_Green/Ruby-rigid"]
-mesh = SubResource("ArrayMesh_3gydo")
-skeleton = NodePath("")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="Island_Spawn/Item_Trash_Group/Item_Gem_Green/Ruby-rigid/Ruby-rigid"]
-transform = Transform3D(-1, 3.89414e-07, 0, -3.89414e-07, -1, 0, 0, 0, 1, -0.215878, -0.431388, 0)
-light_color = Color(0.117647, 1, 0, 1)
-
-[node name="FogVolume" type="FogVolume" parent="Island_Spawn/Item_Trash_Group/Item_Gem_Green/Ruby-rigid/Ruby-rigid/OmniLight3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0287209, -0.0573927, 0)
-size = Vector3(1, 1, 1)
-shape = 0
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Island_Spawn/Item_Trash_Group/Item_Gem_Green/Ruby-rigid"]
-shape = SubResource("ConvexPolygonShape3D_davgr")
-
-[node name="Item_Gem_Orange" type="Node3D" parent="Island_Spawn/Item_Trash_Group"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.118981, -2)
-
-[node name="Ruby-rigid" type="RigidBody3D" parent="Island_Spawn/Item_Trash_Group/Item_Gem_Orange"]
-transform = Transform3D(-0.133042, -4.33506e-08, 0, 4.33506e-08, -0.133042, 0, 0, 0, 0.133042, 0, 0, 0)
-
-[node name="Ruby-rigid" type="MeshInstance3D" parent="Island_Spawn/Item_Trash_Group/Item_Gem_Orange/Ruby-rigid"]
-mesh = SubResource("ArrayMesh_bl3g0")
-skeleton = NodePath("")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="Island_Spawn/Item_Trash_Group/Item_Gem_Orange/Ruby-rigid/Ruby-rigid"]
-transform = Transform3D(-1, 3.89414e-07, 0, -3.89414e-07, -1, 0, 0, 0, 1, -0.215878, -0.431388, 0)
-light_color = Color(1, 0.501961, 0, 1)
-
-[node name="FogVolume" type="FogVolume" parent="Island_Spawn/Item_Trash_Group/Item_Gem_Orange/Ruby-rigid/Ruby-rigid/OmniLight3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0287209, -0.0573927, 0)
-size = Vector3(1, 1, 1)
-shape = 0
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Island_Spawn/Item_Trash_Group/Item_Gem_Orange/Ruby-rigid"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.76837e-07, -1.87714, 0)
-shape = SubResource("ConvexPolygonShape3D_y7tva")
-
-[node name="Item_Gem_Purple" type="Node3D" parent="Island_Spawn/Item_Trash_Group"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.118981, -1)
-
-[node name="Ruby-rigid" type="RigidBody3D" parent="Island_Spawn/Item_Trash_Group/Item_Gem_Purple"]
-transform = Transform3D(-0.133042, -5.18085e-08, 0, 5.18085e-08, -0.133042, 0, 0, 0, 0.133042, 0, 0, 0)
-
-[node name="Ruby-rigid" type="MeshInstance3D" parent="Island_Spawn/Item_Trash_Group/Item_Gem_Purple/Ruby-rigid"]
-mesh = SubResource("ArrayMesh_8dxdw")
-skeleton = NodePath("")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="Island_Spawn/Item_Trash_Group/Item_Gem_Purple/Ruby-rigid/Ruby-rigid"]
-transform = Transform3D(-1, 3.89414e-07, 0, -3.89414e-07, -1, 0, 0, 0, 1, -0.215878, -0.431388, 0)
-light_color = Color(0.639216, 0.207843, 0.933333, 1)
-
-[node name="FogVolume" type="FogVolume" parent="Island_Spawn/Item_Trash_Group/Item_Gem_Purple/Ruby-rigid/Ruby-rigid/OmniLight3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0287209, -0.0573927, 0)
-size = Vector3(1, 1, 1)
-shape = 0
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Island_Spawn/Item_Trash_Group/Item_Gem_Purple/Ruby-rigid"]
-shape = SubResource("ConvexPolygonShape3D_b0etn")
-
-[node name="Item_Gem_White" type="Node3D" parent="Island_Spawn/Item_Trash_Group"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.118981, 2)
-
-[node name="Ruby-rigid" type="RigidBody3D" parent="Island_Spawn/Item_Trash_Group/Item_Gem_White"]
-transform = Transform3D(-0.133042, -4.33506e-08, 0, 4.33506e-08, -0.133042, 0, 0, 0, 0.133042, 0, 0, 0)
-
-[node name="Ruby-rigid" type="MeshInstance3D" parent="Island_Spawn/Item_Trash_Group/Item_Gem_White/Ruby-rigid"]
-mesh = SubResource("ArrayMesh_tlbbv")
-skeleton = NodePath("")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="Island_Spawn/Item_Trash_Group/Item_Gem_White/Ruby-rigid/Ruby-rigid"]
-transform = Transform3D(-1, 3.89414e-07, 0, -3.89414e-07, -1, 0, 0, 0, 1, -0.215878, -0.431388, 0)
-
-[node name="FogVolume" type="FogVolume" parent="Island_Spawn/Item_Trash_Group/Item_Gem_White/Ruby-rigid/Ruby-rigid/OmniLight3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0287209, -0.0573927, 0)
-size = Vector3(1, 1, 1)
-shape = 0
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Island_Spawn/Item_Trash_Group/Item_Gem_White/Ruby-rigid"]
-shape = SubResource("ConvexPolygonShape3D_xrqkp")
-
-[node name="Item_Trash_Group2" type="Node3D" parent="Island_Spawn"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 7.42566, -6)
-
-[node name="Item_Gem_Blue" type="Node3D" parent="Island_Spawn/Item_Trash_Group2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.118981, 0)
-
-[node name="Ruby-rigid" type="RigidBody3D" parent="Island_Spawn/Item_Trash_Group2/Item_Gem_Blue"]
-transform = Transform3D(-0.133042, -4.33506e-08, 0, 4.33506e-08, -0.133042, 0, 0, 0, 0.133042, 0, 0, 0)
-
-[node name="Ruby-rigid" type="MeshInstance3D" parent="Island_Spawn/Item_Trash_Group2/Item_Gem_Blue/Ruby-rigid"]
-mesh = SubResource("ArrayMesh_yo3ct")
-skeleton = NodePath("")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="Island_Spawn/Item_Trash_Group2/Item_Gem_Blue/Ruby-rigid/Ruby-rigid"]
-transform = Transform3D(-1, 3.89414e-07, 0, -3.89414e-07, -1, 0, 0, 0, 1, -0.215878, -0.431388, 0)
-light_color = Color(0, 0.439216, 0.866667, 1)
-
-[node name="FogVolume" type="FogVolume" parent="Island_Spawn/Item_Trash_Group2/Item_Gem_Blue/Ruby-rigid/Ruby-rigid/OmniLight3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0287209, -0.0573927, 0)
-size = Vector3(1, 1, 1)
-shape = 0
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Island_Spawn/Item_Trash_Group2/Item_Gem_Blue/Ruby-rigid"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.87714, 0)
-shape = SubResource("ConvexPolygonShape3D_apses")
-
-[node name="Item_Gem_Green" type="Node3D" parent="Island_Spawn/Item_Trash_Group2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.118981, 1)
-
-[node name="Ruby-rigid" type="RigidBody3D" parent="Island_Spawn/Item_Trash_Group2/Item_Gem_Green"]
-transform = Transform3D(-0.133042, -4.33506e-08, 0, 4.33506e-08, -0.133042, 0, 0, 0, 0.133042, 0, 0, 0)
-
-[node name="Ruby-rigid" type="MeshInstance3D" parent="Island_Spawn/Item_Trash_Group2/Item_Gem_Green/Ruby-rigid"]
-mesh = SubResource("ArrayMesh_3gydo")
-skeleton = NodePath("")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="Island_Spawn/Item_Trash_Group2/Item_Gem_Green/Ruby-rigid/Ruby-rigid"]
-transform = Transform3D(-1, 3.89414e-07, 0, -3.89414e-07, -1, 0, 0, 0, 1, -0.215878, -0.431388, 0)
-light_color = Color(0.117647, 1, 0, 1)
-
-[node name="FogVolume" type="FogVolume" parent="Island_Spawn/Item_Trash_Group2/Item_Gem_Green/Ruby-rigid/Ruby-rigid/OmniLight3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0287209, -0.0573927, 0)
-size = Vector3(1, 1, 1)
-shape = 0
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Island_Spawn/Item_Trash_Group2/Item_Gem_Green/Ruby-rigid"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.87714, 0)
-shape = SubResource("ConvexPolygonShape3D_davgr")
-
-[node name="Item_Gem_Orange" type="Node3D" parent="Island_Spawn/Item_Trash_Group2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.118981, -2)
-
-[node name="Ruby-rigid" type="RigidBody3D" parent="Island_Spawn/Item_Trash_Group2/Item_Gem_Orange"]
-transform = Transform3D(-0.133042, -4.33506e-08, 0, 4.33506e-08, -0.133042, 0, 0, 0, 0.133042, 0, 0, 0)
-
-[node name="Ruby-rigid" type="MeshInstance3D" parent="Island_Spawn/Item_Trash_Group2/Item_Gem_Orange/Ruby-rigid"]
-mesh = SubResource("ArrayMesh_bl3g0")
-skeleton = NodePath("")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="Island_Spawn/Item_Trash_Group2/Item_Gem_Orange/Ruby-rigid/Ruby-rigid"]
-transform = Transform3D(-1, 3.89414e-07, 0, -3.89414e-07, -1, 0, 0, 0, 1, -0.215878, -0.431388, 0)
-light_color = Color(1, 0.501961, 0, 1)
-
-[node name="FogVolume" type="FogVolume" parent="Island_Spawn/Item_Trash_Group2/Item_Gem_Orange/Ruby-rigid/Ruby-rigid/OmniLight3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0287209, -0.0573927, 0)
-size = Vector3(1, 1, 1)
-shape = 0
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Island_Spawn/Item_Trash_Group2/Item_Gem_Orange/Ruby-rigid"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.87714, 0)
-shape = SubResource("ConvexPolygonShape3D_y7tva")
-
-[node name="Item_Gem_Purple" type="Node3D" parent="Island_Spawn/Item_Trash_Group2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.118981, -1)
-
-[node name="Ruby-rigid" type="RigidBody3D" parent="Island_Spawn/Item_Trash_Group2/Item_Gem_Purple"]
-transform = Transform3D(-0.133042, -5.18085e-08, 0, 5.18085e-08, -0.133042, 0, 0, 0, 0.133042, 0, 0, 0)
-
-[node name="Ruby-rigid" type="MeshInstance3D" parent="Island_Spawn/Item_Trash_Group2/Item_Gem_Purple/Ruby-rigid"]
-mesh = SubResource("ArrayMesh_8dxdw")
-skeleton = NodePath("")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="Island_Spawn/Item_Trash_Group2/Item_Gem_Purple/Ruby-rigid/Ruby-rigid"]
-transform = Transform3D(-1, 3.89414e-07, 0, -3.89414e-07, -1, 0, 0, 0, 1, -0.215878, -0.431388, 0)
-light_color = Color(0.639216, 0.207843, 0.933333, 1)
-
-[node name="FogVolume" type="FogVolume" parent="Island_Spawn/Item_Trash_Group2/Item_Gem_Purple/Ruby-rigid/Ruby-rigid/OmniLight3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0287209, -0.0573927, 0)
-size = Vector3(1, 1, 1)
-shape = 0
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Island_Spawn/Item_Trash_Group2/Item_Gem_Purple/Ruby-rigid"]
-transform = Transform3D(1, -2.84217e-14, 0, 2.84217e-14, 1, 0, 0, 0, 1, 0, -1.87714, 0)
-shape = SubResource("ConvexPolygonShape3D_b0etn")
-
-[node name="Item_Gem_White" type="Node3D" parent="Island_Spawn/Item_Trash_Group2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.118981, 2)
-
-[node name="Ruby-rigid" type="RigidBody3D" parent="Island_Spawn/Item_Trash_Group2/Item_Gem_White"]
-transform = Transform3D(-0.133042, -4.33506e-08, 0, 4.33506e-08, -0.133042, 0, 0, 0, 0.133042, 0, 0, 0)
-
-[node name="Ruby-rigid" type="MeshInstance3D" parent="Island_Spawn/Item_Trash_Group2/Item_Gem_White/Ruby-rigid"]
-mesh = SubResource("ArrayMesh_tlbbv")
-skeleton = NodePath("")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="Island_Spawn/Item_Trash_Group2/Item_Gem_White/Ruby-rigid/Ruby-rigid"]
-transform = Transform3D(-1, 3.89414e-07, 0, -3.89414e-07, -1, 0, 0, 0, 1, -0.215878, -0.431388, 0)
-
-[node name="FogVolume" type="FogVolume" parent="Island_Spawn/Item_Trash_Group2/Item_Gem_White/Ruby-rigid/Ruby-rigid/OmniLight3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0287209, -0.0573927, 0)
-size = Vector3(1, 1, 1)
-shape = 0
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Island_Spawn/Item_Trash_Group2/Item_Gem_White/Ruby-rigid"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.87714, 0)
-shape = SubResource("ConvexPolygonShape3D_xrqkp")
+[node name="Item_Trash_Gem" parent="." instance=ExtResource("14_27nms")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.67146, 0.62487, -0.430087)

@@ -23,11 +23,6 @@ config/icon="uid://ba8ygc6xtsg7n"
 
 SteamController="*res://scripts/steam/steam_controller.gd"
 
-[display]
-
-window/size/viewport_width=1920
-window/size/viewport_height=1080
-
 [dotnet]
 
 project/assembly_name="Lucifuga"

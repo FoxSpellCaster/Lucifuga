@@ -1,10 +1,9 @@
-[gd_scene load_steps=29 format=4 uid="uid://b7wh257kan8qj"]
+[gd_scene load_steps=28 format=4 uid="uid://b7wh257kan8qj"]
 
 [ext_resource type="Shader" uid="uid://d3a7pif6ajxph" path="res://shaders/stylized_fire.gdshader" id="1_8dc3d"]
 [ext_resource type="Texture2D" uid="uid://xfq7muddsl53" path="res://assets/textures/HoleNoise.png" id="2_88wp7"]
 [ext_resource type="Texture2D" uid="uid://4wa4an5x18bv" path="res://assets/textures/FireMask.png" id="3_lvlvw"]
 [ext_resource type="Texture2D" uid="uid://xl22pmkk0nsk" path="res://assets/textures/BlueFireGradient.tres" id="4_2o082"]
-[ext_resource type="FontFile" uid="uid://c32bdprq2rbnp" path="res://assets/fonts/m6x11plus.ttf" id="5_88wp7"]
 [ext_resource type="Texture2D" uid="uid://dbu7botfaiot5" path="res://assets/images/BlueParticle.png" id="5_i2la1"]
 [ext_resource type="AudioStream" uid="uid://cqxtpf7kcwcbl" path="res://assets/sfx/FireSound.ogg" id="6_huy1k"]
 
@@ -289,13 +288,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.559589, 0, 0)
 stream = ExtResource("6_huy1k")
 autoplay = true
 max_distance = 6.0
-
-[node name="Label3D" type="Label3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.553192, 0, -1.19564)
-pixel_size = 0.006
-billboard = 1
-text = "Fire Has SFX
-Glow and VFX
-Need to spruce up
-The VFX"
-font = ExtResource("5_88wp7")
