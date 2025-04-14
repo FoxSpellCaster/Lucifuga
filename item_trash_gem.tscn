@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=4 uid="uid://cwh1msyi3klts"]
+[gd_scene load_steps=7 format=4 uid="uid://cwh1msyi3klts"]
 
 [ext_resource type="PhysicsMaterial" uid="uid://dap0go4fe8s8" path="res://trash_gem_physics_material.tres" id="1_7q718"]
-[ext_resource type="PackedScene" uid="uid://c722kvpqgcvb8" path="res://gem_light.tscn" id="2_ux1u4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ladx"]
 resource_name = "GemWhite"
@@ -66,11 +65,17 @@ physics_material_override = ExtResource("1_7q718")
 mesh = SubResource("ArrayMesh_3oqbf")
 skeleton = NodePath("")
 
-[node name="GemLight" parent="TrashGem-rigid/TrashGem-rigid" instance=ExtResource("2_ux1u4")]
+[node name="OmniLight3D" type="OmniLight3D" parent="TrashGem-rigid/TrashGem-rigid"]
+light_energy = 0.5
+omni_range = 1.0
+
+[node name="FogVolume" type="FogVolume" parent="TrashGem-rigid/TrashGem-rigid"]
+size = Vector3(1, 1, 1)
+shape = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TrashGem-rigid"]
 shape = SubResource("ConvexPolygonShape3D_uhpje")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="TrashGem-rigid"]
+[node name="CapCollisionShape3D" type="CollisionShape3D" parent="TrashGem-rigid"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00215745, 0.017173, 0.0019667)
 shape = SubResource("CapsuleShape3D_ux1u4")
