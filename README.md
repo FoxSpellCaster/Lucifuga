@@ -39,9 +39,9 @@ cd Lucifuga
 We welcome contributions! To get started:
 
 1. Fork the repository.
-2. Create a new branch (==git checkout -b feature/your-feature==).
-3. Commit your changes (==git commit -m "Add your feature"==).
-4. Push to your branch (==git push origin feature/your-feature==).
+2. Create a new branch (git checkout -b feature/your-feature).
+3. Commit your changes (git commit -m "Add your feature").
+4. Push to your branch (git push origin feature/your-feature).
 5. Open a Pull Request.
 
 Please read our Contributing Guidelines (CONTRIBUTING.md) for more details.
