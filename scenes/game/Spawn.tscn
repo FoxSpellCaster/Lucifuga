@@ -1,14 +1,15 @@
-[gd_scene load_steps=18 format=3 uid="uid://b5hbtk6hdyibx"]
+[gd_scene load_steps=19 format=3 uid="uid://b5hbtk6hdyibx"]
 
-[ext_resource type="LightmapGIData" uid="uid://csvjckfidtahs" path="res://scenes/Spawn.lmbake" id="1_6pvjs"]
+[ext_resource type="LightmapGIData" uid="uid://csvjckfidtahs" path="res://scenes/game/Spawn.lmbake" id="1_6pvjs"]
 [ext_resource type="PackedScene" uid="uid://de1eao2jnsfxk" path="res://player/player.tscn" id="1_ptqup"]
 [ext_resource type="Shader" uid="uid://dndyugn7jitow" path="res://shaders/sky_box.gdshader" id="2_apglo"]
 [ext_resource type="PackedScene" uid="uid://b3pakgo4tgcyt" path="res://assets/Contruct_Temple.blend" id="3_3yy1u"]
 [ext_resource type="PackedScene" uid="uid://b7wh257kan8qj" path="res://props/temple_pillar.tscn" id="9_ar3th"]
 [ext_resource type="PackedScene" uid="uid://ds0h080e51l1p" path="res://assets/Enviroment_Rock.blend" id="11_ptepl"]
-[ext_resource type="PackedScene" uid="uid://bhp1bcvhj2md5" path="res://scenes/spawn_enviroment.tscn" id="12_ulqxx"]
+[ext_resource type="PackedScene" uid="uid://bhp1bcvhj2md5" path="res://scenes/enviroment/spawn_enviroment.tscn" id="12_ulqxx"]
 [ext_resource type="PackedScene" uid="uid://djeh4ih26prk1" path="res://assets/Land_GroundHex.blend" id="13_lf0fo"]
 [ext_resource type="PackedScene" uid="uid://cwh1msyi3klts" path="res://item_trash_gem.tscn" id="14_27nms"]
+[ext_resource type="PackedScene" uid="uid://0srmm2r0fdhk" path="res://assets/creature_lucipeta.blend" id="15_3a4x0"]
 [ext_resource type="PackedScene" uid="uid://c8jademwauey7" path="res://assets/Player_Golem_Rig.blend" id="16_2fdwt"]
 [ext_resource type="PackedScene" uid="uid://dlxc72xs26wj8" path="res://assets/Prop_Barrel.blend" id="16_p5ah2"]
 [ext_resource type="PackedScene" uid="uid://stt8tabvvvnk" path="res://assets/Temple_FloorTile_Thin.blend" id="20_q8i8p"]
@@ -63,7 +64,7 @@ transform = Transform3D(1.01436, 0, 0, 0, 1.01436, 0, 0, 0, 1.01436, 0, -0.04130
 visible = false
 
 [node name="Player_Golem_Rig" parent="." instance=ExtResource("16_2fdwt")]
-transform = Transform3D(-0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, -0.866025, 0.881374, 0.49673, 0.0647359)
+transform = Transform3D(-0.833124, 0, -0.553086, 0, 1, 0, 0.553086, 0, -0.833124, 0.634002, 0.49673, -1.36199)
 
 [node name="Other" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.93159, 0)
@@ -111,4 +112,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.3016, 0, -29.9978)
 [node name="Contruct_Temple2" parent="." instance=ExtResource("3_3yy1u")]
 
 [node name="Item_Trash_Gem" parent="." instance=ExtResource("14_27nms")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.67146, 0.62487, -0.430087)
+transform = Transform3D(0.790166, 0.432472, 0.434288, 0, 0.708586, -0.705624, -0.612893, 0.55756, 0.5599, -1.67008, 2.52814, -0.430087)
+
+[node name="creature_lucipeta" parent="." instance=ExtResource("15_3a4x0")]
+transform = Transform3D(0.489032, 0, -0.872266, 0, 1, 0, 0.872266, 0, 0.489032, 1.34485, 1.10577, -2.08304)

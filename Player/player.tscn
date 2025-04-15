@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ctaueltyrvak5" path="res://player/character_body_3d.gd" id="1_4ntmi"]
 [ext_resource type="PackedScene" uid="uid://c8jademwauey7" path="res://assets/Player_Golem_Rig.blend" id="2_4ntmi"]
-[ext_resource type="PackedScene" uid="uid://cursmfths2rf" path="res://ui_test.tscn" id="3_g1dw6"]
+[ext_resource type="PackedScene" uid="uid://cursmfths2rf" path="res://scenes/player/ui_test.tscn" id="3_g1dw6"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_btcbx"]
 radius = 0.4
