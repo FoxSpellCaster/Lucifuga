@@ -1,8 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://cursmfths2rf"]
+[gd_scene load_steps=20 format=3 uid="uid://cursmfths2rf"]
 
 [ext_resource type="FontFile" uid="uid://ccso2edoeec7x" path="res://assets/fonts/PeaberryBase.ttf" id="1_bbsb6"]
 [ext_resource type="FontFile" uid="uid://c32bdprq2rbnp" path="res://assets/fonts/m6x11plus.ttf" id="2_aw5hp"]
 [ext_resource type="Script" uid="uid://d52p83jkma87" path="res://scripts/steam/steam_avatar.gd" id="2_phn2e"]
+[ext_resource type="Script" uid="uid://dbap0gqox0ty1" path="res://addons/markdownlabel/markdownlabel.gd" id="4_7kolt"]
+[ext_resource type="Script" uid="uid://dcx7crs23nf4" path="res://addons/markdownlabel/header_formats/h1_format.gd" id="5_10o38"]
+[ext_resource type="Script" uid="uid://d0sin64i4v3op" path="res://addons/markdownlabel/header_formats/h2_format.gd" id="6_rsg8d"]
+[ext_resource type="Script" uid="uid://dlok0dv1tq2bf" path="res://addons/markdownlabel/header_formats/h3_format.gd" id="7_s6a64"]
+[ext_resource type="Script" uid="uid://bayuh2vafablg" path="res://addons/markdownlabel/header_formats/h4_format.gd" id="8_q5dt3"]
+[ext_resource type="Script" uid="uid://dfr1w7u3jgni3" path="res://addons/markdownlabel/header_formats/h5_format.gd" id="9_kfv65"]
+[ext_resource type="Script" uid="uid://bsi6dexoofpe6" path="res://addons/markdownlabel/header_formats/h6_format.gd" id="10_qtefc"]
 
 [sub_resource type="Theme" id="Theme_phn2e"]
 default_font = ExtResource("1_bbsb6")
@@ -11,6 +18,66 @@ default_font = ExtResource("1_bbsb6")
 
 [sub_resource type="LabelSettings" id="LabelSettings_aaiuy"]
 font = ExtResource("2_aw5hp")
+
+[sub_resource type="Resource" id="Resource_xdnvw"]
+resource_local_to_scene = true
+script = ExtResource("5_10o38")
+font_size = 2.285
+is_bold = false
+is_italic = false
+is_underlined = false
+override_font_color = false
+font_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Resource" id="Resource_l1gbr"]
+resource_local_to_scene = true
+script = ExtResource("6_rsg8d")
+font_size = 1.714
+is_bold = false
+is_italic = false
+is_underlined = false
+override_font_color = false
+font_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Resource" id="Resource_6jtpv"]
+resource_local_to_scene = true
+script = ExtResource("7_s6a64")
+font_size = 1.428
+is_bold = false
+is_italic = false
+is_underlined = false
+override_font_color = false
+font_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Resource" id="Resource_kotga"]
+resource_local_to_scene = true
+script = ExtResource("8_q5dt3")
+font_size = 1.142
+is_bold = false
+is_italic = false
+is_underlined = false
+override_font_color = false
+font_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Resource" id="Resource_trfd7"]
+resource_local_to_scene = true
+script = ExtResource("9_kfv65")
+font_size = 1.0
+is_bold = false
+is_italic = false
+is_underlined = false
+override_font_color = false
+font_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Resource" id="Resource_pgaju"]
+resource_local_to_scene = true
+script = ExtResource("10_qtefc")
+font_size = 0.857
+is_bold = false
+is_italic = false
+is_underlined = false
+override_font_color = false
+font_color = Color(1, 1, 1, 1)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -156,3 +223,503 @@ layout_mode = 2
 size_flags_horizontal = 4
 text = "%PlayerName"
 label_settings = SubResource("LabelSettings_aaiuy")
+
+[node name="MarkdownLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 62.0
+offset_top = 44.0
+offset_right = -50.0
+offset_bottom = -38.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[font_size=36]Player[/font_size]
+[font_size=36]Core Abilities[/font_size]
+These are the baseline moves every player starts with, reflecting the Construct Golem’s fundamental design. They’re simple, intuitive, and cost no Energy to use (to encourage exploration and mobility).
+[font_size=27]Run  [/font_size]
+[ul]Mechanic: Increases movement speed by 50% in the current direction (e.g., from 5 m/s to 7.5 m/s). Momentum builds over 1 second, fades if direction changes sharply.  
+Flavor: The Golem’s joints hum as gem-powered pistons accelerate its stride.  
+Gameplay: Encourages sprinting across Island 1’s forest or Spawn Island to gather Trash quickly.  
+[url={\"checked\":false,\"id\":0,\"markdownlabel-checkbox\":true}]☐[/url] Visual: Faint sparks from the Golem’s feet, with a subtle glow from its Core Node.  
+[url={\"checked\":false,\"id\":1,\"markdownlabel-checkbox\":true}]☐[/url] Todo: Add a trail effect toggle in Cosmetics (e.g., Fire sparks or Moss particles).
+[/ul]
+[font_size=27]Jump  [/font_size]
+[ul]Mechanic: Applies 8 m/s upward velocity, with slight mid-air directional control (10% of ground speed). 1.5-second cooldown to prevent spam.  
+Flavor: The Golem’s frame compresses, then springs upward with a mechanical clank.  
+Gameplay: Clears small obstacles like logs on Island 1 or reaches low ledges in the Construct Temple.  
+[url={\"checked\":false,\"id\":2,\"markdownlabel-checkbox\":true}]☐[/url] Visual: A puff of Steam or Dust on takeoff, customizable via Cosmetics.  
+[url={\"checked\":false,\"id\":3,\"markdownlabel-checkbox\":true}]☐[/url] Todo: Add sound effect (e.g., metal creak or gem hum).
+[/ul]
+[font_size=27]Crouch  [/font_size]
+[ul]Mechanic: Reduces collision height by 50% (e.g., from 2m to 1m), slows movement to 60% (e.g., 3 m/s). Hold to maintain, toggle off to stand.  
+Flavor: The Golem’s frame compacts, gears grinding softly as it lowers its center.  
+Gameplay: Slips under roots in Island 1 or dodges attacks (e.g., a toxin spit).  
+[url={\"checked\":false,\"id\":4,\"markdownlabel-checkbox\":true}]☐[/url] Visual: Subtle vibration in the frame, with Cosmetics like Moss trailing or Iron scraping.  
+[url={\"checked\":false,\"id\":5,\"markdownlabel-checkbox\":true}]☐[/url] Todo: Add interaction with Zen Garden (e.g., crouch to meditate for minor Energy regen).
+[/ul]
+[font_size=27]Pickup  [/font_size]
+[ul]Mechanic: Uses cursor to grab Trash or Components within 3m, adding them to the Player Inventory’s 2D physics box. 0.5-second animation locks movement briefly.  
+Flavor: The Golem’s hand glows faintly, magnetized by its Core Node to attract items.  
+Gameplay: Collects Small White Gems or Vertex Shards from Island 1’s leaf litter. If inventory is full, items bounce back into the environment with a physics tumble.  
+[url={\"checked\":false,\"id\":6,\"markdownlabel-checkbox\":true}]☐[/url] Visual: A shimmering arc to the item, colored by Cosmetics (e.g., Sapphire blue or Void black).  
+[url={\"checked\":false,\"id\":7,\"markdownlabel-checkbox\":true}]☐[/url] Todo: Add feedback when inventory is full (e.g., UI shake or Golem’s head tilt \"puke\").
+[/ul]
+[font_size=36]Additive Abilities[/font_size]
+These are unlocked via Threads (earned from Lucipeta trades) and cost Energy to use, reflecting optional modules installed into the Golem.
+[font_size=27]Slide[/font_size]
+[ul]Mechanic: While crouching, press to slide forward 5m with momentum (based on prior speed, max 10 m/s). Costs 10 Energy. Maintains low collision height, ends in crouch.  
+Flavor: Inspired by Northern Dusky Salamander’s slippery movement, the Golem channels gem energy to glide across surfaces.  
+Gameplay:
+[url={\"checked\":false,\"id\":8,\"markdownlabel-checkbox\":true}]☐[/url] Visual: A slick trail (e.g., Ice frost or Plasma sparks), tied to Cosmetics.  
+[url={\"checked\":false,\"id\":9,\"markdownlabel-checkbox\":true}]☐[/url] Todo: Add collision damage to enemies during slide (e.g., 5% Health knockback).
+[/ul]
+[font_size=27]Roll[/font_size]
+[ul]Mechanic: Tuck into a ball, rolling 4m forward (8 m/s). Ignores low obstacles (under 0.5m), costs 15 Energy. Brief invulnerability (0.3 seconds).  
+Flavor: Mimics a Red-Backed Salamander curling defensively, the Golem’s frame collapses into a gem-powered sphere.  
+Gameplay: Evades Spotted Salamander’s glowing spot bursts or rolls through Construct Temple’s narrow traps.  
+[url={\"checked\":false,\"id\":10,\"markdownlabel-checkbox\":true}]☐[/url] Visual: Spinning polygons with Cosmetics (e.g., Obsidian sheen or Petal flutter).  
+[url={\"checked\":false,\"id\":11,\"markdownlabel-checkbox\":true}]☐[/url] Todo: Add terrain interaction (e.g., faster roll on Island 1’s wet seeps).
+[/ul]
+[font_size=27]Double Jump[/font_size]
+[ul]Mechanic: Mid-air jump adds 6 m/s upward velocity (75% of first jump), costs Energy. Same directional control as Jump.  
+Flavor: The Golem vents excess Core Node energy,.  
+Gameplay: Reaches high platforms.  
+[url={\"checked\":false,\"id\":12,\"markdownlabel-checkbox\":true}]☐[/url] Visual: A burst of Energy (e.g., Solar flares or Mist wisps), per Cosmetics.  
+[url={\"checked\":false,\"id\":13,\"markdownlabel-checkbox\":true}]☐[/url] Todo: Add particle scaling based on Energy level (dimmer if low).
+[/ul]
+[font_size=27]Long Jump[/font_size]
+[ul]Mechanic: Crouch then leap 10m forward (12 m/s horizontal, 4 m/s vertical). Costs 25 Energy. 2-second cooldown.  
+Flavor: Built from Blue-Ridged Two-Lined Salamander’s swift lunges, the Golem overcharges its legs.  
+Gameplay: Crosses gaps.  
+[url={\"checked\":false,\"id\":14,\"markdownlabel-checkbox\":true}]☐[/url] Visual: A forward shockwave (e.g., Storm lightning or Sandstone dust).  
+[url={\"checked\":false,\"id\":15,\"markdownlabel-checkbox\":true}]☐[/url] Todo: Add landing stumble if Energy is below 10%.
+[/ul]
+[font_size=27]Wall Jump[/font_size]
+[ul]Mechanic: Jump against a wall to kick off, gaining 7 m/s upward and 5 m/s horizontal (opposite direction). Costs 15 Energy, chainable up to 3 times.  
+Flavor: Inspired by Four-Toed Salamander’s agile climbs, the Golem’s joints pivot with precision. 
+Gameplay: Scales Island 1’s rocky cliffs or navigates Construct Temple’s vertical puzzles.  
+[url={\"checked\":false,\"id\":16,\"markdownlabel-checkbox\":true}]☐[/url] Visual: Wall sparks (e.g., Bronze flecks or Vine tendrils), per Cosmetics.  
+[url={\"checked\":false,\"id\":17,\"markdownlabel-checkbox\":true}]☐[/url] Todo: Add grip meter for slippery surfaces (e.g., Slimy Salamander mucus).
+[/ul]
+[font_size=27]Glide[/font_size]
+[ul]Mechanic: Hold mid-air to slow descent (0.5 m/s), with 20% directional control. Drains 5 Energy/second, ends when grounded or empty.  
+Flavor: Channels The Golem unfolding lightweight Mesh Fiber panels.  
+Gameplay: Crosses vernal pools or soft-lands.  
+[url={\"checked\":false,\"id\":18,\"markdownlabel-checkbox\":true}]☐[/url] Visual: Shimmering air distortion (e.g., Aether glow or Frosted Glass sheen).  
+[url={\"checked\":false,\"id\":19,\"markdownlabel-checkbox\":true}]☐[/url] Todo: Add wind sound tied to Cosmetics (e.g., Storm crackle).
+[/ul]
+[font_size=27]Boost[/font_size]
+[ul]Mechanic: Short burst adds 10 m/s to current movement (speed or jump height), costs 30 Energy. 3-second cooldown.  
+Flavor: The Golem overclocks its Core Node, mimicking Spotted Salamander’s migration sprint.  
+Gameplay: 
+[url={\"checked\":false,\"id\":20,\"markdownlabel-checkbox\":true}]☐[/url] Visual: A pulse of light (e.g., Plasma arcs or Earth dust).  
+[url={\"checked\":false,\"id\":21,\"markdownlabel-checkbox\":true}]☐[/url] Todo: Add overheat risk if used twice in 5 seconds (e.g., 5% Health loss).
+[/ul]
+[font_size=36]Upgrades[/font_size]
+These enhance existing abilities, purchased with Threads. They add flair and power but introduce trade-offs.
+[font_size=27]Heavy Impact [/font_size]
+[ul]Mechanic: Jump or Long Jump landings create a 3m-radius shockwave, dealing 10% Health damage to enemies and knocking back Trash. Costs 20 extra Energy per use.  
+Flavor: The Golem’s reinforced frame channels Granite or Obsidian weight, inspired by Spotted Salamander’s sturdy build.  
+Gameplay: 
+[url={\"checked\":false,\"id\":22,\"markdownlabel-checkbox\":true}]☐[/url] Visual: Ground cracks with Cosmetics (e.g., Fire embers or Marble dust).  
+[url={\"checked\":false,\"id\":23,\"markdownlabel-checkbox\":true}]☐[/url] Todo: Add screen shake intensity slider in User Interface.
+[/ul]
+[font_size=27]Overcharge  [/font_size]
+[ul]Mechanic: Extends Run duration by 50% (e.g., 3 seconds) and Boost distance by 25% (12.5 m/s). Adds 5-second cooldown to both, costs 10 extra Energy.  
+Flavor: The Golem’s Core Node pulses like a Large Orange Gem, mimicking Jefferson Salamander’s endurance.  
+Gameplay:
+[url={\"checked\":false,\"id\":24,\"markdownlabel-checkbox\":true}]☐[/url] Visual: Overloaded glow (e.g., Solar flares or Void wisps).  
+[url={\"checked\":false,\"id\":25,\"markdownlabel-checkbox\":true}]☐[/url] Todo: Add Energy drain warning in User Interface (e.g., red flash).
+[/ul]
+[font_size=27]Grapple  [/font_size]
+[ul]Mechanic: Extends Pickup range to 6m, and extends to pull player 6m toward terrain.  
+Flavor: Inspired by Blue-Ridged Two-Lined Salamander’s quick snatches, the Golem deploys a gem-charged tether.  
+Gameplay:
+[url={\"checked\":false,\"id\":26,\"markdownlabel-checkbox\":true}]☐[/url] Visual: A glowing hook (e.g., Emerald green or Silk shimmer).  
+[url={\"checked\":false,\"id\":27,\"markdownlabel-checkbox\":true}]☐[/url] Todo: Add terrain anchor visuals (e.g., Bark splinters or Steel sparks).
+[/ul]
+[font_size=36]User Interface[/font_size]
+Your Player section mentions Health, Energy, Threads, and a 2D physics-based Inventory, but lacks a cohesive UI to display them. I’ll design a minimalist, immersive UI that integrates with the Construct Golem’s crafted aesthetic and supports your gameplay (e.g., Abilities, Pickup, Cosmetics).
+[font_size=27]UI Principles[/font_size]
+[ul]Clarity: Show Health, Energy, Threads, and Inventory without cluttering the screen.  
+Immersion: Use visuals inspired by Vertex Shards, Core Nodes, and Trash Gems to feel like the Golem’s internal display.  
+Interactivity: Support Pickup’s physics-based Inventory and Cosmetic previews.  
+Accessibility: Include toggles for Voice Chat (e.g., Proximity, Fade out death audio) and Abilities feedback.
+[/ul]
+[font_size=27]UI Layout[/font_size]
+[ul]Screen Corners (non-intrusive, always visible):  
+Top-Left: Health bar (horizontal, 100px long, red gem glow). Fades to cracked Obsidian at 0%, with “Unstable” warning when the Construct Golem Core detaches.  
+Top-Right: Energy bar (vertical, 80px tall, blue Sapphire pulse). Drains during Additive Abilities (e.g., Glide), refills via Battery/Energy Station or Zen Garden.  
+Bottom-Right: Threads counter (circular, Gold coin icon, e.g., “127 T”). Updates after Lucipeta trades or crafting.
+Center-Screen (contextual, fades when idle):  
+Cursor: A glowing Vertex Shard for Pickup, shifts color with Cosmetics (e.g., Emerald green). Expands to 6m range with Grapple.  
+Ability Prompts: Icons for Core/Additive Abilities (e.g., Jump as a Pivot Joint, Slide as a Mesh Fiber). Glow when usable, gray out on cooldown or low Energy.
+Bottom-Center (dynamic, toggles with input):  
+Inventory Box: A 200x150px 2D physics window (styled like a Face Plate with Bronze edges). Trash or Components tumble inside when grabbed via Pickup.  
+Mechanics: Items scale down (e.g., Medium Green Gem from 1m to 10px), bounce with 2D physics (friction 0.8, restitution 0.5). Max 20 items; excess items spill back into the environment with a clatter.  
+Visuals: Box pulses faintly with Core Node energy. Overfull state shakes, with Cosmetics affecting spill effects (e.g., Fire sparks, Moss spores).  
+Interaction: Drag items to Battery/Energy Station (onscreen slot) or Modular Crafting Station (recipe grid).
+[/ul]
+[font_size=27]Pause Menu (accessible via keypress):  [/font_size]
+[ul]Tabs: Stats (view Health, Energy), Inventory (rearrange items), Cosmetics (preview Golem), Upgrades (buy with Threads), Voice Chat (toggle Mimic, Proximity).  
+Style: A holographic Mesh Fiber grid, with Crystal accents per equipped Cosmetics.  
+Cosmetic Preview: 3D Golem model rotates, zooms, shows Frame/Accents/Core changes (e.g., Driftwood + Amethyst).  
+Voice Chat: Sliders for Proximity range (1-10m), checkbox for Fade out death audio (mutes when Health hits 0).
+[/ul]
+[font_size=27]UI Interactions[/font_size]
+[ul]Health: When hit (e.g., by Slimy Salamander mucus), bar flashes red, Golem frame sparks (styled by Cosmetics, e.g., Iron rust flakes). At 0%, a 3-second animation shows the Core Node ejecting, with UI dimming except for a pulsing Core icon.  
+Energy: Drains in chunks for Additive Abilities (e.g., Boost 30 Energy), refills 5 Energy/second near Zen Garden. Low Energy (<10%) grays out ability icons, adds Crystal flicker to cursor.  
+Threads: Numbers pop up (+10, +25) after Lucipeta trades, with a Gold shimmer. Spending Threads (e.g., for Double Jump) shows a crafting animation (e.g., Pivot Joints locking).  
+Inventory: Pickup pulls items into the 2D box, where they settle with physics (e.g., Large Orange Gem rolls heavier than Vertex Shard). Dragging to Battery/Energy Station plays a gem-crush sound, adding Energy.  
+Abilities: Cooldowns show as a Loop Wire wrapping the icon (e.g., Long Jump 2s). Heavy Impact triggers a screen shake (toggleable in Pause Menu).  
+Voice Chat: Proximity range shows as a faint Aether circle around the Golem in-game. Mimic mode overlays teammate voices with Cosmetic filters (e.g., Fire crackle, Void echo).
+[/ul]
+[font_size=27]Visual Notes[/font_size]
+[ul]UI Theme: Inspired by Core Nodes and Trash Gems, with glowing edges and polygonal shapes. Cosmetics tint elements (e.g., Sapphire blue Health bar, Oak textured Inventory).  
+Feedback
+Low Health or Energy pulses the screen faintly. Inventory overflow plays a Metal clang or Crystal shatter.  
+Todo: Add Reset Button to clear Cosmetics or reset UI layout to default (in Pause Menu).
+[/ul]
+
+[font_size=36]Cosmetics[/font_size]
+Cosmetics allow players to customize the Construct Golem’s appearance for visual flair, with no impact on Health, Energy, Threads, or Abilities. They’re obtained through a random booster pack opening system, with effects that react to Abilities (e.g., Run, Glide), Stats (e.g., low Health), and environments (e.g., Construct Temple), displayed via the User Interface.
+Cosmetic System
+Purpose: Purely aesthetic customization of the Golem, with animations and particles for Abilities (e.g., Slide sparks), Stats (e.g., Core Mode glow), and locations (e.g., Island 1 seeps). No gameplay effects.  
+Unlocks: Acquired by opening Booster Packs, random bundles purchased with Threads (earned from Lucipeta trades or Island 1 quests). Packs drop Cosmetics for specific Golem parts.  
+Booster Pack Mechanics:  
+Cost: 50 Threads per pack (bought in Zen Garden’s Cosmetic Kiosk, a new UI or location).  
+Contents: 3 random Cosmetics (1 Frame, 1 Accents, 1 Core), with rarity tiers:  
+Common (60% chance, e.g., Oak, Iron).  
+Uncommon (30% chance, e.g., Marble, Bronze).  
+Rare (10% chance, e.g., Amethyst, Fire).
+Duplicates: Convert to 5 Threads (e.g., a second Quartz Core refunds 5 Threads).  
+Opening: UI shows a pack exploding into Vertex Shard particles, revealing 3 Cosmetics with rarity-colored glows (Common: white, Uncommon: blue, Rare: purple).
+Application: Equipped in the Cosmetics Tab (Pause Menu), where players assign visuals to three parts:  
+Frame (body, covers Edge Rods, Face Plates): Sets main texture (e.g., Steel sheen).  
+Accents (joints, seams, covers Pivot Joints, Loop Wires): Adds details (e.g., Gold filigree).  
+Core (heart, covers Core Node): Defines glow (e.g., Emerald pulse).
+Dynamic Visuals: Shift with game states:  
+Abilities: E.g., Boost trails Storm lightning, Crouch sheds Earth moss.  
+Stats: E.g., low Health cracks Obsidian Frame, high Threads brightens Sapphire Accents.  
+Environment: E.g., Island 1 wets Driftwood Frame, Zen Garden calms Ice Core frost.
+UI Integration: Cosmetics Tab shows a 3D Golem preview (rotate/zoom, 200x200px). Inventory Pickup tints Trash in Cosmetic style (e.g., Fire warms Medium Green Gem). Voice Chat icons reflect Cosmetics (e.g., Moss green).
+Cosmetic Categories
+Five categories with 4 options each, condensed for clarity, drawn from your originals. All are random drops from Booster Packs, with visuals tied to Spawn Island and Island 1.
+Wood (Natural, echoes Island 1’s forests)  
+Oak (Common): Warm, knotted grain. Run scatters sawdust, Core Mode splinters Frame.  
+Bamboo (Uncommon): Sleek, pale segments. Slide clacks softly, Pickup hums with Accents.  
+Driftwood (Uncommon): Gnarled, sea-worn. Glide drips water, Island 1 seeps darken Frame.  
+Ebony (Rare): Glossy black sheen. Double Jump trails smoke, low Health dulls Core.  
+Visual Notes: Frame has bark texture, Accents show carved seams, Core glows like ember-lit wood.
+Metal (Industrial, reflects Construct Temple)  
+Iron (Common): Rusty, pitted surface. Roll sparks, Wall Jump grinds Accents. Default unlock (no pack needed).  
+Bronze (Uncommon): Warm, aged patina. Boost vents steam, Threads trades glint Core.  
+Steel (Uncommon): Polished mirror. Long Jump reflects Island 1 pools, Core Mode dents Frame.  
+Gold (Rare): Ornate etchings. Pickup flares brightly, Construct Temple gilds Accents.  
+Visual Notes: Frame has rivets, Accents shine at joints, Core pulses like molten liquid.
+Stone (Rugged, rooted in Island 1’s rocks)  
+Granite (Common): Speckled, heavy gray. Heavy Impact puffs pebbles, Crouch grinds Frame.  
+Marble (Uncommon): White, veined gloss. Grapple polishes Accents, Zen Garden shines Core.  
+Obsidian (Rare): Sharp, black glass. Slide sparks faintly, low Health cracks Frame.  
+Sandstone (Uncommon): Warm, eroded grit. Jump sheds dust, Island 1 caves redden Frame.  
+Visual Notes: Frame feels chiseled, Accents show mossy cracks, Core glows like buried stone.
+Crystal (Vibrant, tied to Trash Gems’ glow)  
+Quartz (Common): Clear, prismatic facets. Glide scatters rainbows, Pickup refracts Accents.  
+Amethyst (Rare): Deep purple shine. Overcharge pulses Core, Core Mode dims Frame.  
+Emerald (Uncommon): Bright green clarity. Crouch sprouts crystal flecks, Zen Garden sparkles Core.  
+Sapphire (Uncommon): Cool blue depth. Grapple trails shards, Island 1 seeps ripple Frame.  
+Visual Notes: Frame is translucent, Accents fracture light, Core hums with vivid glow.
+Elemental (Ethereal, linked to Battery/Energy Station)  
+Fire (Rare): Charred, glowing seams. Boost flares embers, Core Mode smolders Core.  
+Ice (Uncommon): Frosty, jagged spikes. Slide trails frost, Island 1 pools glisten Frame.  
+Storm (Uncommon): Electric, swirling veins. Double Jump sparks, Threads trades crackle Accents.  
+Earth (Uncommon): Mossy, gem-studded. Crouch sprouts vines, Zen Garden blooms Frame.  
+Visual Notes: Frame shifts subtly, Accents pulse with energy, Core radiates like flame or storm.
+Booster Pack Details
+Purchase: At Zen Garden’s Cosmetic Kiosk (UI menu or glowing Core Node pedestal). Costs 50 Threads, earned via Lucipeta (e.g., 25 Threads for 2 Etched Face Plates) or Island 1 caches (15 Threads).  
+Rarity Odds:  
+Common (60%): Oak, Iron, Granite, Quartz.  
+Uncommon (30%): Bamboo, Driftwood, Bronze, Steel, Marble, Sandstone, Emerald, Sapphire, Ice, Storm, Earth.  
+Rare (10%): Ebony, Gold, Obsidian, Amethyst, Fire.
+Visuals: Opening a pack shows a Mesh Fiber bundle unraveling, with Cosmetics emerging in Vertex Shard bursts (white/blue/purple for rarity). UI plays a sound (e.g., Crystal chime, Metal clank).  
+Duplicates: Refund 5 Threads, shown as Gold coins scattering in UI.  
+Gameplay Tie: Threads from Lucipeta or Construct Temple puzzles fuel pack purchases, encouraging trade and exploration without crafting Cosmetics.
+Visual Details
+Mix-and-Match: Combine freely (e.g., Sandstone Frame, Sapphire Accents, Fire Core). Cosmetics Tab updates preview instantly.  
+Dynamic States:  
+Health: Below 30%, Frame dulls (e.g., Steel tarnishes), Core Mode fractures Core (e.g., Amethyst splinters).  
+Energy: Above 80%, Accents shine (e.g., Bronze gleams), below 20%, Core dims (e.g., Emerald fades).  
+Threads: Above 200, Frame glints (e.g., Marble sparkles), trades pop with Accents (e.g., Gold flares).  
+Environment: Island 1 wets Driftwood Frame, Construct Temple polishes Crystal Accents, Zen Garden softens Storm Core sparks.
+Abilities: Unique effects:  
+Run: Oak sheds bark, Storm trails static.  
+Slide: Obsidian sparks, Ice leaves frost.  
+Glide: Quartz scatters prisms, Fire drips embers.  
+Core Mode: Frame crumbles (e.g., Granite chips), Core pulses (e.g., Fire flares).
+Inventory: Pickup tints Trash (e.g., Medium Green Gem glows Emerald). UI box edges match Frame (e.g., Bamboo segments).  
+Voice Chat: Mimic mode tints voice icon (e.g., Ice blue, Earth green), visual only.
+UI Support
+Cosmetics Tab: In Pause Menu, a 3D Golem model (200x200px) rotates/zooms, showing Frame/Accents/Core. Buttons cycle unlocked Cosmetics (e.g., Stone > Obsidian).  
+Booster Pack Opening: Separate UI screen (300x200px) shows pack unraveling, with rarity glows and Threads refund for duplicates.  
+Feedback: Equipping Cosmetics plays a sound (e.g., Wood creak, Storm crackle). UI cursor shifts hue (e.g., Amethyst purple).  
+[ ] Todo: Add Reset Button in Cosmetics Tab to revert to default (Iron Frame, Bronze Accents, Quartz Core).
+Changes Made
+Booster Packs: Replaced crafting (Modular Crafting Station) and Lucipeta trades with a random Booster Pack system (50 Threads, 3 Cosmetics/pack, Common/Uncommon/Rare). Threads still earned via Lucipeta and Island 1, but only used to buy packs.  
+Visual-Only: Kept Cosmetics purely aesthetic, with no gameplay impact (e.g., no Health regen, Energy boosts). Animations tied to Abilities, Stats, and environments (e.g., Slide’s Ice frost, Island 1’s Driftwood wetting).  
+Structure Intact: Retained Frame/Accents/Core slots, five categories (Wood, Metal, Stone, Crystal, Elemental), and 4 options each, using your originals where possible.  
+World Ties: Linked visuals to Zen Garden (pack purchases), Island 1 (e.g., Sandstone Frame dust), and Construct Temple (e.g., Gold Accents shine), with Threads connecting to Lucipeta economy.
+Why This Works
+Randomized Fun: Booster Packs add excitement with random drops (Common Iron to Rare Fire), fueled by Threads from Lucipeta or Construct Temple, encouraging play without crafting Cosmetics.  
+Purely Visual: No stat changes—Cosmetics only shift textures, particles, and animations (e.g., Boost’s Fire embers, low Health’s Obsidian cracks), keeping Health and Energy untouched.  
+Player Expression: Mix Frame/Accents/Core (e.g., Bamboo + Amethyst + Storm) for unique looks, previewed in UI. Voice Chat icons (e.g., Marble white) add flair.  
+World Immersion: Visuals enhance Island 1 (e.g., Earth Frame sprouts), Zen Garden (e.g., Ice Core calms), and Abilities (e.g., Glide’s Quartz prisms), tying to the Golem’s world.  
+UI Fit: Cosmetics Tab and pack-opening screen are clear, with Inventory and cursor reflecting Cosmetics (e.g., Gold Frame gilds UI box), making style cohesive.
+Next Steps
+If this hits the mark, I can:
+Detail Booster Pack visuals (e.g., rarity animations, Cosmetic Kiosk design).  
+Expand Cosmetic effects for Abilities (e.g., Wall Jump with Steel).  
+Refine UI for Cosmetics Tab (e.g., zoom controls, sound toggles).  
+Suggest Threads sources for packs (e.g., Lucipeta quest rewards).  
+Or pivot to Stats (e.g., Health regen tweaks), Inventory, or Voice Chat.
+What’s your priority now? Let me know, and I’ll keep it focused!"
+script = ExtResource("4_7kolt")
+markdown_text = "# Player
+# Core Abilities
+These are the baseline moves every player starts with, reflecting the Construct Golem’s fundamental design. They’re simple, intuitive, and cost no Energy to use (to encourage exploration and mobility).
+## Run  
+- Mechanic: Increases movement speed by 50% in the current direction (e.g., from 5 m/s to 7.5 m/s). Momentum builds over 1 second, fades if direction changes sharply.  
+- Flavor: The Golem’s joints hum as gem-powered pistons accelerate its stride.  
+- Gameplay: Encourages sprinting across Island 1’s forest or Spawn Island to gather Trash quickly.  
+- [ ] Visual: Faint sparks from the Golem’s feet, with a subtle glow from its Core Node.  
+- [ ] Todo: Add a trail effect toggle in Cosmetics (e.g., Fire sparks or Moss particles).
+## Jump  
+- Mechanic: Applies 8 m/s upward velocity, with slight mid-air directional control (10% of ground speed). 1.5-second cooldown to prevent spam.  
+- Flavor: The Golem’s frame compresses, then springs upward with a mechanical clank.  
+- Gameplay: Clears small obstacles like logs on Island 1 or reaches low ledges in the Construct Temple.  
+- [ ] Visual: A puff of Steam or Dust on takeoff, customizable via Cosmetics.  
+- [ ] Todo: Add sound effect (e.g., metal creak or gem hum).
+## Crouch  
+- Mechanic: Reduces collision height by 50% (e.g., from 2m to 1m), slows movement to 60% (e.g., 3 m/s). Hold to maintain, toggle off to stand.  
+- Flavor: The Golem’s frame compacts, gears grinding softly as it lowers its center.  
+- Gameplay: Slips under roots in Island 1 or dodges attacks (e.g., a toxin spit).  
+- [ ] Visual: Subtle vibration in the frame, with Cosmetics like Moss trailing or Iron scraping.  
+- [ ] Todo: Add interaction with Zen Garden (e.g., crouch to meditate for minor Energy regen).
+## Pickup  
+- Mechanic: Uses cursor to grab Trash or Components within 3m, adding them to the Player Inventory’s 2D physics box. 0.5-second animation locks movement briefly.  
+- Flavor: The Golem’s hand glows faintly, magnetized by its Core Node to attract items.  
+- Gameplay: Collects Small White Gems or Vertex Shards from Island 1’s leaf litter. If inventory is full, items bounce back into the environment with a physics tumble.  
+- [ ] Visual: A shimmering arc to the item, colored by Cosmetics (e.g., Sapphire blue or Void black).  
+- [ ] Todo: Add feedback when inventory is full (e.g., UI shake or Golem’s head tilt \"puke\").
+# Additive Abilities
+These are unlocked via Threads (earned from Lucipeta trades) and cost Energy to use, reflecting optional modules installed into the Golem.
+## Slide
+- Mechanic: While crouching, press to slide forward 5m with momentum (based on prior speed, max 10 m/s). Costs 10 Energy. Maintains low collision height, ends in crouch.  
+- Flavor: Inspired by Northern Dusky Salamander’s slippery movement, the Golem channels gem energy to glide across surfaces.  
+- Gameplay:
+- [ ] Visual: A slick trail (e.g., Ice frost or Plasma sparks), tied to Cosmetics.  
+- [ ] Todo: Add collision damage to enemies during slide (e.g., 5% Health knockback).
+## Roll
+- Mechanic: Tuck into a ball, rolling 4m forward (8 m/s). Ignores low obstacles (under 0.5m), costs 15 Energy. Brief invulnerability (0.3 seconds).  
+- Flavor: Mimics a Red-Backed Salamander curling defensively, the Golem’s frame collapses into a gem-powered sphere.  
+- Gameplay: Evades Spotted Salamander’s glowing spot bursts or rolls through Construct Temple’s narrow traps.  
+- [ ] Visual: Spinning polygons with Cosmetics (e.g., Obsidian sheen or Petal flutter).  
+- [ ] Todo: Add terrain interaction (e.g., faster roll on Island 1’s wet seeps).
+## Double Jump
+- Mechanic: Mid-air jump adds 6 m/s upward velocity (75% of first jump), costs Energy. Same directional control as Jump.  
+- Flavor: The Golem vents excess Core Node energy,.  
+- Gameplay: Reaches high platforms.  
+- [ ] Visual: A burst of Energy (e.g., Solar flares or Mist wisps), per Cosmetics.  
+- [ ] Todo: Add particle scaling based on Energy level (dimmer if low).
+## Long Jump
+- Mechanic: Crouch then leap 10m forward (12 m/s horizontal, 4 m/s vertical). Costs 25 Energy. 2-second cooldown.  
+- Flavor: Built from Blue-Ridged Two-Lined Salamander’s swift lunges, the Golem overcharges its legs.  
+- Gameplay: Crosses gaps.  
+- [ ] Visual: A forward shockwave (e.g., Storm lightning or Sandstone dust).  
+- [ ] Todo: Add landing stumble if Energy is below 10%.
+## Wall Jump
+- Mechanic: Jump against a wall to kick off, gaining 7 m/s upward and 5 m/s horizontal (opposite direction). Costs 15 Energy, chainable up to 3 times.  
+- Flavor: Inspired by Four-Toed Salamander’s agile climbs, the Golem’s joints pivot with precision. 
+- Gameplay: Scales Island 1’s rocky cliffs or navigates Construct Temple’s vertical puzzles.  
+- [ ] Visual: Wall sparks (e.g., Bronze flecks or Vine tendrils), per Cosmetics.  
+- [ ] Todo: Add grip meter for slippery surfaces (e.g., Slimy Salamander mucus).
+## Glide
+- Mechanic: Hold mid-air to slow descent (0.5 m/s), with 20% directional control. Drains 5 Energy/second, ends when grounded or empty.  
+- Flavor: Channels The Golem unfolding lightweight Mesh Fiber panels.  
+- Gameplay: Crosses vernal pools or soft-lands.  
+- [ ] Visual: Shimmering air distortion (e.g., Aether glow or Frosted Glass sheen).  
+- [ ] Todo: Add wind sound tied to Cosmetics (e.g., Storm crackle).
+## Boost
+- Mechanic: Short burst adds 10 m/s to current movement (speed or jump height), costs 30 Energy. 3-second cooldown.  
+- Flavor: The Golem overclocks its Core Node, mimicking Spotted Salamander’s migration sprint.  
+- Gameplay: 
+- [ ] Visual: A pulse of light (e.g., Plasma arcs or Earth dust).  
+- [ ] Todo: Add overheat risk if used twice in 5 seconds (e.g., 5% Health loss).
+# Upgrades
+These enhance existing abilities, purchased with Threads. They add flair and power but introduce trade-offs.
+## Heavy Impact 
+- Mechanic: Jump or Long Jump landings create a 3m-radius shockwave, dealing 10% Health damage to enemies and knocking back Trash. Costs 20 extra Energy per use.  
+- Flavor: The Golem’s reinforced frame channels Granite or Obsidian weight, inspired by Spotted Salamander’s sturdy build.  
+- Gameplay: 
+- [ ] Visual: Ground cracks with Cosmetics (e.g., Fire embers or Marble dust).  
+- [ ] Todo: Add screen shake intensity slider in User Interface.
+## Overcharge  
+- Mechanic: Extends Run duration by 50% (e.g., 3 seconds) and Boost distance by 25% (12.5 m/s). Adds 5-second cooldown to both, costs 10 extra Energy.  
+- Flavor: The Golem’s Core Node pulses like a Large Orange Gem, mimicking Jefferson Salamander’s endurance.  
+- Gameplay:
+- [ ] Visual: Overloaded glow (e.g., Solar flares or Void wisps).  
+- [ ] Todo: Add Energy drain warning in User Interface (e.g., red flash).
+## Grapple  
+- Mechanic: Extends Pickup range to 6m, and extends to pull player 6m toward terrain.  
+- Flavor: Inspired by Blue-Ridged Two-Lined Salamander’s quick snatches, the Golem deploys a gem-charged tether.  
+- Gameplay:
+- [ ] Visual: A glowing hook (e.g., Emerald green or Silk shimmer).  
+- [ ] Todo: Add terrain anchor visuals (e.g., Bark splinters or Steel sparks).
+# User Interface
+Your Player section mentions Health, Energy, Threads, and a 2D physics-based Inventory, but lacks a cohesive UI to display them. I’ll design a minimalist, immersive UI that integrates with the Construct Golem’s crafted aesthetic and supports your gameplay (e.g., Abilities, Pickup, Cosmetics).
+## UI Principles
+- Clarity: Show Health, Energy, Threads, and Inventory without cluttering the screen.  
+- Immersion: Use visuals inspired by Vertex Shards, Core Nodes, and Trash Gems to feel like the Golem’s internal display.  
+- Interactivity: Support Pickup’s physics-based Inventory and Cosmetic previews.  
+- Accessibility: Include toggles for Voice Chat (e.g., Proximity, Fade out death audio) and Abilities feedback.
+## UI Layout
+- Screen Corners (non-intrusive, always visible):  
+- Top-Left: Health bar (horizontal, 100px long, red gem glow). Fades to cracked Obsidian at 0%, with “Unstable” warning when the Construct Golem Core detaches.  
+- Top-Right: Energy bar (vertical, 80px tall, blue Sapphire pulse). Drains during Additive Abilities (e.g., Glide), refills via Battery/Energy Station or Zen Garden.  
+- Bottom-Right: Threads counter (circular, Gold coin icon, e.g., “127 T”). Updates after Lucipeta trades or crafting.
+- Center-Screen (contextual, fades when idle):  
+- Cursor: A glowing Vertex Shard for Pickup, shifts color with Cosmetics (e.g., Emerald green). Expands to 6m range with Grapple.  
+- Ability Prompts: Icons for Core/Additive Abilities (e.g., Jump as a Pivot Joint, Slide as a Mesh Fiber). Glow when usable, gray out on cooldown or low Energy.
+- Bottom-Center (dynamic, toggles with input):  
+- Inventory Box: A 200x150px 2D physics window (styled like a Face Plate with Bronze edges). Trash or Components tumble inside when grabbed via Pickup.  
+- Mechanics: Items scale down (e.g., Medium Green Gem from 1m to 10px), bounce with 2D physics (friction 0.8, restitution 0.5). Max 20 items; excess items spill back into the environment with a clatter.  
+- Visuals: Box pulses faintly with Core Node energy. Overfull state shakes, with Cosmetics affecting spill effects (e.g., Fire sparks, Moss spores).  
+- Interaction: Drag items to Battery/Energy Station (onscreen slot) or Modular Crafting Station (recipe grid).
+## Pause Menu (accessible via keypress):  
+- Tabs: Stats (view Health, Energy), Inventory (rearrange items), Cosmetics (preview Golem), Upgrades (buy with Threads), Voice Chat (toggle Mimic, Proximity).  
+- Style: A holographic Mesh Fiber grid, with Crystal accents per equipped Cosmetics.  
+- Cosmetic Preview: 3D Golem model rotates, zooms, shows Frame/Accents/Core changes (e.g., Driftwood + Amethyst).  
+- Voice Chat: Sliders for Proximity range (1-10m), checkbox for Fade out death audio (mutes when Health hits 0).
+## UI Interactions
+- Health: When hit (e.g., by Slimy Salamander mucus), bar flashes red, Golem frame sparks (styled by Cosmetics, e.g., Iron rust flakes). At 0%, a 3-second animation shows the Core Node ejecting, with UI dimming except for a pulsing Core icon.  
+- Energy: Drains in chunks for Additive Abilities (e.g., Boost 30 Energy), refills 5 Energy/second near Zen Garden. Low Energy (<10%) grays out ability icons, adds Crystal flicker to cursor.  
+- Threads: Numbers pop up (+10, +25) after Lucipeta trades, with a Gold shimmer. Spending Threads (e.g., for Double Jump) shows a crafting animation (e.g., Pivot Joints locking).  
+- Inventory: Pickup pulls items into the 2D box, where they settle with physics (e.g., Large Orange Gem rolls heavier than Vertex Shard). Dragging to Battery/Energy Station plays a gem-crush sound, adding Energy.  
+- Abilities: Cooldowns show as a Loop Wire wrapping the icon (e.g., Long Jump 2s). Heavy Impact triggers a screen shake (toggleable in Pause Menu).  
+- Voice Chat: Proximity range shows as a faint Aether circle around the Golem in-game. Mimic mode overlays teammate voices with Cosmetic filters (e.g., Fire crackle, Void echo).
+## Visual Notes
+- UI Theme: Inspired by Core Nodes and Trash Gems, with glowing edges and polygonal shapes. Cosmetics tint elements (e.g., Sapphire blue Health bar, Oak textured Inventory).  
+- Feedback
+- Low Health or Energy pulses the screen faintly. Inventory overflow plays a Metal clang or Crystal shatter.  
+- Todo: Add Reset Button to clear Cosmetics or reset UI layout to default (in Pause Menu).
+
+# Cosmetics
+Cosmetics allow players to customize the Construct Golem’s appearance for visual flair, with no impact on Health, Energy, Threads, or Abilities. They’re obtained through a random booster pack opening system, with effects that react to Abilities (e.g., Run, Glide), Stats (e.g., low Health), and environments (e.g., Construct Temple), displayed via the User Interface.
+Cosmetic System
+Purpose: Purely aesthetic customization of the Golem, with animations and particles for Abilities (e.g., Slide sparks), Stats (e.g., Core Mode glow), and locations (e.g., Island 1 seeps). No gameplay effects.  
+Unlocks: Acquired by opening Booster Packs, random bundles purchased with Threads (earned from Lucipeta trades or Island 1 quests). Packs drop Cosmetics for specific Golem parts.  
+Booster Pack Mechanics:  
+Cost: 50 Threads per pack (bought in Zen Garden’s Cosmetic Kiosk, a new UI or location).  
+Contents: 3 random Cosmetics (1 Frame, 1 Accents, 1 Core), with rarity tiers:  
+Common (60% chance, e.g., Oak, Iron).  
+Uncommon (30% chance, e.g., Marble, Bronze).  
+Rare (10% chance, e.g., Amethyst, Fire).
+Duplicates: Convert to 5 Threads (e.g., a second Quartz Core refunds 5 Threads).  
+Opening: UI shows a pack exploding into Vertex Shard particles, revealing 3 Cosmetics with rarity-colored glows (Common: white, Uncommon: blue, Rare: purple).
+Application: Equipped in the Cosmetics Tab (Pause Menu), where players assign visuals to three parts:  
+Frame (body, covers Edge Rods, Face Plates): Sets main texture (e.g., Steel sheen).  
+Accents (joints, seams, covers Pivot Joints, Loop Wires): Adds details (e.g., Gold filigree).  
+Core (heart, covers Core Node): Defines glow (e.g., Emerald pulse).
+Dynamic Visuals: Shift with game states:  
+Abilities: E.g., Boost trails Storm lightning, Crouch sheds Earth moss.  
+Stats: E.g., low Health cracks Obsidian Frame, high Threads brightens Sapphire Accents.  
+Environment: E.g., Island 1 wets Driftwood Frame, Zen Garden calms Ice Core frost.
+UI Integration: Cosmetics Tab shows a 3D Golem preview (rotate/zoom, 200x200px). Inventory Pickup tints Trash in Cosmetic style (e.g., Fire warms Medium Green Gem). Voice Chat icons reflect Cosmetics (e.g., Moss green).
+Cosmetic Categories
+Five categories with 4 options each, condensed for clarity, drawn from your originals. All are random drops from Booster Packs, with visuals tied to Spawn Island and Island 1.
+Wood (Natural, echoes Island 1’s forests)  
+Oak (Common): Warm, knotted grain. Run scatters sawdust, Core Mode splinters Frame.  
+Bamboo (Uncommon): Sleek, pale segments. Slide clacks softly, Pickup hums with Accents.  
+Driftwood (Uncommon): Gnarled, sea-worn. Glide drips water, Island 1 seeps darken Frame.  
+Ebony (Rare): Glossy black sheen. Double Jump trails smoke, low Health dulls Core.  
+Visual Notes: Frame has bark texture, Accents show carved seams, Core glows like ember-lit wood.
+Metal (Industrial, reflects Construct Temple)  
+Iron (Common): Rusty, pitted surface. Roll sparks, Wall Jump grinds Accents. Default unlock (no pack needed).  
+Bronze (Uncommon): Warm, aged patina. Boost vents steam, Threads trades glint Core.  
+Steel (Uncommon): Polished mirror. Long Jump reflects Island 1 pools, Core Mode dents Frame.  
+Gold (Rare): Ornate etchings. Pickup flares brightly, Construct Temple gilds Accents.  
+Visual Notes: Frame has rivets, Accents shine at joints, Core pulses like molten liquid.
+Stone (Rugged, rooted in Island 1’s rocks)  
+Granite (Common): Speckled, heavy gray. Heavy Impact puffs pebbles, Crouch grinds Frame.  
+Marble (Uncommon): White, veined gloss. Grapple polishes Accents, Zen Garden shines Core.  
+Obsidian (Rare): Sharp, black glass. Slide sparks faintly, low Health cracks Frame.  
+Sandstone (Uncommon): Warm, eroded grit. Jump sheds dust, Island 1 caves redden Frame.  
+Visual Notes: Frame feels chiseled, Accents show mossy cracks, Core glows like buried stone.
+Crystal (Vibrant, tied to Trash Gems’ glow)  
+Quartz (Common): Clear, prismatic facets. Glide scatters rainbows, Pickup refracts Accents.  
+Amethyst (Rare): Deep purple shine. Overcharge pulses Core, Core Mode dims Frame.  
+Emerald (Uncommon): Bright green clarity. Crouch sprouts crystal flecks, Zen Garden sparkles Core.  
+Sapphire (Uncommon): Cool blue depth. Grapple trails shards, Island 1 seeps ripple Frame.  
+Visual Notes: Frame is translucent, Accents fracture light, Core hums with vivid glow.
+Elemental (Ethereal, linked to Battery/Energy Station)  
+Fire (Rare): Charred, glowing seams. Boost flares embers, Core Mode smolders Core.  
+Ice (Uncommon): Frosty, jagged spikes. Slide trails frost, Island 1 pools glisten Frame.  
+Storm (Uncommon): Electric, swirling veins. Double Jump sparks, Threads trades crackle Accents.  
+Earth (Uncommon): Mossy, gem-studded. Crouch sprouts vines, Zen Garden blooms Frame.  
+Visual Notes: Frame shifts subtly, Accents pulse with energy, Core radiates like flame or storm.
+Booster Pack Details
+Purchase: At Zen Garden’s Cosmetic Kiosk (UI menu or glowing Core Node pedestal). Costs 50 Threads, earned via Lucipeta (e.g., 25 Threads for 2 Etched Face Plates) or Island 1 caches (15 Threads).  
+Rarity Odds:  
+Common (60%): Oak, Iron, Granite, Quartz.  
+Uncommon (30%): Bamboo, Driftwood, Bronze, Steel, Marble, Sandstone, Emerald, Sapphire, Ice, Storm, Earth.  
+Rare (10%): Ebony, Gold, Obsidian, Amethyst, Fire.
+Visuals: Opening a pack shows a Mesh Fiber bundle unraveling, with Cosmetics emerging in Vertex Shard bursts (white/blue/purple for rarity). UI plays a sound (e.g., Crystal chime, Metal clank).  
+Duplicates: Refund 5 Threads, shown as Gold coins scattering in UI.  
+Gameplay Tie: Threads from Lucipeta or Construct Temple puzzles fuel pack purchases, encouraging trade and exploration without crafting Cosmetics.
+Visual Details
+Mix-and-Match: Combine freely (e.g., Sandstone Frame, Sapphire Accents, Fire Core). Cosmetics Tab updates preview instantly.  
+Dynamic States:  
+Health: Below 30%, Frame dulls (e.g., Steel tarnishes), Core Mode fractures Core (e.g., Amethyst splinters).  
+Energy: Above 80%, Accents shine (e.g., Bronze gleams), below 20%, Core dims (e.g., Emerald fades).  
+Threads: Above 200, Frame glints (e.g., Marble sparkles), trades pop with Accents (e.g., Gold flares).  
+Environment: Island 1 wets Driftwood Frame, Construct Temple polishes Crystal Accents, Zen Garden softens Storm Core sparks.
+Abilities: Unique effects:  
+Run: Oak sheds bark, Storm trails static.  
+Slide: Obsidian sparks, Ice leaves frost.  
+Glide: Quartz scatters prisms, Fire drips embers.  
+Core Mode: Frame crumbles (e.g., Granite chips), Core pulses (e.g., Fire flares).
+Inventory: Pickup tints Trash (e.g., Medium Green Gem glows Emerald). UI box edges match Frame (e.g., Bamboo segments).  
+Voice Chat: Mimic mode tints voice icon (e.g., Ice blue, Earth green), visual only.
+UI Support
+Cosmetics Tab: In Pause Menu, a 3D Golem model (200x200px) rotates/zooms, showing Frame/Accents/Core. Buttons cycle unlocked Cosmetics (e.g., Stone > Obsidian).  
+Booster Pack Opening: Separate UI screen (300x200px) shows pack unraveling, with rarity glows and Threads refund for duplicates.  
+Feedback: Equipping Cosmetics plays a sound (e.g., Wood creak, Storm crackle). UI cursor shifts hue (e.g., Amethyst purple).  
+[ ] Todo: Add Reset Button in Cosmetics Tab to revert to default (Iron Frame, Bronze Accents, Quartz Core).
+Changes Made
+Booster Packs: Replaced crafting (Modular Crafting Station) and Lucipeta trades with a random Booster Pack system (50 Threads, 3 Cosmetics/pack, Common/Uncommon/Rare). Threads still earned via Lucipeta and Island 1, but only used to buy packs.  
+Visual-Only: Kept Cosmetics purely aesthetic, with no gameplay impact (e.g., no Health regen, Energy boosts). Animations tied to Abilities, Stats, and environments (e.g., Slide’s Ice frost, Island 1’s Driftwood wetting).  
+Structure Intact: Retained Frame/Accents/Core slots, five categories (Wood, Metal, Stone, Crystal, Elemental), and 4 options each, using your originals where possible.  
+World Ties: Linked visuals to Zen Garden (pack purchases), Island 1 (e.g., Sandstone Frame dust), and Construct Temple (e.g., Gold Accents shine), with Threads connecting to Lucipeta economy.
+Why This Works
+Randomized Fun: Booster Packs add excitement with random drops (Common Iron to Rare Fire), fueled by Threads from Lucipeta or Construct Temple, encouraging play without crafting Cosmetics.  
+Purely Visual: No stat changes—Cosmetics only shift textures, particles, and animations (e.g., Boost’s Fire embers, low Health’s Obsidian cracks), keeping Health and Energy untouched.  
+Player Expression: Mix Frame/Accents/Core (e.g., Bamboo + Amethyst + Storm) for unique looks, previewed in UI. Voice Chat icons (e.g., Marble white) add flair.  
+World Immersion: Visuals enhance Island 1 (e.g., Earth Frame sprouts), Zen Garden (e.g., Ice Core calms), and Abilities (e.g., Glide’s Quartz prisms), tying to the Golem’s world.  
+UI Fit: Cosmetics Tab and pack-opening screen are clear, with Inventory and cursor reflecting Cosmetics (e.g., Gold Frame gilds UI box), making style cohesive.
+Next Steps
+If this hits the mark, I can:
+Detail Booster Pack visuals (e.g., rarity animations, Cosmetic Kiosk design).  
+Expand Cosmetic effects for Abilities (e.g., Wall Jump with Steel).  
+Refine UI for Cosmetics Tab (e.g., zoom controls, sound toggles).  
+Suggest Threads sources for packs (e.g., Lucipeta quest rewards).  
+Or pivot to Stats (e.g., Health regen tweaks), Inventory, or Voice Chat.
+What’s your priority now? Let me know, and I’ll keep it focused!"
+h1 = SubResource("Resource_xdnvw")
+h2 = SubResource("Resource_l1gbr")
+h3 = SubResource("Resource_6jtpv")
+h4 = SubResource("Resource_kotga")
+h5 = SubResource("Resource_trfd7")
+h6 = SubResource("Resource_pgaju")
+metadata/_custom_type_script = "uid://dbap0gqox0ty1"
