@@ -1,9 +1,8 @@
 extends Node
 
 func _init():
-	# Connects to 480 Space War for testing
-	var response : Dictionary = Steam.steamInitEx(480, true)
-	print("Did Steam initialize?: %s " % response)
+	# Connects to 480 Space War for testing, 3673440 is Lucifuga
+	var response : Dictionary = Steam.steamInitEx(3673440, true)
 	
 	# returns player's NAME
 	var username : String = Steam.getPersonaName()
@@ -15,6 +14,7 @@ func _init():
 	
 	# do we own this game on Steam?
 	var is_owned : bool = Steam.isSubscribed()
+	print(is_owned)
 	
 	# are we logged into Steam?
 	var is_online : bool = Steam.loggedOn()
