@@ -1,6 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://b5hbtk6hdyibx"]
+[gd_scene load_steps=20 format=3 uid="uid://b5hbtk6hdyibx"]
 
 [ext_resource type="LightmapGIData" uid="uid://csvjckfidtahs" path="res://scenes/game/Spawn.lmbake" id="1_6pvjs"]
+[ext_resource type="Script" uid="uid://dyo5rcvy4o7l3" path="res://scripts/discord/discord.gd" id="1_poui6"]
 [ext_resource type="PackedScene" uid="uid://de1eao2jnsfxk" path="res://player/player.tscn" id="1_ptqup"]
 [ext_resource type="Shader" uid="uid://dndyugn7jitow" path="res://shaders/sky_box.gdshader" id="2_apglo"]
 [ext_resource type="PackedScene" uid="uid://b3pakgo4tgcyt" path="res://assets/Contruct_Temple.blend" id="3_3yy1u"]
@@ -30,11 +31,11 @@ fog_mode = 1
 fog_light_color = Color(0, 0, 0, 1)
 fog_density = 1.0
 fog_sky_affect = 0.5
-volumetric_fog_enabled = true
 volumetric_fog_density = 0.1
 volumetric_fog_sky_affect = 0.5
 
 [node name="Spawn" type="Node3D"]
+script = ExtResource("1_poui6")
 
 [node name="LightmapGI" type="LightmapGI" parent="."]
 quality = 0

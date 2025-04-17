@@ -80,6 +80,7 @@ override_font_color = false
 font_color = Color(1, 1, 1, 1)
 
 [node name="Control" type="Control"]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

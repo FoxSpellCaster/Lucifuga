@@ -1,0 +1,8 @@
+; Made with the Godot Color Palette Generator by meloonics.
+; https://meloonics.itch.io/godot-color-palette-generator
+FF94C74C
+FF708F89
+FF4C56C7
+FF8951BB
+FFC74CAF
+FFAD897D

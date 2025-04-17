@@ -6,15 +6,15 @@ func _init():
 	
 	# returns player's NAME
 	var username : String = Steam.getPersonaName()
-	print(username)
+	print("Username: ", username)
 	
 	# returns player's ID
 	var steam_id : int = Steam.getSteamID()
-	print(steam_id)
+	print("Steam ID: ", steam_id)
 	
 	# do we own this game on Steam?
 	var is_owned : bool = Steam.isSubscribed()
-	print(is_owned)
+	print("Do you own Lucifuga? ", is_owned)
 	
 	# are we logged into Steam?
 	var is_online : bool = Steam.loggedOn()
