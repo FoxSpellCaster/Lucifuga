@@ -22,6 +22,7 @@ config/icon="uid://ba8ygc6xtsg7n"
 [autoload]
 
 SteamController="*res://scripts/steam/steam_controller.gd"
+Webhook="*res://scripts/discord/webhook.gd"
 
 [dotnet]
 
