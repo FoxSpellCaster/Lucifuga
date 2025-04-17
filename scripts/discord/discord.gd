@@ -1,7 +1,7 @@
 extends Node
 
 # Replace this with your Discord webhook URL
-const WEBHOOK_URL = "https://discord.com/api/webhooks/1362094905954013435/stX5UGGdI0D1CrsnJakF9o9cDBhfalwZVHdF1TFe5fHcUU0J9l0bQQ-Jlqdr-Ppj8zws"
+const WEBHOOK_URL = ""
 
 # Reference to the HTTPRequest node (assign this in the editor or via code)
 @onready var http_request = $HTTPRequest
