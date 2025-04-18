@@ -23,5 +23,6 @@ shape = SubResource("CapsuleShape3D_btcbx")
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.668337, 0.362687)
 current = true
+fov = 83.0
 
 [node name="Control" parent="." instance=ExtResource("3_g1dw6")]

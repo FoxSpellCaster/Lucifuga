@@ -1,7 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://dptexph7f4ouv"]
+[gd_scene load_steps=7 format=3 uid="uid://dptexph7f4ouv"]
 
 [ext_resource type="Script" uid="uid://bv04inbv8mtr6" path="res://scenes/main_menu.gd" id="1_cruaa"]
 [ext_resource type="Theme" uid="uid://cq1dh8n557t88" path="res://ui/MainMenu.tres" id="2_b76km"]
+[ext_resource type="Sky" uid="uid://deel6vvma6vaf" path="res://assets/textures/skyboxes/sky.tres" id="3_2wh52"]
+[ext_resource type="FontFile" uid="uid://clobwjl5k81e" path="res://assets/fonts/Kaph-Regular.ttf" id="4_ow34m"]
+
+[sub_resource type="Environment" id="Environment_ow34m"]
+background_mode = 2
+sky = ExtResource("3_2wh52")
+
+[sub_resource type="LabelSettings" id="LabelSettings_l72w3"]
+font = ExtResource("4_ow34m")
+font_size = 156
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -13,6 +23,7 @@ grow_vertical = 2
 script = ExtResource("1_cruaa")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -26,6 +37,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 240.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -71,6 +83,22 @@ offset_bottom = 8.0
 
 [node name="MarginContainer" type="MarginContainer" parent="SettingsCenterContainer"]
 layout_mode = 2
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ow34m")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 109.0
+offset_right = 1140.0
+offset_bottom = 322.0
+text = "Lucifuga"
+label_settings = SubResource("LabelSettings_l72w3")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Settings" to="SettingsCenterContainer" method="set_mouse_filter"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Settings" to="SettingsCenterContainer" method="show"]

@@ -1,0 +1,10 @@
+[gd_resource type="Sky" load_steps=3 format=3 uid="uid://deel6vvma6vaf"]
+
+[ext_resource type="Shader" uid="uid://dndyugn7jitow" path="res://shaders/sky_box.gdshader" id="1_peqca"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ar3th"]
+shader = ExtResource("1_peqca")
+shader_parameter/background_dark = true
+
+[resource]
+sky_material = SubResource("ShaderMaterial_ar3th")
