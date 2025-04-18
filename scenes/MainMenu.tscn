@@ -52,6 +52,7 @@ text = "Play"
 
 [node name="Settings" type="Button" parent="CenterContainer/VBoxContainer"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 text = "Settings"
 
@@ -100,5 +101,5 @@ label_settings = SubResource("LabelSettings_l72w3")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Settings" to="SettingsCenterContainer" method="set_mouse_filter"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Settings" to="SettingsCenterContainer" method="show"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Settings" to="SettingsCenterContainer" method="set_mouse_filter"]

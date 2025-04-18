@@ -2,17 +2,17 @@
 
 [ext_resource type="LightmapGIData" uid="uid://csvjckfidtahs" path="res://scenes/game/Spawn.lmbake" id="1_6pvjs"]
 [ext_resource type="Script" uid="uid://dyo5rcvy4o7l3" path="res://scripts/discord/discord.gd" id="1_poui6"]
-[ext_resource type="PackedScene" uid="uid://de1eao2jnsfxk" path="res://player/player.tscn" id="1_ptqup"]
 [ext_resource type="PackedScene" uid="uid://b3pakgo4tgcyt" path="res://assets/Contruct_Temple.blend" id="3_3yy1u"]
 [ext_resource type="Sky" uid="uid://deel6vvma6vaf" path="res://assets/textures/skyboxes/sky.tres" id="3_poui6"]
 [ext_resource type="PackedScene" uid="uid://b7wh257kan8qj" path="res://props/temple_pillar.tscn" id="9_ar3th"]
 [ext_resource type="PackedScene" uid="uid://ds0h080e51l1p" path="res://assets/Enviroment_Rock.blend" id="11_ptepl"]
 [ext_resource type="PackedScene" uid="uid://bhp1bcvhj2md5" path="res://scenes/enviroment/spawn_enviroment.tscn" id="12_ulqxx"]
 [ext_resource type="PackedScene" uid="uid://djeh4ih26prk1" path="res://assets/Land_GroundHex.blend" id="13_lf0fo"]
-[ext_resource type="PackedScene" uid="uid://cwh1msyi3klts" path="res://item_trash_gem.tscn" id="14_27nms"]
+[ext_resource type="PackedScene" uid="uid://t6fex1vwg4bc" path="res://World Items/world_item_small_white_shard.tscn" id="14_tyspg"]
 [ext_resource type="PackedScene" uid="uid://0srmm2r0fdhk" path="res://assets/creature_lucipeta.blend" id="15_3a4x0"]
 [ext_resource type="PackedScene" uid="uid://c8jademwauey7" path="res://assets/Player_Golem_Rig.blend" id="16_2fdwt"]
 [ext_resource type="PackedScene" uid="uid://dlxc72xs26wj8" path="res://assets/Prop_Barrel.blend" id="16_p5ah2"]
+[ext_resource type="PackedScene" uid="uid://cf1pwgl0y0mi6" path="res://Player Controller/Player.tscn" id="16_poui6"]
 [ext_resource type="PackedScene" uid="uid://stt8tabvvvnk" path="res://assets/Temple_FloorTile_Thin.blend" id="20_q8i8p"]
 [ext_resource type="PackedScene" uid="uid://brojcku7qsy0x" path="res://assets/Temple_Wall_Thin.blend" id="21_orj0l"]
 [ext_resource type="PackedScene" uid="uid://ehkm4ml4u0pb" path="res://assets/Enviroment_Grass.blend" id="21_ulqxx"]
@@ -51,9 +51,6 @@ directional_shadow_blend_splits = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ptepl")
-
-[node name="Player" parent="." instance=ExtResource("1_ptqup")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.37971, 0.5, -8.12896)
 
 [node name="Contruct_Temple" parent="." instance=ExtResource("3_3yy1u")]
 transform = Transform3D(1.01436, 0, 0, 0, 1.01436, 0, 0, 0, 1.01436, 0, -0.0413022, -0.314929)
@@ -107,8 +104,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.3016, 0, -29.9978)
 
 [node name="Contruct_Temple2" parent="." instance=ExtResource("3_3yy1u")]
 
-[node name="Item_Trash_Gem" parent="." instance=ExtResource("14_27nms")]
-transform = Transform3D(0.790166, 0.432472, 0.434288, 0, 0.708586, -0.705624, -0.612893, 0.55756, 0.5599, -1.67008, 2.52814, -0.430087)
+[node name="WorldItem_Small_White_Shard" parent="." instance=ExtResource("14_tyspg")]
+transform = Transform3D(0.790166, 0.432472, 0.434287, 0, 0.708586, -0.705624, -0.612893, 0.55756, 0.559901, -1.67008, 2.52814, -0.430087)
 
 [node name="creature_lucipeta" parent="." instance=ExtResource("15_3a4x0")]
 transform = Transform3D(0.489032, 0, -0.872266, 0, 1, 0, 0.872266, 0, 0.489032, 1.34485, 1.10577, -2.08304)
+
+[node name="Player" parent="." instance=ExtResource("16_poui6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.37379, 0.5, -6.30902)
