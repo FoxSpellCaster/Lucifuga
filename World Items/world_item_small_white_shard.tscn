@@ -1,19 +1,7 @@
-[gd_scene load_steps=7 format=4 uid="uid://t6fex1vwg4bc"]
+[gd_scene load_steps=6 format=4 uid="uid://cd5w1ksf7uymq"]
 
 [ext_resource type="PhysicsMaterial" uid="uid://dap0go4fe8s8" path="res://trash_gem_physics_material.tres" id="1_vkh80"]
 [ext_resource type="Script" uid="uid://booaowervsp0q" path="res://WorldItem.gd" id="2_7asxc"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ladx"]
-resource_name = "GemWhite"
-transparency = 4
-cull_mode = 2
-albedo_color = Color(1, 1, 1, 0.75)
-roughness = 0.5
-metadata/extras = {
-"yp": {
-"active_ypaint_node": ""
-}
-}
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_m67fn"]
 _surfaces = [{
@@ -39,8 +27,6 @@ _surfaces = [{
 "index_count": 78,
 "index_data": PackedByteArray("EQAAABIAEwAUAAIAAQAVABYAFwAMAAQAGAADABkADwAKABoAEAAKAA8ACgAQABsAGwAQABwACgAbAB0AHgAfACAACQAhAAUAIgAjACQAIgAIACMAJQAmACcAJQAoACYAKQAHACoAKQArAAcALAAtAA0ALAAOAC0ALgAvADAALgAGAC8AMQAyADMAMQA0ADIANQALADYANQA3AAsA"),
 "lods": [0.0513307, PackedByteArray("CQAAAAUAAwAJAAUAAAABAAIADAADAAQAAQAMAAQACgANAAgADQAHAAgACgAIAAsADQAOAAcACgALAA8ADwALAAYACgAQAA0AEAAKAA8ADQAQAA4ADwAGABAAEAAGAA4A"), 0.0732721, PackedByteArray("CQAAAAUAAwAJAAUAAAABAAIAAQADAAQACgAIAAsACgAHAAgACgALAAYABgAHAAoA"), 0.0962263, PackedByteArray("AAABAAIAAQADAAQAAwAAAAUABgAHAAgA")],
-"material": SubResource("StandardMaterial3D_2ladx"),
-"name": "GemWhite",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 56,
@@ -53,7 +39,6 @@ shadow_mesh = SubResource("ArrayMesh_m67fn")
 points = PackedVector3Array(-2.58833e-05, 0.0675434, -0.126455, -0.104035, 0.0675434, -0.0763733, -0.068942, 0.124869, -0.0483988, -2.58833e-05, 0.124845, -0.0815968, 0.0689156, 0.124845, -0.0483988, 0.104008, 0.0649522, -0.0763733, -2.58833e-05, -0.12487, 0.00658464, -0.129707, 0.0675434, 0.0361683, -0.0859552, 0.124869, 0.0261915, 0.0859288, 0.124845, 0.0261915, 0.129706, 0.0649522, 0.0361683, 0.0577174, 0.0649522, 0.126429, -0.0577438, 0.0649522, 0.126429, -0.0382675, 0.124845, 0.0860024, 0.0382411, 0.124845, 0.0860024)
 
 [node name="WorldItem_Small_White_Shard" type="RigidBody3D"]
-transform = Transform3D(0.790166, 0.432472, 0.434288, 0, 0.708586, -0.705624, -0.612893, 0.55756, 0.5599, 0, 0, 0)
 mass = 5.0
 physics_material_override = ExtResource("1_vkh80")
 script = ExtResource("2_7asxc")
