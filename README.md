@@ -31,7 +31,7 @@ cd Lucifuga
 
 5. Run the Project:
 - Press the "Play" button in Godot to test the game in the editor.
-- Alternatively, export the project for your platform via ==Project > Export==.
+- Alternatively, export the project for your platform via Project > Export.
 
 *Note*: If you encounter issues, check the [Issues](https://github.com/FoxSpellCaster/Lucifuga/issues) tab for known bugs or solutions.
 ## Contributing
