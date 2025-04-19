@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=4 uid="uid://de51uhu5rpcsl"]
 
-[ext_resource type="Texture2D" uid="uid://ds73wok5dyfj8" path="res://assets/images/GoldParticle.png" id="1_vu3dq"]
-[ext_resource type="FontFile" uid="uid://c32bdprq2rbnp" path="res://assets/fonts/m6x11plus.ttf" id="2_vu3dq"]
+[ext_resource type="Texture2D" uid="uid://ds73wok5dyfj8" path="res://Assets/Images/GoldParticle.png" id="1_vu3dq"]
+[ext_resource type="FontFile" uid="uid://c32bdprq2rbnp" path="res://Assets/Fonts/m6x11plus.ttf" id="2_vu3dq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sufdi"]
 resource_name = "Crown Gold"

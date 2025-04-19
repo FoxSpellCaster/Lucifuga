@@ -15,14 +15,14 @@ config/description="The Knight of Darkness, Yami, guards a hollow throne.
 In his madness, he crowns his Shadow Princess, Lucifugia.
 A seat of power forsaken—tears stain all that remains."
 config/version="0.7"
-run/main_scene="uid://dptexph7f4ouv"
+run/main_scene="uid://b5hbtk6hdyibx"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="uid://ba8ygc6xtsg7n"
 
 [autoload]
 
-SteamController="*res://scripts/steam/steam_controller.gd"
-Webhook="*res://scripts/discord/webhook.gd"
+SteamController="*res://Scripts/Steam/steam_controller.gd"
+Webhook="res://Scripts/Discord/webhook.gd"
 GlobalSignals="*res://Global Signals/GlobalSignals.gd"
 
 [dotnet]

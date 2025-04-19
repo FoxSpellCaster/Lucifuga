@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://coe42mjjg8ajw"]
+
+[ext_resource type="Texture2D" uid="uid://cmwhi3tyd3pde" path="res://Items/Icons/Shard1.png" id="1_fc8jn"]
+[ext_resource type="Script" uid="uid://bjuixjebeu4c0" path="res://Scripts/Item.gd" id="2_ar6j1"]
+[ext_resource type="PackedScene" uid="uid://4sjresjdp6a2" path="res://WorldItems/WorldItem_Shard1.tscn" id="3_ar6j1"]
+
+[resource]
+script = ExtResource("2_ar6j1")
+display_name = "Shard1"
+icon = ExtResource("1_fc8jn")
+max_stack_size = 12
+world_item_scene = ExtResource("3_ar6j1")

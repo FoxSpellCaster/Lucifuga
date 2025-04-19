@@ -1,24 +1,38 @@
-[gd_scene load_steps=12 format=3 uid="uid://cf1pwgl0y0mi6"]
+[gd_scene load_steps=17 format=3 uid="uid://cf1pwgl0y0mi6"]
 
 [ext_resource type="Script" uid="uid://3m03w87bcjnr" path="res://Player Controller/PlayerController.gd" id="1_krxqb"]
 [ext_resource type="Script" uid="uid://0xopmg7fmfbj" path="res://Player Controller/Interaction/InteractionController.gd" id="2_66uls"]
 [ext_resource type="Script" uid="uid://bgp8sred771bp" path="res://Inventory/Inventory.gd" id="3_0eju6"]
-[ext_resource type="Script" uid="uid://bjuixjebeu4c0" path="res://Item.gd" id="4_ererc"]
+[ext_resource type="FontFile" uid="uid://clobwjl5k81e" path="res://Assets/Fonts/Kaph-Regular.ttf" id="3_kcr7a"]
 [ext_resource type="PackedScene" uid="uid://c7i5cai8ud4lr" path="res://Inventory/inventory_slot.tscn" id="4_sydjo"]
-[ext_resource type="Resource" uid="uid://coe42mjjg8ajw" path="res://Items/ItemData/Small White Shard.tres" id="5_yn5sn"]
-[ext_resource type="Script" uid="uid://d52p83jkma87" path="res://scripts/steam/steam_avatar.gd" id="7_wbj0i"]
+[ext_resource type="Script" uid="uid://bjuixjebeu4c0" path="res://Scripts/Item.gd" id="5_kcr7a"]
+[ext_resource type="Resource" uid="uid://coe42mjjg8ajw" path="res://Items/ItemData/Shard1.tres" id="5_yn5sn"]
+[ext_resource type="Script" uid="uid://d52p83jkma87" path="res://Scripts/Steam/steam_avatar.gd" id="7_wbj0i"]
+[ext_resource type="FontFile" uid="uid://ij4c5ernshbb" path="res://Assets/Fonts/m5x7.ttf" id="8_iq2nx"]
+[ext_resource type="FontFile" uid="uid://dtwojt6wryvrn" path="res://Assets/Fonts/m6x11.ttf" id="9_kcr7a"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lt5te"]
 radius = 0.3
 height = 1.8
 
 [sub_resource type="LabelSettings" id="LabelSettings_cbwra"]
+font = ExtResource("3_kcr7a")
 font_size = 24
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_yn5sn"]
 font_size = 18
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ererc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wac30"]
+font = ExtResource("9_kcr7a")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_inybr"]
+font = ExtResource("8_iq2nx")
+font_size = 24
 
 [node name="Player" type="CharacterBody3D" groups=["Player"]]
 script = ExtResource("1_krxqb")
@@ -53,7 +67,7 @@ vertical_alignment = 1
 
 [node name="Inventory" type="Node" parent="."]
 script = ExtResource("3_0eju6")
-starter_items = Array[ExtResource("4_ererc")]([ExtResource("5_yn5sn"), ExtResource("5_yn5sn"), ExtResource("5_yn5sn"), ExtResource("5_yn5sn"), ExtResource("5_yn5sn")])
+starter_items = Array[ExtResource("5_kcr7a")]([ExtResource("5_yn5sn")])
 
 [node name="InventoryWindow" type="Panel" parent="Inventory"]
 anchors_preset = 8
@@ -150,7 +164,9 @@ size_flags_vertical = 8
 label_settings = SubResource("LabelSettings_yn5sn")
 horizontal_alignment = 1
 
-[node name="SteamAvatar" type="TextureRect" parent="."]
+[node name="Other" type="Node" parent="."]
+
+[node name="SteamAvatar" type="TextureRect" parent="Other"]
 custom_minimum_size = Vector2(64, 64)
 offset_left = 15.0
 offset_top = 11.0
@@ -160,3 +176,82 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = SubResource("PlaceholderTexture2D_ererc")
 script = ExtResource("7_wbj0i")
+
+[node name="VersionPanel" type="Panel" parent="Other"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -289.0
+offset_top = 15.0
+offset_right = -19.0
+offset_bottom = 71.0
+grow_horizontal = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Other/VersionPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -124.0
+offset_top = -22.5
+offset_right = 124.0
+offset_bottom = 22.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Development Test" type="Label" parent="Other/VersionPanel/VBoxContainer"]
+layout_mode = 2
+text = "Lucifuga Development Test"
+label_settings = SubResource("LabelSettings_wac30")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Version" type="Label" parent="Other/VersionPanel/VBoxContainer"]
+layout_mode = 2
+text = "Version 8 [Inventory Update]"
+label_settings = SubResource("LabelSettings_inybr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MadeByPanel" type="Panel" parent="Other"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -207.0
+offset_top = -65.0
+offset_right = -12.0
+offset_bottom = -15.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Other/MadeByPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -22.5
+offset_right = 95.0
+offset_bottom = 22.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MadeBy" type="Label" parent="Other/MadeByPanel/VBoxContainer"]
+layout_mode = 2
+text = "Made By"
+label_settings = SubResource("LabelSettings_inybr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FoxSpellCasterLabs" type="Label" parent="Other/MadeByPanel/VBoxContainer"]
+layout_mode = 2
+text = "FoxSpellCaster Labs"
+label_settings = SubResource("LabelSettings_wac30")
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,10 +1,15 @@
 [gd_resource type="Sky" load_steps=3 format=3 uid="uid://deel6vvma6vaf"]
 
-[ext_resource type="Shader" uid="uid://dndyugn7jitow" path="res://shaders/sky_box.gdshader" id="1_peqca"]
+[ext_resource type="Shader" uid="uid://dmp5sat2fv651" path="res://Shaders/Skybox/Sokpop_Skybox.gdshader" id="1_peqca"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ar3th"]
 shader = ExtResource("1_peqca")
-shader_parameter/background_dark = true
+shader_parameter/color_top = Color(0.2, 0.6, 0.243137, 1)
+shader_parameter/color_horizon = Color(0.345098, 0.427451, 0.6, 1)
+shader_parameter/color_bottom = Color(0.443137, 0.278431, 0.6, 1)
+shader_parameter/exponent_factor_top = 1.0
+shader_parameter/exponent_factor_bottom = 1.0
+shader_parameter/intensity_amp = 1.0
 
 [resource]
 sky_material = SubResource("ShaderMaterial_ar3th")

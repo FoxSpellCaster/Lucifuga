@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://hh6uyrjqtmhm"]
 
-[ext_resource type="PackedScene" uid="uid://3qsafocr2ng2" path="res://assets/Prop_Dark_Shard.blend" id="1_wf6ua"]
-[ext_resource type="Texture2D" uid="uid://duq0fphpnjo43" path="res://assets/images/FireParticle.png" id="2_wf6ua"]
+[ext_resource type="PackedScene" uid="uid://3qsafocr2ng2" path="res://Assets/Prop_Dark_Shard.blend" id="1_wf6ua"]
+[ext_resource type="Texture2D" uid="uid://duq0fphpnjo43" path="res://Assets/Images/FireParticle.png" id="2_wf6ua"]
 
 [sub_resource type="Gradient" id="Gradient_2nkpo"]
 offsets = PackedFloat32Array(0, 0.799283, 1)

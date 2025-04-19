@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dptexph7f4ouv"]
+[gd_scene load_steps=11 format=3 uid="uid://dptexph7f4ouv"]
 
-[ext_resource type="Script" uid="uid://bv04inbv8mtr6" path="res://scenes/main_menu.gd" id="1_cruaa"]
-[ext_resource type="Theme" uid="uid://cq1dh8n557t88" path="res://ui/MainMenu.tres" id="2_b76km"]
-[ext_resource type="Sky" uid="uid://deel6vvma6vaf" path="res://assets/textures/skyboxes/sky.tres" id="3_2wh52"]
-[ext_resource type="FontFile" uid="uid://clobwjl5k81e" path="res://assets/fonts/Kaph-Regular.ttf" id="4_ow34m"]
+[ext_resource type="Script" uid="uid://bv04inbv8mtr6" path="res://Scenes/main_menu.gd" id="1_cruaa"]
+[ext_resource type="Theme" path="res://UI/MainMenu.tres" id="2_b76km"]
+[ext_resource type="Sky" uid="uid://deel6vvma6vaf" path="res://Assets/Textures/skyboxes/sky.tres" id="3_2wh52"]
+[ext_resource type="FontFile" uid="uid://clobwjl5k81e" path="res://Assets/Fonts/Kaph-Regular.ttf" id="4_ow34m"]
+[ext_resource type="FontFile" uid="uid://ij4c5ernshbb" path="res://Assets/Fonts/m5x7.ttf" id="5_826wr"]
+[ext_resource type="FontFile" uid="uid://dtwojt6wryvrn" path="res://Assets/Fonts/m6x11.ttf" id="6_ucygd"]
 
 [sub_resource type="Environment" id="Environment_ow34m"]
 background_mode = 2
@@ -12,6 +14,14 @@ sky = ExtResource("3_2wh52")
 [sub_resource type="LabelSettings" id="LabelSettings_l72w3"]
 font = ExtResource("4_ow34m")
 font_size = 156
+
+[sub_resource type="LabelSettings" id="LabelSettings_826wr"]
+font = ExtResource("5_826wr")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_ucygd"]
+font = ExtResource("6_ucygd")
+font_size = 24
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -90,7 +100,7 @@ environment = SubResource("Environment_ow34m")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 
-[node name="Label" type="Label" parent="."]
+[node name="LucifugaLabel" type="Label" parent="."]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 109.0
@@ -98,6 +108,48 @@ offset_right = 1140.0
 offset_bottom = 322.0
 text = "Lucifuga"
 label_settings = SubResource("LabelSettings_l72w3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MadeByPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -207.0
+offset_top = -65.0
+offset_right = -12.0
+offset_bottom = -15.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MadeByPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -22.5
+offset_right = 95.0
+offset_bottom = 22.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MadeBy" type="Label" parent="MadeByPanel/VBoxContainer"]
+layout_mode = 2
+text = "Made By"
+label_settings = SubResource("LabelSettings_826wr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FoxSpellCasterLabs" type="Label" parent="MadeByPanel/VBoxContainer"]
+layout_mode = 2
+text = "FoxSpellCaster Labs"
+label_settings = SubResource("LabelSettings_ucygd")
 horizontal_alignment = 1
 vertical_alignment = 1
 
