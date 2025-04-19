@@ -1,7 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://dptexph7f4ouv"]
+[gd_scene load_steps=10 format=3 uid="uid://dptexph7f4ouv"]
 
 [ext_resource type="Script" uid="uid://bv04inbv8mtr6" path="res://Scenes/main_menu.gd" id="1_cruaa"]
-[ext_resource type="Theme" path="res://UI/MainMenu.tres" id="2_b76km"]
 [ext_resource type="Sky" uid="uid://deel6vvma6vaf" path="res://Assets/Textures/skyboxes/sky.tres" id="3_2wh52"]
 [ext_resource type="FontFile" uid="uid://clobwjl5k81e" path="res://Assets/Fonts/Kaph-Regular.ttf" id="4_ow34m"]
 [ext_resource type="FontFile" uid="uid://ij4c5ernshbb" path="res://Assets/Fonts/m5x7.ttf" id="5_826wr"]
@@ -57,7 +56,6 @@ layout_mode = 2
 [node name="Play" type="Button" parent="CenterContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-theme = ExtResource("2_b76km")
 text = "Play"
 
 [node name="Settings" type="Button" parent="CenterContainer/VBoxContainer"]

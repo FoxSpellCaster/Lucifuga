@@ -10,4 +10,3 @@ display_name = "Goo"
 icon = ExtResource("1_8it1k")
 max_stack_size = 12
 world_item_scene = ExtResource("3_q6rrq")
-metadata/_custom_type_script = "uid://c077ak2rge5iv"

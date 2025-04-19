@@ -106,7 +106,8 @@ transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926
 
 [node name="WorldItem_Goo" parent="." instance=ExtResource("16_2s21v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.282178, 0.767828, 2.11106)
-script = null
+item_name = ""
+interact_prompt = ""
 
 [node name="WorldItem_Shard1" parent="." instance=ExtResource("16_tyspg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.32968, 1.5, 1.70359)
