@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://c7i5cai8ud4lr"]
 
 [ext_resource type="Script" uid="uid://daq5s125ae4of" path="res://Inventory/InventorySlot.gd" id="1_gpqwp"]
-[ext_resource type="Texture2D" uid="uid://cmwhi3tyd3pde" path="res://Items/Icons/Shard1.png" id="2_gpqwp"]
-[ext_resource type="FontFile" uid="uid://ccso2edoeec7x" path="res://Assets/Fonts/PeaberryBase.ttf" id="3_ded5v"]
+[ext_resource type="Texture2D" uid="uid://dh8tfobldo1u4" path="res://Items/Icons/Shard1.png" id="2_gpqwp"]
+[ext_resource type="FontFile" uid="uid://u5aevdrymqx5" path="res://Assets/Fonts/PeaberryBase.ttf" id="3_ded5v"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0eju6"]
 font = ExtResource("3_ded5v")

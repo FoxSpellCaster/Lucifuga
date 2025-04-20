@@ -1,11 +1,11 @@
 [gd_scene load_steps=28 format=4 uid="uid://b7wh257kan8qj"]
 
 [ext_resource type="Shader" uid="uid://d3a7pif6ajxph" path="res://Shaders/Skybox/stylized_fire.gdshader" id="1_8dc3d"]
-[ext_resource type="Texture2D" uid="uid://xfq7muddsl53" path="res://Assets/Textures/HoleNoise.png" id="2_88wp7"]
-[ext_resource type="Texture2D" uid="uid://4wa4an5x18bv" path="res://Assets/Textures/FireMask.png" id="3_lvlvw"]
-[ext_resource type="Texture2D" uid="uid://xl22pmkk0nsk" path="res://Assets/Textures/BlueFireGradient.tres" id="4_2o082"]
-[ext_resource type="Texture2D" uid="uid://dbu7botfaiot5" path="res://Assets/Images/BlueParticle.png" id="5_i2la1"]
-[ext_resource type="AudioStream" uid="uid://cqxtpf7kcwcbl" path="res://Assets/SFX/FireSound.ogg" id="6_huy1k"]
+[ext_resource type="Texture2D" uid="uid://dkgbxbv3ucd02" path="res://Assets/Textures/HoleNoise.png" id="2_88wp7"]
+[ext_resource type="Texture2D" uid="uid://dqmqyufo7penu" path="res://Assets/Textures/FireMask.png" id="3_lvlvw"]
+[ext_resource type="Texture2D" uid="uid://xl22pmkk0nsk" path="res://assets/textures/BlueFireGradient.tres" id="4_2o082"]
+[ext_resource type="Texture2D" uid="uid://diqjyfhe1hh2p" path="res://Assets/Images/BlueParticle.png" id="5_i2la1"]
+[ext_resource type="AudioStream" uid="uid://1clctgidar8r" path="res://Assets/SFX/FireSound.ogg" id="6_huy1k"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1jhly"]
 resource_name = "PillarDark"

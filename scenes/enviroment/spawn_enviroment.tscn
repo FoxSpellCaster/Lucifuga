@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://bhp1bcvhj2md5"]
 
-[ext_resource type="Texture2D" uid="uid://b5waxkunstcwj" path="res://Assets/Images/DarkParticle.png" id="1_4x7ik"]
-[ext_resource type="Texture2D" uid="uid://ds73wok5dyfj8" path="res://Assets/Images/GoldParticle.png" id="2_73p1u"]
+[ext_resource type="Texture2D" uid="uid://k1ance1et7hk" path="res://Assets/Images/DarkParticle.png" id="1_4x7ik"]
+[ext_resource type="Texture2D" uid="uid://bw2wij51s8xkd" path="res://Assets/Images/GoldParticle.png" id="2_73p1u"]
 
 [sub_resource type="Gradient" id="Gradient_u3ny1"]
 
