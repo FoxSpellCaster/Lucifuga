@@ -1,8 +1,8 @@
 extends Node
 
 func _init():
-	# Connects to 480 Space War for testing, 3673440 is Lucifuga
-	var response : Dictionary = Steam.steamInitEx(3673440, true)
+	## Connects to 480 Space War for testing, 3673440 is Lucifuga
+	#var response : Dictionary = Steam.steamInitEx(3673440, true)
 	
 	# returns player's NAME
 	var username : String = Steam.getPersonaName()

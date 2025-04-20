@@ -192,7 +192,7 @@ vertical_alignment = 1
 [node name="Other" type="Node" parent="."]
 
 [node name="SteamAvatar" type="TextureRect" parent="Other"]
-custom_minimum_size = Vector2(64, 64)
+custom_minimum_size = Vector2(128, 128)
 offset_left = 15.0
 offset_top = 11.0
 offset_right = 79.0

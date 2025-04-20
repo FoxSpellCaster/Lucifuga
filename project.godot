@@ -18,13 +18,16 @@ config/version="8"
 run/main_scene="uid://dptexph7f4ouv"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="uid://cqwvu0bjr2iqk"
-config/windows_native_icon="res://assets/images/Icon_Lucifugia.ico"
 
 [autoload]
 
 SteamController="*res://Scripts/Steam/steam_controller.gd"
 Webhook="res://Scripts/Discord/webhook.gd"
 GlobalSignals="*res://Global Signals/GlobalSignals.gd"
+
+[debug]
+
+file_logging/enable_file_logging=true
 
 [display]
 
@@ -41,6 +44,10 @@ project/assembly_name="Lucifuga"
 [editor_plugins]
 
 enabled=PackedStringArray()
+
+[gui]
+
+fonts/dynamic_fonts/use_oversampling=false
 
 [importer_defaults]
 
@@ -111,3 +118,9 @@ textures/canvas_textures/default_texture_filter=0
 textures/lossless_compression/force_png=true
 environment/screen_space_reflection/roughness_quality=2
 environment/subsurface_scattering/subsurface_scattering_quality=2
+
+[steam]
+
+initialization/app_id=3673440
+initialization/initialize_on_startup=true
+initialization/embed_callbacks=true
