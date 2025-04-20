@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bv04inbv8mtr6" path="res://scenes/main_menu.gd" id="1_cruaa"]
 [ext_resource type="Sky" uid="uid://deel6vvma6vaf" path="res://assets/textures/skyboxes/sky.tres" id="3_2wh52"]
-[ext_resource type="FontFile" uid="uid://btwvxk5geu7tu" path="res://Assets/Fonts/Kaph-Regular.ttf" id="4_ow34m"]
-[ext_resource type="FontFile" uid="uid://05hjvg2qbkrh" path="res://Assets/Fonts/m5x7.ttf" id="5_826wr"]
-[ext_resource type="FontFile" uid="uid://dg2eos0m7x33h" path="res://Assets/Fonts/m6x11.ttf" id="6_ucygd"]
+[ext_resource type="FontFile" uid="uid://duinf10ihytwp" path="res://assets/fonts/Kaph-Regular.ttf" id="4_ow34m"]
+[ext_resource type="FontFile" uid="uid://c0r5u5j04yt85" path="res://assets/fonts/m5x7.ttf" id="5_826wr"]
+[ext_resource type="FontFile" uid="uid://ogh2m2vh5bfx" path="res://assets/fonts/m6x11.ttf" id="6_ucygd"]
 
 [sub_resource type="Environment" id="Environment_ow34m"]
 background_mode = 2

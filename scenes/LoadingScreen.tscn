@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c7taek14scvhr" path="res://scenes/loading_screen.gd" id="1_ij0l4"]
 [ext_resource type="PackedScene" uid="uid://b5hbtk6hdyibx" path="res://scenes/game/Spawn.tscn" id="2_814mh"]
-[ext_resource type="FontFile" uid="uid://dg2eos0m7x33h" path="res://Assets/Fonts/m6x11.ttf" id="3_3gg4b"]
+[ext_resource type="FontFile" uid="uid://ogh2m2vh5bfx" path="res://assets/fonts/m6x11.ttf" id="3_3gg4b"]
 [ext_resource type="Sky" uid="uid://deel6vvma6vaf" path="res://assets/textures/skyboxes/sky.tres" id="4_814mh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_htrc2"]

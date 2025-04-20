@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://0xopmg7fmfbj" path="res://Player Controller/Interaction/InteractionController.gd" id="2_66uls"]
 [ext_resource type="Script" uid="uid://bgp8sred771bp" path="res://Inventory/Inventory.gd" id="3_0eju6"]
 [ext_resource type="FontFile" uid="uid://duinf10ihytwp" path="res://assets/fonts/Kaph-Regular.ttf" id="3_kcr7a"]
-[ext_resource type="Texture2D" uid="uid://bx814db5nvnka" path="res://assets/images/crosshair.png" id="4_fabuu"]
+[ext_resource type="Texture2D" uid="uid://eenht8t6wngj" path="res://assets/images/crosshair.png" id="4_fabuu"]
 [ext_resource type="PackedScene" uid="uid://c7i5cai8ud4lr" path="res://Inventory/inventory_slot.tscn" id="4_sydjo"]
 [ext_resource type="Script" uid="uid://bjuixjebeu4c0" path="res://Scripts/Item.gd" id="5_kcr7a"]
 [ext_resource type="Resource" uid="uid://coe42mjjg8ajw" path="res://Items/ItemData/Shard1.tres" id="6_inybr"]
@@ -204,10 +204,10 @@ script = ExtResource("7_wbj0i")
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -289.0
-offset_top = 15.0
-offset_right = -19.0
-offset_bottom = 71.0
+offset_left = -275.0
+offset_top = 6.0
+offset_right = -5.0
+offset_bottom = 62.0
 grow_horizontal = 0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Other/VersionPanel"]
@@ -233,48 +233,7 @@ vertical_alignment = 1
 
 [node name="Version" type="Label" parent="Other/VersionPanel/VBoxContainer"]
 layout_mode = 2
-text = "Version 8 [Inventory Update]"
+text = "0.0.8-alpha [Inventory Update]"
 label_settings = SubResource("LabelSettings_inybr")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MadeByPanel" type="Panel" parent="Other"]
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -207.0
-offset_top = -65.0
-offset_right = -12.0
-offset_bottom = -15.0
-grow_horizontal = 0
-grow_vertical = 0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Other/MadeByPanel"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -95.0
-offset_top = -22.5
-offset_right = 95.0
-offset_bottom = 22.5
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="MadeBy" type="Label" parent="Other/MadeByPanel/VBoxContainer"]
-layout_mode = 2
-text = "Made By"
-label_settings = SubResource("LabelSettings_inybr")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="FoxSpellCasterLabs" type="Label" parent="Other/MadeByPanel/VBoxContainer"]
-layout_mode = 2
-text = "FoxSpellCaster Labs"
-label_settings = SubResource("LabelSettings_wac30")
 horizontal_alignment = 1
 vertical_alignment = 1

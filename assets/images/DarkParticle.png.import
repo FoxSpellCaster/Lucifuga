@@ -2,18 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1vueod1uhl3y"
-path.s3tc="res://.godot/imported/DarkParticle.png-858ebf7e6e94e8c87f7ddbe7c87ebcc2.s3tc.ctex"
-path.etc2="res://.godot/imported/DarkParticle.png-858ebf7e6e94e8c87f7ddbe7c87ebcc2.etc2.ctex"
+uid="uid://crp1n3aji302u"
+path.s3tc="res://.godot/imported/DarkParticle.png-873d3cad46638a112c37153a4a855b5f.s3tc.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
-source_file="res://assets/images/DarkParticle.png"
-dest_files=["res://.godot/imported/DarkParticle.png-858ebf7e6e94e8c87f7ddbe7c87ebcc2.s3tc.ctex", "res://.godot/imported/DarkParticle.png-858ebf7e6e94e8c87f7ddbe7c87ebcc2.etc2.ctex"]
+source_file="res://Assets/Images/DarkParticle.png"
+dest_files=["res://.godot/imported/DarkParticle.png-873d3cad46638a112c37153a4a855b5f.s3tc.ctex"]
 
 [params]
 

@@ -14,10 +14,10 @@ config/name="Lucifuga"
 config/description="The Knight of Darkness, Yami, guards a hollow throne.
 In his madness, he crowns his Shadow Princess, Lucifugia.
 A seat of power forsaken—tears stain all that remains."
-config/version="0.7"
+config/version="8"
 run/main_scene="uid://b5hbtk6hdyibx"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="uid://c4lejpwtpel36"
+config/icon="uid://cqwvu0bjr2iqk"
 config/windows_native_icon="res://assets/images/Icon_Lucifugia.ico"
 
 [autoload]
@@ -97,7 +97,6 @@ jolt_physics_3d/queries/enable_ray_cast_face_index=true
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-textures/vram_compression/import_etc2_astc=true
 textures/lossless_compression/force_png=true
 environment/screen_space_reflection/roughness_quality=2
 environment/subsurface_scattering/subsurface_scattering_quality=2
