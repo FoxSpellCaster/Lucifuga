@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://beo3mdsyq0f1d"
-path="res://.godot/imported/Contruct_Temple.blend-eea37ccc347d279012ac00e7e7c0b9d9.scn"
+uid="uid://p272hxqlh3y"
+path="res://.godot/imported/Prop_Yellow_Box.blend-6160f2105877dea93d907bcdfddf0076.scn"
 
 [deps]
 
-source_file="res://assets/Contruct_Temple.blend"
-dest_files=["res://.godot/imported/Contruct_Temple.blend-eea37ccc347d279012ac00e7e7c0b9d9.scn"]
+source_file="res://Blender/Prop_Yellow_Box.blend"
+dest_files=["res://.godot/imported/Prop_Yellow_Box.blend-6160f2105877dea93d907bcdfddf0076.scn"]
 
 [params]
 

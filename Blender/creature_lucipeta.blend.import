@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bsuyqdsbn47lo"
-path="res://.godot/imported/Prop_Dark_Shard.blend-7f3936189bfb911144f3530771ee8ac1.scn"
+uid="uid://budd724dpb8v"
+path="res://.godot/imported/creature_lucipeta.blend-7a56e296b1df1f19635487449084504c.scn"
 
 [deps]
 
-source_file="res://assets/Prop_Dark_Shard.blend"
-dest_files=["res://.godot/imported/Prop_Dark_Shard.blend-7f3936189bfb911144f3530771ee8ac1.scn"]
+source_file="res://Blender/creature_lucipeta.blend"
+dest_files=["res://.godot/imported/creature_lucipeta.blend-7a56e296b1df1f19635487449084504c.scn"]
 
 [params]
 
@@ -22,7 +22,7 @@ nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
-meshes/light_baking=1
+meshes/light_baking=2
 meshes/lightmap_texel_size=0.2
 meshes/force_disable_compression=false
 skins/use_named_skins=true

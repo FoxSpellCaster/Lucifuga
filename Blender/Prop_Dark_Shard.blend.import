@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dlsjicifr00ql"
-path="res://.godot/imported/Prop_Crown.blend-3eb52fbcea6b82a8a3f51c50b11b6efb.scn"
+uid="uid://bsuyqdsbn47lo"
+path="res://.godot/imported/Prop_Dark_Shard.blend-50b6a8cb5bbba1a9d9483f9f1be75be8.scn"
 
 [deps]
 
-source_file="res://assets/Prop_Crown.blend"
-dest_files=["res://.godot/imported/Prop_Crown.blend-3eb52fbcea6b82a8a3f51c50b11b6efb.scn"]
+source_file="res://Blender/Prop_Dark_Shard.blend"
+dest_files=["res://.godot/imported/Prop_Dark_Shard.blend-50b6a8cb5bbba1a9d9483f9f1be75be8.scn"]
 
 [params]
 

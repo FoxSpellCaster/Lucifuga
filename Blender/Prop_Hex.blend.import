@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dq156gngavn76"
-path="res://.godot/imported/Enviroment_Rock.blend-47fd94798315a70dfaeb7301b0eb05c3.scn"
+uid="uid://dp3u1484au6uk"
+path="res://.godot/imported/Prop_Hex.blend-09ced912b7e7757402d80ca7e3fa9338.scn"
 
 [deps]
 
-source_file="res://assets/Enviroment_Rock.blend"
-dest_files=["res://.godot/imported/Enviroment_Rock.blend-47fd94798315a70dfaeb7301b0eb05c3.scn"]
+source_file="res://Blender/Prop_Hex.blend"
+dest_files=["res://.godot/imported/Prop_Hex.blend-09ced912b7e7757402d80ca7e3fa9338.scn"]
 
 [params]
 

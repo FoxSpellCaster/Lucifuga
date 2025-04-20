@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://npd1lvyw65g7"
-path="res://.godot/imported/Temple_Wall_Thin.blend-93ac83c0646046aea8f9044250943311.scn"
+uid="uid://4w46dh7c67ak"
+path="res://.godot/imported/Prop_Toolbox.blend-4d2357f4a272ea493e7a2420921c23da.scn"
 
 [deps]
 
-source_file="res://assets/Temple_Wall_Thin.blend"
-dest_files=["res://.godot/imported/Temple_Wall_Thin.blend-93ac83c0646046aea8f9044250943311.scn"]
+source_file="res://Blender/Prop_Toolbox.blend"
+dest_files=["res://.godot/imported/Prop_Toolbox.blend-4d2357f4a272ea493e7a2420921c23da.scn"]
 
 [params]
 

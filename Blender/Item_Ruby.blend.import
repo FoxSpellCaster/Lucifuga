@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dt4lrfxos1n7j"
-path="res://.godot/imported/Temple_Pillar.blend-c232b5df109ef5c615a144edd11a613f.scn"
+uid="uid://bg6f1sx71ihx4"
+path="res://.godot/imported/Item_Ruby.blend-4f464bd8a1c84bd7fa166dd4ca5d2bd4.scn"
 
 [deps]
 
-source_file="res://assets/Temple_Pillar.blend"
-dest_files=["res://.godot/imported/Temple_Pillar.blend-c232b5df109ef5c615a144edd11a613f.scn"]
+source_file="res://Blender/Item_Ruby.blend"
+dest_files=["res://.godot/imported/Item_Ruby.blend-4f464bd8a1c84bd7fa166dd4ca5d2bd4.scn"]
 
 [params]
 

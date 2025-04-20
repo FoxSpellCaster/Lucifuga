@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://4w46dh7c67ak"
-path="res://.godot/imported/Prop_Toolbox.blend-11aafba2a87e0f4e5f71637b566ba004.scn"
+uid="uid://ddc0nayrrqv31"
+path="res://.godot/imported/Prop_Bomb.blend-e267aa18a233596c7bd8950f336d2de6.scn"
 
 [deps]
 
-source_file="res://assets/Prop_Toolbox.blend"
-dest_files=["res://.godot/imported/Prop_Toolbox.blend-11aafba2a87e0f4e5f71637b566ba004.scn"]
+source_file="res://Blender/Prop_Bomb.blend"
+dest_files=["res://.godot/imported/Prop_Bomb.blend-e267aa18a233596c7bd8950f336d2de6.scn"]
 
 [params]
 

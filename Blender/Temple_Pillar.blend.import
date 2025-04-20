@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bg6f1sx71ihx4"
-path="res://.godot/imported/Item_Ruby.blend-f33a5a4f8325f16b994027290ca738da.scn"
+uid="uid://dt4lrfxos1n7j"
+path="res://.godot/imported/Temple_Pillar.blend-c04b6bff5ae7ddfd4152ad61f6275525.scn"
 
 [deps]
 
-source_file="res://assets/Item_Ruby.blend"
-dest_files=["res://.godot/imported/Item_Ruby.blend-f33a5a4f8325f16b994027290ca738da.scn"]
+source_file="res://Blender/Temple_Pillar.blend"
+dest_files=["res://.godot/imported/Temple_Pillar.blend-c04b6bff5ae7ddfd4152ad61f6275525.scn"]
 
 [params]
 
@@ -22,7 +22,7 @@ nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
-meshes/light_baking=1
+meshes/light_baking=2
 meshes/lightmap_texel_size=0.2
 meshes/force_disable_compression=false
 skins/use_named_skins=true

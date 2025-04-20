@@ -6,6 +6,10 @@
 [ext_resource type="FontFile" uid="uid://c0r5u5j04yt85" path="res://assets/fonts/m5x7.ttf" id="5_826wr"]
 [ext_resource type="FontFile" uid="uid://ogh2m2vh5bfx" path="res://assets/fonts/m6x11.ttf" id="6_ucygd"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_l72w3"]
+font = ExtResource("4_ow34m")
+font_size = 156
+
 [sub_resource type="Environment" id="Environment_ow34m"]
 background_mode = 2
 sky = ExtResource("3_2wh52")
@@ -17,10 +21,6 @@ font_size = 24
 [sub_resource type="LabelSettings" id="LabelSettings_ucygd"]
 font = ExtResource("6_ucygd")
 font_size = 24
-
-[sub_resource type="LabelSettings" id="LabelSettings_l72w3"]
-font = ExtResource("4_ow34m")
-font_size = 156
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -40,6 +40,20 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.14902, 0.145098, 0.168627, 1)
+
+[node name="TitleCenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 442.0
+grow_horizontal = 2
+
+[node name="LucifugaLabel" type="Label" parent="TitleCenterContainer"]
+layout_mode = 2
+text = "Lucifuga"
+label_settings = SubResource("LabelSettings_l72w3")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
@@ -105,8 +119,8 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -201.0
-offset_top = -57.0
+offset_left = -212.0
+offset_top = -64.0
 offset_right = -6.0
 offset_bottom = -7.0
 grow_horizontal = 0
@@ -140,19 +154,5 @@ label_settings = SubResource("LabelSettings_ucygd")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TitleCenterContainer" type="CenterContainer" parent="."]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 442.0
-grow_horizontal = 2
-
-[node name="LucifugaLabel" type="Label" parent="TitleCenterContainer"]
-layout_mode = 2
-text = "Lucifuga"
-label_settings = SubResource("LabelSettings_l72w3")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Settings" to="SettingsCenterContainer" method="set_mouse_filter"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Settings" to="SettingsCenterContainer" method="show"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Settings" to="SettingsCenterContainer" method="set_mouse_filter"]

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://budd724dpb8v"
-path="res://.godot/imported/creature_lucipeta.blend-82958f6790603a4b120f27df2cd9b8e6.scn"
+uid="uid://dlsjicifr00ql"
+path="res://.godot/imported/Prop_Crown.blend-abf22ee038aca863ede36c76d4034276.scn"
 
 [deps]
 
-source_file="res://assets/creature_lucipeta.blend"
-dest_files=["res://.godot/imported/creature_lucipeta.blend-82958f6790603a4b120f27df2cd9b8e6.scn"]
+source_file="res://Blender/Prop_Crown.blend"
+dest_files=["res://.godot/imported/Prop_Crown.blend-abf22ee038aca863ede36c76d4034276.scn"]
 
 [params]
 

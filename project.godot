@@ -28,8 +28,11 @@ GlobalSignals="*res://Global Signals/GlobalSignals.gd"
 
 [display]
 
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 window/size/mode=3
 window/size/resizable=false
+window/stretch/mode="canvas_items"
 
 [dotnet]
 
@@ -46,6 +49,9 @@ animation_library={
 }
 3d_texture={
 &"compress/mode": 0
+}
+scene={
+&"meshes/light_baking": 2
 }
 
 [input]

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://tbtv2eg5uemi"
-path="res://.godot/imported/Temple_FloorTile_Thin.blend-a63445f39bd220e02f81deba294db5d9.scn"
+uid="uid://bvbkh4eq2kui8"
+path="res://.godot/imported/Land_GroundHex.blend-4aec774ce38e124bfdd431f1da62b245.scn"
 
 [deps]
 
-source_file="res://assets/Temple_FloorTile_Thin.blend"
-dest_files=["res://.godot/imported/Temple_FloorTile_Thin.blend-a63445f39bd220e02f81deba294db5d9.scn"]
+source_file="res://Blender/Land_GroundHex.blend"
+dest_files=["res://.godot/imported/Land_GroundHex.blend-4aec774ce38e124bfdd431f1da62b245.scn"]
 
 [params]
 
@@ -22,7 +22,7 @@ nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
-meshes/light_baking=1
+meshes/light_baking=2
 meshes/lightmap_texel_size=0.2
 meshes/force_disable_compression=false
 skins/use_named_skins=true

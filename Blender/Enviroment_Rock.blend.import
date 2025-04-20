@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dq4q045dk8f8i"
-path="res://.godot/imported/Player_Golem_Rig.blend-1b3921f70f0c16f8222c5c61834d40fd.scn"
+uid="uid://dq156gngavn76"
+path="res://.godot/imported/Enviroment_Rock.blend-6bbc26acebb9f6339194eb722913a0a9.scn"
 
 [deps]
 
-source_file="res://assets/Player_Golem_Rig.blend"
-dest_files=["res://.godot/imported/Player_Golem_Rig.blend-1b3921f70f0c16f8222c5c61834d40fd.scn"]
+source_file="res://Blender/Enviroment_Rock.blend"
+dest_files=["res://.godot/imported/Enviroment_Rock.blend-6bbc26acebb9f6339194eb722913a0a9.scn"]
 
 [params]
 
