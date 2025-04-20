@@ -1,9 +1,9 @@
-[gd_scene load_steps=22 format=3 uid="uid://cf1pwgl0y0mi6"]
+[gd_scene load_steps=23 format=3 uid="uid://cf1pwgl0y0mi6"]
 
 [ext_resource type="Script" uid="uid://3m03w87bcjnr" path="res://Player Controller/PlayerController.gd" id="1_krxqb"]
 [ext_resource type="Script" uid="uid://0xopmg7fmfbj" path="res://Player Controller/Interaction/InteractionController.gd" id="2_66uls"]
 [ext_resource type="Script" uid="uid://bgp8sred771bp" path="res://Inventory/Inventory.gd" id="3_0eju6"]
-[ext_resource type="FontFile" uid="uid://duinf10ihytwp" path="res://assets/fonts/Kaph-Regular.ttf" id="3_kcr7a"]
+[ext_resource type="FontFile" uid="uid://dk2153f4elis8" path="res://assets/fonts/m6x11plus.ttf" id="4_brk14"]
 [ext_resource type="Texture2D" uid="uid://eenht8t6wngj" path="res://assets/images/crosshair.png" id="4_fabuu"]
 [ext_resource type="PackedScene" uid="uid://c7i5cai8ud4lr" path="res://Inventory/inventory_slot.tscn" id="4_sydjo"]
 [ext_resource type="Script" uid="uid://bjuixjebeu4c0" path="res://Scripts/Item.gd" id="5_kcr7a"]
@@ -15,20 +15,21 @@
 [ext_resource type="Resource" uid="uid://c4l8xfoj8ewe7" path="res://Items/ItemData/Shard4.tres" id="9_6k2o0"]
 [ext_resource type="FontFile" uid="uid://ogh2m2vh5bfx" path="res://assets/fonts/m6x11.ttf" id="9_kcr7a"]
 [ext_resource type="Resource" uid="uid://2ifi3jso2le3" path="res://Items/ItemData/Shard5.tres" id="10_fabuu"]
+[ext_resource type="Script" uid="uid://d0gerk8l4joyu" path="res://Scripts/DevButtons/devbuttons.gd" id="16_brk14"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lt5te"]
 radius = 0.3
 height = 1.8
 
 [sub_resource type="LabelSettings" id="LabelSettings_cbwra"]
-font = ExtResource("3_kcr7a")
-font_size = 24
-outline_size = 3
+font = ExtResource("4_brk14")
+font_size = 48
+outline_size = 5
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_yn5sn"]
 font = ExtResource("9_kcr7a")
-font_size = 18
+font_size = 30
 outline_size = 2
 outline_color = Color(0, 0, 0, 1)
 
@@ -84,6 +85,7 @@ offset_right = 247.0
 offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
+text = "Testing"
 label_settings = SubResource("LabelSettings_cbwra")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -93,6 +95,7 @@ script = ExtResource("3_0eju6")
 starter_items = Array[ExtResource("5_kcr7a")]([ExtResource("6_inybr"), ExtResource("7_wac30"), ExtResource("8_i5yuc"), ExtResource("9_6k2o0"), ExtResource("10_fabuu")])
 
 [node name="InventoryWindow" type="Panel" parent="Inventory"]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -178,14 +181,16 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -280.0
-offset_top = -36.0
+offset_top = -32.0
 offset_right = 280.0
-offset_bottom = -10.0
+offset_bottom = -5.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_vertical = 8
+text = "Small White Shard"
 label_settings = SubResource("LabelSettings_yn5sn")
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Other" type="Node" parent="."]
 
@@ -237,3 +242,26 @@ text = "0.0.8-alpha [Inventory Update]"
 label_settings = SubResource("LabelSettings_inybr")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="DevButtons" type="Node" parent="."]
+
+[node name="DevControl" type="Control" parent="DevButtons"]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+grow_horizontal = 0
+script = ExtResource("16_brk14")
+
+[node name="DevQuitButton" type="Button" parent="DevButtons/DevControl"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -64.0
+offset_top = 65.0
+offset_right = -5.0
+offset_bottom = 102.0
+grow_horizontal = 0
+text = "QUIT"
