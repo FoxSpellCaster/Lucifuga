@@ -1,18 +1,19 @@
-[gd_scene load_steps=21 format=3 uid="uid://cf1pwgl0y0mi6"]
+[gd_scene load_steps=22 format=3 uid="uid://cf1pwgl0y0mi6"]
 
 [ext_resource type="Script" uid="uid://3m03w87bcjnr" path="res://Player Controller/PlayerController.gd" id="1_krxqb"]
 [ext_resource type="Script" uid="uid://0xopmg7fmfbj" path="res://Player Controller/Interaction/InteractionController.gd" id="2_66uls"]
 [ext_resource type="Script" uid="uid://bgp8sred771bp" path="res://Inventory/Inventory.gd" id="3_0eju6"]
-[ext_resource type="FontFile" uid="uid://btwvxk5geu7tu" path="res://assets/fonts/Kaph-Regular.ttf" id="3_kcr7a"]
+[ext_resource type="FontFile" uid="uid://duinf10ihytwp" path="res://assets/fonts/Kaph-Regular.ttf" id="3_kcr7a"]
+[ext_resource type="Texture2D" uid="uid://bx814db5nvnka" path="res://assets/images/crosshair.png" id="4_fabuu"]
 [ext_resource type="PackedScene" uid="uid://c7i5cai8ud4lr" path="res://Inventory/inventory_slot.tscn" id="4_sydjo"]
 [ext_resource type="Script" uid="uid://bjuixjebeu4c0" path="res://Scripts/Item.gd" id="5_kcr7a"]
 [ext_resource type="Resource" uid="uid://coe42mjjg8ajw" path="res://Items/ItemData/Shard1.tres" id="6_inybr"]
 [ext_resource type="Resource" uid="uid://ca68jx621stty" path="res://Items/ItemData/Shard2.tres" id="7_wac30"]
 [ext_resource type="Script" uid="uid://d52p83jkma87" path="res://Scripts/steam/steam_avatar.gd" id="7_wbj0i"]
 [ext_resource type="Resource" uid="uid://blh1xlsjyqlvy" path="res://Items/ItemData/Shard3.tres" id="8_i5yuc"]
-[ext_resource type="FontFile" uid="uid://05hjvg2qbkrh" path="res://assets/fonts/m5x7.ttf" id="8_iq2nx"]
+[ext_resource type="FontFile" uid="uid://c0r5u5j04yt85" path="res://assets/fonts/m5x7.ttf" id="8_iq2nx"]
 [ext_resource type="Resource" uid="uid://c4l8xfoj8ewe7" path="res://Items/ItemData/Shard4.tres" id="9_6k2o0"]
-[ext_resource type="FontFile" uid="uid://dg2eos0m7x33h" path="res://assets/fonts/m6x11.ttf" id="9_kcr7a"]
+[ext_resource type="FontFile" uid="uid://ogh2m2vh5bfx" path="res://assets/fonts/m6x11.ttf" id="9_kcr7a"]
 [ext_resource type="Resource" uid="uid://2ifi3jso2le3" path="res://Items/ItemData/Shard5.tres" id="10_fabuu"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lt5te"]
@@ -44,6 +45,21 @@ font_size = 24
 [node name="Player" type="CharacterBody3D" groups=["Player"]]
 script = ExtResource("1_krxqb")
 
+[node name="CrosshairTextureRect" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -3.5
+offset_top = -2.5
+offset_right = 3.5
+offset_bottom = 2.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+texture = ExtResource("4_fabuu")
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
 shape = SubResource("CapsuleShape3D_lt5te")
@@ -54,7 +70,6 @@ current = true
 
 [node name="InteractionController" type="RayCast3D" parent="Camera3D"]
 target_position = Vector3(0, 0, -2)
-debug_shape_thickness = 5
 script = ExtResource("2_66uls")
 
 [node name="InteractionPrompt" type="Label" parent="Camera3D/InteractionController"]
