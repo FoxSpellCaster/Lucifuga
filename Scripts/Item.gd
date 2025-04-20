@@ -6,6 +6,6 @@ extends Resource
 @export var max_stack_size : int = 12
 @export var world_item_scene : PackedScene
 
-func _on_use (player) -> bool:
+func _on_use (_player) -> bool:
 	print("Use")
 	return false
