@@ -1,18 +1,14 @@
-[gd_scene load_steps=15 format=3 uid="uid://b5hbtk6hdyibx"]
+[gd_scene load_steps=10 format=3 uid="uid://b5hbtk6hdyibx"]
 
 [ext_resource type="PackedScene" uid="uid://beo3mdsyq0f1d" path="res://assets/Contruct_Temple.blend" id="3_3yy1u"]
+[ext_resource type="PackedScene" uid="uid://dl12lahman3m2" path="res://scenes/enviroment/ground_hex.tscn" id="3_dvshw"]
 [ext_resource type="Sky" uid="uid://deel6vvma6vaf" path="res://assets/textures/skyboxes/sky.tres" id="3_poui6"]
 [ext_resource type="PackedScene" uid="uid://b7wh257kan8qj" path="res://props/temple_pillar.tscn" id="9_ar3th"]
-[ext_resource type="PackedScene" uid="uid://dq156gngavn76" path="res://assets/Enviroment_Rock.blend" id="11_ptepl"]
 [ext_resource type="PackedScene" uid="uid://bhp1bcvhj2md5" path="res://scenes/enviroment/spawn_enviroment.tscn" id="12_ulqxx"]
-[ext_resource type="PackedScene" uid="uid://bvbkh4eq2kui8" path="res://assets/Land_GroundHex.blend" id="13_lf0fo"]
 [ext_resource type="PackedScene" uid="uid://budd724dpb8v" path="res://assets/creature_lucipeta.blend" id="15_3a4x0"]
-[ext_resource type="PackedScene" uid="uid://dq4q045dk8f8i" path="res://assets/Player_Golem_Rig.blend" id="16_2fdwt"]
-[ext_resource type="PackedScene" uid="uid://bu52r433aishw" path="res://assets/Prop_Barrel.blend" id="16_p5ah2"]
 [ext_resource type="PackedScene" uid="uid://cf1pwgl0y0mi6" path="res://Player Controller/Player.tscn" id="16_poui6"]
-[ext_resource type="PackedScene" uid="uid://tbtv2eg5uemi" path="res://assets/Temple_FloorTile_Thin.blend" id="20_q8i8p"]
-[ext_resource type="PackedScene" uid="uid://npd1lvyw65g7" path="res://assets/Temple_Wall_Thin.blend" id="21_orj0l"]
-[ext_resource type="PackedScene" uid="uid://p7d5x10jfh0j" path="res://assets/Enviroment_Grass.blend" id="21_ulqxx"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_dvshw"]
 
 [sub_resource type="Environment" id="Environment_ptepl"]
 background_mode = 2
@@ -28,6 +24,9 @@ volumetric_fog_sky_affect = 0.5
 
 [node name="Spawn" type="Node3D"]
 
+[node name="LightmapGI" type="LightmapGI" parent="."]
+camera_attributes = SubResource("CameraAttributesPractical_dvshw")
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
 light_volumetric_fog_energy = 0.5
@@ -40,20 +39,14 @@ directional_shadow_blend_splits = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ptepl")
 
-[node name="Player_Golem_Rig" parent="." instance=ExtResource("16_2fdwt")]
-transform = Transform3D(-0.833124, 0, -0.553086, 0, 1, 0, 0.553086, 0, -0.833124, 0.634002, 0.49673, -1.36199)
+[node name="Player" parent="." instance=ExtResource("16_poui6")]
+transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, 1.37379, 0.5, -6.30902)
+
+[node name="GroundHex" parent="." instance=ExtResource("3_dvshw")]
+cast_shadow = 0
 
 [node name="Other" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.93159, 0)
-
-[node name="Prop_Rock" parent="Other" instance=ExtResource("11_ptepl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -9.41606, -2)
-
-[node name="Prop_Barrel" parent="Other" instance=ExtResource("16_p5ah2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -9.02436, 1)
-
-[node name="Enviroment_Grass" parent="Other" instance=ExtResource("21_ulqxx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -9.05293, -3)
 
 [node name="Spawn_Enviroment" parent="." instance=ExtResource("12_ulqxx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.91549, 0)
@@ -69,27 +62,7 @@ spot_angle = 51.33
 [node name="Temple_Pillar" parent="." instance=ExtResource("9_ar3th")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 14.9791, 3, 4.7815)
 
-[node name="Temple_FloorTile_Thin" parent="." instance=ExtResource("20_q8i8p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7967, 0.55, -5.99851)
-
-[node name="Temple_Wall_Thin" parent="." instance=ExtResource("21_orj0l")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 16.2503, 1.83035, -6)
-
-[node name="Land_GroundHex" parent="." instance=ExtResource("13_lf0fo")]
-
-[node name="Land_GroundHex2" parent="." instance=ExtResource("13_lf0fo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.5745, 0, 0)
-
-[node name="Land_GroundHex3" parent="." instance=ExtResource("13_lf0fo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.3016, 0, 29.9743)
-
-[node name="Land_GroundHex4" parent="." instance=ExtResource("13_lf0fo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.3016, 0, -29.9978)
-
 [node name="Contruct_Temple2" parent="." instance=ExtResource("3_3yy1u")]
 
 [node name="creature_lucipeta" parent="." instance=ExtResource("15_3a4x0")]
 transform = Transform3D(0.489032, 0, -0.872266, 0, 1, 0, 0.872266, 0, 0.489032, 1.34485, 1.10577, -2.08304)
-
-[node name="Player" parent="." instance=ExtResource("16_poui6")]
-transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, 1.37379, 0.5, -6.30902)
