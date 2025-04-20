@@ -17,7 +17,8 @@ A seat of power forsaken—tears stain all that remains."
 config/version="0.7"
 run/main_scene="uid://b5hbtk6hdyibx"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="uid://ba8ygc6xtsg7n"
+config/icon="uid://mjovjruuov"
+config/windows_native_icon="res://assets/images/Icon_Lucifugia.ico"
 
 [autoload]
 
