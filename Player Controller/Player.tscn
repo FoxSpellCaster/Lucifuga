@@ -1,13 +1,15 @@
-[gd_scene load_steps=15 format=3 uid="uid://cf1pwgl0y0mi6"]
+[gd_scene load_steps=17 format=3 uid="uid://cf1pwgl0y0mi6"]
 
 [ext_resource type="Script" uid="uid://3m03w87bcjnr" path="res://Player Controller/PlayerController.gd" id="1_krxqb"]
 [ext_resource type="Script" uid="uid://0xopmg7fmfbj" path="res://Player Controller/Interaction/InteractionController.gd" id="2_66uls"]
 [ext_resource type="Script" uid="uid://bgp8sred771bp" path="res://Inventory/Inventory.gd" id="3_0eju6"]
-[ext_resource type="FontFile" uid="uid://clobwjl5k81e" path="res://Assets/Fonts/Kaph-Regular.ttf" id="3_kcr7a"]
+[ext_resource type="FontFile" uid="uid://c5d6d87utq3l" path="res://Assets/Fonts/Kaph-Regular.ttf" id="3_kcr7a"]
 [ext_resource type="PackedScene" uid="uid://c7i5cai8ud4lr" path="res://Inventory/inventory_slot.tscn" id="4_sydjo"]
-[ext_resource type="Script" uid="uid://d52p83jkma87" path="res://Scripts/Steam/steam_avatar.gd" id="7_wbj0i"]
-[ext_resource type="FontFile" uid="uid://ij4c5ernshbb" path="res://Assets/Fonts/m5x7.ttf" id="8_iq2nx"]
-[ext_resource type="FontFile" uid="uid://dtwojt6wryvrn" path="res://Assets/Fonts/m6x11.ttf" id="9_kcr7a"]
+[ext_resource type="Script" uid="uid://bjuixjebeu4c0" path="res://Scripts/Item.gd" id="5_kcr7a"]
+[ext_resource type="Resource" uid="uid://coe42mjjg8ajw" path="res://Items/ItemData/Shard1.tres" id="6_inybr"]
+[ext_resource type="Script" uid="uid://d52p83jkma87" path="res://Scripts/steam/steam_avatar.gd" id="7_wbj0i"]
+[ext_resource type="FontFile" uid="uid://se4gqh5spmhm" path="res://Assets/Fonts/m5x7.ttf" id="8_iq2nx"]
+[ext_resource type="FontFile" uid="uid://b8sym30qfqeue" path="res://Assets/Fonts/m6x11.ttf" id="9_kcr7a"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lt5te"]
 radius = 0.3
@@ -68,6 +70,7 @@ vertical_alignment = 1
 
 [node name="Inventory" type="Node" parent="."]
 script = ExtResource("3_0eju6")
+starter_items = Array[ExtResource("5_kcr7a")]([ExtResource("6_inybr"), ExtResource("6_inybr"), ExtResource("6_inybr"), ExtResource("6_inybr"), ExtResource("6_inybr"), ExtResource("6_inybr"), ExtResource("6_inybr")])
 
 [node name="InventoryWindow" type="Panel" parent="Inventory"]
 anchors_preset = 8
