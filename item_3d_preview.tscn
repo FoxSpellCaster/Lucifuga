@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=3 uid="uid://delvd7c02tsgg"]
+
+[ext_resource type="Sky" uid="uid://deel6vvma6vaf" path="res://assets/textures/skyboxes/sky.tres" id="1_1vsmo"]
+[ext_resource type="PackedScene" uid="uid://4sjresjdp6a2" path="res://WorldItems/WorldItem_Shard1.tscn" id="2_6rndp"]
+[ext_resource type="PackedScene" uid="uid://dfpqab05cis16" path="res://WorldItems/WorldItem_Shard2.tscn" id="3_wrdr4"]
+[ext_resource type="PackedScene" uid="uid://ddv77eexok5fu" path="res://WorldItems/WorldItem_Shard3.tscn" id="4_re2wj"]
+[ext_resource type="PackedScene" uid="uid://dp635o6ipcjgc" path="res://WorldItems/WorldItem_Shard4.tscn" id="5_sbwhk"]
+[ext_resource type="PackedScene" uid="uid://ccko6yqeoo0j1" path="res://WorldItems/WorldItem_Shard5.tscn" id="6_euna0"]
+
+[sub_resource type="Environment" id="Environment_6hg67"]
+background_mode = 2
+sky = ExtResource("1_1vsmo")
+fog_mode = 1
+fog_light_color = Color(0, 0, 0, 1)
+fog_density = 1.0
+fog_sky_affect = 0.5
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.1
+volumetric_fog_anisotropy = -0.5
+volumetric_fog_sky_affect = 0.5
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_6hg67")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0240009, 0.409331)
+
+[node name="WorldItem_Shard1" parent="." instance=ExtResource("2_6rndp")]
+visible = false
+
+[node name="WorldItem_Shard2" parent="." instance=ExtResource("3_wrdr4")]
+visible = false
+
+[node name="WorldItem_Shard3" parent="." instance=ExtResource("4_re2wj")]
+visible = false
+
+[node name="WorldItem_Shard4" parent="." instance=ExtResource("5_sbwhk")]
+visible = false
+
+[node name="WorldItem_Shard5" parent="." instance=ExtResource("6_euna0")]
