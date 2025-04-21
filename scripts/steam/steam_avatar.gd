@@ -6,7 +6,7 @@ extends TextureRect
 
 func _ready():
 	Steam.avatar_loaded.connect(_on_avatar_loaded)
-	Steam.getPlayerAvatar(Steam.AVATAR_LARGE, Steam.getSteamID())
+	Steam.getPlayerAvatar(Steam.AVATAR_SMALL, Steam.getSteamID())
 
 func _on_avatar_loaded (_user_id: int, avatar_size : int, avatar_buffer : PackedByteArray):
 	var image : Image = Image.create_from_data(avatar_size, avatar_size, false, Image.FORMAT_RGBA8, avatar_buffer)

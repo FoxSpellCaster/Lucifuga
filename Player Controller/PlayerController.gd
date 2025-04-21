@@ -12,7 +12,7 @@ extends CharacterBody3D
 var is_running : bool = false
 
 @export_group("Camera")
-@export var look_sensitivity : float = 0.005
+@export var look_sensitivity : float = 0.003
 var camera_look_input : Vector2
 
 @onready var camera : Camera3D = get_node("Camera3D")
