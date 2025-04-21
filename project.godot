@@ -51,10 +51,18 @@ enabled=PackedStringArray()
 folder_colors={
 "res://addons/": "gray",
 "res://assets/": "red",
-"res://blender/": "orange",
-"res://scenes/": "yellow",
-"res://scripts/": "green",
-"res://shaders/": "teal"
+"res://assets/fonts/": "red",
+"res://assets/icons/": "orange",
+"res://assets/images/": "yellow",
+"res://assets/materials/": "green",
+"res://assets/music/": "teal",
+"res://assets/shaders/": "blue",
+"res://assets/sounds/": "purple",
+"res://assets/textures/": "pink",
+"res://assets/themes/": "red",
+"res://blender/": "green",
+"res://scenes/": "blue",
+"res://scripts/": "pink"
 }
 
 [gui]
