@@ -1,0 +1,307 @@
+[gd_scene load_steps=25 format=3 uid="uid://cf1pwgl0y0mi6"]
+
+[ext_resource type="Script" uid="uid://3m03w87bcjnr" path="res://scripts/player/PlayerController.gd" id="1_krxqb"]
+[ext_resource type="Script" uid="uid://0xopmg7fmfbj" path="res://scripts/player/Interaction/InteractionController.gd" id="2_66uls"]
+[ext_resource type="Script" uid="uid://bgp8sred771bp" path="res://scripts/inventory/Inventory.gd" id="3_0eju6"]
+[ext_resource type="FontFile" uid="uid://dk2153f4elis8" path="res://assets/fonts/m6x11plus.ttf" id="4_brk14"]
+[ext_resource type="Texture2D" uid="uid://eenht8t6wngj" path="res://assets/icons/crosshair.png" id="4_fabuu"]
+[ext_resource type="PackedScene" uid="uid://c7i5cai8ud4lr" path="res://scenes/inventory/inventory_slot.tscn" id="4_sydjo"]
+[ext_resource type="Script" uid="uid://bjuixjebeu4c0" path="res://scripts/inventory/Item.gd" id="5_kcr7a"]
+[ext_resource type="Resource" uid="uid://coe42mjjg8ajw" path="res://scenes/inventory/data/Shard1.tres" id="6_inybr"]
+[ext_resource type="Resource" uid="uid://ca68jx621stty" path="res://scenes/inventory/data/Shard2.tres" id="7_wac30"]
+[ext_resource type="Resource" uid="uid://blh1xlsjyqlvy" path="res://scenes/inventory/data/Shard3.tres" id="8_i5yuc"]
+[ext_resource type="FontFile" uid="uid://c0r5u5j04yt85" path="res://assets/fonts/m5x7.ttf" id="8_iq2nx"]
+[ext_resource type="Resource" uid="uid://c4l8xfoj8ewe7" path="res://scenes/inventory/data/Shard4.tres" id="9_6k2o0"]
+[ext_resource type="FontFile" uid="uid://ogh2m2vh5bfx" path="res://assets/fonts/m6x11.ttf" id="9_kcr7a"]
+[ext_resource type="Resource" uid="uid://2ifi3jso2le3" path="res://scenes/inventory/data/Shard5.tres" id="10_fabuu"]
+[ext_resource type="Script" uid="uid://d0gerk8l4joyu" path="res://scripts/debug/devbuttons.gd" id="16_brk14"]
+[ext_resource type="Script" uid="uid://bgmvt7n2vo8af" path="res://scripts/player/persona.gd" id="16_pbbws"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lt5te"]
+radius = 0.3
+height = 1.8
+
+[sub_resource type="LabelSettings" id="LabelSettings_cbwra"]
+font = ExtResource("4_brk14")
+font_size = 48
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_yn5sn"]
+font = ExtResource("9_kcr7a")
+font_size = 30
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wac30"]
+font = ExtResource("9_kcr7a")
+font_size = 24
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_inybr"]
+font = ExtResource("8_iq2nx")
+font_size = 24
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ImageTexture" id="ImageTexture_brk14"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_brk14"]
+font = ExtResource("4_brk14")
+font_size = 32
+shadow_color = Color(0, 0, 0, 0.75)
+
+[sub_resource type="LabelSettings" id="LabelSettings_pbbws"]
+font = ExtResource("4_brk14")
+font_size = 24
+shadow_color = Color(0, 0, 0, 0.75)
+
+[node name="Player" type="CharacterBody3D" groups=["Player"]]
+script = ExtResource("1_krxqb")
+
+[node name="CrosshairTextureRect" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -3.5
+offset_top = -2.5
+offset_right = 3.5
+offset_bottom = 2.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+texture = ExtResource("4_fabuu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_lt5te")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+current = true
+
+[node name="InteractionController" type="RayCast3D" parent="Camera3D"]
+target_position = Vector3(0, 0, -2)
+script = ExtResource("2_66uls")
+
+[node name="InteractionPrompt" type="Label" parent="Camera3D/InteractionController"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -247.0
+offset_top = -50.0
+offset_right = 247.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_cbwra")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Inventory" type="Node" parent="."]
+script = ExtResource("3_0eju6")
+starter_items = Array[ExtResource("5_kcr7a")]([ExtResource("6_inybr"), ExtResource("7_wac30"), ExtResource("8_i5yuc"), ExtResource("9_6k2o0"), ExtResource("10_fabuu")])
+
+[node name="InventoryWindow" type="Panel" parent="Inventory"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -280.0
+offset_top = -184.0
+offset_right = 280.0
+offset_bottom = 184.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SlotContainer" type="GridContainer" parent="Inventory/InventoryWindow"]
+custom_minimum_size = Vector2(520, 312)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -166.0
+offset_right = 260.0
+offset_bottom = 146.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 5
+
+[node name="InventorySlot" parent="Inventory/InventoryWindow/SlotContainer" instance=ExtResource("4_sydjo")]
+layout_mode = 2
+
+[node name="InventorySlot2" parent="Inventory/InventoryWindow/SlotContainer" instance=ExtResource("4_sydjo")]
+layout_mode = 2
+
+[node name="InventorySlot3" parent="Inventory/InventoryWindow/SlotContainer" instance=ExtResource("4_sydjo")]
+layout_mode = 2
+
+[node name="InventorySlot4" parent="Inventory/InventoryWindow/SlotContainer" instance=ExtResource("4_sydjo")]
+layout_mode = 2
+
+[node name="InventorySlot5" parent="Inventory/InventoryWindow/SlotContainer" instance=ExtResource("4_sydjo")]
+layout_mode = 2
+
+[node name="InventorySlot6" parent="Inventory/InventoryWindow/SlotContainer" instance=ExtResource("4_sydjo")]
+layout_mode = 2
+
+[node name="InventorySlot7" parent="Inventory/InventoryWindow/SlotContainer" instance=ExtResource("4_sydjo")]
+layout_mode = 2
+
+[node name="InventorySlot8" parent="Inventory/InventoryWindow/SlotContainer" instance=ExtResource("4_sydjo")]
+layout_mode = 2
+
+[node name="InventorySlot9" parent="Inventory/InventoryWindow/SlotContainer" instance=ExtResource("4_sydjo")]
+layout_mode = 2
+
+[node name="InventorySlot10" parent="Inventory/InventoryWindow/SlotContainer" instance=ExtResource("4_sydjo")]
+layout_mode = 2
+
+[node name="InventorySlot11" parent="Inventory/InventoryWindow/SlotContainer" instance=ExtResource("4_sydjo")]
+layout_mode = 2
+
+[node name="InventorySlot12" parent="Inventory/InventoryWindow/SlotContainer" instance=ExtResource("4_sydjo")]
+layout_mode = 2
+
+[node name="InventorySlot13" parent="Inventory/InventoryWindow/SlotContainer" instance=ExtResource("4_sydjo")]
+layout_mode = 2
+
+[node name="InventorySlot14" parent="Inventory/InventoryWindow/SlotContainer" instance=ExtResource("4_sydjo")]
+layout_mode = 2
+
+[node name="InventorySlot15" parent="Inventory/InventoryWindow/SlotContainer" instance=ExtResource("4_sydjo")]
+layout_mode = 2
+
+[node name="InfoText" type="Label" parent="Inventory/InventoryWindow"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -280.0
+offset_top = -32.0
+offset_right = 280.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+label_settings = SubResource("LabelSettings_yn5sn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Other" type="Node" parent="."]
+
+[node name="DevButtons" type="Node" parent="."]
+
+[node name="Persona" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("16_pbbws")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Persona"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 294.0
+offset_bottom = 312.0
+
+[node name="PanelContainer" type="PanelContainer" parent="Persona/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Persona/VBoxContainer/PanelContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(290, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Persona/VBoxContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Development Test" type="Label" parent="Persona/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Lucifuga Development Test"
+label_settings = SubResource("LabelSettings_wac30")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Version" type="Label" parent="Persona/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "0.0.8-alpha [Inventory Update]"
+label_settings = SubResource("LabelSettings_inybr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AvatarContainer" type="PanelContainer" parent="Persona/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="Avatar" type="TextureRect" parent="Persona/VBoxContainer/AvatarContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = SubResource("ImageTexture_brk14")
+stretch_mode = 4
+
+[node name="NameLabel" type="Label" parent="Persona/VBoxContainer"]
+layout_mode = 2
+text = "Name"
+label_settings = SubResource("LabelSettings_brk14")
+
+[node name="SteamIDLabel" type="Label" parent="Persona/VBoxContainer"]
+layout_mode = 2
+text = "SteamID"
+label_settings = SubResource("LabelSettings_pbbws")
+
+[node name="OnlineStatusLabel" type="Label" parent="Persona/VBoxContainer"]
+layout_mode = 2
+text = "OnlineStatus"
+label_settings = SubResource("LabelSettings_pbbws")
+
+[node name="OwnershipLabel" type="Label" parent="Persona/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Ownership"
+label_settings = SubResource("LabelSettings_pbbws")
+
+[node name="LanguageLabel" type="Label" parent="Persona/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Language"
+label_settings = SubResource("LabelSettings_pbbws")
+
+[node name="SteamDeckLabel" type="Label" parent="Persona/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "SteamDeck"
+label_settings = SubResource("LabelSettings_pbbws")
+
+[node name="DevControl" type="Control" parent="Persona/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+script = ExtResource("16_brk14")
+
+[node name="DevQuitButton" type="Button" parent="Persona/VBoxContainer/DevControl"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 37.0
+text = "QUIT"

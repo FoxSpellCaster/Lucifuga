@@ -1,9 +1,9 @@
 [gd_scene load_steps=12 format=3 uid="uid://dptexph7f4ouv"]
 
 [ext_resource type="Script" uid="uid://bv04inbv8mtr6" path="res://scenes/menu/main_menu.gd" id="1_cruaa"]
-[ext_resource type="Texture2D" uid="uid://bsa208vapj85n" path="res://assets/images/image.jpg" id="2_ucygd"]
+[ext_resource type="Texture2D" uid="uid://bsa208vapj85n" path="res://assets/images/lucifuga_grok_raw.jpg" id="2_ucygd"]
 [ext_resource type="Sky" uid="uid://deel6vvma6vaf" path="res://assets/textures/skyboxes/sky.tres" id="3_2wh52"]
-[ext_resource type="Theme" uid="uid://bnknowa7wt7df" path="res://Menu_Theme.tres" id="4_mipys"]
+[ext_resource type="Theme" uid="uid://bnknowa7wt7df" path="res://assets/themes/Menu_Theme.tres" id="4_mipys"]
 [ext_resource type="FontFile" uid="uid://duinf10ihytwp" path="res://assets/fonts/Kaph-Regular.ttf" id="4_ow34m"]
 [ext_resource type="FontFile" uid="uid://c0r5u5j04yt85" path="res://assets/fonts/m5x7.ttf" id="5_826wr"]
 [ext_resource type="FontFile" uid="uid://ogh2m2vh5bfx" path="res://assets/fonts/m6x11.ttf" id="6_ucygd"]
@@ -161,5 +161,5 @@ label_settings = SubResource("LabelSettings_ucygd")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Settings" to="SettingsCenterContainer" method="set_mouse_filter"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Settings" to="SettingsCenterContainer" method="show"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Settings" to="SettingsCenterContainer" method="set_mouse_filter"]

@@ -1,28 +1,34 @@
-# Godot 4+ specific ignores
+# Godot-specific
 .godot/
-
-# Godot-specific ignores
 .import/
+*.import
 export.cfg
 export_credentials.cfg
-
-# Imported translations (automatically generated from CSV files)
 *.translation
+user://
 
-# Mono-specific ignores
+# Mono-specific
 .mono/
 data_*/
 mono_crash.*.json
 
-*.blend1
-.tmp
-.kra~
-.tga~
-.lmbake.depren
-.mmpz.bak
-.psd
-.blend
+# Temporary files
+*.tmp
+*.bak
+*.exr
+*.lmbake
+*.bin
+*.ico~
+*.kra
+*.kra~
+*.tga~
+*.mmpz
 *.png~
-*.unwrap_cache
+*.jpg
+
+# Asset sources
+*.blend
+*.psd
+
+# Misc
 *.temp
-/configs
