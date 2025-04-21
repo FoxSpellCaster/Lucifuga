@@ -12,7 +12,7 @@ func _ready() -> void:
 	
 	# Verify TextureRect
 	if not avatar_texture:
-		push_error("Avatar TextureRect node not found")
+		push_error("Avatar TextureRect not found")
 		update_ui_offline()
 		return
 	
@@ -47,7 +47,9 @@ func load_steam_avatar(steam_id: int) -> void:
 	
 	# Get avatar data
 	var avatar_data: Dictionary = Steam.getImageRGBA(avatar_id)
-	if not avatar_data.get("success", false):
+	var data_success: bool = avatar_data.get("success", false)
+	print("Avatar data success: ", data_success)
+	if not data_success:
 		avatar_texture.texture = null
 		print("Avatar data failed")
 		return
@@ -56,8 +58,7 @@ func load_steam_avatar(steam_id: int) -> void:
 	var width: int = avatar_data.get("width", 0)
 	var height: int = avatar_data.get("height", 0)
 	var buffer: PackedByteArray = avatar_data.get("buffer", PackedByteArray())
-	print("Avatar width: ", width, ", height: ", height)
-	print("Buffer size: ", buffer.size())
+	print("Width: ", width, ", Height: ", height, ", Buffer size: ", buffer.size())
 	
 	if width <= 0 or height <= 0 or buffer.is_empty():
 		avatar_texture.texture = null
@@ -65,16 +66,20 @@ func load_steam_avatar(steam_id: int) -> void:
 		return
 	
 	# Create image
-	var image := Image.new()
-	var error: int = image.create_from_data(width, height, false, Image.FORMAT_RGBA8, buffer)
-	if error != OK or image.is_empty():
+	var image: Image = Image.new()
+	var image_error: int = image.create_from_data(width, height, false, Image.FORMAT_RGBA8, buffer)
+	if image_error != OK:
 		avatar_texture.texture = null
-		print("Image creation failed, error: ", error)
+		print("Image creation failed, error code: ", image_error)
+		return
+	if image.is_empty():
+		avatar_texture.texture = null
+		print("Image is empty")
 		return
 	print("Image created")
 	
 	# Create texture
-	var texture := ImageTexture.create_from_image(image)
+	var texture: ImageTexture = ImageTexture.create_from_image(image)
 	if not texture:
 		avatar_texture.texture = null
 		print("Texture creation failed")
@@ -82,6 +87,6 @@ func load_steam_avatar(steam_id: int) -> void:
 	avatar_texture.texture = texture
 	print("Texture applied")
 	
-	# Verify TextureRect
+	# Check TextureRect
 	print("TextureRect visible: ", avatar_texture.visible)
 	print("TextureRect size: ", avatar_texture.size)

@@ -39,11 +39,13 @@ interact_prompt = "Pickup Large Orange Shard"
 mesh = SubResource("ArrayMesh_k6pxm")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Large Orange Shard"]
+visible = false
 light_color = Color(1, 0.67451, 0, 1)
 light_energy = 0.5
 omni_range = 1.0
 
 [node name="FogVolume" type="FogVolume" parent="Large Orange Shard"]
+visible = false
 size = Vector3(1, 1, 1)
 shape = 0
 

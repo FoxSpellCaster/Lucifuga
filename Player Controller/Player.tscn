@@ -43,7 +43,7 @@ font = ExtResource("8_iq2nx")
 font_size = 24
 shadow_color = Color(0, 0, 0, 1)
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_brk14"]
+[sub_resource type="ImageTexture" id="ImageTexture_brk14"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_brk14"]
 font = ExtResource("4_brk14")
@@ -258,7 +258,8 @@ custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
-texture = SubResource("PlaceholderTexture2D_brk14")
+texture = SubResource("ImageTexture_brk14")
+stretch_mode = 4
 
 [node name="NameLabel" type="Label" parent="Persona/VBoxContainer"]
 layout_mode = 2

@@ -40,11 +40,13 @@ mesh = SubResource("ArrayMesh_p8cku")
 skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Medium Green Shard"]
+visible = false
 light_color = Color(0.054902, 1, 0, 1)
 light_energy = 0.5
 omni_range = 1.0
 
 [node name="FogVolume" type="FogVolume" parent="Medium Green Shard"]
+visible = false
 size = Vector3(1, 1, 1)
 shape = 0
 
