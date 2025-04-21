@@ -1,92 +1,59 @@
 extends Control
 
-# UI nodes
-@onready var avatar_texture: TextureRect = $VBoxContainer/AvatarContainer/Avatar
+# UI nodes for displaying Steam user information
 @onready var name_label: Label = $VBoxContainer/NameLabel
+@onready var steam_id_label: Label = $VBoxContainer/SteamIDLabel
+@onready var online_status_label: Label = $VBoxContainer/OnlineStatusLabel
 
+# Called when the node is ready
 func _ready() -> void:
-	# Check Steam initialization
+	# Check if Steam is initialized and enabled
 	if not SteamController or not SteamController.enable_steam or not Steam.isSteamRunning():
 		update_ui_offline()
 		return
 	
-	# Verify TextureRect
-	if not avatar_texture:
-		push_error("Avatar TextureRect not found")
+	# Verify UI nodes exist
+	if not name_label or not steam_id_label or not online_status_label:
+		push_error("One or more UI nodes (NameLabel, SteamIDLabel, OnlineStatusLabel) not found")
 		update_ui_offline()
 		return
 	
-	# Set username
+	# Fetch Steam username
 	var username: String = Steam.getPersonaName()
 	name_label.text = username if username else "Unknown"
-	print("Username: ", username)
 	
-	# Load avatar
+	# Fetch Steam ID
 	var steam_id: int = Steam.getSteamID()
+	steam_id_label.text = "Steam ID: %d" % steam_id
+	
+	# Fetch online status
+	var is_online: bool = Steam.loggedOn()
+	var persona_state: int = Steam.getFriendPersonaState(steam_id) if is_online and steam_id else 0
+	online_status_label.text = "Status: %s" % persona_state_to_string(persona_state)
+	
+	# Print debug information
+	print("Username: ", username)
 	print("Steam ID: ", steam_id)
-	if steam_id:
-		load_steam_avatar(steam_id)
-	else:
-		avatar_texture.texture = null
-		print("No valid Steam ID")
+	print("Online Status: ", persona_state_to_string(persona_state))
 
+# Updates the UI when Steam is not available
 func update_ui_offline() -> void:
-	name_label.text = "Offline"
-	if avatar_texture:
-		avatar_texture.texture = null
+	if name_label:
+		name_label.text = "Offline"
+	if steam_id_label:
+		steam_id_label.text = "Steam ID: N/A"
+	if online_status_label:
+		online_status_label.text = "Status: Offline"
 	print("Steam offline or not initialized")
 
-func load_steam_avatar(steam_id: int) -> void:
-	# Get avatar ID (medium, 64x64)
-	var avatar_id: int = Steam.getMediumFriendAvatar(steam_id)
-	print("Avatar ID: ", avatar_id)
-	if avatar_id <= 0:
-		avatar_texture.texture = null
-		print("Invalid avatar ID")
-		return
-	
-	# Get avatar data
-	var avatar_data: Dictionary = Steam.getImageRGBA(avatar_id)
-	var data_success: bool = avatar_data.get("success", false)
-	print("Avatar data success: ", data_success)
-	if not data_success:
-		avatar_texture.texture = null
-		print("Avatar data failed")
-		return
-	
-	# Extract dimensions and buffer
-	var width: int = avatar_data.get("width", 0)
-	var height: int = avatar_data.get("height", 0)
-	var buffer: PackedByteArray = avatar_data.get("buffer", PackedByteArray())
-	print("Width: ", width, ", Height: ", height, ", Buffer size: ", buffer.size())
-	
-	if width <= 0 or height <= 0 or buffer.is_empty():
-		avatar_texture.texture = null
-		print("Invalid dimensions or buffer")
-		return
-	
-	# Create image
-	var image: Image = Image.new()
-	var image_error: int = image.create_from_data(width, height, false, Image.FORMAT_RGBA8, buffer)
-	if image_error != OK:
-		avatar_texture.texture = null
-		print("Image creation failed, error code: ", image_error)
-		return
-	if image.is_empty():
-		avatar_texture.texture = null
-		print("Image is empty")
-		return
-	print("Image created")
-	
-	# Create texture
-	var texture: ImageTexture = ImageTexture.create_from_image(image)
-	if not texture:
-		avatar_texture.texture = null
-		print("Texture creation failed")
-		return
-	avatar_texture.texture = texture
-	print("Texture applied")
-	
-	# Check TextureRect
-	print("TextureRect visible: ", avatar_texture.visible)
-	print("TextureRect size: ", avatar_texture.size)
+# Converts Steam persona state to a readable string
+func persona_state_to_string(state: int) -> String:
+	match state:
+		0: return "Offline"
+		1: return "Online"
+		2: return "Busy"
+		3: return "Away"
+		4: return "Snooze"
+		5: return "Looking to Trade"
+		6: return "Looking to Play"
+		_: return "Unknown"

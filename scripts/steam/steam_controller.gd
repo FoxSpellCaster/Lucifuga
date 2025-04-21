@@ -17,37 +17,25 @@ func _ready() -> void:
 		return
 	
 	# Retrieve and log user information
-	var username: String = Steam.getPersonaName()
-	print("Username: ", username if username else "Unknown")
+	var _username: String = Steam.getPersonaName()
 	
-	var steam_id: int = Steam.getSteamID()
-	print("Steam ID: ", steam_id)
+	var _steam_id: int = Steam.getSteamID()
 	
-	var is_owned: bool = Steam.isSubscribed()
-	print("Do you own this game? ", is_owned)
+	var _is_owned: bool = Steam.isSubscribed()
 	
-	var is_online: bool = Steam.loggedOn()
-	print("Steam online: ", is_online)
+	var _is_online: bool = Steam.loggedOn()
 	
-	var launch_cmd_line: String = Steam.getLaunchCommandLine()
-	if launch_cmd_line:
-		print("Launch command line: ", launch_cmd_line)
+	var _launch_cmd_line: String = Steam.getLaunchCommandLine()
 	
-	var is_on_steam_deck: bool = Steam.isSteamRunningOnSteamDeck()
-	print("Running on Steam Deck: ", is_on_steam_deck)
+	var _is_on_steam_deck: bool = Steam.isSteamRunningOnSteamDeck()
 	
-	var is_on_vr: bool = Steam.isSteamRunningInVR()
-	print("Running in VR: ", is_on_vr)
+	var _is_on_vr: bool = Steam.isSteamRunningInVR()
 	
-	var is_vac_banned: bool = Steam.isVACBanned()
-	if is_vac_banned:
-		print("WARNING: Player is VAC banned!")
+	var _is_vac_banned: bool = Steam.isVACBanned()
 	
-	var game_language: String = Steam.getCurrentGameLanguage()
-	print("Game language: ", game_language)
+	var _game_language: String = Steam.getCurrentGameLanguage()
 	
-	var ui_language: String = Steam.getSteamUILanguage()
-	print("UI language: ", ui_language)
+	var _ui_language: String = Steam.getSteamUILanguage()
 
 # Optional: Clean up Steam when the node is removed
 func _exit_tree() -> void:
