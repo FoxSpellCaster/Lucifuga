@@ -5,4 +5,6 @@
 [resource]
 default_font = ExtResource("1_3oeqb")
 default_font_size = 48
+Button/colors/font_outline_color = Color(0, 0, 0, 0.5)
+Button/constants/outline_size = 10
 Button/fonts/font = ExtResource("1_3oeqb")
