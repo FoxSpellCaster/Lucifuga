@@ -25,6 +25,7 @@ mono_crash.*.json
 *.mmpz
 *.png~
 *.jpg
+*.unwrap_cache
 
 # Asset sources
 *.blend
