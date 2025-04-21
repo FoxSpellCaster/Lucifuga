@@ -1,0 +1,165 @@
+[gd_scene load_steps=12 format=3 uid="uid://dptexph7f4ouv"]
+
+[ext_resource type="Script" uid="uid://bv04inbv8mtr6" path="res://scenes/menu/main_menu.gd" id="1_cruaa"]
+[ext_resource type="Texture2D" uid="uid://bsa208vapj85n" path="res://assets/images/image.jpg" id="2_ucygd"]
+[ext_resource type="Sky" uid="uid://deel6vvma6vaf" path="res://assets/textures/skyboxes/sky.tres" id="3_2wh52"]
+[ext_resource type="Theme" uid="uid://bnknowa7wt7df" path="res://Menu_Theme.tres" id="4_mipys"]
+[ext_resource type="FontFile" uid="uid://duinf10ihytwp" path="res://assets/fonts/Kaph-Regular.ttf" id="4_ow34m"]
+[ext_resource type="FontFile" uid="uid://c0r5u5j04yt85" path="res://assets/fonts/m5x7.ttf" id="5_826wr"]
+[ext_resource type="FontFile" uid="uid://ogh2m2vh5bfx" path="res://assets/fonts/m6x11.ttf" id="6_ucygd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_l72w3"]
+font = ExtResource("4_ow34m")
+font_size = 156
+shadow_size = 50
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Environment" id="Environment_ow34m"]
+background_mode = 2
+sky = ExtResource("3_2wh52")
+
+[sub_resource type="LabelSettings" id="LabelSettings_826wr"]
+font = ExtResource("5_826wr")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_ucygd"]
+font = ExtResource("6_ucygd")
+font_size = 24
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cruaa")
+
+[node name="ColorRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ucygd")
+
+[node name="TitleCenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 442.0
+grow_horizontal = 2
+
+[node name="LucifugaLabel" type="Label" parent="TitleCenterContainer"]
+layout_mode = 2
+text = "Lucifuga"
+label_settings = SubResource("LabelSettings_l72w3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 139.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme = ExtResource("4_mipys")
+
+[node name="Play" type="Button" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_mipys")
+text = "Play"
+
+[node name="Settings" type="Button" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "Settings"
+
+[node name="Quit" type="Button" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_mipys")
+text = "Quit"
+
+[node name="SettingsCenterContainer" type="CenterContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="SettingsCenterContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Control" type="Control" parent="SettingsCenterContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="SettingsCenterContainer/PanelContainer/Control"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingsCenterContainer"]
+layout_mode = 2
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ow34m")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+
+[node name="MadeByPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -212.0
+offset_top = -64.0
+offset_right = -6.0
+offset_bottom = -7.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MadeByPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -22.5
+offset_right = 95.0
+offset_bottom = 22.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MadeBy" type="Label" parent="MadeByPanel/VBoxContainer"]
+layout_mode = 2
+text = "Made By"
+label_settings = SubResource("LabelSettings_826wr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FoxSpellCasterLabs" type="Label" parent="MadeByPanel/VBoxContainer"]
+layout_mode = 2
+text = "FoxSpellCaster Labs"
+label_settings = SubResource("LabelSettings_ucygd")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Settings" to="SettingsCenterContainer" method="set_mouse_filter"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Settings" to="SettingsCenterContainer" method="show"]

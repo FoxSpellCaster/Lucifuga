@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://ca68jx621stty"]
 
 [ext_resource type="Texture2D" uid="uid://bht2sh414qof5" path="res://Items/Icons/Shard2.png" id="1_ejbou"]
-[ext_resource type="Script" uid="uid://bjuixjebeu4c0" path="res://Scripts/Item.gd" id="2_7r8wj"]
-[ext_resource type="PackedScene" uid="uid://dfpqab05cis16" path="res://WorldItems/WorldItem_Shard2.tscn" id="3_7r8wj"]
+[ext_resource type="Script" uid="uid://bjuixjebeu4c0" path="res://scripts/inventory/Item.gd" id="2_7r8wj"]
+[ext_resource type="PackedScene" uid="uid://dfpqab05cis16" path="res://scenes/world_items/WorldItem_Shard2.tscn" id="3_7r8wj"]
 
 [resource]
 script = ExtResource("2_7r8wj")

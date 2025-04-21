@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://3m03w87bcjnr" path="res://Player Controller/PlayerController.gd" id="1_krxqb"]
 [ext_resource type="Script" uid="uid://0xopmg7fmfbj" path="res://Player Controller/Interaction/InteractionController.gd" id="2_66uls"]
-[ext_resource type="Script" uid="uid://bgp8sred771bp" path="res://Inventory/Inventory.gd" id="3_0eju6"]
+[ext_resource type="Script" uid="uid://bgp8sred771bp" path="res://scripts/inventory/Inventory.gd" id="3_0eju6"]
 [ext_resource type="FontFile" uid="uid://dk2153f4elis8" path="res://assets/fonts/m6x11plus.ttf" id="4_brk14"]
 [ext_resource type="Texture2D" uid="uid://eenht8t6wngj" path="res://assets/images/crosshair.png" id="4_fabuu"]
 [ext_resource type="PackedScene" uid="uid://c7i5cai8ud4lr" path="res://Inventory/inventory_slot.tscn" id="4_sydjo"]
-[ext_resource type="Script" uid="uid://bjuixjebeu4c0" path="res://Scripts/Item.gd" id="5_kcr7a"]
+[ext_resource type="Script" uid="uid://bjuixjebeu4c0" path="res://scripts/inventory/Item.gd" id="5_kcr7a"]
 [ext_resource type="Resource" uid="uid://coe42mjjg8ajw" path="res://Items/ItemData/Shard1.tres" id="6_inybr"]
 [ext_resource type="Resource" uid="uid://ca68jx621stty" path="res://Items/ItemData/Shard2.tres" id="7_wac30"]
 [ext_resource type="Resource" uid="uid://blh1xlsjyqlvy" path="res://Items/ItemData/Shard3.tres" id="8_i5yuc"]
@@ -14,7 +14,7 @@
 [ext_resource type="Resource" uid="uid://c4l8xfoj8ewe7" path="res://Items/ItemData/Shard4.tres" id="9_6k2o0"]
 [ext_resource type="FontFile" uid="uid://ogh2m2vh5bfx" path="res://assets/fonts/m6x11.ttf" id="9_kcr7a"]
 [ext_resource type="Resource" uid="uid://2ifi3jso2le3" path="res://Items/ItemData/Shard5.tres" id="10_fabuu"]
-[ext_resource type="Script" uid="uid://d0gerk8l4joyu" path="res://Scripts/DevButtons/devbuttons.gd" id="16_brk14"]
+[ext_resource type="Script" uid="uid://d0gerk8l4joyu" path="res://scripts/debug/devbuttons.gd" id="16_brk14"]
 [ext_resource type="Script" uid="uid://bgmvt7n2vo8af" path="res://Player Controller/persona.gd" id="16_pbbws"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lt5te"]

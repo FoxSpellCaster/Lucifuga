@@ -15,4 +15,14 @@ data_*/
 mono_crash.*.json
 
 *.blend1
+.tmp
+.kra~
+.tga~
+.lmbake.depren
+.mmpz.bak
+.psd
+.blend
+*.png~
+*.unwrap_cache
+*.temp
 /configs

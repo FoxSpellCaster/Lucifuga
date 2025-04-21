@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c7i5cai8ud4lr"]
 
-[ext_resource type="Script" uid="uid://daq5s125ae4of" path="res://Inventory/InventorySlot.gd" id="1_gpqwp"]
+[ext_resource type="Script" uid="uid://daq5s125ae4of" path="res://scripts/inventory/InventorySlot.gd" id="1_gpqwp"]
 [ext_resource type="Texture2D" uid="uid://big0bepicef7v" path="res://Items/Icons/Shard1.png" id="2_gpqwp"]
 [ext_resource type="FontFile" uid="uid://3ec4ri4vh56n" path="res://assets/fonts/PeaberryBase.ttf" id="3_ded5v"]
 
