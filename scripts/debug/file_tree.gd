@@ -1,57 +1,55 @@
 extends Node
 
-# Folders to ignore
-var ignore_folders = [".git", ".github", ".godot", "addons"]
+# Configuration for ignored folders and files
+const IGNORE_FOLDERS := [".git", ".github", ".godot", "addons"]
+const IGNORE_FILES_EXACT := [".editorconfig", ".gitattributes", ".gitignore"]
+const IGNORE_FILES_PATTERNS := ["*.import", "*.png~", "*.uid", "*.blend1", "*.unwrap_cache", "*.temp", "*.kra~"]
 
-# Files to ignore (exact matches)
-var ignore_files_exact = [".editorconfig", ".gitattributes", ".gitignore"]
-
-# File patterns to ignore (wildcards)
-var ignore_files_patterns = ["*.import", "*.png~", "*.uid", "*.blend1", "*.unwrap_cache", "*.temp", "*.kra~"]
-
-func _ready():
-	var output_file = FileAccess.open("user://file_tree.txt", FileAccess.WRITE)
+func _ready() -> void:
+	var output_file := FileAccess.open("user://file_tree.txt", FileAccess.WRITE)
 	if output_file:
-		print("Generating file tree, ignoring folders: ", ignore_folders)
-		print("Ignoring files: ", ignore_files_exact, ", patterns: ", ignore_files_patterns)
-		write_file_tree("res://", 0, output_file)
+		print("Generating file tree, ignoring folders: %s" % [IGNORE_FOLDERS])
+		print("Ignoring files: %s, patterns: %s" % [IGNORE_FILES_EXACT, IGNORE_FILES_PATTERNS])
+		_generate_file_tree("res://", 0, output_file)
 		output_file.close()
 		print("File tree saved to user://file_tree.txt")
 	else:
-		print("Error opening file for writing")
+		printerr("Failed to open file for writing")
 
-func write_file_tree(path: String, indent_level: int, file: FileAccess):
-	var dir = DirAccess.open(path)
-	if dir:
-		dir.list_dir_begin()
-		var file_name = dir.get_next()
-		while file_name != "":
-			if file_name != "." and file_name != "..":
-				var full_path = path + ("/" if path != "res://" else "") + file_name
-				# Skip ignored folders
-				if dir.current_is_dir() and file_name in ignore_folders:
-					file_name = dir.get_next()
-					continue
-				# Skip ignored files (exact matches and patterns)
-				if not dir.current_is_dir() and should_ignore_file(file_name):
-					file_name = dir.get_next()
-					continue
-				file.store_line("  ".repeat(indent_level) + file_name)
-				if dir.current_is_dir():
-					write_file_tree(full_path, indent_level + 1, file)
+func _generate_file_tree(path: String, indent_level: int, file: FileAccess) -> void:
+	var dir := DirAccess.open(path)
+	if not dir:
+		printerr("Failed to access path: %s" % path)
+		return
+
+	dir.list_dir_begin()
+	var file_name := dir.get_next()
+	while file_name:
+		if file_name in [".", ".."]:
 			file_name = dir.get_next()
-		dir.list_dir_end()
-	else:
-		print("Error accessing path: ", path)
+			continue
 
-func should_ignore_file(file_name: String) -> bool:
-	# Check exact matches
-	if file_name in ignore_files_exact:
+		var full_path := path + ("/" if path != "res://" else "") + file_name
+		if dir.current_is_dir():
+			if file_name not in IGNORE_FOLDERS:
+				file.store_line("  ".repeat(indent_level) + file_name)
+				_generate_file_tree(full_path, indent_level + 1, file)
+		elif not _should_ignore_file(file_name):
+			file.store_line("  ".repeat(indent_level) + file_name)
+
+		file_name = dir.get_next()
+	dir.list_dir_end()
+
+func _should_ignore_file(file_name: String) -> bool:
+	if file_name in IGNORE_FILES_EXACT:
 		return true
-	# Check patterns
-	for pattern in ignore_files_patterns:
+
+	for pattern in IGNORE_FILES_PATTERNS:
+		var extension: String
 		if pattern.begins_with("*."):
-			var extension = pattern.substr(2)
-			if file_name.ends_with(extension) or (extension == "png~" and file_name.ends_with(".png~")):
-				return true
+			extension = pattern.substr(2)
+		else:
+			extension = pattern
+		if file_name.ends_with(extension):
+			return true
 	return false
