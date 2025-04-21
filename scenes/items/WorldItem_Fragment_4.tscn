@@ -1,13 +1,13 @@
-[gd_scene load_steps=6 format=4 uid="uid://ddv77eexok5fu"]
+[gd_scene load_steps=6 format=4 uid="uid://dp635o6ipcjgc"]
 
-[ext_resource type="Script" uid="uid://booaowervsp0q" path="res://scripts/inventory/WorldItem.gd" id="1_hi4iu"]
+[ext_resource type="Script" uid="uid://booaowervsp0q" path="res://scripts/inventory/WorldItem.gd" id="1_83bqa"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p8cku"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_83bqa"]
 transparency = 1
 diffuse_mode = 3
-albedo_color = Color(0, 0.00252581, 1, 0.75)
+albedo_color = Color(1, 0, 0.97, 0.75)
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_poui6"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_m7kk7"]
 _surfaces = [{
 "aabb": AABB(-0.129707, -0.12487, -0.126455, 0.259413, 0.249739, 0.252909),
 "attribute_data": PackedByteArray("CHCwmeV7q83/P/+/GQSrzf8//7//P/+/GYSrzeX7q80I8LCZ9g+wmdPfnKb2j7CZVyVa96nRreRWpVr3KqCcpk6YDsn/P46C/z//vwhwsJnle6vNqFpa9/8//7+oWlr3VyVa9/8//7//v0iXqdGt5FWureSw5w7JGQSrzfYPsJn/P/+//z+OgtPfnKb/v46C/79Il7DnDskI8LCZ09+cpuX7q82p0a3ksOcOyafaWvdVrq3kp9pa906YDslWpVr3Va6t5CqgnKYZhKvNTpgOyfaPsJn/v0iXKqCcpv+/joI="),
@@ -15,8 +15,8 @@ _surfaces = [{
 "index_count": 78,
 "index_data": PackedByteArray("EQAAABIAEwAUAAIAAQAVABYAFwAMAAQAGAADABkADwAKABoAEAAKAA8ACgAQABsAGwAQABwACgAbAB0AHgAfACAACQAhAAUAIgAjACQAIgAIACMAJQAmACcAJQAoACYAKQAHACoAKQArAAcALAAtAA0ALAAOAC0ALgAvADAALgAGAC8AMQAyADMAMQA0ADIANQALADYANQA3AAsA"),
 "lods": [0.0513307, PackedByteArray("CQAAAAUAAwAJAAUAAAABAAIADAADAAQAAQAMAAQACgANAAgADQAHAAgACgAIAAsADQAOAAcACgALAA8ADwALAAYACgAQAA0AEAAKAA8ADQAQAA4ADwAGABAAEAAGAA4A"), 0.0732721, PackedByteArray("CQAAAAUAAwAJAAUAAAABAAIAAQADAAQACgAIAAsACgAHAAgACgALAAYABgAHAAoA"), 0.0962263, PackedByteArray("AAABAAIAAQADAAQAAwAAAAUABgAHAAgA")],
-"material": SubResource("StandardMaterial3D_p8cku"),
-"name": "GemBlue",
+"material": SubResource("StandardMaterial3D_83bqa"),
+"name": "GemPurple",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 56,
@@ -29,25 +29,14 @@ points = PackedVector3Array(-2.58833e-05, 0.0675434, -0.126455, -0.104035, 0.067
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xwmxk"]
 
-[node name="WorldItem_Shard3" type="RigidBody3D"]
-mass = 10.0
-script = ExtResource("1_hi4iu")
-item_name = "Shard3"
-interact_prompt = "Pickup Medium Blue Shard"
+[node name="WorldItem_Fragment_4" type="RigidBody3D"]
+mass = 15.0
+script = ExtResource("1_83bqa")
+item_name = "Fragment_4"
+interact_prompt = "Pickup Large Purple Fragment"
 
-[node name="Medium Blue Shard" type="MeshInstance3D" parent="."]
-mesh = SubResource("ArrayMesh_poui6")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="Medium Blue Shard"]
-visible = false
-light_color = Color(0, 0.00392157, 1, 1)
-light_energy = 0.5
-omni_range = 1.0
-
-[node name="FogVolume" type="FogVolume" parent="Medium Blue Shard"]
-visible = false
-size = Vector3(1, 1, 1)
-shape = 0
+[node name="Fragment_4" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_m7kk7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("ConvexPolygonShape3D_tyspg")

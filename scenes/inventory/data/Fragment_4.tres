@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://c4l8xfoj8ewe7"]
+
+[ext_resource type="Texture2D" uid="uid://w8jncvg7kfl5" path="res://assets/icons/Shard4.png" id="1_1ufms"]
+[ext_resource type="Script" uid="uid://bjuixjebeu4c0" path="res://scripts/inventory/Item.gd" id="2_xi7ye"]
+[ext_resource type="PackedScene" uid="uid://dp635o6ipcjgc" path="res://scenes/items/WorldItem_Fragment_4.tscn" id="3_lo7u6"]
+
+[resource]
+script = ExtResource("2_xi7ye")
+display_name = "Large Purple Fragment"
+icon = ExtResource("1_1ufms")
+max_stack_size = 12
+world_item_scene = ExtResource("3_lo7u6")

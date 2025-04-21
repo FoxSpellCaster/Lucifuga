@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cf1pwgl0y0mi6"]
+[gd_scene load_steps=26 format=3 uid="uid://cf1pwgl0y0mi6"]
 
 [ext_resource type="Script" uid="uid://3m03w87bcjnr" path="res://scripts/player/PlayerController.gd" id="1_krxqb"]
 [ext_resource type="Script" uid="uid://0xopmg7fmfbj" path="res://scripts/player/Interaction/InteractionController.gd" id="2_66uls"]
@@ -7,13 +7,13 @@
 [ext_resource type="Texture2D" uid="uid://eenht8t6wngj" path="res://assets/icons/crosshair.png" id="4_fabuu"]
 [ext_resource type="PackedScene" uid="uid://c7i5cai8ud4lr" path="res://scenes/inventory/inventory_slot.tscn" id="4_sydjo"]
 [ext_resource type="Script" uid="uid://bjuixjebeu4c0" path="res://scripts/inventory/Item.gd" id="5_kcr7a"]
-[ext_resource type="Resource" uid="uid://coe42mjjg8ajw" path="res://scenes/inventory/data/Shard1.tres" id="6_inybr"]
-[ext_resource type="Resource" uid="uid://ca68jx621stty" path="res://scenes/inventory/data/Shard2.tres" id="7_wac30"]
-[ext_resource type="Resource" uid="uid://blh1xlsjyqlvy" path="res://scenes/inventory/data/Shard3.tres" id="8_i5yuc"]
-[ext_resource type="FontFile" uid="uid://c0r5u5j04yt85" path="res://assets/fonts/m5x7.ttf" id="8_iq2nx"]
-[ext_resource type="Resource" uid="uid://c4l8xfoj8ewe7" path="res://scenes/inventory/data/Shard4.tres" id="9_6k2o0"]
+[ext_resource type="Resource" uid="uid://coe42mjjg8ajw" path="res://scenes/inventory/data/Fragment_1.tres" id="6_inybr"]
+[ext_resource type="Resource" uid="uid://ca68jx621stty" path="res://scenes/inventory/data/Fragment_2.tres" id="7_wac30"]
+[ext_resource type="Resource" uid="uid://blh1xlsjyqlvy" path="res://scenes/inventory/data/Fragment_3.tres" id="8_i5yuc"]
+[ext_resource type="Resource" uid="uid://c4l8xfoj8ewe7" path="res://scenes/inventory/data/Fragment_4.tres" id="9_6k2o0"]
 [ext_resource type="FontFile" uid="uid://ogh2m2vh5bfx" path="res://assets/fonts/m6x11.ttf" id="9_kcr7a"]
-[ext_resource type="Resource" uid="uid://2ifi3jso2le3" path="res://scenes/inventory/data/Shard5.tres" id="10_fabuu"]
+[ext_resource type="Resource" uid="uid://2ifi3jso2le3" path="res://scenes/inventory/data/Fragment_5.tres" id="10_fabuu"]
+[ext_resource type="FontFile" uid="uid://rv85cmh4o567" path="res://assets/fonts/PeaberryMono.ttf" id="15_8qjgm"]
 [ext_resource type="Script" uid="uid://d0gerk8l4joyu" path="res://scripts/debug/devbuttons.gd" id="16_brk14"]
 [ext_resource type="Script" uid="uid://bgmvt7n2vo8af" path="res://scripts/player/persona.gd" id="16_pbbws"]
 
@@ -39,8 +39,8 @@ font_size = 24
 shadow_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_inybr"]
-font = ExtResource("8_iq2nx")
-font_size = 24
+font = ExtResource("9_kcr7a")
+font_size = 17
 shadow_color = Color(0, 0, 0, 1)
 
 [sub_resource type="ImageTexture" id="ImageTexture_brk14"]
@@ -54,6 +54,11 @@ shadow_color = Color(0, 0, 0, 0.75)
 font = ExtResource("4_brk14")
 font_size = 24
 shadow_color = Color(0, 0, 0, 0.75)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ejd4k"]
+font = ExtResource("15_8qjgm")
+font_size = 12
+shadow_color = Color(0, 0, 0, 1)
 
 [node name="Player" type="CharacterBody3D" groups=["Player"]]
 script = ExtResource("1_krxqb")
@@ -215,31 +220,31 @@ offset_top = 3.0
 offset_right = 294.0
 offset_bottom = 312.0
 
-[node name="PanelContainer" type="PanelContainer" parent="Persona/VBoxContainer"]
+[node name="DevTestPanelContainer" type="PanelContainer" parent="Persona/VBoxContainer"]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="Persona/VBoxContainer/PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="Persona/VBoxContainer/DevTestPanelContainer"]
 clip_contents = true
 custom_minimum_size = Vector2(290, 60)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Persona/VBoxContainer/PanelContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Persona/VBoxContainer/DevTestPanelContainer/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Development Test" type="Label" parent="Persona/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="Development Test" type="Label" parent="Persona/VBoxContainer/DevTestPanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Lucifuga Development Test"
 label_settings = SubResource("LabelSettings_wac30")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Version" type="Label" parent="Persona/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="Version" type="Label" parent="Persona/VBoxContainer/DevTestPanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "0.0.8a-alpha [Inventory Update]"
+text = "v0.0.8b-alpha"
 label_settings = SubResource("LabelSettings_inybr")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -301,3 +306,50 @@ layout_mode = 0
 offset_right = 128.0
 offset_bottom = 37.0
 text = "QUIT"
+
+[node name="DevTestPanelContainer2" type="PanelContainer" parent="Persona"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 40.375
+anchor_top = 0.35
+anchor_right = 47.625
+anchor_bottom = 5.35
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Persona/DevTestPanelContainer2"]
+clip_contents = true
+custom_minimum_size = Vector2(290, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Persona/DevTestPanelContainer2/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Development Test" type="Label" parent="Persona/DevTestPanelContainer2/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Todo"
+label_settings = SubResource("LabelSettings_wac30")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="Persona/DevTestPanelContainer2/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Todo" type="Label" parent="Persona/DevTestPanelContainer2/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "## Mechanic
+- [ ] Save System #script
+- [ ] Store #tutorial
+## Steam
+- [ ] Persona Avatar
+- [ ] Multiplayer #tutorial
+	- [ ] Lobbies
+- [ ] Voice Chat #tutorial
+- [ ] Steam Keys #havetowait"
+label_settings = SubResource("LabelSettings_ejd4k")
+vertical_alignment = 1

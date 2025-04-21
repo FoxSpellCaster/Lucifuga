@@ -1,15 +1,16 @@
-[gd_scene load_steps=15 format=3 uid="uid://b5hbtk6hdyibx"]
+[gd_scene load_steps=16 format=3 uid="uid://b5hbtk6hdyibx"]
 
 [ext_resource type="LightmapGIData" uid="uid://cg78lor2ip7jx" path="res://scenes/game/Spawn.lmbake" id="1_dvshw"]
 [ext_resource type="PackedScene" uid="uid://beo3mdsyq0f1d" path="res://blender/environment/env_construct_temple.blend" id="3_3yy1u"]
 [ext_resource type="Sky" uid="uid://deel6vvma6vaf" path="res://assets/textures/skyboxes/sky.tres" id="3_poui6"]
 [ext_resource type="PackedScene" uid="uid://cui1ncxuidtpn" path="res://scenes/structures/ground_hex.tscn" id="7_rnvla"]
-[ext_resource type="PackedScene" uid="uid://4sjresjdp6a2" path="res://scenes/items/WorldItem_Shard1.tscn" id="8_q7srp"]
+[ext_resource type="PackedScene" uid="uid://4sjresjdp6a2" path="res://scenes/items/WorldItem_Fragment_1.tscn" id="8_q7srp"]
 [ext_resource type="PackedScene" uid="uid://b7wh257kan8qj" path="res://scenes/structures/temple_pillar.tscn" id="9_ar3th"]
-[ext_resource type="PackedScene" uid="uid://dfpqab05cis16" path="res://scenes/items/WorldItem_Shard2.tscn" id="9_qq5ev"]
-[ext_resource type="PackedScene" uid="uid://ddv77eexok5fu" path="res://scenes/items/WorldItem_Shard3.tscn" id="10_11gop"]
-[ext_resource type="PackedScene" uid="uid://dp635o6ipcjgc" path="res://scenes/items/WorldItem_Shard4.tscn" id="11_p8cku"]
-[ext_resource type="PackedScene" uid="uid://ccko6yqeoo0j1" path="res://scenes/items/WorldItem_Shard5.tscn" id="12_poui6"]
+[ext_resource type="PackedScene" uid="uid://dfpqab05cis16" path="res://scenes/items/WorldItem_Fragment_2.tscn" id="9_qq5ev"]
+[ext_resource type="PackedScene" uid="uid://ddv77eexok5fu" path="res://scenes/items/WorldItem_Fragment_3.tscn" id="10_11gop"]
+[ext_resource type="PackedScene" uid="uid://dp635o6ipcjgc" path="res://scenes/items/WorldItem_Fragment_4.tscn" id="11_p8cku"]
+[ext_resource type="PackedScene" uid="uid://ccko6yqeoo0j1" path="res://scenes/items/WorldItem_Fragment_5.tscn" id="12_poui6"]
+[ext_resource type="PackedScene" uid="uid://bvffseiosu153" path="res://scenes/items/WorldItem_Fragment_Empty.tscn" id="13_qq5ev"]
 [ext_resource type="PackedScene" uid="uid://budd724dpb8v" path="res://blender/characters/char_lucipeta.blend" id="15_3a4x0"]
 [ext_resource type="PackedScene" uid="uid://cf1pwgl0y0mi6" path="res://scenes/player/Player.tscn" id="16_poui6"]
 
@@ -112,3 +113,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.488, 1.5, -18.8869)
 
 [node name="WorldItem_Shard12" parent="." instance=ExtResource("11_p8cku")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5512, 1.5, -33.995)
+
+[node name="WorldItem_Fragment_Empty" parent="." instance=ExtResource("13_qq5ev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.99414, 0.62487, -7.25549)
+
+[node name="WorldItem_Fragment_Empty2" parent="." instance=ExtResource("13_qq5ev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.39892, 0.62487, -7.43221)

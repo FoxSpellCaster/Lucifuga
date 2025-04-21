@@ -1,11 +1,11 @@
 [gd_scene load_steps=12 format=4 uid="uid://delvd7c02tsgg"]
 
 [ext_resource type="Sky" uid="uid://deel6vvma6vaf" path="res://assets/textures/skyboxes/sky.tres" id="1_5oveh"]
-[ext_resource type="PackedScene" uid="uid://4sjresjdp6a2" path="res://scenes/items/WorldItem_Shard1.tscn" id="2_0pec0"]
-[ext_resource type="PackedScene" uid="uid://dfpqab05cis16" path="res://scenes/items/WorldItem_Shard2.tscn" id="3_5tdq2"]
-[ext_resource type="PackedScene" uid="uid://ddv77eexok5fu" path="res://scenes/items/WorldItem_Shard3.tscn" id="4_sbdvo"]
-[ext_resource type="PackedScene" uid="uid://dp635o6ipcjgc" path="res://scenes/items/WorldItem_Shard4.tscn" id="5_7beb7"]
-[ext_resource type="PackedScene" uid="uid://ccko6yqeoo0j1" path="res://scenes/items/WorldItem_Shard5.tscn" id="6_msggh"]
+[ext_resource type="PackedScene" uid="uid://4sjresjdp6a2" path="res://scenes/items/WorldItem_Fragment_1.tscn" id="2_0pec0"]
+[ext_resource type="PackedScene" uid="uid://dfpqab05cis16" path="res://scenes/items/WorldItem_Fragment_2.tscn" id="3_5tdq2"]
+[ext_resource type="PackedScene" uid="uid://ddv77eexok5fu" path="res://scenes/items/WorldItem_Fragment_3.tscn" id="4_sbdvo"]
+[ext_resource type="PackedScene" uid="uid://dp635o6ipcjgc" path="res://scenes/items/WorldItem_Fragment_4.tscn" id="5_7beb7"]
+[ext_resource type="PackedScene" uid="uid://ccko6yqeoo0j1" path="res://scenes/items/WorldItem_Fragment_5.tscn" id="6_msggh"]
 
 [sub_resource type="Environment" id="Environment_6hg67"]
 background_mode = 2
