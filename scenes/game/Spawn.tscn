@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://ccko6yqeoo0j1" path="res://scenes/items/WorldItem_Fragment_5.tscn" id="12_poui6"]
 [ext_resource type="PackedScene" uid="uid://bvffseiosu153" path="res://scenes/items/WorldItem_Fragment_Empty.tscn" id="13_qq5ev"]
 [ext_resource type="PackedScene" uid="uid://budd724dpb8v" path="res://blender/characters/char_lucipeta.blend" id="15_3a4x0"]
-[ext_resource type="PackedScene" uid="uid://cf1pwgl0y0mi6" path="res://scenes/player/Player.tscn" id="16_poui6"]
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_dvshw"]
 
@@ -27,6 +26,8 @@ volumetric_fog_enabled = true
 volumetric_fog_density = 0.1
 volumetric_fog_anisotropy = -0.5
 volumetric_fog_sky_affect = 0.5
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_p8cku"]
 
 [node name="Spawn" type="Node3D"]
 
@@ -45,9 +46,6 @@ directional_shadow_blend_splits = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ptepl")
-
-[node name="Player" parent="." instance=ExtResource("16_poui6")]
-transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, 1.37379, 0.5, -6.30902)
 
 [node name="Other" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.93159, 0)
@@ -119,3 +117,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.99414, 0.62487, -7.25549)
 
 [node name="WorldItem_Fragment_Empty2" parent="." instance=ExtResource("13_qq5ev")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.39892, 0.62487, -7.43221)
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+spawn_path = NodePath("../SpawnMarker3D")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_p8cku")
+
+[node name="SpawnMarker3D" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.38945, -9.76723)
