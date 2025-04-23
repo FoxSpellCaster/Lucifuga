@@ -15,22 +15,18 @@ mono_crash.*.json
 # Temporary files
 *.tmp
 *.bak
-*.exr
-*.lmbake
-*.bin
 *.ico~
-*.kra
 *.kra~
 *.tga~
-*.mmpz
 *.png~
-*.jpg
 *.unwrap_cache
+*.temp
 
 # Asset sources
-*.blend
-*.psd
+#*.blend
+#*.psd
+#*.kra
+#*.mmpz
 
 # Misc
-*.temp
 addons/godotsteam/win64/~libgodotsteam.windows.template_debug.x86_64.dll
