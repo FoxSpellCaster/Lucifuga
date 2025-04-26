@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b4lpmq8egnw2h"]
 
-[ext_resource type="Script" uid="uid://x4a80xlycytf" path="res://bug_report_ui.gd" id="1_ha7bv"]
+[ext_resource type="Script" uid="uid://x4a80xlycytf" path="res://scripts/debug/bug_report_ui.gd" id="1_ha7bv"]
 
 [node name="BugReportUI" type="Control"]
 layout_mode = 3
