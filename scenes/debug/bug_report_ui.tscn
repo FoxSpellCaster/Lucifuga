@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://example_bug_report_ui"]
+[gd_scene load_steps=2 format=3 uid="uid://b4lpmq8egnw2h"]
 
-[ext_resource type="Script" path="res://scripts/bug_report_ui.gd" id="1"]
-[ext_resource type="Texture2D" path="res://assets/textures/crystal.png" id="2"]
+[ext_resource type="Script" uid="uid://x4a80xlycytf" path="res://scripts/debug/bug_report_ui.gd" id="1_ha7bv"]
 
 [node name="BugReportUI" type="Control"]
 layout_mode = 3
@@ -10,17 +9,19 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1")
+script = ExtResource("1_ha7bv")
 
-[node name="Background" type="TextureRect"]
-layout_mode = 0
+[node name="Background" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = ExtResource("2")
-expand_mode = 1
-stretch_mode = 5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.101961, 0.101961, 0.239216, 1)
 
-[node name="VBoxContainer" type="VBoxContainer"]
+[node name="MainContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -28,60 +29,81 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -200.0
-offset_top = -150.0
+offset_top = -300.0
 offset_right = 200.0
-offset_bottom = 150.0
+offset_bottom = 300.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 10
 
-[node name="TitleLabel" type="Label"]
+[node name="TitleLabel" type="Label" parent="MainContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.545098, 0.913725, 1, 1)  # Cyan glow (0x8be9fdff)
-theme_override_font_sizes/font_size = 24
-text = "Submit a Bug Report to RubberFox"
-horizontal_alignment = 1
-
-[node name="FeatureRequestNote" type="Label"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.545098, 0.913725, 1, 1)
-theme_override_font_sizes/font_size = 16
-text = "For feature requests, use /feature-request in Discord!"
-horizontal_alignment = 1
-
-[node name="TitleInput" type="LineEdit"]
-layout_mode = 2
-placeholder_text = "Bug Title"
-max_length = 50
-
-[node name="DescriptionInput" type="TextEdit"]
-layout_mode = 2
-custom_minimum_size = Vector2(0, 80)
-placeholder_text = "Describe the bug..."
-wrap_mode = 1
-
-[node name="StepsInput" type="TextEdit"]
-layout_mode = 2
-custom_minimum_size = Vector2(0, 80)
-placeholder_text = "Steps to reproduce..."
-wrap_mode = 1
-
-[node name="SteamIDInput" type="LineEdit"]
-layout_mode = 2
-placeholder_text = "Steam ID (optional)"
-max_length = 50
-
-[node name="SubmitButton" type="Button"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.545098, 0.913725, 1, 1)
+theme_override_colors/font_color = Color(0.545098, 0.913725, 0.992157, 1)
 theme_override_font_sizes/font_size = 18
-text = "Submit Bug Report"
+text = "Report Title"
 
-[node name="FeedbackLabel" type="Label"]
+[node name="TitleEdit" type="LineEdit" parent="MainContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.411765, 0.411765, 1)  # Soft red for errors
+theme_override_colors/font_color = Color(0.545098, 0.913725, 0.992157, 1)
 theme_override_font_sizes/font_size = 16
-horizontal_alignment = 1
-autowrap_mode = 3
 
-[connection signal="pressed" from="VBoxContainer/SubmitButton" to="." method="_on_submit_button_pressed"]
+[node name="DescriptionLabel" type="Label" parent="MainContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.545098, 0.913725, 0.992157, 1)
+theme_override_font_sizes/font_size = 18
+text = "Description"
+
+[node name="DescriptionEdit" type="TextEdit" parent="MainContainer"]
+custom_minimum_size = Vector2(400, 150)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.545098, 0.913725, 0.992157, 1)
+theme_override_font_sizes/font_size = 16
+wrap_mode = 1
+
+[node name="StepsLabel" type="Label" parent="MainContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.545098, 0.913725, 0.992157, 1)
+theme_override_font_sizes/font_size = 18
+text = "Steps to Reproduce"
+
+[node name="StepsEdit" type="TextEdit" parent="MainContainer"]
+custom_minimum_size = Vector2(400, 150)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.545098, 0.913725, 0.992157, 1)
+theme_override_font_sizes/font_size = 16
+wrap_mode = 1
+
+[node name="CategoryLabel" type="Label" parent="MainContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.545098, 0.913725, 0.992157, 1)
+theme_override_font_sizes/font_size = 18
+text = "Category"
+
+[node name="CategoryOption" type="OptionButton" parent="MainContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.545098, 0.913725, 0.992157, 1)
+item_count = 3
+popup/item_0/text = "Bug"
+popup/item_0/id = 0
+popup/item_1/text = "Feedback"
+popup/item_1/id = 1
+popup/item_2/text = "Feature"
+popup/item_2/id = 2
+
+[node name="PrivacyLabel" type="Label" parent="MainContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.545098, 0.913725, 0.992157, 1)
+theme_override_font_sizes/font_size = 18
+text = "Steam IDs are used only for bug tracking."
+
+[node name="SubmitButton" type="Button" parent="MainContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.545098, 0.913725, 0.992157, 1)
+text = "Submit to the Aether"
+
+[node name="StatusLabel" type="Label" parent="MainContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.545098, 0.913725, 0.992157, 1)
+theme_override_font_sizes/font_size = 18
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]

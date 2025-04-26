@@ -2,8 +2,6 @@
 .godot/
 .import/
 *.import
-export.cfg
-export_credentials.cfg
 *.translation
 user://
 

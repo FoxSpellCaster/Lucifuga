@@ -1,9 +1,9 @@
 extends Control
 
 # UI nodes for displaying Steam user information
-@onready var name_label: Label = $VBoxContainer/HBoxContainer2/NameLabel
-@onready var steam_id_label: Label = $VBoxContainer/HBoxContainer2/SteamIDLabel
-@onready var online_status_label: Label = $VBoxContainer/HBoxContainer/OnlineStatusLabel
+@onready var name_label: Label = $VBoxContainer2/ConnectionContainer/MarginContainer/VBoxContainer/HBoxContainer2/NameLabel
+@onready var steam_id_label: Label = $VBoxContainer2/ConnectionContainer/MarginContainer/VBoxContainer/HBoxContainer2/SteamIDLabel
+@onready var online_status_label: Label = $VBoxContainer2/ConnectionContainer/MarginContainer/VBoxContainer/HBoxContainer/OnlineStatusLabel
 
 # Called when the node is ready
 func _ready() -> void:
