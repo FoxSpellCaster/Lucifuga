@@ -1,10 +1,10 @@
-[gd_scene load_steps=25 format=3 uid="uid://cf1pwgl0y0mi6"]
+[gd_scene load_steps=26 format=3 uid="uid://cf1pwgl0y0mi6"]
 
 [ext_resource type="Script" uid="uid://3m03w87bcjnr" path="res://scripts/player/PlayerController.gd" id="1_krxqb"]
 [ext_resource type="Script" uid="uid://0xopmg7fmfbj" path="res://scripts/player/Interaction/InteractionController.gd" id="2_66uls"]
 [ext_resource type="Script" uid="uid://bgp8sred771bp" path="res://scripts/inventory/Inventory.gd" id="3_0eju6"]
 [ext_resource type="FontFile" uid="uid://dk2153f4elis8" path="res://assets/fonts/m6x11plus.ttf" id="4_brk14"]
-[ext_resource type="Texture2D" uid="uid://c0hsijyei028v" path="res://assets/icons/crosshair.png" id="4_fabuu"]
+[ext_resource type="Texture2D" uid="uid://eenht8t6wngj" path="res://assets/icons/crosshair.png" id="4_fabuu"]
 [ext_resource type="PackedScene" uid="uid://c7i5cai8ud4lr" path="res://scenes/inventory/inventory_slot.tscn" id="4_sydjo"]
 [ext_resource type="Script" uid="uid://bjuixjebeu4c0" path="res://scripts/inventory/Item.gd" id="5_kcr7a"]
 [ext_resource type="Resource" uid="uid://coe42mjjg8ajw" path="res://scenes/inventory/data/Fragment_1.tres" id="6_inybr"]
@@ -14,11 +14,13 @@
 [ext_resource type="FontFile" uid="uid://ogh2m2vh5bfx" path="res://assets/fonts/m6x11.ttf" id="9_kcr7a"]
 [ext_resource type="Resource" uid="uid://2ifi3jso2le3" path="res://scenes/inventory/data/Fragment_5.tres" id="10_fabuu"]
 [ext_resource type="LabelSettings" uid="uid://dk22217krwqxv" path="res://scenes/player/RawDebugText.tres" id="15_8qjgm"]
+[ext_resource type="Script" uid="uid://d52p83jkma87" path="res://scripts/steam/steam_avatar.gd" id="15_kswpp"]
 [ext_resource type="LabelSettings" uid="uid://bxnlmc4i1n7wk" path="res://scenes/player/PersonaName.tres" id="15_pi3ps"]
 [ext_resource type="Script" uid="uid://d0gerk8l4joyu" path="res://scripts/debug/devbuttons.gd" id="16_brk14"]
 [ext_resource type="Script" uid="uid://bgmvt7n2vo8af" path="res://scripts/player/persona.gd" id="16_pbbws"]
 [ext_resource type="LabelSettings" uid="uid://plsj0epx31i0" path="res://scenes/player/VersonLabel.tres" id="17_kswpp"]
 [ext_resource type="LabelSettings" uid="uid://cvcn87tb85ks" path="res://scenes/player/OnlineStatus.tres" id="18_v5i4m"]
+[ext_resource type="PackedScene" uid="uid://b4lpmq8egnw2h" path="res://bug_report_ui.tscn" id="21_v5i4m"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lt5te"]
 radius = 0.3
@@ -37,11 +39,6 @@ outline_size = 2
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="ImageTexture" id="ImageTexture_brk14"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_pbbws"]
-font = ExtResource("4_brk14")
-font_size = 24
-shadow_color = Color(0, 0, 0, 0.75)
 
 [node name="Player" type="CharacterBody3D" groups=["Player"]]
 script = ExtResource("1_krxqb")
@@ -199,57 +196,54 @@ grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("16_pbbws")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Persona"]
-layout_mode = 0
+[node name="VBoxContainer2" type="VBoxContainer" parent="Persona"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
 offset_left = 8.0
-offset_top = -136.0
-offset_right = 420.0
-offset_bottom = -12.0
+offset_top = -152.0
+offset_right = 456.0
+offset_bottom = -8.0
+grow_vertical = 0
 
-[node name="AvatarContainer" type="PanelContainer" parent="Persona/VBoxContainer"]
+[node name="AvatarContainer" type="PanelContainer" parent="Persona/VBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 
-[node name="Avatar" type="TextureRect" parent="Persona/VBoxContainer/AvatarContainer"]
+[node name="Avatar" type="TextureRect" parent="Persona/VBoxContainer2/AvatarContainer"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 texture = SubResource("ImageTexture_brk14")
 stretch_mode = 4
+script = ExtResource("15_kswpp")
 
-[node name="OwnershipLabel" type="Label" parent="Persona/VBoxContainer"]
-visible = false
-layout_mode = 2
-size_flags_vertical = 1
-text = "Ownership"
-label_settings = SubResource("LabelSettings_pbbws")
-
-[node name="LanguageLabel" type="Label" parent="Persona/VBoxContainer"]
-visible = false
-layout_mode = 2
-size_flags_vertical = 1
-text = "Language"
-label_settings = SubResource("LabelSettings_pbbws")
-
-[node name="SteamDeckLabel" type="Label" parent="Persona/VBoxContainer"]
-visible = false
-layout_mode = 2
-size_flags_vertical = 1
-text = "SteamDeck"
-label_settings = SubResource("LabelSettings_pbbws")
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="Persona/VBoxContainer"]
+[node name="ConnectionContainer" type="PanelContainer" parent="Persona/VBoxContainer2"]
 layout_mode = 2
 
-[node name="NameLabel" type="Label" parent="Persona/VBoxContainer/HBoxContainer2"]
+[node name="MarginContainer" type="MarginContainer" parent="Persona/VBoxContainer2/ConnectionContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Persona/VBoxContainer2/ConnectionContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Persona/VBoxContainer2/ConnectionContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="Persona/VBoxContainer2/ConnectionContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_vertical = 1
 text = "Name"
 label_settings = ExtResource("15_pi3ps")
 
-[node name="Line Space2" type="Label" parent="Persona/VBoxContainer/HBoxContainer2"]
+[node name="Line Space2" type="Label" parent="Persona/VBoxContainer2/ConnectionContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 text = "|"
 label_settings = ExtResource("15_8qjgm")
@@ -257,17 +251,17 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="SteamIDLabel" type="Label" parent="Persona/VBoxContainer/HBoxContainer2"]
+[node name="SteamIDLabel" type="Label" parent="Persona/VBoxContainer2/ConnectionContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_vertical = 1
 text = "SteamID"
 label_settings = ExtResource("15_8qjgm")
 uppercase = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Persona/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Persona/VBoxContainer2/ConnectionContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Development Test" type="Label" parent="Persona/VBoxContainer/HBoxContainer"]
+[node name="Development Test" type="Label" parent="Persona/VBoxContainer2/ConnectionContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = "lucifuga.dev.1.0.8.b_alpha"
 label_settings = ExtResource("17_kswpp")
@@ -275,7 +269,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Line Space" type="Label" parent="Persona/VBoxContainer/HBoxContainer"]
+[node name="Line Space" type="Label" parent="Persona/VBoxContainer2/ConnectionContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = "|"
 label_settings = ExtResource("15_8qjgm")
@@ -283,7 +277,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="OnlineStatusLabel" type="Label" parent="Persona/VBoxContainer/HBoxContainer"]
+[node name="OnlineStatusLabel" type="Label" parent="Persona/VBoxContainer2/ConnectionContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 1
 text = "OnlineStatus"
@@ -291,18 +285,18 @@ label_settings = ExtResource("18_v5i4m")
 uppercase = true
 
 [node name="DevControl" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 0
-offset_left = 10.0
-offset_top = 763.0
-offset_right = 300.0
-offset_bottom = 763.0
+offset_right = 290.0
 script = ExtResource("16_brk14")
 
 [node name="DevQuitButton" type="Button" parent="DevControl"]
 unique_name_in_owner = true
-layout_mode = 0
-offset_right = 128.0
-offset_bottom = 37.0
-text = "QUIT"
+layout_mode = 1
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 152.0
+offset_bottom = 61.0
+text = "QUIT GAME"
+
+[node name="BugReportUI" parent="." instance=ExtResource("21_v5i4m")]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b5hbtk6hdyibx"]
+[gd_scene load_steps=15 format=3 uid="uid://b5hbtk6hdyibx"]
 
 [ext_resource type="LightmapGIData" uid="uid://cg78lor2ip7jx" path="res://scenes/game/Spawn.lmbake" id="1_dvshw"]
 [ext_resource type="Sky" uid="uid://deel6vvma6vaf" path="res://assets/textures/skyboxes/sky.tres" id="3_poui6"]
@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://ccko6yqeoo0j1" path="res://scenes/items/WorldItem_Fragment_5.tscn" id="12_poui6"]
 [ext_resource type="PackedScene" uid="uid://cf1pwgl0y0mi6" path="res://scenes/player/Player.tscn" id="12_q7srp"]
 [ext_resource type="PackedScene" uid="uid://bvffseiosu153" path="res://scenes/items/WorldItem_Fragment_Empty.tscn" id="13_qq5ev"]
-[ext_resource type="PackedScene" uid="uid://budd724dpb8v" path="res://blender/characters/char_lucipeta.blend" id="15_3a4x0"]
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_dvshw"]
 
@@ -47,9 +46,6 @@ directional_shadow_blend_splits = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ptepl")
 
-[node name="Other" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.93159, 0)
-
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.0965271, 7.08455, 0.131213)
 light_energy = 5.0
@@ -59,9 +55,6 @@ spot_angle = 51.33
 
 [node name="Temple_Pillar" parent="." instance=ExtResource("9_ar3th")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 14.9791, 3, 4.7815)
-
-[node name="creature_lucipeta" parent="." instance=ExtResource("15_3a4x0")]
-transform = Transform3D(0.489032, 0, -0.872266, 0, 1, 0, 0.872266, 0, 0.489032, 1.34485, 1.10577, -2.08304)
 
 [node name="GroundHex" parent="." instance=ExtResource("7_rnvla")]
 

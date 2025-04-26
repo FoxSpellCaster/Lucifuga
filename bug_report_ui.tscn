@@ -1,0 +1,109 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4lpmq8egnw2h"]
+
+[ext_resource type="Script" uid="uid://x4a80xlycytf" path="res://bug_report_ui.gd" id="1_ha7bv"]
+
+[node name="BugReportUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ha7bv")
+
+[node name="Background" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.101961, 0.101961, 0.239216, 1)
+
+[node name="MainContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -300.0
+offset_right = 200.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="TitleLabel" type="Label" parent="MainContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.545098, 0.913725, 0.992157, 1)
+theme_override_font_sizes/font_size = 18
+text = "Report Title"
+
+[node name="TitleEdit" type="LineEdit" parent="MainContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.545098, 0.913725, 0.992157, 1)
+theme_override_font_sizes/font_size = 16
+
+[node name="DescriptionLabel" type="Label" parent="MainContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.545098, 0.913725, 0.992157, 1)
+theme_override_font_sizes/font_size = 18
+text = "Description"
+
+[node name="DescriptionEdit" type="TextEdit" parent="MainContainer"]
+custom_minimum_size = Vector2(400, 150)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.545098, 0.913725, 0.992157, 1)
+theme_override_font_sizes/font_size = 16
+wrap_mode = 1
+
+[node name="StepsLabel" type="Label" parent="MainContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.545098, 0.913725, 0.992157, 1)
+theme_override_font_sizes/font_size = 18
+text = "Steps to Reproduce"
+
+[node name="StepsEdit" type="TextEdit" parent="MainContainer"]
+custom_minimum_size = Vector2(400, 150)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.545098, 0.913725, 0.992157, 1)
+theme_override_font_sizes/font_size = 16
+wrap_mode = 1
+
+[node name="CategoryLabel" type="Label" parent="MainContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.545098, 0.913725, 0.992157, 1)
+theme_override_font_sizes/font_size = 18
+text = "Category"
+
+[node name="CategoryOption" type="OptionButton" parent="MainContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.545098, 0.913725, 0.992157, 1)
+item_count = 3
+popup/item_0/text = "Bug"
+popup/item_0/id = 0
+popup/item_1/text = "Feedback"
+popup/item_1/id = 1
+popup/item_2/text = "Feature"
+popup/item_2/id = 2
+
+[node name="PrivacyLabel" type="Label" parent="MainContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.545098, 0.913725, 0.992157, 1)
+theme_override_font_sizes/font_size = 18
+text = "Steam IDs are used only for bug tracking."
+
+[node name="SubmitButton" type="Button" parent="MainContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.545098, 0.913725, 0.992157, 1)
+text = "Submit to the Aether"
+
+[node name="StatusLabel" type="Label" parent="MainContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.545098, 0.913725, 0.992157, 1)
+theme_override_font_sizes/font_size = 18
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
