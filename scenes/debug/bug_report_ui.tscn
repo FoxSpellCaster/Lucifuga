@@ -1,0 +1,87 @@
+[gd_scene load_steps=4 format=3 uid="uid://example_bug_report_ui"]
+
+[ext_resource type="Script" path="res://scripts/bug_report_ui.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/textures/crystal.png" id="2"]
+
+[node name="BugReportUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="Background" type="TextureRect"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -150.0
+offset_right = 200.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="TitleLabel" type="Label"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.545098, 0.913725, 1, 1)  # Cyan glow (0x8be9fdff)
+theme_override_font_sizes/font_size = 24
+text = "Submit a Bug Report to RubberFox"
+horizontal_alignment = 1
+
+[node name="FeatureRequestNote" type="Label"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.545098, 0.913725, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "For feature requests, use /feature-request in Discord!"
+horizontal_alignment = 1
+
+[node name="TitleInput" type="LineEdit"]
+layout_mode = 2
+placeholder_text = "Bug Title"
+max_length = 50
+
+[node name="DescriptionInput" type="TextEdit"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 80)
+placeholder_text = "Describe the bug..."
+wrap_mode = 1
+
+[node name="StepsInput" type="TextEdit"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 80)
+placeholder_text = "Steps to reproduce..."
+wrap_mode = 1
+
+[node name="SteamIDInput" type="LineEdit"]
+layout_mode = 2
+placeholder_text = "Steam ID (optional)"
+max_length = 50
+
+[node name="SubmitButton" type="Button"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.545098, 0.913725, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "Submit Bug Report"
+
+[node name="FeedbackLabel" type="Label"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.411765, 0.411765, 1)  # Soft red for errors
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[connection signal="pressed" from="VBoxContainer/SubmitButton" to="." method="_on_submit_button_pressed"]
