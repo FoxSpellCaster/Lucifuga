@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b5hbtk6hdyibx"]
+[gd_scene load_steps=16 format=3 uid="uid://b5hbtk6hdyibx"]
 
 [ext_resource type="LightmapGIData" uid="uid://cg78lor2ip7jx" path="res://scenes/game/Spawn.lmbake" id="1_dvshw"]
 [ext_resource type="Sky" uid="uid://deel6vvma6vaf" path="res://assets/textures/skyboxes/sky.tres" id="3_poui6"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ddv77eexok5fu" path="res://scenes/items/WorldItem_Fragment_3.tscn" id="10_11gop"]
 [ext_resource type="PackedScene" uid="uid://dp635o6ipcjgc" path="res://scenes/items/WorldItem_Fragment_4.tscn" id="11_p8cku"]
 [ext_resource type="PackedScene" uid="uid://ccko6yqeoo0j1" path="res://scenes/items/WorldItem_Fragment_5.tscn" id="12_poui6"]
+[ext_resource type="PackedScene" uid="uid://cf1pwgl0y0mi6" path="res://scenes/player/Player.tscn" id="12_q7srp"]
 [ext_resource type="PackedScene" uid="uid://bvffseiosu153" path="res://scenes/items/WorldItem_Fragment_Empty.tscn" id="13_qq5ev"]
 [ext_resource type="PackedScene" uid="uid://budd724dpb8v" path="res://blender/characters/char_lucipeta.blend" id="15_3a4x0"]
 
@@ -123,3 +124,6 @@ replication_config = SubResource("SceneReplicationConfig_p8cku")
 
 [node name="SpawnMarker3D" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.38945, -9.76723)
+
+[node name="Player" parent="." instance=ExtResource("12_q7srp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.50992, 3.01457, -2.25326)
