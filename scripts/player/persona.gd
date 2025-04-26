@@ -1,9 +1,9 @@
 extends Control
 
 # UI nodes for displaying Steam user information
-@onready var name_label: Label = $VBoxContainer/NameLabel
-@onready var steam_id_label: Label = $VBoxContainer/SteamIDLabel
-@onready var online_status_label: Label = $VBoxContainer/OnlineStatusLabel
+@onready var name_label: Label = $VBoxContainer/HBoxContainer2/NameLabel
+@onready var steam_id_label: Label = $VBoxContainer/HBoxContainer2/SteamIDLabel
+@onready var online_status_label: Label = $VBoxContainer/HBoxContainer/OnlineStatusLabel
 
 # Called when the node is ready
 func _ready() -> void:
@@ -24,12 +24,12 @@ func _ready() -> void:
 	
 	# Fetch Steam ID
 	var steam_id: int = Steam.getSteamID()
-	steam_id_label.text = "Steam ID: %d" % steam_id
+	steam_id_label.text = "%d" % steam_id
 	
 	# Fetch online status
 	var is_online: bool = Steam.loggedOn()
 	var persona_state: int = Steam.getFriendPersonaState(steam_id) if is_online and steam_id else 0
-	online_status_label.text = "Status: %s" % persona_state_to_string(persona_state)
+	online_status_label.text = "%s" % persona_state_to_string(persona_state)
 	
 	# Print debug information
 	print("Username: ", username)
