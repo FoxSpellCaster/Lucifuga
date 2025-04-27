@@ -1,111 +1,82 @@
 extends Control
 
-var server_url: String = ""
-var api_key: String = ""
+@onready var title_input = $VBoxContainer/TitleInput
+@onready var description_input = $VBoxContainer/DescriptionInput
+@onready var steps_input = $VBoxContainer/StepsInput
+@onready var steam_id_input = $VBoxContainer/SteamIDInput
+@onready var feedback_label = $VBoxContainer/FeedbackLabel
+
+var api_key = ""
 
 func _ready():
-	# Ensure the development setting exists
-	if not ProjectSettings.has_setting("lucifuga/is_development"):
-		ProjectSettings.set_setting("lucifuga/is_development", true)
-		ProjectSettings.save()
-
-	# Load config only in editor or development mode
-	if OS.has_feature("editor") or ProjectSettings.get_setting("lucifuga/is_development", false):
-		if not FileAccess.file_exists("res://config.ini"):
-			print("Config file not found at res://config.ini")
-			$MainContainer/StatusLabel.text = "Configuration file missing"
-			$MainContainer/SubmitButton.disabled = true
-			return
-
-		# Read and parse the config file manually
-		var file = FileAccess.open("res://config.ini", FileAccess.READ)
-		if file:
-			print("Config file contents:")
-			var content = file.get_as_text()
-			print(content)
-			file.close()
-
-			# Parse the INI content
-			var current_section = ""
-			for line in content.split("\n"):
-				line = line.strip_edges()  # Remove leading/trailing whitespace
-				if line.is_empty() or line.begins_with(";"):  # Skip empty lines or comments
-					continue
-				if line.begins_with("[") and line.ends_with("]"):
-					current_section = line.substr(1, line.length() - 2)
-					continue
-				if current_section == "discord" and "=" in line:
-					var parts = line.split("=", false, 1)
-					if parts.size() == 2:
-						var key = parts[0].strip_edges()
-						var value = parts[1].strip_edges()
-						if key == "server_url":
-							server_url = value
-						elif key == "api_key":
-							api_key = value
-
-			if server_url.is_empty() or api_key.is_empty():
-				print("Failed to parse config: server_url or api_key missing")
-				$MainContainer/StatusLabel.text = "Configuration parsing error"
-				$MainContainer/SubmitButton.disabled = true
-				return
-			else:
-				print("Config parsed manually: Server URL = ", server_url)
-		else:
-			print("Failed to open config file: ", FileAccess.get_open_error())
-			$MainContainer/StatusLabel.text = "Configuration error"
-			$MainContainer/SubmitButton.disabled = true
-			return
+	# Load API key from api_config.tres
+	var config = load("res://api_config.tres")
+	if config and config is Resource and config.api_key != "":
+		api_key = config.api_key
 	else:
-		$MainContainer/StatusLabel.text = "Bug reporting disabled. Use /report in Discord!"
-		$MainContainer/SubmitButton.disabled = true
+		feedback_label.text = "Error: Could not load API key from api_config.tres"
+		feedback_label.modulate = Color(1, 0.411765, 0.411765, 1)  # Soft red
 		return
-
-	# Populate category dropdown
-	$MainContainer/CategoryOption.add_item("Bug", 0)
-	$MainContainer/CategoryOption.add_item("Feedback", 1)
-	$MainContainer/CategoryOption.add_item("Feature", 2)
-
-	# Connect signals
-	$MainContainer/SubmitButton.pressed.connect(_on_submit_button_pressed)
-	$HTTPRequest.request_completed.connect(_on_request_completed)
 
 func _on_submit_button_pressed():
-	var title = $MainContainer/TitleEdit.text
-	var description = $MainContainer/DescriptionEdit.text
-	var steps = $MainContainer/StepsEdit.text
-	var category = ["bug", "feedback", "feature"][$MainContainer/CategoryOption.selected]
-	var steam_id = Steam.getSteamID()
+	# Clear previous feedback
+	feedback_label.text = ""
+	feedback_label.modulate = Color(1, 0.411765, 0.411765, 1)
 
-	if title.is_empty() or description.is_empty() or steps.is_empty():
-		$MainContainer/StatusLabel.text = "Please fill all fields"
-		$MainContainer/StatusLabel.modulate = Color(1, 0, 0)  # Red for error
+	# Validate inputs
+	var title = title_input.text.strip_edges()
+	var description = description_input.text.strip_edges()
+	var steps = steps_input.text.strip_edges()
+	var steam_id = steam_id_input.text.strip_edges()
+
+	if title == "":
+		feedback_label.text = "Please enter a title."
+		return
+	if description == "":
+		feedback_label.text = "Please enter a description."
+		return
+	if steps == "":
+		feedback_label.text = "Please enter steps to reproduce."
 		return
 
-	submit_bug_report(title, description, steps, category, str(steam_id))
+	# Prepare the HTTP request
+	var http_request = HTTPRequest.new()
+	add_child(http_request)
+	http_request.request_completed.connect(self._on_request_completed)
 
-func submit_bug_report(title: String, description: String, steps: String, category: String, steam_id: String):
-	if server_url.is_empty() or api_key.is_empty():
-		$MainContainer/StatusLabel.text = "Error: Server not configured"
-		$MainContainer/StatusLabel.modulate = Color(1, 0, 0)
-		return
-
-	var headers = [
-		"Content-Type: application/json",
-		"X-API-Key: %s" % api_key
-	]
-	var body = {
+	var url = "http://foxden.servebeer.com:7782/report"
+	var headers = ["Content-Type: application/json", "x-api-key: " + api_key]
+	var body = JSON.stringify({
 		"title": title,
 		"description": description,
 		"steps": steps,
-		"category": category,
-		"steam_id": steam_id if steam_id else "Anonymous"
-	}
+		"category": "bug",
+		"steam_id": steam_id if steam_id != "" else "Anonymous"
+	})
 
-	$HTTPRequest.request(server_url, headers, HTTPClient.METHOD_POST, JSON.stringify(body))
-	$MainContainer/StatusLabel.text = "Submitting report..."
-	$MainContainer/StatusLabel.modulate = Color(1, 1, 1)  # White while submitting
+	var error = http_request.request(url, headers, HTTPClient.METHOD_POST, body)
+	if error != OK:
+		feedback_label.text = "Error: Failed to send request to RubberFox."
+		http_request.queue_free()
 
 func _on_request_completed(result, response_code, headers, body):
+	var response = JSON.parse_string(body.get_string_from_utf8())
 	if response_code == 200:
-		$MainContainer/StatusLabel.tex
+		feedback_label.text = "Bug report successfully sent to RubberFox!"
+		feedback_label.modulate = Color(0.545098, 0.913725, 1, 1)  # Cyan glow
+		# Clear the form
+		title_input.text = ""
+		description_input.text = ""
+		steps_input.text = ""
+		steam_id_input.text = ""
+	else:
+		var error_message = response if response is String else "Unknown error"
+		if response_code == 400 and error_message == "Invalid category. Use /feature-request for features.":
+			feedback_label.text = "Feature requests are not supported here. Use /feature-request in Discord!"
+		else:
+			feedback_label.text = "Error: " + error_message
+
+	# Clean up the HTTPRequest node
+	var http_request = get_node_or_null("HTTPRequest")
+	if http_request:
+		http_request.queue_free()

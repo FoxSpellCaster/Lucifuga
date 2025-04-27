@@ -1,10 +1,10 @@
-[gd_scene load_steps=25 format=3 uid="uid://cf1pwgl0y0mi6"]
+[gd_scene load_steps=26 format=3 uid="uid://cf1pwgl0y0mi6"]
 
 [ext_resource type="Script" uid="uid://3m03w87bcjnr" path="res://scripts/player/PlayerController.gd" id="1_krxqb"]
 [ext_resource type="Script" uid="uid://0xopmg7fmfbj" path="res://scripts/player/Interaction/InteractionController.gd" id="2_66uls"]
 [ext_resource type="Script" uid="uid://bgp8sred771bp" path="res://scripts/inventory/Inventory.gd" id="3_0eju6"]
 [ext_resource type="FontFile" uid="uid://dk2153f4elis8" path="res://assets/fonts/m6x11plus.ttf" id="4_brk14"]
-[ext_resource type="Texture2D" uid="uid://eenht8t6wngj" path="res://assets/icons/crosshair.png" id="4_fabuu"]
+[ext_resource type="Texture2D" uid="uid://c0hsijyei028v" path="res://assets/icons/crosshair.png" id="4_fabuu"]
 [ext_resource type="PackedScene" uid="uid://c7i5cai8ud4lr" path="res://scenes/inventory/inventory_slot.tscn" id="4_sydjo"]
 [ext_resource type="Script" uid="uid://bjuixjebeu4c0" path="res://scripts/inventory/Item.gd" id="5_kcr7a"]
 [ext_resource type="Resource" uid="uid://coe42mjjg8ajw" path="res://scenes/inventory/data/Fragment_1.tres" id="6_inybr"]
@@ -20,6 +20,7 @@
 [ext_resource type="Script" uid="uid://bgmvt7n2vo8af" path="res://scripts/player/persona.gd" id="16_pbbws"]
 [ext_resource type="LabelSettings" uid="uid://plsj0epx31i0" path="res://scenes/player/VersonLabel.tres" id="17_kswpp"]
 [ext_resource type="LabelSettings" uid="uid://cvcn87tb85ks" path="res://scenes/player/OnlineStatus.tres" id="18_v5i4m"]
+[ext_resource type="Script" uid="uid://dvx6y6jbrtrye" path="res://scripts/discord/player_discord.gd" id="21_v5i4m"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lt5te"]
 radius = 0.3
@@ -297,3 +298,10 @@ offset_top = 24.0
 offset_right = 152.0
 offset_bottom = 61.0
 text = "QUIT GAME"
+
+[node name="DiscordControl" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("21_v5i4m")
