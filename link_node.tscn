@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://dki1jqrpot2qh"]
+
+[ext_resource type="FontFile" uid="uid://duinf10ihytwp" path="res://assets/fonts/Kaph-Regular.ttf" id="1_ltw50"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_e1dod"]
+font = ExtResource("1_ltw50")
+outline_size = 25
+outline_color = Color(0, 0, 0, 1)
+
+[node name="LinkNode" type="Node"]
+
+[node name="Code" type="Label" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -219.0
+offset_top = -99.0
+offset_right = -24.0
+offset_bottom = -76.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "LINK CODE: XXXXXX"
+label_settings = SubResource("LabelSettings_e1dod")
+horizontal_alignment = 2
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]

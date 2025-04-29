@@ -22,7 +22,6 @@ config/icon="uid://cqwvu0bjr2iqk"
 [autoload]
 
 GlobalSignals="*res://scripts/global/GlobalSignals.gd"
-SteamController="*res://scripts/steam/steam_controller.gd"
 
 [debug]
 

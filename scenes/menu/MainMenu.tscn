@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dptexph7f4ouv"]
+[gd_scene load_steps=12 format=3 uid="uid://dptexph7f4ouv"]
 
 [ext_resource type="Script" uid="uid://bv04inbv8mtr6" path="res://scenes/menu/main_menu.gd" id="1_cruaa"]
 [ext_resource type="Texture2D" uid="uid://bsa208vapj85n" path="res://assets/images/lucifuga_grok_raw.jpg" id="2_ucygd"]
@@ -7,7 +7,6 @@
 [ext_resource type="FontFile" uid="uid://duinf10ihytwp" path="res://assets/fonts/Kaph-Regular.ttf" id="4_ow34m"]
 [ext_resource type="FontFile" uid="uid://c0r5u5j04yt85" path="res://assets/fonts/m5x7.ttf" id="5_826wr"]
 [ext_resource type="FontFile" uid="uid://ogh2m2vh5bfx" path="res://assets/fonts/m6x11.ttf" id="6_ucygd"]
-[ext_resource type="Script" uid="uid://5r6o06pdpkeg" path="res://scripts/steam/player_link.gd" id="8_e1dod"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_l72w3"]
 font = ExtResource("4_ow34m")
@@ -26,11 +25,6 @@ font_size = 24
 [sub_resource type="LabelSettings" id="LabelSettings_ucygd"]
 font = ExtResource("6_ucygd")
 font_size = 24
-
-[sub_resource type="LabelSettings" id="LabelSettings_e1dod"]
-font = ExtResource("4_ow34m")
-outline_size = 25
-outline_color = Color(0, 0, 0, 1)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -171,27 +165,6 @@ text = "FoxSpellCaster Labs"
 label_settings = SubResource("LabelSettings_ucygd")
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="LinkNode" type="Node" parent="."]
-script = ExtResource("8_e1dod")
-
-[node name="Code" type="Label" parent="LinkNode"]
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -219.0
-offset_top = -99.0
-offset_right = -24.0
-offset_bottom = -76.0
-grow_horizontal = 0
-grow_vertical = 0
-text = "LINK CODE: XXXXXX"
-label_settings = SubResource("LabelSettings_e1dod")
-horizontal_alignment = 2
-
-[node name="HTTPRequest" type="HTTPRequest" parent="LinkNode"]
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Settings" to="SettingsCenterContainer" method="show"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Settings" to="SettingsCenterContainer" method="set_mouse_filter"]

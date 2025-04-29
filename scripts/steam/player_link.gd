@@ -4,6 +4,7 @@ extends Node
 var steam_id: int = 0
 var link_code: String = ""
 var is_linked: bool = false
+var has_been_notified: bool = false  # New flag to track if the player has been notified
 
 # File to store linking status locally
 const LINK_FILE_PATH: String = "user://discord_link.dat"
@@ -18,8 +19,8 @@ var http_request: HTTPRequest = null
 var is_requesting: bool = false
 
 # Polling settings
-const POLLING_INTERVAL: float = 15.0  # Increased from 5 to 15 seconds
-const MAX_POLLING_ATTEMPTS: int = 20  # Stop after ~5 minutes (20 * 15s)
+const POLLING_INTERVAL: float = 15.0
+const MAX_POLLING_ATTEMPTS: int = 20
 var polling_attempts: int = 0
 
 func _ready() -> void:
@@ -34,11 +35,19 @@ func _ready() -> void:
 		print("Failed to retrieve Steam ID")
 		return
 
-	# Check if the player is already linked
+	# Load linking status and notification flag
 	load_link_status()
 
-	if not is_linked:
-		# Hide the label initially
+	if is_linked:
+		# If already linked, hide the label
+		code_label.visible = false
+	elif has_been_notified:
+		# If not linked but previously notified, show a reminder
+		code_label.text = "Please link your Discord ID using the code from your last session."
+		code_label.visible = true
+		print("Reminder: Please link your Discord ID to continue.")
+	else:
+		# If not linked and not notified, proceed with linking process
 		code_label.visible = false
 
 		# Generate a unique code for linking
@@ -69,9 +78,6 @@ func _ready() -> void:
 		# Start polling the server to check if the link is complete
 		polling_attempts = 0
 		poll_link_status()
-	else:
-		# If already linked, ensure the label is hidden
-		code_label.visible = false
 
 func generate_link_code() -> void:
 	# Generate a simple 6-character alphanumeric code
@@ -85,6 +91,7 @@ func save_link_status() -> void:
 	var file: FileAccess = FileAccess.open(LINK_FILE_PATH, FileAccess.WRITE)
 	if file:
 		file.store_line(str(is_linked))
+		file.store_line(str(has_been_notified))
 		file.close()
 
 func load_link_status() -> void:
@@ -92,6 +99,7 @@ func load_link_status() -> void:
 		var file: FileAccess = FileAccess.open(LINK_FILE_PATH, FileAccess.READ)
 		if file:
 			is_linked = file.get_line().to_lower() == "true"
+			has_been_notified = file.get_line().to_lower() == "true"
 			file.close()
 
 func poll_link_status() -> void:
@@ -112,6 +120,8 @@ func poll_link_status() -> void:
 		polling_attempts += 1
 		if polling_attempts >= MAX_POLLING_ATTEMPTS:
 			print("Max polling attempts reached. Stopping link status checks.")
+			has_been_notified = true  # Set the flag since linking wasn't completed
+			save_link_status()
 			break
 
 		# Wait before the next poll
@@ -134,6 +144,7 @@ func _on_http_request_completed(result: int, response_code: int, headers: Packed
 		
 		if data.get("linked", false):
 			is_linked = true
+			has_been_notified = false  # Reset the flag since linking succeeded
 			save_link_status()
 			# Hide the label after a successful link
 			code_label.visible = false
