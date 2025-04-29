@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://dptexph7f4ouv"]
 
 [ext_resource type="Script" uid="uid://bv04inbv8mtr6" path="res://scenes/menu/main_menu.gd" id="1_cruaa"]
-[ext_resource type="Texture2D" uid="uid://bsa208vapj85n" path="res://assets/images/lucifuga_grok_raw.jpg" id="2_ucygd"]
+[ext_resource type="Texture2D" uid="uid://hflxwecvvlp" path="res://assets/images/lucifuga_grok_raw.jpg" id="2_ucygd"]
 [ext_resource type="Sky" uid="uid://deel6vvma6vaf" path="res://assets/textures/skyboxes/sky.tres" id="3_2wh52"]
 [ext_resource type="Theme" uid="uid://bnknowa7wt7df" path="res://assets/themes/Menu_Theme.tres" id="4_mipys"]
 [ext_resource type="FontFile" uid="uid://duinf10ihytwp" path="res://assets/fonts/Kaph-Regular.ttf" id="4_ow34m"]

@@ -7,8 +7,18 @@ extends Control
 
 # Called when the node is ready
 func _ready() -> void:
-	# Check if Steam is initialized and enabled
-	if not SteamController or not SteamController.enable_steam or not Steam.isSteamRunning():
+	# Wait for SteamController to initialize (deferred to ensure autoloads are ready)
+	await get_tree().create_timer(0.1).timeout
+	
+	# Check if SteamController exists and Steam is enabled
+	if not SteamController or not SteamController.enable_steam:
+		push_error("SteamController not found or Steam integration disabled")
+		update_ui_offline()
+		return
+	
+	# Check if Steam is initialized and running
+	if not Steam.isSteamRunning() or not Steam.loggedOn():
+		push_error("Steam client not running or not logged in")
 		update_ui_offline()
 		return
 	
@@ -20,16 +30,15 @@ func _ready() -> void:
 	
 	# Fetch Steam username
 	var username: String = Steam.getPersonaName()
-	name_label.text = username if username else "Unknown"
+	name_label.text = username if username and username != "" else "Unknown"
 	
 	# Fetch Steam ID
 	var steam_id: int = Steam.getSteamID()
-	steam_id_label.text = "%d" % steam_id
+	steam_id_label.text = str(steam_id) if steam_id != 0 else "N/A"
 	
 	# Fetch online status
-	var is_online: bool = Steam.loggedOn()
-	var persona_state: int = Steam.getFriendPersonaState(steam_id) if is_online and steam_id else 0
-	online_status_label.text = "%s" % persona_state_to_string(persona_state)
+	var persona_state: int = Steam.getPersonaState()
+	online_status_label.text = persona_state_to_string(persona_state)
 	
 	# Print debug information
 	print("Username: ", username)

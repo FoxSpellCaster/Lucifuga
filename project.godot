@@ -17,10 +17,11 @@ A seat of power forsaken—tears stain all that remains."
 config/version="0.0.8b-alpha-inventory_update"
 run/main_scene="uid://dptexph7f4ouv"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="uid://cqwvu0bjr2iqk"
+config/icon="uid://crpj84uhl3sqa"
 
 [autoload]
 
+SteamController="*res://scripts/steam/steam_controller.gd"
 GlobalSignals="*res://scripts/global/GlobalSignals.gd"
 
 [debug]
@@ -140,5 +141,3 @@ environment/subsurface_scattering/subsurface_scattering_quality=2
 [steam]
 
 initialization/app_id=3673440
-initialization/initialize_on_startup=true
-initialization/embed_callbacks=true
