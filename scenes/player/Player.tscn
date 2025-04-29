@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://0xopmg7fmfbj" path="res://scripts/player/Interaction/InteractionController.gd" id="2_66uls"]
 [ext_resource type="Script" uid="uid://bgp8sred771bp" path="res://scripts/inventory/Inventory.gd" id="3_0eju6"]
 [ext_resource type="FontFile" uid="uid://dk2153f4elis8" path="res://assets/fonts/m6x11plus.ttf" id="4_brk14"]
-[ext_resource type="Texture2D" uid="uid://b2ue876yf6vmb" path="res://assets/icons/crosshair.png" id="4_fabuu"]
+[ext_resource type="Texture2D" uid="uid://ckduoxblee7m1" path="res://assets/icons/crosshair.png" id="4_fabuu"]
 [ext_resource type="PackedScene" uid="uid://c7i5cai8ud4lr" path="res://scenes/inventory/inventory_slot.tscn" id="4_sydjo"]
 [ext_resource type="Script" uid="uid://bjuixjebeu4c0" path="res://scripts/inventory/Item.gd" id="5_kcr7a"]
 [ext_resource type="Resource" uid="uid://coe42mjjg8ajw" path="res://scenes/inventory/data/Fragment_1.tres" id="6_inybr"]
