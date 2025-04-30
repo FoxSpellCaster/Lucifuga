@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://dg8qk648gumag"]
 
-[ext_resource type="Texture2D" uid="uid://cya168lwsb6p5" path="res://assets/images/particles/particle_pyre_crystal.png" id="1_2nkpo"]
+[ext_resource type="Texture2D" uid="uid://d2w4vbbqy8vig" path="res://assets/images/particles/particle_pyre_crystal.png" id="1_2nkpo"]
 
 [sub_resource type="Gradient" id="Gradient_2nkpo"]
 offsets = PackedFloat32Array(0, 0.799283, 1)
