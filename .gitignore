@@ -1,7 +1,7 @@
 # Godot 4+ specific ignores
 .godot/
 .nomedia
-.hidden
+/hidden
 
 # Godot-specific ignores
 .import/
