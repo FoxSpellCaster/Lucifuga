@@ -7,7 +7,7 @@
 [ext_resource type="FontFile" uid="uid://duinf10ihytwp" path="res://assets/fonts/Kaph-Regular.ttf" id="4_ow34m"]
 [ext_resource type="FontFile" uid="uid://c0r5u5j04yt85" path="res://assets/fonts/m5x7.ttf" id="5_826wr"]
 [ext_resource type="FontFile" uid="uid://ogh2m2vh5bfx" path="res://assets/fonts/m6x11.ttf" id="6_ucygd"]
-[ext_resource type="PackedScene" uid="uid://dki1jqrpot2qh" path="res://link_node.tscn" id="8_e1dod"]
+[ext_resource type="PackedScene" uid="uid://dki1jqrpot2qh" path="res://scenes/debug/link_node.tscn" id="8_e1dod"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_l72w3"]
 font = ExtResource("4_ow34m")
