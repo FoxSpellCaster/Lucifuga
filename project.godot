@@ -17,7 +17,7 @@ A seat of power forsaken—tears stain all that remains."
 config/version="0.0.8b-alpha-inventory_update"
 run/main_scene="uid://dptexph7f4ouv"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="uid://crpj84uhl3sqa"
+config/icon="uid://bma7rl15fr3ef"
 
 [autoload]
 
