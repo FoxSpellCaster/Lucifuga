@@ -39,7 +39,7 @@ project/assembly_name="Lucifuga"
 
 [editor_plugins]
 
-enabled=PackedStringArray()
+enabled=PackedStringArray("res://addons/auto_assign_ids/plugin.cfg", "res://addons/scene_tree_as_text/plugin.cfg")
 
 [file_customization]
 

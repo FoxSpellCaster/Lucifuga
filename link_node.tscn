@@ -1,6 +1,5 @@
-[gd_scene load_steps=4 format=3 uid="uid://dki1jqrpot2qh"]
+[gd_scene load_steps=3 format=3 uid="uid://dki1jqrpot2qh"]
 
-[ext_resource type="Script" uid="uid://5r6o06pdpkeg" path="res://scripts/steam/player_link.gd" id="1_aul76"]
 [ext_resource type="FontFile" uid="uid://duinf10ihytwp" path="res://assets/fonts/Kaph-Regular.ttf" id="1_ltw50"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_e1dod"]
@@ -9,7 +8,6 @@ outline_size = 25
 outline_color = Color(0, 0, 0, 1)
 
 [node name="LinkNode" type="Node"]
-script = ExtResource("1_aul76")
 
 [node name="Code" type="Label" parent="."]
 anchors_preset = 3

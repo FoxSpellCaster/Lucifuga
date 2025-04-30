@@ -1,0 +1,428 @@
+link_node.tscn:
+Node (name: "LinkNode", scene: "res://link_node.tscn", script: "res://scripts/steam/player_link.gd")
+├── Label (name: "Code")
+└── HTTPRequest
+    └── Timer (name: "@Timer@26590")
+
+bug_report_ui.tscn:
+Control (name: "BugReportUI", scene: "res://scenes/debug/bug_report_ui.tscn", script: "res://scripts/debug/bug_report_ui.gd")
+├── TextureRect (name: "Background")
+└── VBoxContainer
+    ├── Label (name: "TitleLabel")
+    ├── Label (name: "FeatureRequestNote")
+    ├── LineEdit (name: "TitleInput")
+    ├── TextEdit (name: "DescriptionInput")
+    ├── TextEdit (name: "StepsInput")
+    ├── LineEdit (name: "SteamIDInput")
+    ├── Button (name: "SubmitButton")
+    └── Label (name: "FeedbackLabel")
+
+file_tree.tscn:
+Node (scene: "res://scenes/debug/file_tree.tscn", script: "res://scripts/debug/file_tree.gd")
+
+spawn_enviroment.tscn:
+Node3D (name: "Spawn_Enviroment", scene: "res://scenes/enviroment/spawn_enviroment.tscn")
+├── GPUParticles3D (name: "DarkGPUParticles3D")
+└── GPUParticles3D (name: "GoldGPUParticles3D")
+
+Spawn.tscn:
+Node3D (name: "Spawn", scene: "res://scenes/game/Spawn.tscn", script: "res://scenes/game/spawn.gd")
+├── LightmapGI
+├── DirectionalLight3D
+├── HTTPRequest
+│   └── Timer (name: "@Timer@26601")
+├── WorldEnvironment
+├── SpotLight3D
+├── Node3D (name: "Temple_Pillar", scene: "res://scenes/structures/temple_pillar.tscn")
+│   ├── MeshInstance3D (name: "DungeonPillar")
+│   │   └── StaticBody3D
+│   │       └── CollisionShape3D
+│   ├── GPUParticles3D (name: "BlueFire")
+│   ├── OmniLight3D
+│   │   └── FogVolume
+│   ├── GPUParticles3D (name: "BlueGPUParticles3D")
+│   └── AudioStreamPlayer3D
+├── MeshInstance3D (name: "GroundHex", scene: "res://scenes/structures/ground_hex.tscn")
+│   └── StaticBody3D
+│       └── CollisionShape3D
+├── MeshInstance3D (name: "GroundHex2", scene: "res://scenes/structures/ground_hex.tscn")
+│   └── StaticBody3D
+│       └── CollisionShape3D
+├── MeshInstance3D (name: "GroundHex3", scene: "res://scenes/structures/ground_hex.tscn")
+│   └── StaticBody3D
+│       └── CollisionShape3D
+├── MeshInstance3D (name: "GroundHex4", scene: "res://scenes/structures/ground_hex.tscn")
+│   └── StaticBody3D
+│       └── CollisionShape3D
+├── RigidBody3D (name: "WorldItem_Shard1", scene: "res://scenes/items/WorldItem_Fragment_1.tscn", script: "res://scripts/inventory/WorldItem.gd")
+│   ├── MeshInstance3D (name: "Fragment_1")
+│   ├── CollisionShape3D
+│   └── CollisionShape3D (name: "CollisionShape3D2")
+├── RigidBody3D (name: "WorldItem_Shard2", scene: "res://scenes/items/WorldItem_Fragment_2.tscn", script: "res://scripts/inventory/WorldItem.gd")
+│   ├── MeshInstance3D (name: "Fragment_2")
+│   ├── CollisionShape3D
+│   └── CollisionShape3D (name: "CollisionShape3D2")
+├── RigidBody3D (name: "WorldItem_Shard3", scene: "res://scenes/items/WorldItem_Fragment_3.tscn", script: "res://scripts/inventory/WorldItem.gd")
+│   ├── MeshInstance3D (name: "Fragment_3")
+│   ├── CollisionShape3D
+│   └── CollisionShape3D (name: "CollisionShape3D2")
+├── RigidBody3D (name: "WorldItem_Shard4", scene: "res://scenes/items/WorldItem_Fragment_4.tscn", script: "res://scripts/inventory/WorldItem.gd")
+│   ├── MeshInstance3D (name: "Fragment_4")
+│   ├── CollisionShape3D
+│   └── CollisionShape3D (name: "CollisionShape3D2")
+├── RigidBody3D (name: "WorldItem_Shard5", scene: "res://scenes/items/WorldItem_Fragment_5.tscn", script: "res://scripts/inventory/WorldItem.gd")
+│   ├── MeshInstance3D (name: "Fragment_5")
+│   ├── CollisionShape3D
+│   └── CollisionShape3D (name: "CollisionShape3D2")
+├── RigidBody3D (name: "WorldItem_Shard6", scene: "res://scenes/items/WorldItem_Fragment_1.tscn", script: "res://scripts/inventory/WorldItem.gd")
+│   ├── MeshInstance3D (name: "Fragment_1")
+│   ├── CollisionShape3D
+│   └── CollisionShape3D (name: "CollisionShape3D2")
+├── RigidBody3D (name: "WorldItem_Shard7", scene: "res://scenes/items/WorldItem_Fragment_2.tscn", script: "res://scripts/inventory/WorldItem.gd")
+│   ├── MeshInstance3D (name: "Fragment_2")
+│   ├── CollisionShape3D
+│   └── CollisionShape3D (name: "CollisionShape3D2")
+├── RigidBody3D (name: "WorldItem_Shard8", scene: "res://scenes/items/WorldItem_Fragment_1.tscn", script: "res://scripts/inventory/WorldItem.gd")
+│   ├── MeshInstance3D (name: "Fragment_1")
+│   ├── CollisionShape3D
+│   └── CollisionShape3D (name: "CollisionShape3D2")
+├── RigidBody3D (name: "WorldItem_Shard9", scene: "res://scenes/items/WorldItem_Fragment_1.tscn", script: "res://scripts/inventory/WorldItem.gd")
+│   ├── MeshInstance3D (name: "Fragment_1")
+│   ├── CollisionShape3D
+│   └── CollisionShape3D (name: "CollisionShape3D2")
+├── RigidBody3D (name: "WorldItem_Shard10", scene: "res://scenes/items/WorldItem_Fragment_2.tscn", script: "res://scripts/inventory/WorldItem.gd")
+│   ├── MeshInstance3D (name: "Fragment_2")
+│   ├── CollisionShape3D
+│   └── CollisionShape3D (name: "CollisionShape3D2")
+├── RigidBody3D (name: "WorldItem_Shard11", scene: "res://scenes/items/WorldItem_Fragment_3.tscn", script: "res://scripts/inventory/WorldItem.gd")
+│   ├── MeshInstance3D (name: "Fragment_3")
+│   ├── CollisionShape3D
+│   └── CollisionShape3D (name: "CollisionShape3D2")
+├── RigidBody3D (name: "WorldItem_Shard12", scene: "res://scenes/items/WorldItem_Fragment_4.tscn", script: "res://scripts/inventory/WorldItem.gd")
+│   ├── MeshInstance3D (name: "Fragment_4")
+│   ├── CollisionShape3D
+│   └── CollisionShape3D (name: "CollisionShape3D2")
+├── RigidBody3D (name: "WorldItem_Fragment_Empty", scene: "res://scenes/items/WorldItem_Fragment_Empty.tscn", script: "res://scripts/inventory/WorldItem.gd")
+│   ├── MeshInstance3D (name: "Fragment_Empty")
+│   ├── CollisionShape3D
+│   └── CollisionShape3D (name: "CollisionShape3D2")
+├── RigidBody3D (name: "WorldItem_Fragment_Empty2", scene: "res://scenes/items/WorldItem_Fragment_Empty.tscn", script: "res://scripts/inventory/WorldItem.gd")
+│   ├── MeshInstance3D (name: "Fragment_Empty")
+│   ├── CollisionShape3D
+│   └── CollisionShape3D (name: "CollisionShape3D2")
+├── MultiplayerSpawner
+├── MultiplayerSynchronizer
+├── Marker3D (name: "SpawnMarker3D")
+└── CharacterBody3D (name: "Player", scene: "res://scenes/player/Player.tscn", script: "res://scripts/player/PlayerController.gd")
+    ├── TextureRect (name: "CrosshairTextureRect")
+    ├── CollisionShape3D
+    ├── Camera3D
+    │   └── RayCast3D (name: "InteractionController", script: "res://scripts/player/Interaction/InteractionController.gd")
+    │       └── Label (name: "InteractionPrompt")
+    ├── Node (name: "Inventory", script: "res://scripts/inventory/Inventory.gd")
+    │   └── Panel (name: "InventoryWindow")
+    │       ├── GridContainer (name: "SlotContainer")
+    │       │   ├── Button (name: "InventorySlot", scene: "res://scenes/inventory/inventory_slot.tscn", script: "res://scripts/inventory/InventorySlot.gd")
+    │       │   │   ├── TextureRect (name: "Icon")
+    │       │   │   └── Label (name: "QuanityText")
+    │       │   ├── Button (name: "InventorySlot2", scene: "res://scenes/inventory/inventory_slot.tscn", script: "res://scripts/inventory/InventorySlot.gd")
+    │       │   │   ├── TextureRect (name: "Icon")
+    │       │   │   └── Label (name: "QuanityText")
+    │       │   ├── Button (name: "InventorySlot3", scene: "res://scenes/inventory/inventory_slot.tscn", script: "res://scripts/inventory/InventorySlot.gd")
+    │       │   │   ├── TextureRect (name: "Icon")
+    │       │   │   └── Label (name: "QuanityText")
+    │       │   ├── Button (name: "InventorySlot4", scene: "res://scenes/inventory/inventory_slot.tscn", script: "res://scripts/inventory/InventorySlot.gd")
+    │       │   │   ├── TextureRect (name: "Icon")
+    │       │   │   └── Label (name: "QuanityText")
+    │       │   ├── Button (name: "InventorySlot5", scene: "res://scenes/inventory/inventory_slot.tscn", script: "res://scripts/inventory/InventorySlot.gd")
+    │       │   │   ├── TextureRect (name: "Icon")
+    │       │   │   └── Label (name: "QuanityText")
+    │       │   ├── Button (name: "InventorySlot6", scene: "res://scenes/inventory/inventory_slot.tscn", script: "res://scripts/inventory/InventorySlot.gd")
+    │       │   │   ├── TextureRect (name: "Icon")
+    │       │   │   └── Label (name: "QuanityText")
+    │       │   ├── Button (name: "InventorySlot7", scene: "res://scenes/inventory/inventory_slot.tscn", script: "res://scripts/inventory/InventorySlot.gd")
+    │       │   │   ├── TextureRect (name: "Icon")
+    │       │   │   └── Label (name: "QuanityText")
+    │       │   ├── Button (name: "InventorySlot8", scene: "res://scenes/inventory/inventory_slot.tscn", script: "res://scripts/inventory/InventorySlot.gd")
+    │       │   │   ├── TextureRect (name: "Icon")
+    │       │   │   └── Label (name: "QuanityText")
+    │       │   ├── Button (name: "InventorySlot9", scene: "res://scenes/inventory/inventory_slot.tscn", script: "res://scripts/inventory/InventorySlot.gd")
+    │       │   │   ├── TextureRect (name: "Icon")
+    │       │   │   └── Label (name: "QuanityText")
+    │       │   ├── Button (name: "InventorySlot10", scene: "res://scenes/inventory/inventory_slot.tscn", script: "res://scripts/inventory/InventorySlot.gd")
+    │       │   │   ├── TextureRect (name: "Icon")
+    │       │   │   └── Label (name: "QuanityText")
+    │       │   ├── Button (name: "InventorySlot11", scene: "res://scenes/inventory/inventory_slot.tscn", script: "res://scripts/inventory/InventorySlot.gd")
+    │       │   │   ├── TextureRect (name: "Icon")
+    │       │   │   └── Label (name: "QuanityText")
+    │       │   ├── Button (name: "InventorySlot12", scene: "res://scenes/inventory/inventory_slot.tscn", script: "res://scripts/inventory/InventorySlot.gd")
+    │       │   │   ├── TextureRect (name: "Icon")
+    │       │   │   └── Label (name: "QuanityText")
+    │       │   ├── Button (name: "InventorySlot13", scene: "res://scenes/inventory/inventory_slot.tscn", script: "res://scripts/inventory/InventorySlot.gd")
+    │       │   │   ├── TextureRect (name: "Icon")
+    │       │   │   └── Label (name: "QuanityText")
+    │       │   ├── Button (name: "InventorySlot14", scene: "res://scenes/inventory/inventory_slot.tscn", script: "res://scripts/inventory/InventorySlot.gd")
+    │       │   │   ├── TextureRect (name: "Icon")
+    │       │   │   └── Label (name: "QuanityText")
+    │       │   └── Button (name: "InventorySlot15", scene: "res://scenes/inventory/inventory_slot.tscn", script: "res://scripts/inventory/InventorySlot.gd")
+    │       │       ├── TextureRect (name: "Icon")
+    │       │       └── Label (name: "QuanityText")
+    │       └── Label (name: "InfoText")
+    ├── Control (name: "Persona", script: "res://scripts/player/persona.gd")
+    │   └── VBoxContainer (name: "VBoxContainer2")
+    │       ├── PanelContainer (name: "AvatarContainer")
+    │       │   └── TextureRect (name: "Avatar", script: "res://scripts/steam/steam_avatar.gd")
+    │       └── PanelContainer (name: "ConnectionContainer")
+    │           └── MarginContainer
+    │               └── VBoxContainer
+    │                   ├── HBoxContainer (name: "HBoxContainer2")
+    │                   │   ├── Label (name: "NameLabel")
+    │                   │   ├── Label (name: "Line Space2")
+    │                   │   └── Label (name: "SteamIDLabel")
+    │                   └── HBoxContainer
+    │                       ├── Label (name: "Development Test")
+    │                       ├── Label (name: "Line Space")
+    │                       └── Label (name: "OnlineStatusLabel")
+    ├── Control (name: "DevControl", script: "res://scripts/debug/devbuttons.gd")
+    │   └── Button (name: "DevQuitButton")
+    └── Control (name: "DiscordControl", script: "res://scripts/discord/player_discord.gd")
+
+inventory_slot.tscn:
+Button (name: "InventorySlot", scene: "res://scenes/inventory/inventory_slot.tscn", script: "res://scripts/inventory/InventorySlot.gd")
+├── TextureRect (name: "Icon")
+└── Label (name: "QuanityText")
+
+inventory_ui_control.tscn:
+Control (name: "InventoryUIControl", scene: "res://scenes/inventory/inventory_ui_control.tscn")
+├── NinePatchRect (name: "BoxBackgroundNinePatchRect")
+├── Area2D (name: "BoxArea2D")
+│   └── CollisionShape2D
+├── Area2D (name: "OpeningArea2D")
+│   └── CollisionShape2D
+├── Node2D (name: "ItemContainerNode2D")
+│   ├── RigidBody2D (name: "Item1RigidBody2D")
+│   │   ├── Sprite2D
+│   │   └── CollisionShape2D
+│   └── RigidBody2D (name: "Item2RigidBody2D")
+│       ├── Sprite2D
+│       └── CollisionShape2D
+├── Button (name: "AddItemButton")
+└── Popup
+
+item_3d_preview.tscn:
+Node3D (scene: "res://scenes/inventory/item_3d_preview.tscn")
+├── WorldEnvironment
+├── Camera3D
+├── RigidBody3D (name: "WorldItem_Shard1", scene: "res://scenes/items/WorldItem_Fragment_1.tscn", script: "res://scripts/inventory/WorldItem.gd")
+│   ├── MeshInstance3D (name: "Fragment_1")
+│   ├── CollisionShape3D
+│   └── CollisionShape3D (name: "CollisionShape3D2")
+├── RigidBody3D (name: "WorldItem_Shard2", scene: "res://scenes/items/WorldItem_Fragment_2.tscn", script: "res://scripts/inventory/WorldItem.gd")
+│   ├── MeshInstance3D (name: "Fragment_2")
+│   ├── CollisionShape3D
+│   └── CollisionShape3D (name: "CollisionShape3D2")
+├── RigidBody3D (name: "WorldItem_Shard3", scene: "res://scenes/items/WorldItem_Fragment_3.tscn", script: "res://scripts/inventory/WorldItem.gd")
+│   ├── MeshInstance3D (name: "Fragment_3")
+│   ├── CollisionShape3D
+│   └── CollisionShape3D (name: "CollisionShape3D2")
+├── RigidBody3D (name: "WorldItem_Shard4", scene: "res://scenes/items/WorldItem_Fragment_4.tscn", script: "res://scripts/inventory/WorldItem.gd")
+│   ├── MeshInstance3D (name: "Fragment_4")
+│   ├── CollisionShape3D
+│   └── CollisionShape3D (name: "CollisionShape3D2")
+├── RigidBody3D (name: "WorldItem_Shard5", scene: "res://scenes/items/WorldItem_Fragment_5.tscn", script: "res://scripts/inventory/WorldItem.gd")
+│   ├── MeshInstance3D (name: "Fragment_5")
+│   ├── CollisionShape3D
+│   └── CollisionShape3D (name: "CollisionShape3D2")
+├── Node3D (name: "Prop_Crown")
+│   └── StaticBody3D (name: "Circle-rigid")
+│       ├── MeshInstance3D (name: "Circle-rigid")
+│       └── CollisionShape3D
+└── SpotLight3D
+
+WorldItem_Fragment_1.tscn:
+RigidBody3D (name: "WorldItem_Fragment_1", scene: "res://scenes/items/WorldItem_Fragment_1.tscn", script: "res://scripts/inventory/WorldItem.gd")
+├── MeshInstance3D (name: "Fragment_1")
+├── CollisionShape3D
+└── CollisionShape3D (name: "CollisionShape3D2")
+
+WorldItem_Fragment_2.tscn:
+RigidBody3D (name: "WorldItem_Fragment_1", scene: "res://scenes/items/WorldItem_Fragment_2.tscn", script: "res://scripts/inventory/WorldItem.gd")
+├── MeshInstance3D (name: "Fragment_2")
+├── CollisionShape3D
+└── CollisionShape3D (name: "CollisionShape3D2")
+
+WorldItem_Fragment_3.tscn:
+RigidBody3D (name: "WorldItem_Fragment_3", scene: "res://scenes/items/WorldItem_Fragment_3.tscn", script: "res://scripts/inventory/WorldItem.gd")
+├── MeshInstance3D (name: "Fragment_3")
+├── CollisionShape3D
+└── CollisionShape3D (name: "CollisionShape3D2")
+
+WorldItem_Fragment_4.tscn:
+RigidBody3D (name: "WorldItem_Fragment_4", scene: "res://scenes/items/WorldItem_Fragment_4.tscn", script: "res://scripts/inventory/WorldItem.gd")
+├── MeshInstance3D (name: "Fragment_4")
+├── CollisionShape3D
+└── CollisionShape3D (name: "CollisionShape3D2")
+
+WorldItem_Fragment_5.tscn:
+RigidBody3D (name: "WorldItem_Fragment_5", scene: "res://scenes/items/WorldItem_Fragment_5.tscn", script: "res://scripts/inventory/WorldItem.gd")
+├── MeshInstance3D (name: "Fragment_5")
+├── CollisionShape3D
+└── CollisionShape3D (name: "CollisionShape3D2")
+
+WorldItem_Fragment_Empty.tscn:
+RigidBody3D (name: "WorldItem_Fragment_Empty", scene: "res://scenes/items/WorldItem_Fragment_Empty.tscn", script: "res://scripts/inventory/WorldItem.gd")
+├── MeshInstance3D (name: "Fragment_Empty")
+├── CollisionShape3D
+└── CollisionShape3D (name: "CollisionShape3D2")
+
+LoadingScreen.tscn:
+Control (scene: "res://scenes/menu/LoadingScreen.tscn", script: "res://scenes/menu/loading_screen.gd")
+├── Label
+├── AudioStreamPlayer
+├── WorldEnvironment
+└── Camera3D
+
+MainMenu.tscn:
+Control (scene: "res://scenes/menu/MainMenu.tscn", script: "res://scenes/menu/main_menu.gd")
+├── TextureRect (name: "ColorRect")
+├── CenterContainer (name: "TitleCenterContainer")
+│   └── Label (name: "LucifugaLabel")
+├── CenterContainer
+│   └── VBoxContainer
+│       ├── Button (name: "Play")
+│       ├── Button (name: "Settings")
+│       └── Button (name: "Quit")
+├── CenterContainer (name: "SettingsCenterContainer")
+│   ├── PanelContainer
+│   │   └── Control
+│   │       └── Button
+│   └── MarginContainer
+├── WorldEnvironment
+├── Camera3D
+├── Panel (name: "MadeByPanel")
+│   └── VBoxContainer
+│       ├── Label (name: "MadeBy")
+│       └── Label (name: "FoxSpellCasterLabs")
+└── Node (name: "LinkNode", scene: "res://link_node.tscn", script: "res://scripts/steam/player_link.gd")
+    ├── Label (name: "Code")
+    └── HTTPRequest
+        └── Timer (name: "@Timer@26602")
+
+AetherFlame.tscn:
+Node3D (name: "BlueFire VFX", scene: "res://scenes/particles/AetherFlame.tscn")
+└── GPUParticles3D (name: "BlueFire")
+    ├── OmniLight3D
+    ├── GPUParticles3D (name: "BlueGPUParticles3D")
+    └── AudioStreamPlayer3D
+
+DarkParticles.tscn:
+GPUParticles3D (name: "DarkGPUParticles3D", scene: "res://scenes/particles/DarkParticles.tscn")
+
+dark_gold_gpu_particles_3d.tscn:
+GPUParticles3D (name: "DarkGPUParticles3D", scene: "res://scenes/particles/dark_gold_gpu_particles_3d.tscn")
+└── Node3D
+
+FireParticles.tscn:
+GPUParticles3D (name: "FireGPUParticles3D", scene: "res://scenes/particles/FireParticles.tscn")
+
+Player.tscn:
+CharacterBody3D (name: "Player", scene: "res://scenes/player/Player.tscn", script: "res://scripts/player/PlayerController.gd")
+├── TextureRect (name: "CrosshairTextureRect")
+├── CollisionShape3D
+├── Camera3D
+│   └── RayCast3D (name: "InteractionController", script: "res://scripts/player/Interaction/InteractionController.gd")
+│       └── Label (name: "InteractionPrompt")
+├── Node (name: "Inventory", script: "res://scripts/inventory/Inventory.gd")
+│   └── Panel (name: "InventoryWindow")
+│       ├── GridContainer (name: "SlotContainer")
+│       │   ├── Button (name: "InventorySlot", scene: "res://scenes/inventory/inventory_slot.tscn", script: "res://scripts/inventory/InventorySlot.gd")
+│       │   │   ├── TextureRect (name: "Icon")
+│       │   │   └── Label (name: "QuanityText")
+│       │   ├── Button (name: "InventorySlot2", scene: "res://scenes/inventory/inventory_slot.tscn", script: "res://scripts/inventory/InventorySlot.gd")
+│       │   │   ├── TextureRect (name: "Icon")
+│       │   │   └── Label (name: "QuanityText")
+│       │   ├── Button (name: "InventorySlot3", scene: "res://scenes/inventory/inventory_slot.tscn", script: "res://scripts/inventory/InventorySlot.gd")
+│       │   │   ├── TextureRect (name: "Icon")
+│       │   │   └── Label (name: "QuanityText")
+│       │   ├── Button (name: "InventorySlot4", scene: "res://scenes/inventory/inventory_slot.tscn", script: "res://scripts/inventory/InventorySlot.gd")
+│       │   │   ├── TextureRect (name: "Icon")
+│       │   │   └── Label (name: "QuanityText")
+│       │   ├── Button (name: "InventorySlot5", scene: "res://scenes/inventory/inventory_slot.tscn", script: "res://scripts/inventory/InventorySlot.gd")
+│       │   │   ├── TextureRect (name: "Icon")
+│       │   │   └── Label (name: "QuanityText")
+│       │   ├── Button (name: "InventorySlot6", scene: "res://scenes/inventory/inventory_slot.tscn", script: "res://scripts/inventory/InventorySlot.gd")
+│       │   │   ├── TextureRect (name: "Icon")
+│       │   │   └── Label (name: "QuanityText")
+│       │   ├── Button (name: "InventorySlot7", scene: "res://scenes/inventory/inventory_slot.tscn", script: "res://scripts/inventory/InventorySlot.gd")
+│       │   │   ├── TextureRect (name: "Icon")
+│       │   │   └── Label (name: "QuanityText")
+│       │   ├── Button (name: "InventorySlot8", scene: "res://scenes/inventory/inventory_slot.tscn", script: "res://scripts/inventory/InventorySlot.gd")
+│       │   │   ├── TextureRect (name: "Icon")
+│       │   │   └── Label (name: "QuanityText")
+│       │   ├── Button (name: "InventorySlot9", scene: "res://scenes/inventory/inventory_slot.tscn", script: "res://scripts/inventory/InventorySlot.gd")
+│       │   │   ├── TextureRect (name: "Icon")
+│       │   │   └── Label (name: "QuanityText")
+│       │   ├── Button (name: "InventorySlot10", scene: "res://scenes/inventory/inventory_slot.tscn", script: "res://scripts/inventory/InventorySlot.gd")
+│       │   │   ├── TextureRect (name: "Icon")
+│       │   │   └── Label (name: "QuanityText")
+│       │   ├── Button (name: "InventorySlot11", scene: "res://scenes/inventory/inventory_slot.tscn", script: "res://scripts/inventory/InventorySlot.gd")
+│       │   │   ├── TextureRect (name: "Icon")
+│       │   │   └── Label (name: "QuanityText")
+│       │   ├── Button (name: "InventorySlot12", scene: "res://scenes/inventory/inventory_slot.tscn", script: "res://scripts/inventory/InventorySlot.gd")
+│       │   │   ├── TextureRect (name: "Icon")
+│       │   │   └── Label (name: "QuanityText")
+│       │   ├── Button (name: "InventorySlot13", scene: "res://scenes/inventory/inventory_slot.tscn", script: "res://scripts/inventory/InventorySlot.gd")
+│       │   │   ├── TextureRect (name: "Icon")
+│       │   │   └── Label (name: "QuanityText")
+│       │   ├── Button (name: "InventorySlot14", scene: "res://scenes/inventory/inventory_slot.tscn", script: "res://scripts/inventory/InventorySlot.gd")
+│       │   │   ├── TextureRect (name: "Icon")
+│       │   │   └── Label (name: "QuanityText")
+│       │   └── Button (name: "InventorySlot15", scene: "res://scenes/inventory/inventory_slot.tscn", script: "res://scripts/inventory/InventorySlot.gd")
+│       │       ├── TextureRect (name: "Icon")
+│       │       └── Label (name: "QuanityText")
+│       └── Label (name: "InfoText")
+├── Control (name: "Persona", script: "res://scripts/player/persona.gd")
+│   └── VBoxContainer (name: "VBoxContainer2")
+│       ├── PanelContainer (name: "AvatarContainer")
+│       │   └── TextureRect (name: "Avatar", script: "res://scripts/steam/steam_avatar.gd")
+│       └── PanelContainer (name: "ConnectionContainer")
+│           └── MarginContainer
+│               └── VBoxContainer
+│                   ├── HBoxContainer (name: "HBoxContainer2")
+│                   │   ├── Label (name: "NameLabel")
+│                   │   ├── Label (name: "Line Space2")
+│                   │   └── Label (name: "SteamIDLabel")
+│                   └── HBoxContainer
+│                       ├── Label (name: "Development Test")
+│                       ├── Label (name: "Line Space")
+│                       └── Label (name: "OnlineStatusLabel")
+├── Control (name: "DevControl", script: "res://scripts/debug/devbuttons.gd")
+│   └── Button (name: "DevQuitButton")
+└── Control (name: "DiscordControl", script: "res://scripts/discord/player_discord.gd")
+
+ground_hex.tscn:
+MeshInstance3D (name: "GroundHex", scene: "res://scenes/structures/ground_hex.tscn")
+└── StaticBody3D
+    └── CollisionShape3D
+
+prop_dark_shard.tscn:
+Node3D (name: "Prop_Dark_Shard", scene: "res://scenes/structures/prop_dark_shard.tscn")
+├── Node3D (name: "Prop_Dark_Shard", scene: "res://blender/props/prop_dark_shard.blend")
+│   └── MeshInstance3D (name: "Prop_Dark_Shard")
+│       └── StaticBody3D
+│           └── CollisionShape3D
+├── OmniLight3D
+│   └── FogVolume
+└── GPUParticles3D (name: "FireGPUParticles3D")
+
+temple_pillar.tscn:
+Node3D (name: "Temple_Pillar", scene: "res://scenes/structures/temple_pillar.tscn")
+├── MeshInstance3D (name: "DungeonPillar")
+│   └── StaticBody3D
+│       └── CollisionShape3D
+├── GPUParticles3D (name: "BlueFire")
+├── OmniLight3D
+│   └── FogVolume
+├── GPUParticles3D (name: "BlueGPUParticles3D")
+└── AudioStreamPlayer3D
+
