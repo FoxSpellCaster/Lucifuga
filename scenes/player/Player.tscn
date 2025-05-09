@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cf1pwgl0y0mi6"]
+[gd_scene load_steps=25 format=3 uid="uid://cf1pwgl0y0mi6"]
 
 [ext_resource type="Script" uid="uid://3m03w87bcjnr" path="res://scripts/player/PlayerController.gd" id="1_krxqb"]
 [ext_resource type="Script" uid="uid://0xopmg7fmfbj" path="res://scripts/player/Interaction/InteractionController.gd" id="2_66uls"]
@@ -20,7 +20,6 @@
 [ext_resource type="Script" uid="uid://bgmvt7n2vo8af" path="res://scripts/player/persona.gd" id="16_pbbws"]
 [ext_resource type="LabelSettings" uid="uid://plsj0epx31i0" path="res://scenes/player/VersonLabel.tres" id="17_kswpp"]
 [ext_resource type="LabelSettings" uid="uid://cvcn87tb85ks" path="res://scenes/player/OnlineStatus.tres" id="18_v5i4m"]
-[ext_resource type="Script" uid="uid://dvx6y6jbrtrye" path="res://scripts/discord/player_discord.gd" id="21_v5i4m"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lt5te"]
 radius = 0.3
@@ -304,4 +303,3 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("21_v5i4m")
