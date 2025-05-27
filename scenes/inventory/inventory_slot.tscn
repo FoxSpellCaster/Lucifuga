@@ -1,13 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://c7i5cai8ud4lr"]
+[gd_scene load_steps=3 format=3 uid="uid://c7i5cai8ud4lr"]
 
 [ext_resource type="Script" uid="uid://daq5s125ae4of" path="res://scripts/inventory/InventorySlot.gd" id="1_gpqwp"]
 [ext_resource type="Texture2D" uid="uid://bb46ugybnp3xc" path="res://assets/icons/Fragment1.png" id="2_gpqwp"]
-[ext_resource type="FontFile" uid="uid://3ec4ri4vh56n" path="res://assets/fonts/PeaberryBase.ttf" id="3_ded5v"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_0eju6"]
-font = ExtResource("3_ded5v")
-font_size = 32
-shadow_color = Color(0, 0, 0, 0.75)
 
 [node name="InventorySlot" type="Button"]
 custom_minimum_size = Vector2(96, 96)
@@ -44,7 +38,6 @@ offset_right = -5.0
 grow_horizontal = 0
 grow_vertical = 0
 text = "42"
-label_settings = SubResource("LabelSettings_0eju6")
 horizontal_alignment = 2
 vertical_alignment = 2
 

@@ -1,0 +1,233 @@
+[gd_scene load_steps=10 format=3 uid="uid://c1ksuch0niqy8"]
+
+[ext_resource type="FontFile" uid="uid://cdftc6d5kuuxu" path="res://assets/fonts/0xProto/0xProtoNerdFont-Bold.ttf" id="1_0fbet"]
+
+[sub_resource type="Theme" id="Theme_62e2m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qtu10"]
+bg_color = Color(0.114, 0.133, 0.165, 0.75)
+
+[sub_resource type="LabelSettings" id="LabelSettings_62e2m"]
+font = ExtResource("1_0fbet")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_qtu10"]
+font = ExtResource("1_0fbet")
+font_size = 18
+font_color = Color(0.503906, 0.503906, 0.503906, 1)
+outline_size = 8
+outline_color = Color(0.106789, 0.109275, 0.152344, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fj5cn"]
+font = ExtResource("1_0fbet")
+font_size = 24
+font_color = Color(0.439838, 0.627419, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0fbet"]
+font = ExtResource("1_0fbet")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_kbped"]
+font = ExtResource("1_0fbet")
+font_size = 24
+font_color = Color(1, 0.954413, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ee4bf"]
+font = ExtResource("1_0fbet")
+font_size = 24
+font_color = Color(1, 0, 0, 1)
+
+[node name="New UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.279093, 0.308507, 0.327714, 1)
+
+[node name="ControlBar" type="Panel" parent="."]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+theme = SubResource("Theme_62e2m")
+theme_override_styles/panel = SubResource("StyleBoxFlat_qtu10")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ControlBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.5
+offset_top = -14.5
+offset_right = 100.5
+offset_bottom = 14.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="ID" type="Label" parent="ControlBar/HBoxContainer"]
+layout_mode = 2
+text = ""
+label_settings = SubResource("LabelSettings_62e2m")
+
+[node name="Persona" type="Label" parent="ControlBar/HBoxContainer"]
+layout_mode = 2
+text = ""
+label_settings = SubResource("LabelSettings_62e2m")
+
+[node name="Search" type="Label" parent="ControlBar/HBoxContainer"]
+layout_mode = 2
+text = ""
+label_settings = SubResource("LabelSettings_62e2m")
+
+[node name="Settings" type="Label" parent="ControlBar/HBoxContainer"]
+layout_mode = 2
+text = ""
+label_settings = SubResource("LabelSettings_62e2m")
+
+[node name="Tools" type="Label" parent="ControlBar/HBoxContainer"]
+layout_mode = 2
+text = "󱁤"
+label_settings = SubResource("LabelSettings_62e2m")
+
+[node name="Inventory" type="Label" parent="ControlBar/HBoxContainer"]
+layout_mode = 2
+text = "󰸐"
+label_settings = SubResource("LabelSettings_62e2m")
+
+[node name="Gem" type="Label" parent="ControlBar/HBoxContainer"]
+layout_mode = 2
+text = ""
+label_settings = SubResource("LabelSettings_62e2m")
+
+[node name="BottomStatus" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -62.0
+offset_right = 283.0
+grow_vertical = 0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BottomStatus"]
+layout_mode = 2
+
+[node name="PersonaLobby" type="Label" parent="BottomStatus/VBoxContainer"]
+layout_mode = 2
+text = "[FoxSpellCaster@Lobby_1 ~]$"
+label_settings = SubResource("LabelSettings_qtu10")
+
+[node name="Location" type="Label" parent="BottomStatus/VBoxContainer"]
+layout_mode = 2
+text = "/Island_1/Construct_Temple/"
+label_settings = SubResource("LabelSettings_qtu10")
+
+[node name="CenterStatus" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -154.0
+offset_top = -84.0
+offset_right = 154.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterStatus"]
+layout_mode = 2
+
+[node name="PlayerContainer" type="HBoxContainer" parent="CenterStatus/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterStatus/VBoxContainer/PlayerContainer"]
+visible = false
+layout_mode = 2
+
+[node name="CurrencyContainer" type="HBoxContainer" parent="CenterStatus/VBoxContainer/PlayerContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Currency" type="Label" parent="CenterStatus/VBoxContainer/PlayerContainer/VBoxContainer/CurrencyContainer"]
+layout_mode = 2
+text = "󰞾"
+label_settings = SubResource("LabelSettings_fj5cn")
+
+[node name="CurrencyNum" type="Label" parent="CenterStatus/VBoxContainer/PlayerContainer/VBoxContainer/CurrencyContainer"]
+layout_mode = 2
+text = "1,165"
+label_settings = SubResource("LabelSettings_0fbet")
+
+[node name="EnergyContainer" type="HBoxContainer" parent="CenterStatus/VBoxContainer/PlayerContainer"]
+layout_mode = 2
+
+[node name="Energy" type="Label" parent="CenterStatus/VBoxContainer/PlayerContainer/EnergyContainer"]
+layout_mode = 2
+text = "󱐋"
+label_settings = SubResource("LabelSettings_kbped")
+
+[node name="EnergyNum" type="Label" parent="CenterStatus/VBoxContainer/PlayerContainer/EnergyContainer"]
+layout_mode = 2
+text = "50/50"
+label_settings = SubResource("LabelSettings_0fbet")
+
+[node name="Avatar" type="TextureRect" parent="CenterStatus/VBoxContainer/PlayerContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+expand_mode = 2
+
+[node name="HealthContainer" type="HBoxContainer" parent="CenterStatus/VBoxContainer/PlayerContainer"]
+layout_mode = 2
+
+[node name="Health" type="Label" parent="CenterStatus/VBoxContainer/PlayerContainer/HealthContainer"]
+layout_mode = 2
+text = "󰋑"
+label_settings = SubResource("LabelSettings_ee4bf")
+
+[node name="HealthNum" type="Label" parent="CenterStatus/VBoxContainer/PlayerContainer/HealthContainer"]
+layout_mode = 2
+text = "100/100"
+label_settings = SubResource("LabelSettings_0fbet")
+
+[node name="Hello" type="Label" parent="CenterStatus/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = " Hello"
+label_settings = SubResource("LabelSettings_0fbet")
+
+[node name="WriteHere" type="Label" parent="CenterStatus/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "󰌌 Write Here"
+label_settings = SubResource("LabelSettings_0fbet")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextEdit" type="TextEdit" parent="Panel"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0

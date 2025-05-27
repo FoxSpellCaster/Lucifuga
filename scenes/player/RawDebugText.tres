@@ -1,9 +1,0 @@
-[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://dk22217krwqxv"]
-
-[ext_resource type="FontFile" uid="uid://c0r5u5j04yt85" path="res://assets/fonts/m5x7.ttf" id="1_rbjkb"]
-
-[resource]
-font = ExtResource("1_rbjkb")
-font_size = 32
-outline_size = 8
-outline_color = Color(0, 0, 0, 1)

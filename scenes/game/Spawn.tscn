@@ -1,7 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://b5hbtk6hdyibx"]
 
-[ext_resource type="LightmapGIData" uid="uid://cg78lor2ip7jx" path="res://scenes/game/Spawn.lmbake" id="1_dvshw"]
-[ext_resource type="Script" uid="uid://c0f880gcays7j" path="res://scenes/game/spawn.gd" id="1_q7srp"]
+[ext_resource type="LightmapGIData" uid="uid://dofpc8cubfyjc" path="res://scenes/game/Spawn.lmbake" id="2_q7srp"]
 [ext_resource type="Sky" uid="uid://deel6vvma6vaf" path="res://assets/textures/skyboxes/sky.tres" id="3_poui6"]
 [ext_resource type="PackedScene" uid="uid://cui1ncxuidtpn" path="res://scenes/structures/ground_hex.tscn" id="7_rnvla"]
 [ext_resource type="PackedScene" uid="uid://4sjresjdp6a2" path="res://scenes/items/WorldItem_Fragment_1.tscn" id="8_q7srp"]
@@ -12,6 +11,48 @@
 [ext_resource type="PackedScene" uid="uid://ccko6yqeoo0j1" path="res://scenes/items/WorldItem_Fragment_5.tscn" id="12_poui6"]
 [ext_resource type="PackedScene" uid="uid://cf1pwgl0y0mi6" path="res://scenes/player/Player.tscn" id="12_q7srp"]
 [ext_resource type="PackedScene" uid="uid://bvffseiosu153" path="res://scenes/items/WorldItem_Fragment_Empty.tscn" id="13_qq5ev"]
+
+[sub_resource type="GDScript" id="GDScript_5somu"]
+script/source = "extends Node
+
+@onready var http_request = $HTTPRequest  # Add an HTTPRequest node to your scene
+
+func _ready():
+	http_request.request_completed.connect(_on_request_completed)
+	# Example: Call this function when a player spawns
+	log_spawn(\"PlayerName\", \"76561197993670373\")
+
+func log_spawn(persona_name: String, steam_id: String):
+	var url = \"http://your-server-address:7782/log-spawn\"
+	var headers = [\"Content-Type: application/json\", \"x-api-key: \" + \"38668777-e815-4a2f-8010-a221cc1f7c05\"]
+	var body = {
+		\"persona_name\": persona_name,
+		\"steam_id\": steam_id
+	}
+	var json = JSON.stringify(body)
+	http_request.request(url, headers, HTTPClient.METHOD_POST, json)
+
+func _on_request_completed(result, response_code, headers, body):
+	if result != HTTPRequest.RESULT_SUCCESS:
+		print(\"HTTP request failed: \", result)
+		return
+	
+	if response_code != 200:
+		print(\"HTTP response code: \", response_code)
+		return
+	
+	var json = JSON.new()
+	var parse_result = json.parse(body.get_string_from_utf8())
+	if parse_result != OK:
+		print(\"JSON parse error: \", json.get_error_message())
+		return
+	
+	var response = json.data
+	if response.status == \"success\":
+		print(\"Spawn logged successfully: \", response.message)
+	else:
+		print(\"Spawn log failed: \", response.message)
+"
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_dvshw"]
 
@@ -30,11 +71,11 @@ volumetric_fog_sky_affect = 0.5
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_p8cku"]
 
 [node name="Spawn" type="Node3D"]
-script = ExtResource("1_q7srp")
+script = SubResource("GDScript_5somu")
 
 [node name="LightmapGI" type="LightmapGI" parent="."]
 camera_attributes = SubResource("CameraAttributesPractical_dvshw")
-light_data = ExtResource("1_dvshw")
+light_data = ExtResource("2_q7srp")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
