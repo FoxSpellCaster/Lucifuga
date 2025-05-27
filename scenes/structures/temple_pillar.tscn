@@ -1,11 +1,10 @@
-[gd_scene load_steps=28 format=4 uid="uid://b7wh257kan8qj"]
+[gd_scene load_steps=27 format=4 uid="uid://b7wh257kan8qj"]
 
 [ext_resource type="Shader" uid="uid://d3a7pif6ajxph" path="res://assets/shaders/effects/stylized_fire.gdshader" id="1_8dc3d"]
 [ext_resource type="Texture2D" uid="uid://7ptgj5gh72u5" path="res://assets/textures/HoleNoise.png" id="2_88wp7"]
 [ext_resource type="Texture2D" uid="uid://b0rx4m5n2vvho" path="res://assets/textures/particles/FireMask.png" id="3_lvlvw"]
 [ext_resource type="Texture2D" uid="uid://xl22pmkk0nsk" path="res://assets/textures/particles/BlueFireGradient.tres" id="4_2o082"]
 [ext_resource type="Texture2D" uid="uid://moni44yoe62x" path="res://assets/images/particles/particle_aether_crystal.png" id="5_i2la1"]
-[ext_resource type="AudioStream" uid="uid://gcaqjhhd6uo" path="res://assets/sounds/FireSound.ogg" id="6_huy1k"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5dt37"]
 resource_name = "PillarDark"
@@ -283,9 +282,3 @@ amount_ratio = 0.5
 trail_lifetime = 4.0
 process_material = SubResource("ParticleProcessMaterial_iutu3")
 draw_pass_1 = SubResource("QuadMesh_igyhk")
-
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.559589, 0, 0)
-stream = ExtResource("6_huy1k")
-autoplay = true
-max_distance = 6.0

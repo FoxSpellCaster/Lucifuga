@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4276uk7h2gkn"]
+
+[ext_resource type="Script" uid="uid://cwmlpsnvaexnx" path="res://scenes/LobbyMenu.gd" id="1_5gu6x"]
+[ext_resource type="Script" uid="uid://3b3y6cwvjn02" path="res://scenes/LobbyNameGenerator.gd" id="1_o1atq"]
+
+[node name="LobbyMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_5gu6x")
+
+[node name="LobbyNameGenerator" type="Node" parent="."]
+script = ExtResource("1_o1atq")
+
+[node name="GenerateNameButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 10.0
+offset_right = 114.0
+offset_bottom = 41.0
+text = "Create Lobby"
+
+[node name="LobbyNameLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 46.0
+offset_right = 106.0
+offset_bottom = 69.0
+text = "Lobby: None"

@@ -21,7 +21,7 @@ config/icon="uid://bma7rl15fr3ef"
 
 [autoload]
 
-SteamController="*res://scripts/steam/steam_controller.gd"
+SteamController="res://scripts/steam/steam_controller.gd"
 GlobalSignals="*res://scripts/global/GlobalSignals.gd"
 
 [debug]
@@ -31,7 +31,6 @@ file_logging/enable_file_logging=true
 [display]
 
 window/size/sharp_corners=true
-window/stretch/mode="canvas_items"
 
 [dotnet]
 
