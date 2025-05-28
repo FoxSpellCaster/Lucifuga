@@ -1,26 +1,20 @@
-[gd_scene load_steps=11 format=3 uid="uid://dptexph7f4ouv"]
+[gd_scene load_steps=8 format=3 uid="uid://dptexph7f4ouv"]
 
 [ext_resource type="Script" uid="uid://bv04inbv8mtr6" path="res://scenes/menu/main_menu.gd" id="1_cruaa"]
-[ext_resource type="Texture2D" uid="uid://c84tydf06xkut" path="res://assets/images/lucifuga_grok_raw.jpg" id="2_ucygd"]
+[ext_resource type="LabelSettings" uid="uid://c22ql7ax0khpq" path="res://Lucifuga.tres" id="2_iv2fv"]
 [ext_resource type="Sky" uid="uid://deel6vvma6vaf" path="res://assets/textures/skyboxes/sky.tres" id="3_2wh52"]
-[ext_resource type="FontFile" uid="uid://cdftc6d5kuuxu" path="res://assets/fonts/0xProto/0xProtoNerdFont-Bold.ttf" id="3_mgsx5"]
-[ext_resource type="Theme" uid="uid://bnknowa7wt7df" path="res://assets/themes/Menu_Theme.tres" id="4_mipys"]
-[ext_resource type="FontFile" uid="uid://0cwpnpli7ew4" path="res://assets/fonts/ProFont/ProFontIIxNerdFont-Regular.ttf" id="6_y6vun"]
+[ext_resource type="Script" uid="uid://cwmlpsnvaexnx" path="res://scenes/lobby/LobbyMenu.gd" id="4_mgsx5"]
+[ext_resource type="Script" uid="uid://3b3y6cwvjn02" path="res://scenes/lobby/LobbyNameGenerator.gd" id="5_y6vun"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_l72w3"]
-font = ExtResource("3_mgsx5")
-font_size = 100
-shadow_size = 25
-shadow_color = Color(0, 0, 0, 1)
+[sub_resource type="Theme" id="Theme_s3dsm"]
+default_font_size = 48
+Button/colors/font_outline_color = Color(0, 0, 0, 0.5)
+Button/constants/outline_size = 10
+Button/fonts/font = null
 
 [sub_resource type="Environment" id="Environment_ow34m"]
 background_mode = 2
 sky = ExtResource("3_2wh52")
-
-[sub_resource type="LabelSettings" id="LabelSettings_826wr"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_ucygd"]
-font = ExtResource("6_y6vun")
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -38,7 +32,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_ucygd")
 expand_mode = 2
 
 [node name="TitleCenterContainer" type="CenterContainer" parent="."]
@@ -54,7 +47,7 @@ grow_horizontal = 2
 [node name="LucifugaLabel" type="Label" parent="TitleCenterContainer"]
 layout_mode = 2
 text = "Lucifuga"
-label_settings = SubResource("LabelSettings_l72w3")
+label_settings = ExtResource("2_iv2fv")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -71,12 +64,12 @@ metadata/_edit_use_anchors_ = true
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-theme = ExtResource("4_mipys")
+theme = SubResource("Theme_s3dsm")
 
 [node name="Play" type="Button" parent="CenterContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-theme = ExtResource("4_mipys")
+theme = SubResource("Theme_s3dsm")
 text = "Play"
 
 [node name="Settings" type="Button" parent="CenterContainer/VBoxContainer"]
@@ -88,7 +81,7 @@ text = "Settings"
 [node name="Quit" type="Button" parent="CenterContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-theme = ExtResource("4_mipys")
+theme = SubResource("Theme_s3dsm")
 text = "Quit"
 
 [node name="SettingsCenterContainer" type="CenterContainer" parent="."]
@@ -151,16 +144,38 @@ grow_vertical = 2
 [node name="MadeBy" type="Label" parent="MadeByPanel/VBoxContainer"]
 layout_mode = 2
 text = "Made By"
-label_settings = SubResource("LabelSettings_826wr")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="FoxSpellCasterLabs" type="Label" parent="MadeByPanel/VBoxContainer"]
 layout_mode = 2
 text = "FoxSpellCaster Labs"
-label_settings = SubResource("LabelSettings_ucygd")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="LobbyMenu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("4_mgsx5")
+
+[node name="LobbyNameGenerator" type="Node" parent="LobbyMenu"]
+script = ExtResource("5_y6vun")
+
+[node name="GenerateNameButton" type="Button" parent="LobbyMenu"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 10.0
+offset_right = 114.0
+offset_bottom = 41.0
+text = "Create Lobby"
+
+[node name="LobbyNameLabel" type="Label" parent="LobbyMenu"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 46.0
+offset_right = 106.0
+offset_bottom = 69.0
+text = "Lobby: None"
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Settings" to="SettingsCenterContainer" method="show"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Settings" to="SettingsCenterContainer" method="set_mouse_filter"]

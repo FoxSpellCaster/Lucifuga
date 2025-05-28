@@ -1,62 +1,50 @@
-[gd_scene load_steps=24 format=3 uid="uid://cf1pwgl0y0mi6"]
+[gd_scene load_steps=21 format=3 uid="uid://cf1pwgl0y0mi6"]
 
 [ext_resource type="Script" uid="uid://3m03w87bcjnr" path="res://scripts/player/PlayerController.gd" id="1_krxqb"]
 [ext_resource type="Script" uid="uid://0xopmg7fmfbj" path="res://scripts/player/Interaction/InteractionController.gd" id="2_66uls"]
 [ext_resource type="Script" uid="uid://bgp8sred771bp" path="res://scripts/inventory/Inventory.gd" id="3_0eju6"]
 [ext_resource type="Texture2D" uid="uid://ckduoxblee7m1" path="res://assets/icons/crosshair.png" id="4_fabuu"]
+[ext_resource type="LabelSettings" uid="uid://p8odcet8okvy" path="res://ui_label_settings.tres" id="4_ov1oi"]
 [ext_resource type="PackedScene" uid="uid://c7i5cai8ud4lr" path="res://scenes/inventory/inventory_slot.tscn" id="4_sydjo"]
 [ext_resource type="Script" uid="uid://bjuixjebeu4c0" path="res://scripts/inventory/Item.gd" id="5_kcr7a"]
+[ext_resource type="FontFile" uid="uid://bfnjwai6rnhxu" path="res://assets/fonts/Hack/HackNerdFont-Bold.ttf" id="5_rn7t0"]
 [ext_resource type="Resource" uid="uid://coe42mjjg8ajw" path="res://scenes/inventory/data/Fragment_1.tres" id="6_inybr"]
+[ext_resource type="FontFile" uid="uid://j7qpofu85udb" path="res://assets/fonts/Hack/HackNerdFontMono-BoldItalic.ttf" id="6_rn7t0"]
 [ext_resource type="Resource" uid="uid://ca68jx621stty" path="res://scenes/inventory/data/Fragment_2.tres" id="7_wac30"]
 [ext_resource type="Resource" uid="uid://blh1xlsjyqlvy" path="res://scenes/inventory/data/Fragment_3.tres" id="8_i5yuc"]
 [ext_resource type="Resource" uid="uid://c4l8xfoj8ewe7" path="res://scenes/inventory/data/Fragment_4.tres" id="9_6k2o0"]
 [ext_resource type="Resource" uid="uid://2ifi3jso2le3" path="res://scenes/inventory/data/Fragment_5.tres" id="10_fabuu"]
-[ext_resource type="FontFile" uid="uid://cdftc6d5kuuxu" path="res://assets/fonts/0xProto/0xProtoNerdFont-Bold.ttf" id="15_rn7t0"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lt5te"]
 radius = 0.3
 height = 1.8
 
 [sub_resource type="LabelSettings" id="LabelSettings_cbwra"]
+font = ExtResource("5_rn7t0")
 font_size = 48
 outline_size = 5
 outline_color = Color(0, 0, 0, 1)
 
-[sub_resource type="Theme" id="Theme_62e2m"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qtu10"]
-bg_color = Color(0.114, 0.133, 0.165, 0.75)
-
-[sub_resource type="LabelSettings" id="LabelSettings_62e2m"]
-font = ExtResource("15_rn7t0")
-font_size = 24
-
-[sub_resource type="LabelSettings" id="LabelSettings_qtu10"]
-font = ExtResource("15_rn7t0")
-font_color = Color(0.503906, 0.503906, 0.503906, 1)
-outline_size = 8
-outline_color = Color(0.106789, 0.109275, 0.152344, 1)
-
 [sub_resource type="LabelSettings" id="LabelSettings_fj5cn"]
-font = ExtResource("15_rn7t0")
+font = ExtResource("5_rn7t0")
 font_size = 24
 font_color = Color(0.439838, 0.627419, 1, 1)
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_0fbet"]
-font = ExtResource("15_rn7t0")
-font_size = 24
+font = ExtResource("5_rn7t0")
+font_size = 20
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_kbped"]
-font = ExtResource("15_rn7t0")
-font_size = 24
-font_color = Color(1, 0.954413, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_ee4bf"]
-font = ExtResource("15_rn7t0")
-font_size = 24
-font_color = Color(1, 0, 0, 1)
+[sub_resource type="LabelSettings" id="LabelSettings_qtu10"]
+font = ExtResource("5_rn7t0")
+outline_size = 8
+outline_color = Color(0.067294, 0.108028, 0.148623, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_yn5sn"]
+font = ExtResource("6_rn7t0")
 font_size = 30
 outline_size = 2
 outline_color = Color(0, 0, 0, 1)
@@ -107,77 +95,41 @@ label_settings = SubResource("LabelSettings_cbwra")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="New UI" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 1
+[node name="Player Interface" type="Node" parent="."]
 
-[node name="ControlBar" type="Panel" parent="New UI"]
-visible = false
+[node name="ControlBar" type="MarginContainer" parent="Player Interface"]
 custom_minimum_size = Vector2(0, 35)
-layout_mode = 1
-anchors_preset = 10
+anchors_preset = 1
+anchor_left = 1.0
 anchor_right = 1.0
-grow_horizontal = 2
-theme = SubResource("Theme_62e2m")
-theme_override_styles/panel = SubResource("StyleBoxFlat_qtu10")
+offset_left = -171.0
+offset_bottom = 35.0
+grow_horizontal = 0
+theme_override_constants/margin_right = 50
 
-[node name="HBoxContainer" type="HBoxContainer" parent="New UI/ControlBar"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -100.5
-offset_top = -14.5
-offset_right = 100.5
-offset_bottom = 14.5
-grow_horizontal = 2
-grow_vertical = 2
+[node name="HBoxContainer" type="HBoxContainer" parent="Player Interface/ControlBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
 theme_override_constants/separation = 16
 
-[node name="ID" type="Label" parent="New UI/ControlBar/HBoxContainer"]
-layout_mode = 2
-text = ""
-label_settings = SubResource("LabelSettings_62e2m")
-
-[node name="Persona" type="Label" parent="New UI/ControlBar/HBoxContainer"]
-layout_mode = 2
-text = ""
-label_settings = SubResource("LabelSettings_62e2m")
-
-[node name="Search" type="Label" parent="New UI/ControlBar/HBoxContainer"]
-layout_mode = 2
-text = ""
-label_settings = SubResource("LabelSettings_62e2m")
-
-[node name="Settings" type="Label" parent="New UI/ControlBar/HBoxContainer"]
-layout_mode = 2
-text = ""
-label_settings = SubResource("LabelSettings_62e2m")
-
-[node name="Tools" type="Label" parent="New UI/ControlBar/HBoxContainer"]
-layout_mode = 2
-text = "󱁤"
-label_settings = SubResource("LabelSettings_62e2m")
-
-[node name="Inventory" type="Label" parent="New UI/ControlBar/HBoxContainer"]
-layout_mode = 2
-text = "󰸐"
-label_settings = SubResource("LabelSettings_62e2m")
-
-[node name="Gem" type="Label" parent="New UI/ControlBar/HBoxContainer"]
+[node name="Gem" type="Label" parent="Player Interface/ControlBar/HBoxContainer"]
+visible = false
 layout_mode = 2
 text = ""
-label_settings = SubResource("LabelSettings_62e2m")
+label_settings = ExtResource("4_ov1oi")
 
-[node name="ConnectionStatus" type="MarginContainer" parent="New UI"]
-layout_mode = 1
+[node name="Currency" type="Label" parent="Player Interface/ControlBar/HBoxContainer"]
+layout_mode = 2
+text = "󰞾"
+label_settings = SubResource("LabelSettings_fj5cn")
+
+[node name="CurrencyNum" type="Label" parent="Player Interface/ControlBar/HBoxContainer"]
+layout_mode = 2
+text = "1,165"
+label_settings = SubResource("LabelSettings_0fbet")
+
+[node name="ConnectionStatus" type="MarginContainer" parent="Player Interface"]
 offset_right = 322.0
 offset_bottom = 70.0
 theme_override_constants/margin_left = 10
@@ -185,21 +137,20 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="VBoxContainer" type="VBoxContainer" parent="New UI/ConnectionStatus"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Player Interface/ConnectionStatus"]
 layout_mode = 2
 
-[node name="PersonaLobby" type="Label" parent="New UI/ConnectionStatus/VBoxContainer"]
+[node name="PersonaLobby" type="Label" parent="Player Interface/ConnectionStatus/VBoxContainer"]
 layout_mode = 2
 text = "[FoxSpellCaster@Lobby_1 ~]$"
 label_settings = SubResource("LabelSettings_qtu10")
 
-[node name="Location" type="Label" parent="New UI/ConnectionStatus/VBoxContainer"]
+[node name="Location" type="Label" parent="Player Interface/ConnectionStatus/VBoxContainer"]
 layout_mode = 2
 text = "/Island_1/Construct_Temple/"
 label_settings = SubResource("LabelSettings_qtu10")
 
-[node name="CenterStatus" type="MarginContainer" parent="New UI"]
-layout_mode = 1
+[node name="CenterStatus" type="MarginContainer" parent="Player Interface"]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -215,79 +166,61 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="VBoxContainer" type="VBoxContainer" parent="New UI/CenterStatus"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Player Interface/CenterStatus"]
 layout_mode = 2
 
-[node name="PlayerContainer" type="HBoxContainer" parent="New UI/CenterStatus/VBoxContainer"]
+[node name="PlayerContainer" type="HBoxContainer" parent="Player Interface/CenterStatus/VBoxContainer"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="New UI/CenterStatus/VBoxContainer/PlayerContainer"]
-visible = false
+[node name="EnergyContainer" type="HBoxContainer" parent="Player Interface/CenterStatus/VBoxContainer/PlayerContainer"]
 layout_mode = 2
 
-[node name="CurrencyContainer" type="HBoxContainer" parent="New UI/CenterStatus/VBoxContainer/PlayerContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="Currency" type="Label" parent="New UI/CenterStatus/VBoxContainer/PlayerContainer/VBoxContainer/CurrencyContainer"]
-layout_mode = 2
-text = "󰞾"
-label_settings = SubResource("LabelSettings_fj5cn")
-
-[node name="CurrencyNum" type="Label" parent="New UI/CenterStatus/VBoxContainer/PlayerContainer/VBoxContainer/CurrencyContainer"]
-layout_mode = 2
-text = "1,165"
-label_settings = SubResource("LabelSettings_0fbet")
-
-[node name="EnergyContainer" type="HBoxContainer" parent="New UI/CenterStatus/VBoxContainer/PlayerContainer"]
-layout_mode = 2
-
-[node name="Energy" type="Label" parent="New UI/CenterStatus/VBoxContainer/PlayerContainer/EnergyContainer"]
+[node name="Energy" type="Label" parent="Player Interface/CenterStatus/VBoxContainer/PlayerContainer/EnergyContainer"]
 layout_mode = 2
 text = "󱐋"
-label_settings = SubResource("LabelSettings_kbped")
+label_settings = ExtResource("4_ov1oi")
 
-[node name="EnergyNum" type="Label" parent="New UI/CenterStatus/VBoxContainer/PlayerContainer/EnergyContainer"]
+[node name="EnergyNum" type="Label" parent="Player Interface/CenterStatus/VBoxContainer/PlayerContainer/EnergyContainer"]
 layout_mode = 2
 text = "50/50"
-label_settings = SubResource("LabelSettings_0fbet")
+label_settings = ExtResource("4_ov1oi")
 
-[node name="Avatar" type="TextureRect" parent="New UI/CenterStatus/VBoxContainer/PlayerContainer"]
+[node name="Avatar" type="TextureRect" parent="Player Interface/CenterStatus/VBoxContainer/PlayerContainer"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 expand_mode = 2
 
-[node name="HealthContainer" type="HBoxContainer" parent="New UI/CenterStatus/VBoxContainer/PlayerContainer"]
+[node name="HealthContainer" type="HBoxContainer" parent="Player Interface/CenterStatus/VBoxContainer/PlayerContainer"]
 layout_mode = 2
 
-[node name="Health" type="Label" parent="New UI/CenterStatus/VBoxContainer/PlayerContainer/HealthContainer"]
+[node name="Health" type="Label" parent="Player Interface/CenterStatus/VBoxContainer/PlayerContainer/HealthContainer"]
 layout_mode = 2
 text = "󰋑"
-label_settings = SubResource("LabelSettings_ee4bf")
+label_settings = ExtResource("4_ov1oi")
 
-[node name="HealthNum" type="Label" parent="New UI/CenterStatus/VBoxContainer/PlayerContainer/HealthContainer"]
+[node name="HealthNum" type="Label" parent="Player Interface/CenterStatus/VBoxContainer/PlayerContainer/HealthContainer"]
 layout_mode = 2
 text = "100/100"
-label_settings = SubResource("LabelSettings_0fbet")
+label_settings = ExtResource("4_ov1oi")
 
-[node name="Hello" type="Label" parent="New UI/CenterStatus/VBoxContainer"]
+[node name="Hello" type="Label" parent="Player Interface/CenterStatus/VBoxContainer"]
 visible = false
 layout_mode = 2
 text = " Hello"
 label_settings = SubResource("LabelSettings_0fbet")
 
-[node name="WriteHere" type="Label" parent="New UI/CenterStatus/VBoxContainer"]
+[node name="WriteHere" type="Label" parent="Player Interface/CenterStatus/VBoxContainer"]
 visible = false
 layout_mode = 2
 text = "󰌌 Write Here"
 label_settings = SubResource("LabelSettings_0fbet")
 
-[node name="Panel" type="Panel" parent="New UI"]
+[node name="Panel" type="Panel" parent="Player Interface"]
 visible = false
-layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="TextEdit" type="TextEdit" parent="New UI/Panel"]
+[node name="TextEdit" type="TextEdit" parent="Player Interface/Panel"]
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0

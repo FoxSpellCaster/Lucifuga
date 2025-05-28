@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://p8odcet8okvy"]
+
+[ext_resource type="FontFile" uid="uid://1dvxsw3mi4q2" path="res://assets/fonts/FiraCode/FiraCodeNerdFont-Bold.ttf" id="1_khw08"]
+
+[resource]
+font = ExtResource("1_khw08")
+font_size = 23

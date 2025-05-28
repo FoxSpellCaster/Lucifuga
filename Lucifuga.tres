@@ -1,0 +1,10 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://c22ql7ax0khpq"]
+
+[ext_resource type="FontFile" uid="uid://1dvxsw3mi4q2" path="res://assets/fonts/FiraCode/FiraCodeNerdFont-Bold.ttf" id="1_i3eu7"]
+
+[resource]
+font = ExtResource("1_i3eu7")
+font_size = 100
+font_color = Color(0, 0, 0, 1)
+outline_size = 2
+shadow_color = Color(1, 1, 1, 1)
