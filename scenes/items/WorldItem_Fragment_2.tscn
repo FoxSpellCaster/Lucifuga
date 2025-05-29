@@ -29,7 +29,7 @@ points = PackedVector3Array(-2.58833e-05, 0.0675434, -0.126455, -0.104035, 0.067
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xwmxk"]
 
-[node name="WorldItem_Fragment_1" type="RigidBody3D"]
+[node name="WorldItem_Fragment_2" type="RigidBody3D"]
 mass = 10.0
 script = ExtResource("1_0piof")
 item_name = "Fragment_2"

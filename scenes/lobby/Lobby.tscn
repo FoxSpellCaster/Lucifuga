@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c4276uk7h2gkn"]
 
-[ext_resource type="Script" uid="uid://cwmlpsnvaexnx" path="res://scenes/lobby/LobbyMenu.gd" id="1_ras1x"]
-[ext_resource type="Script" uid="uid://3b3y6cwvjn02" path="res://scenes/lobby/LobbyNameGenerator.gd" id="2_cdhm0"]
+[ext_resource type="Script" uid="uid://cwmlpsnvaexnx" path="res://scenes/hub/LobbyMenu.gd" id="1_ras1x"]
+[ext_resource type="Script" uid="uid://3b3y6cwvjn02" path="res://scenes/hub/LobbyNameGenerator.gd" id="2_cdhm0"]
 
 [node name="LobbyMenu" type="Control"]
 layout_mode = 3

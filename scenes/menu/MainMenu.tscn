@@ -1,10 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dptexph7f4ouv"]
+[gd_scene load_steps=6 format=3 uid="uid://dptexph7f4ouv"]
 
-[ext_resource type="Script" uid="uid://bv04inbv8mtr6" path="res://scenes/menu/main_menu.gd" id="1_cruaa"]
+[ext_resource type="Script" uid="uid://d84e8e2auk3u" path="res://scenes/menu/main_menu.gd" id="1_cruaa"]
 [ext_resource type="LabelSettings" uid="uid://c22ql7ax0khpq" path="res://Lucifuga.tres" id="2_iv2fv"]
 [ext_resource type="Sky" uid="uid://deel6vvma6vaf" path="res://assets/textures/skyboxes/sky.tres" id="3_2wh52"]
-[ext_resource type="Script" uid="uid://cwmlpsnvaexnx" path="res://scenes/lobby/LobbyMenu.gd" id="4_mgsx5"]
-[ext_resource type="Script" uid="uid://3b3y6cwvjn02" path="res://scenes/lobby/LobbyNameGenerator.gd" id="5_y6vun"]
 
 [sub_resource type="Theme" id="Theme_s3dsm"]
 default_font_size = 48
@@ -152,30 +150,6 @@ layout_mode = 2
 text = "FoxSpellCaster Labs"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="LobbyMenu" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-script = ExtResource("4_mgsx5")
-
-[node name="LobbyNameGenerator" type="Node" parent="LobbyMenu"]
-script = ExtResource("5_y6vun")
-
-[node name="GenerateNameButton" type="Button" parent="LobbyMenu"]
-layout_mode = 0
-offset_left = 3.0
-offset_top = 10.0
-offset_right = 114.0
-offset_bottom = 41.0
-text = "Create Lobby"
-
-[node name="LobbyNameLabel" type="Label" parent="LobbyMenu"]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 46.0
-offset_right = 106.0
-offset_bottom = 69.0
-text = "Lobby: None"
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Settings" to="SettingsCenterContainer" method="show"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Settings" to="SettingsCenterContainer" method="set_mouse_filter"]

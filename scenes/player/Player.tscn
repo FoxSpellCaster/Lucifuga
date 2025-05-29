@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cf1pwgl0y0mi6"]
+[gd_scene load_steps=23 format=3 uid="uid://cf1pwgl0y0mi6"]
 
 [ext_resource type="Script" uid="uid://3m03w87bcjnr" path="res://scripts/player/PlayerController.gd" id="1_krxqb"]
 [ext_resource type="Script" uid="uid://0xopmg7fmfbj" path="res://scripts/player/Interaction/InteractionController.gd" id="2_66uls"]
@@ -14,6 +14,8 @@
 [ext_resource type="Resource" uid="uid://blh1xlsjyqlvy" path="res://scenes/inventory/data/Fragment_3.tres" id="8_i5yuc"]
 [ext_resource type="Resource" uid="uid://c4l8xfoj8ewe7" path="res://scenes/inventory/data/Fragment_4.tres" id="9_6k2o0"]
 [ext_resource type="Resource" uid="uid://2ifi3jso2le3" path="res://scenes/inventory/data/Fragment_5.tres" id="10_fabuu"]
+[ext_resource type="Script" uid="uid://cwmlpsnvaexnx" path="res://scenes/hub/LobbyMenu.gd" id="15_8qjgm"]
+[ext_resource type="Script" uid="uid://3b3y6cwvjn02" path="res://scenes/hub/LobbyNameGenerator.gd" id="16_ejd4k"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lt5te"]
 radius = 0.3
@@ -325,3 +327,29 @@ size_flags_vertical = 8
 label_settings = SubResource("LabelSettings_yn5sn")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Multiplayer" type="Node" parent="."]
+
+[node name="LobbyMenu" type="Control" parent="Multiplayer"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("15_8qjgm")
+
+[node name="LobbyNameGenerator" type="Node" parent="Multiplayer/LobbyMenu"]
+script = ExtResource("16_ejd4k")
+
+[node name="GenerateNameButton" type="Button" parent="Multiplayer/LobbyMenu"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 77.0
+offset_right = 130.0
+offset_bottom = 108.0
+text = "Create Lobby"
+
+[node name="LobbyNameLabel" type="Label" parent="Multiplayer/LobbyMenu"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 112.0
+offset_right = 124.0
+offset_bottom = 135.0
+text = "Lobby: None"

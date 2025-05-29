@@ -2,8 +2,8 @@
 
 importer="2d_array_texture"
 type="CompressedTexture2DArray"
-uid="uid://c343ywtbw1qvt"
-path.bptc="res://.godot/imported/Spawn.exr-dbe54c721480211cf9cf891794a5660c.bptc.ctexarray"
+uid="uid://cle5ncctdgmei"
+path.bptc="res://.godot/imported/Hub.exr-2d49d38ead447202afd0e72548e16938.bptc.ctexarray"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://scenes/game/Spawn.exr"
-dest_files=["res://.godot/imported/Spawn.exr-dbe54c721480211cf9cf891794a5660c.bptc.ctexarray"]
+source_file="res://scenes/hub/Hub.exr"
+dest_files=["res://.godot/imported/Hub.exr-2d49d38ead447202afd0e72548e16938.bptc.ctexarray"]
 
 [params]
 
