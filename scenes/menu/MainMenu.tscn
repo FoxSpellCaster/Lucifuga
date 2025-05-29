@@ -151,5 +151,5 @@ text = "FoxSpellCaster Labs"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Settings" to="SettingsCenterContainer" method="show"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Settings" to="SettingsCenterContainer" method="set_mouse_filter"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Settings" to="SettingsCenterContainer" method="show"]

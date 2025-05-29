@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cf1pwgl0y0mi6"]
+[gd_scene load_steps=24 format=3 uid="uid://cf1pwgl0y0mi6"]
 
 [ext_resource type="Script" uid="uid://3m03w87bcjnr" path="res://scripts/player/PlayerController.gd" id="1_krxqb"]
 [ext_resource type="Script" uid="uid://0xopmg7fmfbj" path="res://scripts/player/Interaction/InteractionController.gd" id="2_66uls"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c7i5cai8ud4lr" path="res://scenes/inventory/inventory_slot.tscn" id="4_sydjo"]
 [ext_resource type="Script" uid="uid://bjuixjebeu4c0" path="res://scripts/inventory/Item.gd" id="5_kcr7a"]
 [ext_resource type="FontFile" uid="uid://bfnjwai6rnhxu" path="res://assets/fonts/Hack/HackNerdFont-Bold.ttf" id="5_rn7t0"]
+[ext_resource type="Script" uid="uid://bk88s2fp5lgxp" path="res://scripts/steam/steam_avatar.gd" id="6_ejd4k"]
 [ext_resource type="Resource" uid="uid://coe42mjjg8ajw" path="res://scenes/inventory/data/Fragment_1.tres" id="6_inybr"]
 [ext_resource type="FontFile" uid="uid://j7qpofu85udb" path="res://assets/fonts/Hack/HackNerdFontMono-BoldItalic.ttf" id="6_rn7t0"]
 [ext_resource type="Resource" uid="uid://ca68jx621stty" path="res://scenes/inventory/data/Fragment_2.tres" id="7_wac30"]
@@ -187,10 +188,11 @@ layout_mode = 2
 text = "50/50"
 label_settings = ExtResource("4_ov1oi")
 
-[node name="Avatar" type="TextureRect" parent="Player Interface/CenterStatus/VBoxContainer/PlayerContainer"]
+[node name="SteamAvatar" type="TextureRect" parent="Player Interface/CenterStatus/VBoxContainer/PlayerContainer"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-expand_mode = 2
+expand_mode = 3
+script = ExtResource("6_ejd4k")
 
 [node name="HealthContainer" type="HBoxContainer" parent="Player Interface/CenterStatus/VBoxContainer/PlayerContainer"]
 layout_mode = 2

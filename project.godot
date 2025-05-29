@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Lucifuga"
 config/version="0.0.9a-alpha-steam_controller_update"
-run/main_scene="uid://dptexph7f4ouv"
+run/main_scene="uid://b5hbtk6hdyibx"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="uid://bma7rl15fr3ef"
 
