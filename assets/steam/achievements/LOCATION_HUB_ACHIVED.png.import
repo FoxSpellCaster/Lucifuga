@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://maag4ljv5vki"
-path="res://.godot/imported/Main Capsule.png-0ae5b19b3fc937e03f9f2f307e9a3456.ctex"
+uid="uid://c72875hvmtyrl"
+path="res://.godot/imported/LOCATION_HUB_ACHIVED.png-b6382a24d166ef69444b94e348ae7a5d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/steam/Main Capsule.png"
-dest_files=["res://.godot/imported/Main Capsule.png-0ae5b19b3fc937e03f9f2f307e9a3456.ctex"]
+source_file="res://assets/steam/achievements/LOCATION_HUB_ACHIVED.png"
+dest_files=["res://.godot/imported/LOCATION_HUB_ACHIVED.png-b6382a24d166ef69444b94e348ae7a5d.ctex"]
 
 [params]
 

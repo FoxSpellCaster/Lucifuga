@@ -1,10 +1,9 @@
 extends Node
 
 var achievements : Dictionary = {
-	"ACH_WIN_ONE_GAME": false,
-	"ACH_WIN_100_GAMES": false,
-	"ACH_TRAVEL_FAR_ACCUM": false,
-	"ACH_TRAVEL_FAR_SINGLE": false
+	"LOCATION_HUB": false,
+	"STAT_FULL_HEALTH": false,
+	"STAT_FULL_BATTERY": false
 }
 
 func _init():

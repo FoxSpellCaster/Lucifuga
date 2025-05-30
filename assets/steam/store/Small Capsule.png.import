@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjuuyymclxdnd"
-path="res://.godot/imported/Library Hero.png-c08729ad772606b63e88b0b16a996e4d.ctex"
+uid="uid://c10pwq34dcsn8"
+path="res://.godot/imported/Small Capsule.png-9c9a391215c53aff2a467eadb2fa7f71.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/steam/Library Hero.png"
-dest_files=["res://.godot/imported/Library Hero.png-c08729ad772606b63e88b0b16a996e4d.ctex"]
+source_file="res://assets/steam/store/Small Capsule.png"
+dest_files=["res://.godot/imported/Small Capsule.png-9c9a391215c53aff2a467eadb2fa7f71.ctex"]
 
 [params]
 

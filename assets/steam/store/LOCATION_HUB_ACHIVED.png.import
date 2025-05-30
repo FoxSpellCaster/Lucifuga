@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2y287s8bpco5"
-path="res://.godot/imported/Vertical Capsule.png-97c73eb5bc77647f785173bc79db17a2.ctex"
+uid="uid://blc66ybym785r"
+path="res://.godot/imported/LOCATION_HUB_ACHIVED.png-d30fead53c706b803abb77467755ab7f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/steam/Vertical Capsule.png"
-dest_files=["res://.godot/imported/Vertical Capsule.png-97c73eb5bc77647f785173bc79db17a2.ctex"]
+source_file="res://assets/images/steam/LOCATION_HUB_ACHIVED.png"
+dest_files=["res://.godot/imported/LOCATION_HUB_ACHIVED.png-d30fead53c706b803abb77467755ab7f.ctex"]
 
 [params]
 

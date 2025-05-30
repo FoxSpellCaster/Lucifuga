@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7tpv0ipx8tag"
-path="res://.godot/imported/Header Capsule.png-934378b0f36dbef54a2afa3bcb6fce6e.ctex"
+uid="uid://dbqbcnenm64uf"
+path="res://.godot/imported/LOCATION_HUB_UNACHIVED.png-d154497123c853000c3e280286929a96.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/steam/Header Capsule.png"
-dest_files=["res://.godot/imported/Header Capsule.png-934378b0f36dbef54a2afa3bcb6fce6e.ctex"]
+source_file="res://assets/images/steam/LOCATION_HUB_UNACHIVED.png"
+dest_files=["res://.godot/imported/LOCATION_HUB_UNACHIVED.png-d154497123c853000c3e280286929a96.ctex"]
 
 [params]
 

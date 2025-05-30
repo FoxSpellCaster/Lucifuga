@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://duboga2eqigs0"
-path="res://.godot/imported/Library Capsule.png-305ade32145e2d1f47be9f3e9a47bf61.ctex"
+path="res://.godot/imported/Library Capsule.png-436318b25bea201569e2a65ea768cec7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/steam/Library Capsule.png"
-dest_files=["res://.godot/imported/Library Capsule.png-305ade32145e2d1f47be9f3e9a47bf61.ctex"]
+source_file="res://assets/steam/store/Library Capsule.png"
+dest_files=["res://.godot/imported/Library Capsule.png-436318b25bea201569e2a65ea768cec7.ctex"]
 
 [params]
 
