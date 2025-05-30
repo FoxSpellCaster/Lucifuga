@@ -1,0 +1,297 @@
+[gd_scene load_steps=3 format=3 uid="uid://fwmu6u40apjo"]
+
+[ext_resource type="Script" uid="uid://c3gpmxnp41ucr" path="res://scripts/steam/achievements_screen.gd" id="1_cvcn7"]
+[ext_resource type="Script" uid="uid://ckfhloqw425sd" path="res://scripts/steam/achievement_box.gd" id="2_3ourl"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cvcn7")
+
+[node name="AchievementList" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 25.0
+offset_right = 535.0
+offset_bottom = 388.0
+
+[node name="Achievement" type="Panel" parent="AchievementList"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+script = ExtResource("2_3ourl")
+
+[node name="TextureRect" type="TextureRect" parent="AchievementList/Achievement"]
+layout_mode = 2
+offset_left = 6.0
+offset_top = 5.0
+offset_right = 67.0
+offset_bottom = 59.0
+expand_mode = 1
+
+[node name="DisplayName" type="Label" parent="AchievementList/Achievement"]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 4.0
+offset_right = 116.0
+offset_bottom = 27.0
+text = "Achievement Name"
+
+[node name="Description" type="Label" parent="AchievementList/Achievement"]
+modulate = Color(0.505344, 0.505344, 0.505344, 1)
+layout_mode = 0
+offset_left = 77.0
+offset_top = 31.0
+offset_right = 229.0
+offset_bottom = 54.0
+text = "Achievement Description"
+
+[node name="UnlockButton" type="Button" parent="AchievementList/Achievement"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -15.0
+offset_right = -14.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "Unlock"
+
+[node name="Achievement2" type="Panel" parent="AchievementList"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+script = ExtResource("2_3ourl")
+
+[node name="TextureRect" type="TextureRect" parent="AchievementList/Achievement2"]
+layout_mode = 2
+offset_left = 6.0
+offset_top = 5.0
+offset_right = 67.0
+offset_bottom = 59.0
+expand_mode = 1
+
+[node name="DisplayName" type="Label" parent="AchievementList/Achievement2"]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 4.0
+offset_right = 116.0
+offset_bottom = 27.0
+text = "Achievement Name"
+
+[node name="Description" type="Label" parent="AchievementList/Achievement2"]
+modulate = Color(0.505344, 0.505344, 0.505344, 1)
+layout_mode = 0
+offset_left = 77.0
+offset_top = 31.0
+offset_right = 229.0
+offset_bottom = 54.0
+text = "Achievement Description"
+
+[node name="UnlockButton" type="Button" parent="AchievementList/Achievement2"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -15.0
+offset_right = -14.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "Unlock"
+
+[node name="Achievement3" type="Panel" parent="AchievementList"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+script = ExtResource("2_3ourl")
+
+[node name="TextureRect" type="TextureRect" parent="AchievementList/Achievement3"]
+layout_mode = 2
+offset_left = 6.0
+offset_top = 5.0
+offset_right = 67.0
+offset_bottom = 59.0
+expand_mode = 1
+
+[node name="DisplayName" type="Label" parent="AchievementList/Achievement3"]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 4.0
+offset_right = 116.0
+offset_bottom = 27.0
+text = "Achievement Name"
+
+[node name="Description" type="Label" parent="AchievementList/Achievement3"]
+modulate = Color(0.505344, 0.505344, 0.505344, 1)
+layout_mode = 0
+offset_left = 77.0
+offset_top = 31.0
+offset_right = 229.0
+offset_bottom = 54.0
+text = "Achievement Description"
+
+[node name="UnlockButton" type="Button" parent="AchievementList/Achievement3"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -15.0
+offset_right = -14.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "Unlock"
+
+[node name="Achievement4" type="Panel" parent="AchievementList"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+script = ExtResource("2_3ourl")
+
+[node name="TextureRect" type="TextureRect" parent="AchievementList/Achievement4"]
+layout_mode = 2
+offset_left = 6.0
+offset_top = 5.0
+offset_right = 67.0
+offset_bottom = 59.0
+expand_mode = 1
+
+[node name="DisplayName" type="Label" parent="AchievementList/Achievement4"]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 4.0
+offset_right = 116.0
+offset_bottom = 27.0
+text = "Achievement Name"
+
+[node name="Description" type="Label" parent="AchievementList/Achievement4"]
+modulate = Color(0.505344, 0.505344, 0.505344, 1)
+layout_mode = 0
+offset_left = 77.0
+offset_top = 31.0
+offset_right = 229.0
+offset_bottom = 54.0
+text = "Achievement Description"
+
+[node name="UnlockButton" type="Button" parent="AchievementList/Achievement4"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -15.0
+offset_right = -14.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "Unlock"
+
+[node name="Achievement5" type="Panel" parent="AchievementList"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+script = ExtResource("2_3ourl")
+
+[node name="TextureRect" type="TextureRect" parent="AchievementList/Achievement5"]
+layout_mode = 2
+offset_left = 6.0
+offset_top = 5.0
+offset_right = 67.0
+offset_bottom = 59.0
+expand_mode = 1
+
+[node name="DisplayName" type="Label" parent="AchievementList/Achievement5"]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 4.0
+offset_right = 116.0
+offset_bottom = 27.0
+text = "Achievement Name"
+
+[node name="Description" type="Label" parent="AchievementList/Achievement5"]
+modulate = Color(0.505344, 0.505344, 0.505344, 1)
+layout_mode = 0
+offset_left = 77.0
+offset_top = 31.0
+offset_right = 229.0
+offset_bottom = 54.0
+text = "Achievement Description"
+
+[node name="UnlockButton" type="Button" parent="AchievementList/Achievement5"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -15.0
+offset_right = -14.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "Unlock"
+
+[node name="Achievement6" type="Panel" parent="AchievementList"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+script = ExtResource("2_3ourl")
+
+[node name="TextureRect" type="TextureRect" parent="AchievementList/Achievement6"]
+layout_mode = 2
+offset_left = 6.0
+offset_top = 5.0
+offset_right = 67.0
+offset_bottom = 59.0
+expand_mode = 1
+
+[node name="DisplayName" type="Label" parent="AchievementList/Achievement6"]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 4.0
+offset_right = 116.0
+offset_bottom = 27.0
+text = "Achievement Name"
+
+[node name="Description" type="Label" parent="AchievementList/Achievement6"]
+modulate = Color(0.505344, 0.505344, 0.505344, 1)
+layout_mode = 0
+offset_left = 77.0
+offset_top = 31.0
+offset_right = 229.0
+offset_bottom = 54.0
+text = "Achievement Description"
+
+[node name="UnlockButton" type="Button" parent="AchievementList/Achievement6"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -15.0
+offset_right = -14.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "Unlock"
+
+[connection signal="pressed" from="AchievementList/Achievement/UnlockButton" to="AchievementList/Achievement" method="_on_unlock_button_pressed"]
+[connection signal="pressed" from="AchievementList/Achievement2/UnlockButton" to="AchievementList/Achievement2" method="_on_unlock_button_pressed"]
+[connection signal="pressed" from="AchievementList/Achievement3/UnlockButton" to="AchievementList/Achievement3" method="_on_unlock_button_pressed"]
+[connection signal="pressed" from="AchievementList/Achievement4/UnlockButton" to="AchievementList/Achievement4" method="_on_unlock_button_pressed"]
+[connection signal="pressed" from="AchievementList/Achievement5/UnlockButton" to="AchievementList/Achievement5" method="_on_unlock_button_pressed"]
+[connection signal="pressed" from="AchievementList/Achievement6/UnlockButton" to="AchievementList/Achievement6" method="_on_unlock_button_pressed"]
