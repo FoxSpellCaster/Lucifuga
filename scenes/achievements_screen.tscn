@@ -95,6 +95,7 @@ offset_bottom = 54.0
 text = "Achievement Description"
 
 [node name="UnlockButton" type="Button" parent="AchievementList/Achievement2"]
+visible = false
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -140,6 +141,7 @@ offset_bottom = 54.0
 text = "Achievement Description"
 
 [node name="UnlockButton" type="Button" parent="AchievementList/Achievement3"]
+visible = false
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -185,6 +187,7 @@ offset_bottom = 54.0
 text = "Achievement Description"
 
 [node name="UnlockButton" type="Button" parent="AchievementList/Achievement4"]
+visible = false
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -230,6 +233,7 @@ offset_bottom = 54.0
 text = "Achievement Description"
 
 [node name="UnlockButton" type="Button" parent="AchievementList/Achievement5"]
+visible = false
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -275,6 +279,7 @@ offset_bottom = 54.0
 text = "Achievement Description"
 
 [node name="UnlockButton" type="Button" parent="AchievementList/Achievement6"]
+visible = false
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
