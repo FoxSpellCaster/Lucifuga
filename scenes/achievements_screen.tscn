@@ -24,7 +24,7 @@ custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 script = ExtResource("2_3ourl")
 
-[node name="TextureRect" type="TextureRect" parent="AchievementList/Achievement"]
+[node name="Icon" type="TextureRect" parent="AchievementList/Achievement"]
 layout_mode = 2
 offset_left = 6.0
 offset_top = 5.0
@@ -69,7 +69,7 @@ custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 script = ExtResource("2_3ourl")
 
-[node name="TextureRect" type="TextureRect" parent="AchievementList/Achievement2"]
+[node name="Icon" type="TextureRect" parent="AchievementList/Achievement2"]
 layout_mode = 2
 offset_left = 6.0
 offset_top = 5.0
@@ -114,7 +114,7 @@ custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 script = ExtResource("2_3ourl")
 
-[node name="TextureRect" type="TextureRect" parent="AchievementList/Achievement3"]
+[node name="Icon" type="TextureRect" parent="AchievementList/Achievement3"]
 layout_mode = 2
 offset_left = 6.0
 offset_top = 5.0
@@ -159,7 +159,7 @@ custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 script = ExtResource("2_3ourl")
 
-[node name="TextureRect" type="TextureRect" parent="AchievementList/Achievement4"]
+[node name="Icon" type="TextureRect" parent="AchievementList/Achievement4"]
 layout_mode = 2
 offset_left = 6.0
 offset_top = 5.0
@@ -204,7 +204,7 @@ custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 script = ExtResource("2_3ourl")
 
-[node name="TextureRect" type="TextureRect" parent="AchievementList/Achievement5"]
+[node name="Icon" type="TextureRect" parent="AchievementList/Achievement5"]
 layout_mode = 2
 offset_left = 6.0
 offset_top = 5.0
@@ -249,7 +249,7 @@ custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 script = ExtResource("2_3ourl")
 
-[node name="TextureRect" type="TextureRect" parent="AchievementList/Achievement6"]
+[node name="Icon" type="TextureRect" parent="AchievementList/Achievement6"]
 layout_mode = 2
 offset_left = 6.0
 offset_top = 5.0

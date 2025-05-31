@@ -1,6 +1,6 @@
 extends Control
 
-@onready var list_container : VBoxContainer = $Achievement
+@onready var list_container : VBoxContainer = $AchievementList
 var boxes : Array = []
 
 func _ready ():
@@ -16,7 +16,7 @@ func _update_list ():
 	
 	for i in len(boxes):
 		if i >= len(achs):
-			boxes[i].visable = false
+			boxes[i].visible = false
 			continue
 		
 		boxes[i].visible = true
