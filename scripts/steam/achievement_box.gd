@@ -42,3 +42,4 @@ func _get_icon() -> ImageTexture:
 
 func _on_unlock_button_pressed() -> void:
 	SteamController.set_achievement(current_achievement)
+	_get_icon()
