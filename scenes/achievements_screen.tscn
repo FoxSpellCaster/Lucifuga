@@ -25,44 +25,56 @@ layout_mode = 2
 script = ExtResource("2_3ourl")
 
 [node name="Icon" type="TextureRect" parent="AchievementList/Achievement"]
-layout_mode = 2
-offset_left = 6.0
-offset_top = 5.0
-offset_right = 67.0
-offset_bottom = 59.0
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
 expand_mode = 1
 
 [node name="DisplayName" type="Label" parent="AchievementList/Achievement"]
-layout_mode = 0
-offset_left = 76.0
-offset_top = 4.0
-offset_right = 116.0
-offset_bottom = 27.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -76.0
+offset_right = 76.0
+offset_bottom = 23.0
+grow_horizontal = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
 text = "Achievement Name"
 
 [node name="Description" type="Label" parent="AchievementList/Achievement"]
 modulate = Color(0.505344, 0.505344, 0.505344, 1)
-layout_mode = 0
-offset_left = 77.0
-offset_top = 31.0
-offset_right = 229.0
-offset_bottom = 54.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -97.0
+offset_top = -23.0
+offset_right = 97.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 1
 text = "Achievement Description"
 
 [node name="UnlockButton" type="Button" parent="AchievementList/Achievement"]
+custom_minimum_size = Vector2(64, 64)
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -76.0
-offset_top = -15.0
-offset_right = -14.0
-offset_bottom = 16.0
+offset_left = -75.0
+offset_top = -32.0
+offset_bottom = 32.0
 grow_horizontal = 0
 grow_vertical = 2
-text = "Unlock"
+size_flags_horizontal = 10
+size_flags_vertical = 4
+text = "UNLOCK"
 
 [node name="Achievement2" type="Panel" parent="AchievementList"]
 custom_minimum_size = Vector2(0, 64)
@@ -70,45 +82,56 @@ layout_mode = 2
 script = ExtResource("2_3ourl")
 
 [node name="Icon" type="TextureRect" parent="AchievementList/Achievement2"]
-layout_mode = 2
-offset_left = 6.0
-offset_top = 5.0
-offset_right = 67.0
-offset_bottom = 59.0
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
 expand_mode = 1
 
 [node name="DisplayName" type="Label" parent="AchievementList/Achievement2"]
-layout_mode = 0
-offset_left = 76.0
-offset_top = 4.0
-offset_right = 116.0
-offset_bottom = 27.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -76.0
+offset_right = 76.0
+offset_bottom = 23.0
+grow_horizontal = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
 text = "Achievement Name"
 
 [node name="Description" type="Label" parent="AchievementList/Achievement2"]
 modulate = Color(0.505344, 0.505344, 0.505344, 1)
-layout_mode = 0
-offset_left = 77.0
-offset_top = 31.0
-offset_right = 229.0
-offset_bottom = 54.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -97.0
+offset_top = -23.0
+offset_right = 97.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 1
 text = "Achievement Description"
 
 [node name="UnlockButton" type="Button" parent="AchievementList/Achievement2"]
-visible = false
+custom_minimum_size = Vector2(64, 64)
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -76.0
-offset_top = -15.0
-offset_right = -14.0
-offset_bottom = 16.0
+offset_left = -75.0
+offset_top = -32.0
+offset_bottom = 32.0
 grow_horizontal = 0
 grow_vertical = 2
-text = "Unlock"
+size_flags_horizontal = 10
+size_flags_vertical = 4
+text = "UNLOCK"
 
 [node name="Achievement3" type="Panel" parent="AchievementList"]
 custom_minimum_size = Vector2(0, 64)
@@ -116,45 +139,56 @@ layout_mode = 2
 script = ExtResource("2_3ourl")
 
 [node name="Icon" type="TextureRect" parent="AchievementList/Achievement3"]
-layout_mode = 2
-offset_left = 6.0
-offset_top = 5.0
-offset_right = 67.0
-offset_bottom = 59.0
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
 expand_mode = 1
 
 [node name="DisplayName" type="Label" parent="AchievementList/Achievement3"]
-layout_mode = 0
-offset_left = 76.0
-offset_top = 4.0
-offset_right = 116.0
-offset_bottom = 27.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -76.0
+offset_right = 76.0
+offset_bottom = 23.0
+grow_horizontal = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
 text = "Achievement Name"
 
 [node name="Description" type="Label" parent="AchievementList/Achievement3"]
 modulate = Color(0.505344, 0.505344, 0.505344, 1)
-layout_mode = 0
-offset_left = 77.0
-offset_top = 31.0
-offset_right = 229.0
-offset_bottom = 54.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -97.0
+offset_top = -23.0
+offset_right = 97.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 1
 text = "Achievement Description"
 
 [node name="UnlockButton" type="Button" parent="AchievementList/Achievement3"]
-visible = false
+custom_minimum_size = Vector2(64, 64)
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -76.0
-offset_top = -15.0
-offset_right = -14.0
-offset_bottom = 16.0
+offset_left = -75.0
+offset_top = -32.0
+offset_bottom = 32.0
 grow_horizontal = 0
 grow_vertical = 2
-text = "Unlock"
+size_flags_horizontal = 10
+size_flags_vertical = 4
+text = "UNLOCK"
 
 [node name="Achievement4" type="Panel" parent="AchievementList"]
 custom_minimum_size = Vector2(0, 64)
@@ -162,45 +196,56 @@ layout_mode = 2
 script = ExtResource("2_3ourl")
 
 [node name="Icon" type="TextureRect" parent="AchievementList/Achievement4"]
-layout_mode = 2
-offset_left = 6.0
-offset_top = 5.0
-offset_right = 67.0
-offset_bottom = 59.0
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
 expand_mode = 1
 
 [node name="DisplayName" type="Label" parent="AchievementList/Achievement4"]
-layout_mode = 0
-offset_left = 76.0
-offset_top = 4.0
-offset_right = 116.0
-offset_bottom = 27.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -76.0
+offset_right = 76.0
+offset_bottom = 23.0
+grow_horizontal = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
 text = "Achievement Name"
 
 [node name="Description" type="Label" parent="AchievementList/Achievement4"]
 modulate = Color(0.505344, 0.505344, 0.505344, 1)
-layout_mode = 0
-offset_left = 77.0
-offset_top = 31.0
-offset_right = 229.0
-offset_bottom = 54.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -97.0
+offset_top = -23.0
+offset_right = 97.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 1
 text = "Achievement Description"
 
 [node name="UnlockButton" type="Button" parent="AchievementList/Achievement4"]
-visible = false
+custom_minimum_size = Vector2(64, 64)
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -76.0
-offset_top = -15.0
-offset_right = -14.0
-offset_bottom = 16.0
+offset_left = -75.0
+offset_top = -32.0
+offset_bottom = 32.0
 grow_horizontal = 0
 grow_vertical = 2
-text = "Unlock"
+size_flags_horizontal = 10
+size_flags_vertical = 4
+text = "UNLOCK"
 
 [node name="Achievement5" type="Panel" parent="AchievementList"]
 custom_minimum_size = Vector2(0, 64)
@@ -208,45 +253,56 @@ layout_mode = 2
 script = ExtResource("2_3ourl")
 
 [node name="Icon" type="TextureRect" parent="AchievementList/Achievement5"]
-layout_mode = 2
-offset_left = 6.0
-offset_top = 5.0
-offset_right = 67.0
-offset_bottom = 59.0
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
 expand_mode = 1
 
 [node name="DisplayName" type="Label" parent="AchievementList/Achievement5"]
-layout_mode = 0
-offset_left = 76.0
-offset_top = 4.0
-offset_right = 116.0
-offset_bottom = 27.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -76.0
+offset_right = 76.0
+offset_bottom = 23.0
+grow_horizontal = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
 text = "Achievement Name"
 
 [node name="Description" type="Label" parent="AchievementList/Achievement5"]
 modulate = Color(0.505344, 0.505344, 0.505344, 1)
-layout_mode = 0
-offset_left = 77.0
-offset_top = 31.0
-offset_right = 229.0
-offset_bottom = 54.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -97.0
+offset_top = -23.0
+offset_right = 97.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 1
 text = "Achievement Description"
 
 [node name="UnlockButton" type="Button" parent="AchievementList/Achievement5"]
-visible = false
+custom_minimum_size = Vector2(64, 64)
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -76.0
-offset_top = -15.0
-offset_right = -14.0
-offset_bottom = 16.0
+offset_left = -75.0
+offset_top = -32.0
+offset_bottom = 32.0
 grow_horizontal = 0
 grow_vertical = 2
-text = "Unlock"
+size_flags_horizontal = 10
+size_flags_vertical = 4
+text = "UNLOCK"
 
 [node name="Achievement6" type="Panel" parent="AchievementList"]
 custom_minimum_size = Vector2(0, 64)
@@ -254,45 +310,56 @@ layout_mode = 2
 script = ExtResource("2_3ourl")
 
 [node name="Icon" type="TextureRect" parent="AchievementList/Achievement6"]
-layout_mode = 2
-offset_left = 6.0
-offset_top = 5.0
-offset_right = 67.0
-offset_bottom = 59.0
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
 expand_mode = 1
 
 [node name="DisplayName" type="Label" parent="AchievementList/Achievement6"]
-layout_mode = 0
-offset_left = 76.0
-offset_top = 4.0
-offset_right = 116.0
-offset_bottom = 27.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -76.0
+offset_right = 76.0
+offset_bottom = 23.0
+grow_horizontal = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
 text = "Achievement Name"
 
 [node name="Description" type="Label" parent="AchievementList/Achievement6"]
 modulate = Color(0.505344, 0.505344, 0.505344, 1)
-layout_mode = 0
-offset_left = 77.0
-offset_top = 31.0
-offset_right = 229.0
-offset_bottom = 54.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -97.0
+offset_top = -23.0
+offset_right = 97.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 1
 text = "Achievement Description"
 
 [node name="UnlockButton" type="Button" parent="AchievementList/Achievement6"]
-visible = false
+custom_minimum_size = Vector2(64, 64)
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -76.0
-offset_top = -15.0
-offset_right = -14.0
-offset_bottom = 16.0
+offset_left = -75.0
+offset_top = -32.0
+offset_bottom = 32.0
 grow_horizontal = 0
 grow_vertical = 2
-text = "Unlock"
+size_flags_horizontal = 10
+size_flags_vertical = 4
+text = "UNLOCK"
 
 [connection signal="pressed" from="AchievementList/Achievement/UnlockButton" to="AchievementList/Achievement" method="_on_unlock_button_pressed"]
 [connection signal="pressed" from="AchievementList/Achievement2/UnlockButton" to="AchievementList/Achievement2" method="_on_unlock_button_pressed"]

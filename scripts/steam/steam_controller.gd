@@ -40,7 +40,7 @@ func _user_stats_recived(game_id : int, result : int, user_id : int):
 	
 	print("Steam Stats")
 	_load_stats()
-	#set_stat("CollectedFragments", 500)
+	set_stat("CollectedFragments", 500)
 	print(stats)
 
 func _load_achievements ():
